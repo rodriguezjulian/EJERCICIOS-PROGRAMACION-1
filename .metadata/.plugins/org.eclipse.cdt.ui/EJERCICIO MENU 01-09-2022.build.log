@@ -1,0 +1,7 @@
+19:33:53 **** Rebuild of configuration Debug for project EJERCICIO MENU 01-09-2022 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO MENU 01-09-2022.o" "..\\src\\EJERCICIO MENU 01-09-2022.c" 
+gcc -o "EJERCICIO MENU 01-09-2022.exe" "src\\EJERCICIO MENU 01-09-2022.o" 
+
+19:33:53 Build Finished. 0 errors, 0 warnings. (took 347ms)
+

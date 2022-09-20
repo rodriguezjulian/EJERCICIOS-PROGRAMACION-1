@@ -1,0 +1,49 @@
+/*
+ ============================================================================
+ Name        : EJERCICIO.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+
+
+void formarApellidoNombre(char* pNombre,char* pApellido,char* pCompleto);
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	char nombre[15];
+	char apellido[15];
+	char nombreCompleto[30];
+
+	printf("Ingrese nombre \n");
+	fflush(stdin);
+	scanf("%s",nombre);
+
+	printf("Ingrese apellido \n");
+	fflush(stdin);
+	scanf("%s",apellido);
+
+	formarApellidoNombre(nombre,apellido,nombreCompleto);
+
+	printf("%s",nombreCompleto);
+
+	return EXIT_SUCCESS;
+}
+void formarApellidoNombre(char* pNombre,char* pApellido,char* pCompleto)
+{
+	if(pNombre!=NULL && pApellido!=NULL && pCompleto!=NULL)
+	{
+		strcat(pCompleto,pApellido);
+		strcat(pCompleto, ", ");
+		strcat(pCompleto,pNombre);
+	}
+}

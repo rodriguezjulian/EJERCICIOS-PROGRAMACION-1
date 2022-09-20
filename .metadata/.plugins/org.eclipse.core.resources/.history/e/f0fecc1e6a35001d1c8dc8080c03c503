@@ -1,0 +1,35 @@
+/*
+ ============================================================================
+ Name        : PARALELOS.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#define TAM 10
+
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	int array [2][4];
+
+	for(int i=0;i<TAM;i++)
+	{
+		for(int j=0;j<TAM;j++)
+		{
+			printf("%d\n",array[j]);
+		}
+	}
+
+
+
+
+
+	return EXIT_SUCCESS;
+}

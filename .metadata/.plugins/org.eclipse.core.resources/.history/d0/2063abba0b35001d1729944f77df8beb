@@ -1,0 +1,115 @@
+/*
+ ============================================================================
+ Name        : EJERCICIO.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "calculos.h"
+#define TAM 5
+
+int ordenarArrayAscendente(int* array, int tam);
+int imprimirArrayIntSinCero(int* array,int tam, char* mensaje);
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numerosIngresados[TAM];
+	int numerosNegativos[TAM];
+	int numerosPositvos[TAM];
+
+	inicializarArray(numerosNegativos,TAM);
+	inicializarArray(numerosPositvos,TAM);
+
+
+	for(int i=0;i<TAM;i++)
+	{
+		ingresarInt2(&numerosIngresados[i]);
+
+		if(numerosIngresados[i]<0)
+		{
+			numerosNegativos[i]=numerosIngresados[i];
+		}
+		else
+		{
+			numerosPositvos[i]=numerosIngresados[i];
+		}
+
+	}
+
+	for(int i=0;i<TAM;i++)
+	{
+		if(numerosIngresados[i]>0)
+		{
+			numerosPositvos[i]=numerosIngresados[i];
+		}
+		else
+		{
+			numerosNegativos[i]=numerosIngresados[i];
+		}
+	}
+
+	imprimirArrayInt(numerosIngresados,TAM, "Numeros ingresados \n");
+	//ordenarArrayAscendente(numerosIngresados,TAM);
+
+	ordenarArrayAscendente(numerosNegativos,TAM);
+	ordenarArrayAscendente(numerosPositvos,TAM);
+
+	imprimirArrayIntSinCero(numerosNegativos,TAM, "ORDENADOS NEGATIVOS \n");
+	imprimirArrayIntSinCero(numerosPositvos,TAM, "ORDENADOS POSITIVOS \n");
+
+	return EXIT_SUCCESS;
+}
+
+int ordenarArrayAscendente(int* array, int tam)
+{
+	int retorno=-1;
+	int auxiliar;
+
+	if(array!=NULL && tam>0)
+	{
+		retorno=0;
+		for(int i=0;i<tam-1;i++)
+		{
+			for(int j=i+1;j<tam;j++)
+			{
+				if(array[i]>array[j])
+				{
+					auxiliar=array[i];
+					array[i]=array[j];
+					array[j]=auxiliar;
+				}
+			}
+		}
+	}
+	return retorno;
+}
+
+int imprimirArrayIntSinCero(int* array,int tam, char* mensaje)
+{
+	int retorno=-1;
+	if(array!=NULL && tam>0)
+	{
+		printf(mensaje);
+		for(int i=0;i<tam;i++)
+		{
+			if(array!=0)
+			{
+				printf("%d | ",array[i]);
+			}
+			retorno=0;
+		}
+		printf("\n");
+	}
+	return retorno;
+}
+
+
+
+
+

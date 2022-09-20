@@ -1,0 +1,36 @@
+/*
+ * tp.1.c
+ *
+ *  Created on: 19 sep. 2022
+ *      Author: Julian Rodriguez
+ */
+#include <stdio.h>
+#include <stdlib.h>
+int validarEntradaParaOpcion3(int flagCostos,int contadorJugadores)
+{
+	int retorno=-1;
+	if(flagCostos==1 && contadorJugadores>0)
+	{
+
+		printf("\nCalculos realizados correctamente\n");
+		retorno=0;
+	}else
+	{
+		printf("\nERROR, Primero debe cargar costos e ingresar jugadores\n");
+	}
+	return retorno;
+}
+/*void validarEntradaParaOpcion4(int flagCostos,int contadorJugadores,int flagCalculos)
+{
+	{
+
+		if(flagCostos==1 && contadorJugadores>0 && flagCalculos==1)
+		{
+			printf("\nCalculos realizados correctamente\n");
+		}else
+		{
+			printf("\nERROR, Primero debe cargar costos, ingresar jugadores y realizar los calculos\n");
+		}
+	}
+}
+*/

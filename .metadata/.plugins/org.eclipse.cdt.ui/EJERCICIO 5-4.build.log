@@ -1,0 +1,6 @@
+23:32:37 **** Incremental Build of configuration Debug for project EJERCICIO 5-4 ****
+Info: Internal Builder is used for build
+gcc -o "EJERCICIO 5-4.exe" "src\\EJERCICIO 5-4.o" "src\\calculos.o" "src\\ingresos.o" 
+
+23:32:38 Build Finished. 0 errors, 0 warnings. (took 424ms)
+

@@ -1,0 +1,50 @@
+/*
+ ============================================================================
+ Name        : EJERCICIO.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "ingresos.h"
+#include "calculos.h"
+#define TAM 10
+#define REINTENTOS 3
+#define MAX 75
+#define MIN -50
+int ingresarNumerosConRangoMenosCero(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numerosIngresados[TAM];
+	int contador;
+	int posicion;
+	contador=0;
+
+
+	for(int i=0;i<TAM;i++)
+	{
+		printf("Ingrese indice posicion en donde cargara al numero");
+		scanf("%d",&posicion);
+		if(posicion>-1 && posicion<TAM)
+		{
+			ingresarNumerosConRangoMenosCero(&numerosIngresados[posicion],"INGRESE NUMERO ENTERO ENTRE -50 Y 75, A EXEPCION DEL 0\n","ERROR, RESPETE EL RANGO Y CONDICION\n", MIN,MAX, REINTENTOS);
+			contador=contador+1;
+		}
+		else
+		{
+			printf("ERROR, cargue una posicion valida");
+		}
+
+	}
+
+	return EXIT_SUCCESS;
+}
+
+
+

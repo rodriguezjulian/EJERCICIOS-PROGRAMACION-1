@@ -1,0 +1,80 @@
+/*
+ ============================================================================
+ Name        : EJERCICIO.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "calculos.h"
+
+#define TAM 10
+
+
+//int ordenarArrayAscendente(int* array, int TAM);
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numerosIngresados[TAM];
+	int numerosNegativos[TAM];
+	int numerosPositvos[TAM];
+
+	inicializarArray(numerosNegativos,TAM);
+	inicializarArray(numerosPositvos,TAM);
+
+
+	for(int i=0;i<TAM;i++)
+	{
+		ingresarInt2(&numerosIngresados[i]);
+
+		if(numerosIngresados[i]<0)
+		{
+			numerosNegativos[i]=numerosIngresados[i];
+		}
+		else
+		{
+			numerosPositvos[i]=numerosIngresados[i];
+		}
+
+	}
+
+
+	imprimirArrayInt(numerosIngresados,TAM, "Numeros ingresados \n");
+//	ordenarArrayAscendente(numerosIngresados,TAM);
+	imprimirArrayInt(numerosIngresados,TAM, "ORDENADOS \n");
+
+	//imprimirArrayInt(numerosNegativos,TAM, "Numeros NEGATIVOS \n");
+	//imprimirArrayInt(numerosPositvos,TAM, "Numeros POSITIVOS \n");
+
+
+	return EXIT_SUCCESS;
+}
+/*
+int ordenarArrayAscendente(int* array, int TAM)
+{
+	int retorno=-1;
+	int auxiliar;
+
+	if(array!=NULL && TAM>0)
+	{
+		retorno=0;
+		for(int i=0;i<TAM-1;i++)
+		{
+			for(int j=i+1;i<TAM;i++)
+			{
+				if(array[i]>array[j])
+				{
+					auxiliar=array[i];
+					array[i]=array[j];
+					array[j]=auxiliar;
+				}
+			}
+		}
+	}
+	return retorno;
+}*/

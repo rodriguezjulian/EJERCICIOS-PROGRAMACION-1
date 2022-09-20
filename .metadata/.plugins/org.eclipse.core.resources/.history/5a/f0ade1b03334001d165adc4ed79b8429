@@ -1,0 +1,43 @@
+/*
+ ============================================================================
+ Name        : EJERCICIO.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "ingresos.h"
+#define TAM 5
+
+int calcularMaximoArray(int* array, int* valorMaximo);
+
+int main(void) {
+	setbuf(stdout,NULL);
+	int numerosIngresados[TAM];
+
+	for(int i=0;i<TAM;i++)
+	{
+		numerosIngresados[i]= ingresarInt();
+	}
+
+	return EXIT_SUCCESS;
+}
+int calcularMaximoArray(int* array, int* valorMaximo)
+{
+	*valorMaximo=array[0];
+	for(int i=0;i<5;i++)
+	{
+		//ENTRA Y COMPARA EL VALOR MAXIMO QUE DIJIMOS QUE ES EL DE LA POSICION 0 CON CADA UNA DE LAS POSICIONES DEL ARRAY
+		if(valorMaximo<array[i])
+		{
+				*valorMaximo=array[i];
+		}
+	}
+
+
+
+}

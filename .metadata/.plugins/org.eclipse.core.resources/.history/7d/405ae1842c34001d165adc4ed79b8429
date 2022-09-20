@@ -1,0 +1,44 @@
+/*
+ ============================================================================
+ Name        : EJERCICIO.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "ingresos.h"
+#define TAM 5
+
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	int numerosIngresados[TAM];
+	int i;
+	float promedio;
+	int retorno;
+
+
+	for(i=0;i<TAM;i++)
+	{
+		numerosIngresados[i]= ingresarInt();
+	}
+
+	calcularPromedioArray(TAM, numerosIngresados, &promedio);
+	/*if(retorno==0)
+	{
+		printf("El promedio es: %.2f", promedio);
+	}
+	else
+	{
+		printf("No se pudo calcular el promedio del array");
+	}*/
+
+
+	return EXIT_SUCCESS;
+}

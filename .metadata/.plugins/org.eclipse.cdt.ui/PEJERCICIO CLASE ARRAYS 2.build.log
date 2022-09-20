@@ -1,0 +1,11 @@
+19:33:53 **** Rebuild of configuration Debug for project PEJERCICIO CLASE ARRAYS 2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PEJERCICIO CLASE ARRAYS 2.o" "..\\src\\PEJERCICIO CLASE ARRAYS 2.c" 
+..\src\PEJERCICIO CLASE ARRAYS 2.c: In function 'main':
+..\src\PEJERCICIO CLASE ARRAYS 2.c:17:6: warning: variable 'notas' set but not used [-Wunused-but-set-variable]
+  int notas[TAM];
+      ^~~~~
+gcc -o "PEJERCICIO CLASE ARRAYS 2.exe" "src\\PEJERCICIO CLASE ARRAYS 2.o" 
+
+19:33:54 Build Finished. 0 errors, 1 warnings. (took 348ms)
+

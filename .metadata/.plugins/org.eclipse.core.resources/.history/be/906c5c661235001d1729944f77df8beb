@@ -1,0 +1,66 @@
+/*
+ ============================================================================
+ Name        : EJERCICIO.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+//RODRIGUEZ JULIAN MANUEL DIV J EJERCICIO 6-2
+#include <stdio.h>
+#include <stdlib.h>
+#include "calculos.h"
+#include "ingresos.h"
+#define TAM 5
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numerosIngresados[TAM];
+	int numerosNegativos[TAM];
+	int numerosPositvos[TAM];
+
+	inicializarArray(numerosNegativos,TAM);
+	inicializarArray(numerosPositvos,TAM);
+
+
+	for(int i=0;i<TAM;i++)
+	{
+		ingresarInt2(&numerosIngresados[i]);
+
+		if(numerosIngresados[i]<0)
+		{
+			numerosNegativos[i]=numerosIngresados[i];
+		}
+		else
+		{
+			numerosPositvos[i]=numerosIngresados[i];
+		}
+
+	}
+
+	for(int i=0;i<TAM;i++)
+	{
+		if(numerosIngresados[i]>0)
+		{
+			numerosPositvos[i]=numerosIngresados[i];
+		}
+		else
+		{
+			numerosNegativos[i]=numerosIngresados[i];
+		}
+	}
+
+	imprimirArrayInt(numerosIngresados,TAM, "Numeros ingresados \n");
+	//ordenarArrayAscendente(numerosIngresados,TAM);
+
+	ordenarArrayDescendente(numerosNegativos,TAM);
+	ordenarArrayAscendente(numerosPositvos,TAM);
+
+	imprimirArrayIntSinCero(numerosNegativos,TAM, "ORDENADOS NEGATIVOS \n");
+	imprimirArrayIntSinCero(numerosPositvos,TAM, "ORDENADOS POSITIVOS \n");
+
+	return EXIT_SUCCESS;
+}
+

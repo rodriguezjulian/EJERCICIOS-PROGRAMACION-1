@@ -1,0 +1,70 @@
+/*
+ ============================================================================
+ Name        : EJERCICIO.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "ingresos.h"
+#include "calculos.h"
+#define TAM 10
+#define REINTENTOS 3
+#define MAX 75
+#define MIN -50
+
+int calcularPromedioPositivosArray(int tam, int* array, float* promedio);
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numerosIngresados[TAM];
+	int contador;
+	int posicion;
+	float promedio;
+	contador=0;
+
+
+	for(int i=0;i<TAM;i++)
+	{
+		printf("Ingrese indice posicion en donde cargara al numero");
+		scanf("%d",&posicion);
+		if(posicion>-1 && posicion<TAM)
+		{
+			ingresarNumerosConRangoMenosCero(&numerosIngresados[posicion],"INGRESE NUMERO ENTERO ENTRE -50 Y 75, A EXEPCION DEL 0\n","ERROR, RESPETE EL RANGO Y CONDICION\n", MIN,MAX, REINTENTOS);
+			contador=contador+1;
+		}
+		else
+		{
+			printf("ERROR, cargue una posicion valida\n");
+		}
+	}
+	calcularPromedioPositivosArray(TAM, numerosIngresados, &promedio);
+	return EXIT_SUCCESS;
+}
+int calcularPromedioPositivosArray(int tam, int* array, float* promedio)
+{
+	int retorno=-1;
+	int acumulador;
+	acumulador=0;
+
+	if(tam>0 && array!=NULL && promedio!=NULL)
+	{
+		for(int i=0;i<tam;i++)
+		{
+			if(array[i]>0)
+			{
+				acumulador=acumulador+array[i];
+			}
+		}
+		*promedio=(float)acumulador/tam;
+		retorno=0;
+	}
+	return retorno;
+}
+
+

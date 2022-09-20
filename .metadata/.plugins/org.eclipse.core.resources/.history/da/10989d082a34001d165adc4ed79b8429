@@ -1,0 +1,42 @@
+/*
+ ============================================================================
+ Name        : PRUEBAS.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+//RODRIGUEZ JULIAN MANUEL DIV J - EJERCICIO ARRAYS EN CLASE
+#include <stdio.h>
+#include <stdlib.h>
+#define TAM 5
+
+int calcularPromedioArray(int tam, int* array, int *promedio);
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	int array[TAM];
+	int i;
+	int acumulador;
+	acumulador=0;
+
+	for(i=0;i<5;i++)
+	{
+		acumulador=acumulador+array;
+	}
+
+	return EXIT_SUCCESS;
+}
+
+
+
+
+
+
+
+
+
+
