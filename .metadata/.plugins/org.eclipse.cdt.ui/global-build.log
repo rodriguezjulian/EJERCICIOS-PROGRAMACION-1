@@ -1,2 +1,4 @@
-Info: Nothing to build for TP_1
-Info: Nothing to build for TP_1
+21:39:24 **** Incremental Build of configuration Debug for project TrabajoPractico1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresos.o" "..\\src\\ingresos.c" 
+gcc -o TrabajoPractico1.exe "src\\Biblioteca_Tp.1.o" "src\\TP_1.o" "src\\calculos.o" "src\\ingresos.o" 
