@@ -1,5 +1,5 @@
 /*
- * tp.1.c
+ * Biblioteca_Tp.1.h
  *
  *  Created on: 19 sep. 2022
  *      Author: Julian Rodriguez
@@ -75,7 +75,7 @@ void ejecutarSubMenuConfederaciones(int flag,int* contadorAfc,int* contadorCaf,i
 	if(flag==0 && contadorAfc!=NULL && contadorCaf!=NULL && contadorConcacaf!=NULL && contadorConmebol!=NULL && contadorUefa!=NULL)
 	{
 		//CAMISETA SE PUEDE REPETIR PORQUE ES EL NUMERO DEL JUGADOR EN SU CLUB ESPECIFICO - VALIDAR 1/99
-		ingresarNumerosConRangoV1(&numeroCamiseta, "Ingresar numero de camiseta (1/99)\n", "ERROR, Ingresar dato valido", 1, 99);
+		ingresarNumerosConRangoV1(&numeroCamiseta, "Ingresar numero de camiseta (1/99)\n", "ERROR, Ingresar dato valido\n", 1, 99);
 
 		ingresarNumerosConRangoV1(&opcionSubMenu,"Ingrese segun corresponda la conferedacion a la que pertenece el jugador\n"
 						"1.AFC\n"

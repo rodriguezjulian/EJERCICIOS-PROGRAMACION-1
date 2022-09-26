@@ -217,7 +217,7 @@ int calcularMinimoArray(int* array, int* valorMinimo, int tam)
 		*valorMinimo=array[0];
 		for(int i=0;i<tam;i++)
 		{
-			//ENTRA Y COMPARA EL VALOR MAXIMO QUE DIJIMOS QUE ES EL DE LA POSICION 0 CON CADA UNA DE LAS POSICIONES DEL ARRAY
+			//ENTRA Y COMPARA EL VALOR MINIMO QUE DIJIMOS QUE ES EL DE LA POSICION 0 CON CADA UNA DE LAS POSICIONES DEL ARRAY
 			if(*valorMinimo>array[i])
 			{
 				*valorMinimo=array[i];

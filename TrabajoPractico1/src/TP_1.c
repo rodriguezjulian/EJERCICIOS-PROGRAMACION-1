@@ -18,8 +18,6 @@
 #define MIN 1 //MENU PRINCIPAL DE OPCIONES
 #define UEFA 35 //SI LA MAYORIA DE JUGADORES PERTENECE A UEFA SE APLICA UN 35% DE RECARGO AL COSTO DE MANTENIMIENTO.
 
-
-
 int main(void) {
 	setbuf(stdout,NULL);
 
@@ -56,7 +54,6 @@ int main(void) {
 	float promedioOfc=0;
 	/////////////////////////
 	int flagCalculos=0;
-	//int flagCostos=0; //A ESTE FLAG LO TERMINO USANDO DE CONTADOR PARA VALIDAR EL INGRESO DE TODOS LOS COSTOS
 	int control; // ESTA VARIABLE CONTROLA EL RETORNO DE LA FUNCION limitarContador -1/0
 
 	do
@@ -101,17 +98,17 @@ int main(void) {
 								&contadorOfc,&contadorJugadores);
 					break;
 					case 2:
-						control=limitarContador(&contadorDefensores ,8,"ERROR, puede ingresar hasta 8 defensores\n");
+						control=limitarContador(&contadorDefensores ,8,"ERROR, puede ingresar hasta 8 defensores\n\n");
 						ejecutarSubMenuConfederaciones(control,&contadorAfc,&contadorCaf,&contadorConcacaf,&contadorConmebol,&contadorUefa,
 								&contadorOfc,&contadorJugadores);
 					break;
 					case 3:
-						control=limitarContador(&contadorMediocampistas ,8,"ERROR, puede ingresar hasta 8 mediocampistas\n");
+						control=limitarContador(&contadorMediocampistas ,8,"ERROR, puede ingresar hasta 8 mediocampistas\n\n");
 						ejecutarSubMenuConfederaciones(control,&contadorAfc,&contadorCaf,&contadorConcacaf,&contadorConmebol,&contadorUefa,
 								&contadorOfc,&contadorJugadores);
 					break;
 					case 4:
-						control=limitarContador(&contadorDelanteros,4,"ERROR, puede ingresar hasta 4 delanteros\n");
+						control=limitarContador(&contadorDelanteros,4,"ERROR, puede ingresar hasta 4 delanteros\n\n");
 						ejecutarSubMenuConfederaciones(control,&contadorAfc,&contadorCaf,&contadorConcacaf,&contadorConmebol,&contadorUefa,
 								&contadorOfc,&contadorJugadores);
 					break;
@@ -123,7 +120,6 @@ int main(void) {
 
 				if(retornoValidarEntradaParaOpcion3==0)
 				{
-
 					flagCalculos=1;
 					costoMantenimiento=hospedaje+comida+transporte;
 					ejecutarCalculosPromedios(contadorJugadores,contadorAfc,&promedioAfc,contadorCaf,&promedioCaf,
@@ -141,13 +137,18 @@ int main(void) {
 			case 4:
 					informarResultados( flagCalculos,  promedioAfc, promedioCaf, promedioConcacaf, promedioConmebol, promedioUefa,  promedioOfc,  costoMantenimiento, diferenciaCostoMantenimiento,costoMantenimientoAumentado);
 					ingresarIntConMensaje(&opcion,"Si desea salir presione 5, para seguir operando presione cualquier otro numero\n");
+					//ESTE IF ES NECESARIO YA QUE SI EL USUARIO SIGUE CARGANDO JUGADORES, HAY QUE REALIZAR LOS CALCULOS NUEVAMENTE.
+					if(opcion!=5)
+					{
+						diferenciaCostoMantenimiento=0;
+						flagCalculos=0;
+					}
 					mostrarMensajeSalida(opcion);
 			break;
 			case 5:
 				mostrarMensajeSalida(opcion);
 			break;
 		}
-
 	}while(opcion!=5);
 
 	return EXIT_SUCCESS;

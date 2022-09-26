@@ -7,23 +7,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float ingresarFloat(void)
-{
-	float numeroIngresado;
-	printf("Ingrese numero\n");
-	scanf("%f",&numeroIngresado);
-
-	return numeroIngresado;
-}
-int ingresarInt(void)
-{
-	int numeroIngresado;
-	printf("Ingrese numero\n");
-	scanf("%d",&numeroIngresado);
-
-	return numeroIngresado;
-
-}
 int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
 {
 	int retorno=-1;
@@ -42,7 +25,7 @@ int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, i
 			}
 			else
 			{
-				printf(mensajeError);
+				printf("%s",mensajeError);
 				printf("Le quedan %d intentos ",reintentos);
 			}
 		}
@@ -50,63 +33,7 @@ int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, i
 	}
 	return retorno;
 }
-int ingresarNumeroDistintoCero(int* array,int reintentos,int *resultado)
-{
-	//DEBERIA FIJARME QUE HACER CUANDO SE TERMINAN LOS REINTENTOS
-	int retorno=-1;
-	int numero;
-	if(array!=NULL && resultado!=NULL && reintentos>0)
-	{
-		while(reintentos>1)
-		{
-			printf("Ingrese un numero entero distinto de cero");
-			scanf("%d",&numero);
-			if(numero==0)
-			{
-				printf("ERROR, Recuerde que el numero debe ser distinto a cero\n");
-				reintentos=reintentos-1;
-				printf("Le quedan %d reintentos \n",reintentos);
 
-			}
-			else
-			{
-				*resultado=numero;
-				retorno=0;
-			}
-
-		}
-
-	}
-	return retorno;
-}
-int ingresarNumerosConRangoMenosCero(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
-{
-	int retorno=-1;
-	int numero;
-
-	while(retorno==-1 && reintentos>1)
-	{
-		if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL && minimo<maximo)
-		{
-			printf("%s",mensaje);
-			scanf("%d",&numero);
-			if(numero>=minimo && numero<maximo && numero!=0)
-			{
-				*resultado=numero;
-				retorno=0;
-			}
-			else
-			{
-				printf("%s",mensajeError);
-				reintentos= reintentos -1;
-				printf("Le quedan %d intentos \n",reintentos);
-
-			}
-		}
-
-	}
-	return retorno;
-}
 int ingresarInt2(int* resultado)
 {
 	int retorno=-1;
@@ -180,7 +107,7 @@ int ingresarFloatConMinimo(float* resultado, char* mensaje,char*mensajeError,int
 			}
 			else
 			{
-				printf(mensajeError);
+				printf("%s",mensajeError);
 			}
 		}
 	}while(retorno!=0);

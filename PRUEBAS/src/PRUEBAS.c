@@ -11,56 +11,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ingresos.h"
-#define TAM 5
+#define TAM 2
 
-int calcularPromedioArray(int tam, int* array, float *promedio);
+void mostrarNombre(char arrayNombre[][20],int tam);
 
 int main(void) {
 
 	setbuf(stdout,NULL);
 
-	int numerosIngresados[TAM];
-	int i;
-	float promedio;
-	int retorno;
+	char nombre[2][20];
+	//[filas][columnas] las columnas serian el largo
 
-
-	for(i=0;i<TAM;i++)
+	for(int i=0;i<TAM;i++)
 	{
-		numerosIngresados[i]= ingresarInt();
+		printf("Ingrese nombre");
+		fflush(stdin);
+		scanf("%s", nombre[i]);
 	}
-
-	retorno=calcularPromedioArray(TAM, numerosIngresados, &promedio);
-	if(retorno==0)
-	{
-		printf("El promedio es: %.2f", promedio);
-	}
-	else
-	{
-		printf("No se pudo calcular el promedio del array");
-	}
-
+	mostrarNombre(nombre,TAM);
 
 	return EXIT_SUCCESS;
 }
-int calcularPromedioArray(int tam, int* array, float* promedio)
+
+void mostrarNombre(char arrayNombre[][20],int tam)
 {
-	int retorno=-1;
-	int acumulador;
-	acumulador=0;
-
-	if(tam>0 && array!=NULL && promedio!=NULL)
+	int i;
+	for(i=0;i<TAM;i++)
 	{
-		for(int i=0;i<tam;i++)
-		{
-			acumulador=acumulador+array[i];
-		}
-		*promedio=(float)acumulador/tam;
-		retorno=0;
+		printf("\nSu nombre es:%s",arrayNombre[i]);
 	}
-	return retorno;//
 }
-
 
 
 
