@@ -12,9 +12,13 @@
 #include <stdlib.h>
 #include "ingresos.h"
 #include<string.h>
-#define TAM 20
+#include <ctype.h>
+#include "calculos.h"
+#define TAM 2
+
 void ejecutarMenuprincipal(char respuesta, char* opcion);
-//int ingresarArrayCodigo(char array[][4],char* mensaje,char* mensajeError,int longitud);
+int cargarProductos(char codigo[][5],char modelo[][11] ,int* cantidad, float* precio,int longitud);
+
 int main(void) {
 	setbuf(stdout,NULL);
 
@@ -23,6 +27,7 @@ int main(void) {
 	int cantidad[TAM];
 	float precio[TAM];
 	char opcion;
+
 	//int banderaCargaProductos=0;
 	//int banderaVenta=0;
 	//int banderaModificacion=0;
@@ -37,16 +42,7 @@ int main(void) {
 		{
 			case'A'://
 				printf("Carga de productos\n");
-				/*do{
-					ingresarArrayCaracteres(codigo,"Ingrese codigo alfanumerico de 4 caracteres","ERROR, ingrese codigo valido\n",5);
-					//int ingresarArrayCodigo(char array[][4],char* mensaje,char* mensajeError,int longitud)
-					//ingresarArrayCodigo(codigo,"Ingrese codigo alfanumerico","ERROR, ingrese codigo valido\n",5);
-					if(validarAlfanumerico(codigo)==-1)
-					{
-						printf("ERROR, deben ser caracteres alfanumericos\n");
-					}
-
-				}while(validarAlfanumerico(codigo)==-1);*/
+				cargarProductos(codigo,modelo,cantidad,precio,TAM);
 			break;
 			case 'B':
 				printf("Venta de productos\n");
@@ -94,53 +90,45 @@ void ejecutarMenuprincipal(char respuesta, char* opcion)
 }
 int cargarProductos(char codigo[][5],char modelo[][11] ,int* cantidad, float* precio,int longitud)
 {
-
 	int retorno=-1;
 	int i=0;
 	char axuliarCodigo [longitud][5];
 	char auxiliarModelo [longitud][11];
 	int auxiliarCantidad [longitud];
 	float auxiliarPrecio[longitud];
-	int respuesta=1;
 
-	if(axuliarCodigo!=NULL && modelo!=NULL && longitud>=0)
+	do
 	{
+		if(axuliarCodigo!=NULL && modelo!=NULL && longitud>0)
+		{
 
-		printf("Ingrese codigo alfanumerico de 4 caracteres");
-		fflush(stdin);
-		scanf("%s",axuliarCodigo[i]);
-		strcpy(*codigo,axuliarCodigo[i]);
-		while(strlen(axuliarCodigo[i])>=5 && validarAlfanumerico(codigo[i])==-1)
-		{
-			printf("ERROR,cargue codigo valido");
-			fflush(stdin);
-			scanf("%s",axuliarCodigo[i]);
-			strcpy(*codigo,axuliarCodigo[i]);
-		}
+				do
+				{
+					ingresarArrayCaracteres(axuliarCodigo[i],"Ingrese codigo alfanumerico de 4 caracteres","ERROR,cargue codigo valido\n",5);
+					if(validarAlfanumerico(axuliarCodigo[i])==-1)
+					{
+						printf("ERROR,cargue codigo valido\n");
+					}
 
-		printf("Ingrese modelo");
-		fflush(stdin);
-		scanf("%s",auxiliarModelo[i]);
-		strcpy(*modelo,auxiliarModelo[i]);
-		while(strlen(auxiliarModelo[i])>=11)
-		{
-			printf("ERROR,cargue modelo valido");
-			fflush(stdin);
-			scanf("%s",auxiliarModelo[i]);
-			strcpy(*modelo,auxiliarModelo[i]);
-		}
-		//int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
-		ingresarNumerosConRangoV1(&auxiliarCantidad[i], "Ingrese cantidad", "ERROR, ingrese cantidad valida", 1, 10000);
-		ingresarFloatConMinimo(&auxiliarPrecio[i], "Ingrese precio","ERROR, ingrese precio valido",0);
-		if(ingresarNumerosConRangoV1(&auxiliarCantidad[i], "Ingrese cantidad", "ERROR, ingrese cantidad valida", 1, 10000)==0 &&ingresarFloatConMinimo(&auxiliarPrecio[i], "Ingrese precio","ERROR, ingrese precio valido",0)==0)
-		{
-			*cantidad=auxiliarCantidad[i];
-			*precio=auxiliarPrecio[i];
-			retorno=0;
-		}
-		printf("Si desea cargar otro producto presione 1");
-		scanf("%d",respuesta);
-	}
+				}while((validarAlfanumerico(axuliarCodigo[i])==-1));
+				strcpy(*codigo,axuliarCodigo[i]);
+
+				ingresarArrayCaracteres(auxiliarModelo[i],"Ingrese modelo","ERROR,cargue modelo valido\n",5);
+				strcpy(*modelo,auxiliarModelo[i]);
+
+				if(ingresarNumerosConRangoV1(&auxiliarCantidad[i], "Ingrese cantidad", "ERROR, ingrese cantidad valida", 1, 10000)==0 && ingresarFloatConMinimo(&auxiliarPrecio[i], "Ingrese precio","ERROR, ingrese precio valido",0)==0)
+				{
+					*cantidad=auxiliarCantidad[i];
+					*precio=auxiliarPrecio[i];
+					retorno=0;
+					i=i+1;
+				}
+
+			}
+		}while(i>longitud);
+
+
+
 
 	return retorno;
 }

@@ -26,6 +26,32 @@ int ingresarInt(void)
 	return numeroIngresado;
 
 }
+int ingresarIntConMensaje(int* resultado,char* mensaje)
+{
+	int retorno=-1;
+	int numeroIngresado;
+	int verificacionScanf;
+	if(resultado!=NULL && mensaje!=NULL)
+	{
+		while(retorno==-1)
+		{
+			printf("%s",mensaje);
+			fflush(stdin);
+			verificacionScanf=scanf("%d",&numeroIngresado);
+
+			if(verificacionScanf==1)
+			{
+				*resultado=numeroIngresado;
+				retorno=0;
+			}
+			else
+			{
+				printf("ERROR, Ingrese un numero\n");
+			}
+		}
+	}
+	return retorno;
+}
 int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
 {
 	int retorno=-1;
@@ -44,7 +70,7 @@ int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, i
 			}
 			else
 			{
-				printf(mensajeError);
+				printf("%s",mensajeError);
 				printf("Le quedan %d intentos ",reintentos);
 			}
 		}
@@ -189,6 +215,30 @@ int ingresarFloatConMinimo(float* resultado, char* mensaje,char*mensajeError,int
 
 	return retorno;
 }
+int ingresarIntConMinimo(int* resultado, char* mensaje,char*mensajeError,int minimo)
+{
+	int retorno=-1;
+	int numero;
+	do
+	{
+		if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL)
+		{
+			//int ingresarFloat2(float* resultado,char* mensaje)
+			ingresarIntConMensaje(&numero,mensaje);
+			if(numero>=minimo)
+			{
+				*resultado=numero;
+				retorno=0;
+			}
+			else
+			{
+				printf("%s",mensajeError);
+			}
+		}
+	}while(retorno!=0);
+
+	return retorno;
+}
 
 int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo)
 {
@@ -223,32 +273,7 @@ int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError,
 
 	return retorno;
 }
-int ingresarIntConMensaje(int* resultado,char* mensaje)
-{
-	int retorno=-1;
-	int numeroIngresado;
-	int verificacionScanf;
-	if(resultado!=NULL && mensaje!=NULL)
-	{
-		while(retorno==-1)
-		{
-			printf("%s",mensaje);
-			fflush(stdin);
-			verificacionScanf=scanf("%d",&numeroIngresado);
 
-			if(verificacionScanf==1)
-			{
-				*resultado=numeroIngresado;
-				retorno=0;
-			}
-			else
-			{
-				printf("ERROR, Ingrese un numero\n");
-			}
-		}
-	}
-	return retorno;
-}
 int validarAlfanumerico(char* array)
 {
 	int controlIsDigit=0;

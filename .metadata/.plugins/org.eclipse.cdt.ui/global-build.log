@@ -1,150 +1,35 @@
-16:04:14 **** Incremental Build of configuration Debug for project EJERCICIO 8-1 ****
+20:20:48 **** Incremental Build of configuration Debug for project EJERCICIO 8-1.2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.o" "..\\src\\EJERCICIO 8-1.c" 
-..\src\EJERCICIO 8-1.c: In function 'main':
-..\src\EJERCICIO 8-1.c:22:7: warning: unused variable 'modelo' [-Wunused-variable]
-  char modelo[TAM][11];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c:21:7: warning: unused variable 'codigo' [-Wunused-variable]
-  char codigo[TAM][5];
-       ^~~~~~
-gcc -o "EJERCICIO 8-1.exe" "src\\EJERCICIO 8-1.o" "src\\ingresos.o" 
-16:19:17 **** Incremental Build of configuration Debug for project EJERCICIO 8-1 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.2.o" "..\\src\\EJERCICIO 8-1.2.c" 
+..\src\EJERCICIO 8-1.2.c:192:5: warning: "/*" within comment [-Wcomment]
+     /*if(array[i]>array[j])
+      
+gcc -o "EJERCICIO 8-1.2.exe" "src\\EJERCICIO 8-1.2.o" "src\\calculos.o" "src\\ingresos.o" 
+20:20:59 **** Incremental Build of configuration Debug for project EJERCICIO 8-1.2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.o" "..\\src\\EJERCICIO 8-1.c" 
-..\src\EJERCICIO 8-1.c: In function 'main':
-..\src\EJERCICIO 8-1.c:24:8: warning: unused variable 'precio' [-Wunused-variable]
-  float precio[TAM];
-        ^~~~~~
-..\src\EJERCICIO 8-1.c:23:6: warning: unused variable 'cantidad' [-Wunused-variable]
-  int cantidad[TAM];
-      ^~~~~~~~
-..\src\EJERCICIO 8-1.c:22:7: warning: unused variable 'modelo' [-Wunused-variable]
-  char modelo[TAM][11];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c:21:7: warning: unused variable 'codigo' [-Wunused-variable]
-  char codigo[TAM][5];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c: In function 'cargarProductos':
-..\src\EJERCICIO 8-1.c:132:29: warning: passing argument 1 of 'ingresarNumerosConRangoV1' from incompatible pointer type [-Wincompatible-pointer-types]
-   ingresarNumerosConRangoV1(&auxiliarCantidad, "Ingrese cantidad", "ERROR, ingrese cantidad valida", 1, 10000);
-                             ^
-In file included from ..\src\EJERCICIO 8-1.c:13:0:
-..\src\ingresos.h:20:5: note: expected 'int *' but argument is of type 'int (*)[(sizetype)(longitud)]'
- int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\EJERCICIO 8-1.c:134:32: warning: passing argument 1 of 'ingresarNumerosConRangoV1' from incompatible pointer type [-Wincompatible-pointer-types]
-   if(ingresarNumerosConRangoV1(&auxiliarCantidad, "Ingrese cantidad", "ERROR, ingrese cantidad valida", 1, 10000)==0 &&ingresarFloatConMinimo(&auxiliarPrecio, "Ingrese precio","ERROR, ingrese precio valido",0)==0)
-                                ^
-In file included from ..\src\EJERCICIO 8-1.c:13:0:
-..\src\ingresos.h:20:5: note: expected 'int *' but argument is of type 'int (*)[(sizetype)(longitud)]'
- int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\EJERCICIO 8-1.c:137:10: error: incompatible types when assigning to type 'float *' from type 'float'
-    precio=auxiliarPrecio;
-          ^
-16:19:44 **** Incremental Build of configuration Debug for project EJERCICIO 8-1 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.2.o" "..\\src\\EJERCICIO 8-1.2.c" 
+gcc -o "EJERCICIO 8-1.2.exe" "src\\EJERCICIO 8-1.2.o" "src\\calculos.o" "src\\ingresos.o" 
+20:22:03 **** Incremental Build of configuration Debug for project EJERCICIO 8-1.2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.o" "..\\src\\EJERCICIO 8-1.c" 
-..\src\EJERCICIO 8-1.c: In function 'main':
-..\src\EJERCICIO 8-1.c:24:8: warning: unused variable 'precio' [-Wunused-variable]
-  float precio[TAM];
-        ^~~~~~
-..\src\EJERCICIO 8-1.c:23:6: warning: unused variable 'cantidad' [-Wunused-variable]
-  int cantidad[TAM];
-      ^~~~~~~~
-..\src\EJERCICIO 8-1.c:22:7: warning: unused variable 'modelo' [-Wunused-variable]
-  char modelo[TAM][11];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c:21:7: warning: unused variable 'codigo' [-Wunused-variable]
-  char codigo[TAM][5];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c: In function 'cargarProductos':
-..\src\EJERCICIO 8-1.c:132:29: warning: passing argument 1 of 'ingresarNumerosConRangoV1' from incompatible pointer type [-Wincompatible-pointer-types]
-   ingresarNumerosConRangoV1(&auxiliarCantidad, "Ingrese cantidad", "ERROR, ingrese cantidad valida", 1, 10000);
-                             ^
-In file included from ..\src\EJERCICIO 8-1.c:13:0:
-..\src\ingresos.h:20:5: note: expected 'int *' but argument is of type 'int (*)[(sizetype)(longitud)]'
- int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\EJERCICIO 8-1.c:134:32: warning: passing argument 1 of 'ingresarNumerosConRangoV1' from incompatible pointer type [-Wincompatible-pointer-types]
-   if(ingresarNumerosConRangoV1(&auxiliarCantidad, "Ingrese cantidad", "ERROR, ingrese cantidad valida", 1, 10000)==0 &&ingresarFloatConMinimo(&auxiliarPrecio, "Ingrese precio","ERROR, ingrese precio valido",0)==0)
-                                ^
-In file included from ..\src\EJERCICIO 8-1.c:13:0:
-..\src\ingresos.h:20:5: note: expected 'int *' but argument is of type 'int (*)[(sizetype)(longitud)]'
- int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\EJERCICIO 8-1.c:136:13: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-    *cantidad=auxiliarCantidad;
-             ^
-gcc -o "EJERCICIO 8-1.exe" "src\\EJERCICIO 8-1.o" "src\\ingresos.o" 
-16:20:13 **** Incremental Build of configuration Debug for project EJERCICIO 8-1 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.2.o" "..\\src\\EJERCICIO 8-1.2.c" 
+..\src\EJERCICIO 8-1.2.c: In function 'main':
+..\src\EJERCICIO 8-1.2.c:105:5: error: 'else' without a previous 'if'
+     else
+     ^~~~
+20:22:15 **** Incremental Build of configuration Debug for project EJERCICIO 8-1.2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.o" "..\\src\\EJERCICIO 8-1.c" 
-..\src\EJERCICIO 8-1.c: In function 'main':
-..\src\EJERCICIO 8-1.c:24:8: warning: unused variable 'precio' [-Wunused-variable]
-  float precio[TAM];
-        ^~~~~~
-..\src\EJERCICIO 8-1.c:23:6: warning: unused variable 'cantidad' [-Wunused-variable]
-  int cantidad[TAM];
-      ^~~~~~~~
-..\src\EJERCICIO 8-1.c:22:7: warning: unused variable 'modelo' [-Wunused-variable]
-  char modelo[TAM][11];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c:21:7: warning: unused variable 'codigo' [-Wunused-variable]
-  char codigo[TAM][5];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c: In function 'cargarProductos':
-..\src\EJERCICIO 8-1.c:134:32: warning: passing argument 1 of 'ingresarNumerosConRangoV1' from incompatible pointer type [-Wincompatible-pointer-types]
-   if(ingresarNumerosConRangoV1(&auxiliarCantidad, "Ingrese cantidad", "ERROR, ingrese cantidad valida", 1, 10000)==0 &&ingresarFloatConMinimo(&auxiliarPrecio, "Ingrese precio","ERROR, ingrese precio valido",0)==0)
-                                ^
-In file included from ..\src\EJERCICIO 8-1.c:13:0:
-..\src\ingresos.h:20:5: note: expected 'int *' but argument is of type 'int (*)[(sizetype)(longitud)]'
- int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\EJERCICIO 8-1.c:136:13: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-    *cantidad=auxiliarCantidad;
-             ^
-gcc -o "EJERCICIO 8-1.exe" "src\\EJERCICIO 8-1.o" "src\\ingresos.o" 
-16:20:45 **** Incremental Build of configuration Debug for project EJERCICIO 8-1 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.2.o" "..\\src\\EJERCICIO 8-1.2.c" 
+gcc -o "EJERCICIO 8-1.2.exe" "src\\EJERCICIO 8-1.2.o" "src\\calculos.o" "src\\ingresos.o" 
+20:23:02 **** Incremental Build of configuration Debug for project EJERCICIO 8-1.2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.o" "..\\src\\EJERCICIO 8-1.c" 
-..\src\EJERCICIO 8-1.c: In function 'main':
-..\src\EJERCICIO 8-1.c:24:8: warning: unused variable 'precio' [-Wunused-variable]
-  float precio[TAM];
-        ^~~~~~
-..\src\EJERCICIO 8-1.c:23:6: warning: unused variable 'cantidad' [-Wunused-variable]
-  int cantidad[TAM];
-      ^~~~~~~~
-..\src\EJERCICIO 8-1.c:22:7: warning: unused variable 'modelo' [-Wunused-variable]
-  char modelo[TAM][11];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c:21:7: warning: unused variable 'codigo' [-Wunused-variable]
-  char codigo[TAM][5];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c: In function 'cargarProductos':
-..\src\EJERCICIO 8-1.c:136:13: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-    *cantidad=auxiliarCantidad;
-             ^
-..\src\EJERCICIO 8-1.c:137:11: error: incompatible types when assigning to type 'float' from type 'float *'
-    *precio=auxiliarPrecio;
-           ^
-16:20:59 **** Incremental Build of configuration Debug for project EJERCICIO 8-1 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.2.o" "..\\src\\EJERCICIO 8-1.2.c" 
+gcc -o "EJERCICIO 8-1.2.exe" "src\\EJERCICIO 8-1.2.o" "src\\calculos.o" "src\\ingresos.o" 
+20:24:37 **** Incremental Build of configuration Debug for project EJERCICIO 8-1.2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.o" "..\\src\\EJERCICIO 8-1.c" 
-..\src\EJERCICIO 8-1.c: In function 'main':
-..\src\EJERCICIO 8-1.c:24:8: warning: unused variable 'precio' [-Wunused-variable]
-  float precio[TAM];
-        ^~~~~~
-..\src\EJERCICIO 8-1.c:23:6: warning: unused variable 'cantidad' [-Wunused-variable]
-  int cantidad[TAM];
-      ^~~~~~~~
-..\src\EJERCICIO 8-1.c:22:7: warning: unused variable 'modelo' [-Wunused-variable]
-  char modelo[TAM][11];
-       ^~~~~~
-..\src\EJERCICIO 8-1.c:21:7: warning: unused variable 'codigo' [-Wunused-variable]
-  char codigo[TAM][5];
-       ^~~~~~
-gcc -o "EJERCICIO 8-1.exe" "src\\EJERCICIO 8-1.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 8-1
-Info: Nothing to build for EJERCICIO 8-1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.2.o" "..\\src\\EJERCICIO 8-1.2.c" 
+gcc -o "EJERCICIO 8-1.2.exe" "src\\EJERCICIO 8-1.2.o" "src\\calculos.o" "src\\ingresos.o" 
+20:25:39 **** Incremental Build of configuration Debug for project EJERCICIO 8-1.2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 8-1.2.o" "..\\src\\EJERCICIO 8-1.2.c" 
+gcc -o "EJERCICIO 8-1.2.exe" "src\\EJERCICIO 8-1.2.o" "src\\calculos.o" "src\\ingresos.o" 
+Info: Nothing to build for EJERCICIO 8-1.2
