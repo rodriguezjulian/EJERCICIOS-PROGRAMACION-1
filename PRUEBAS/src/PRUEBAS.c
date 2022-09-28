@@ -11,12 +11,56 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ingresos.h"
-#define TAM 2
+#include<string.h>
 
-int main(void) {
+#define TAM 2
+	//UNA FORMA DE HACERLO
+	/*struct ePersona
+	{
+		char nombre[20];//ESTO ES UN CAMPO
+		char apellido[20];
+		int edad;
+		char estadoCivil;
+		float altura;
+	};
+	*/
+	//OTRA FORMA DE HACERLO
+	typedef struct
+	{
+		char nombre[20];//ESTO ES UN CAMPO
+		char apellido[20];
+		int edad;
+		char estadoCivil;
+		float altura;
+	}ePersona;//ePersona seria el tipo de la estructura, es un tipo especifico que creamos nosotros
+//%[^ para el scanf hasta \0 || \n
+
+
+	/////////	ESTRUCTURA ANIDADA
+	typedef struct
+	{
+		int dia;
+		int mes;
+		int anio;
+	}eFecha;
+	typedef struct
+	{
+		char nombre[20];//ESTO ES UN CAMPO
+		char apellido[20];
+		int edad;
+		char estadoCivil;
+		float altura;
+		eFecha fechaNacimiento;
+	}ePersonitaa;
+
+int main(void){
 
 	setbuf(stdout,NULL);
+	ePersona personita;
+	personita.edad=23;
+	strcpy(personita.nombre,"julian");
 
+	printf("EDAD %d | nombre %s",personita.edad,personita.nombre);
 
 
 	return EXIT_SUCCESS;
