@@ -21,14 +21,21 @@
 
 typedef struct
 {
+	int idSector;
+	char descripcionSector[20];
+
+}eSector;
+typedef struct
+{
 	int id;
 	char name[51];
 	char lastName[51];
 	float salary;
 	int sector;
+	int idSector;
 	int isEmpety;
 }eEmpleado;
-
+//VALIDAR QUE EL SECTOR EXISTA - UNA FUNCION QUE MUESTRE LOS SECTORES - UNA FUNCION QUE LE TIRE EL NUMERO DE SECTOR Y ME DEVUELVA LA CADENA DE CARACTERES
 int inicializarIsEmpety(eEmpleado* empleados, int tam, int estado);
 int loguearEmpleado(eEmpleado* empleadoAuxliar,int estado, int* id);
 int modificarEmpleado(eEmpleado* empleados);
@@ -39,8 +46,10 @@ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, fl
 int calcacularTotalSalarios(eEmpleado* empleados, int tam, float* resultadoAcumulado);
 int promediarSalarios(eEmpleado* empleados, int tam, float totalEnSueldos,float* promedio);
 int contarEmpleadosMayorSueldoMedio(eEmpleado* empleados,int tam,float promedio, int* resultado);
+
 int main(void) {
 	setbuf(stdout,NULL);
+
 
 	char respuesta;
 	int id=0;
@@ -52,12 +61,19 @@ int main(void) {
 	float promedioDeSueldos;
 	int empleadosArribaMedia;
 
+	eSector sectores[4]={
+							{100,"Sistemas"},
+							{200,"RecursosHumanos"},
+							{300,"Administracino"},
+							{400,"Gerencia"}
+						};
+
 	inicializarIsEmpety(empleados,TAM, VACIO);
 
 	do
 	{
 		ingresarNumerosConRangoV1(&opcion,"MARQUE SEGUN QUIERA OPERAR\n"
-				"1.ALTAS\n2.MODIFICAR LEGAJO\n3.BAJAS\n4.INFORMAR\n" ,"Ingrese opcion valida\n",1,4);
+				"1.ALTAS\n2.MODIFICAR LEGAJO\n3.BAJAS\n4.INFORMAR\n" ,"Ingrese opcion valida",1,4);
 		switch(opcion)
 		{
 		case 1:
@@ -145,8 +161,10 @@ int modificarEmpleado(eEmpleado* empleados)
 
 		if(empleados[posicion].isEmpety==OCUPADO)
 		{
-			ingresarNumerosConRangoV1(&opcion,"MARQUE SEGUN QUIERA MODIFICAR\n"
-					"1.Nombre\n2.Apellido\n3.Salario\n4.Sector\n" ,"Ingrese opcion valida",1,4);
+			printf("%*s",-40,"Menu principal");
+
+			ingresarNumerosConRangoV1(&opcion,"MARQUE SEGUN QUIERA OPERAR\n"
+					"1.ALTAS\n2.MODIFICAR LEGAJO\n3.BAJAS\n4.INFORMAR\n" ,"Ingrese opcion valida",1,4);
 			switch(opcion)
 			{
 				case 1:
