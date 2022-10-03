@@ -4,6 +4,8 @@
  *  Created on: 2 oct. 2022
  *      Author: Julian Rodriguez
  */
+#include <stdio.h>
+#include <stdlib.h>
 #include "ingresos.h"
 #include<string.h>
 #include <ctype.h>
@@ -25,10 +27,36 @@ int inicializarIsEmpety(eEmpleado* empleados, int tam, int estado)
 	}
 	return retorno;
 }
-int loguearEmpleado(eEmpleado* empleadoAuxliar,int estado, int* id )
+/*int cargarSector(eEmpleado* empleados)
+{
+	int retorno=-1;
+	if(empleados!=NULL)
+	{
+
+	}
+
+	return retorno;
+}
+*/
+int validarSector(int idSector,eSector* sectores, int tam)
 {
 	int retorno=-1;
 
+	for(int i=0;i<tam;i++)
+	{
+		if(idSector==sectores[i].idSector)
+		{
+			retorno=0;
+			break;
+		}
+	}
+	return retorno;
+}
+
+int loguearEmpleado(eEmpleado* empleadoAuxliar,int estado, int* id, eSector* sectores, int tamSectores)
+{
+	int retorno=-1;
+	int flagMensajeError=0;
 	if(empleadoAuxliar!=NULL && id!=NULL)
 	{
 			(*empleadoAuxliar).id=*id;
@@ -36,7 +64,17 @@ int loguearEmpleado(eEmpleado* empleadoAuxliar,int estado, int* id )
 			ingresarArrayCaracteres((*empleadoAuxliar).name,"Ingrese nombre de empleado","Error, ingrese nombre valido",51);
 			ingresarArrayCaracteres((*empleadoAuxliar).lastName,"Ingrese apellido de empleado","Error, ingrese apellido valido",51);
 			ingresarFloatConMinimo(&(*empleadoAuxliar).salary, "Ingrese sueldo","Ingrese sueldo valido",0);
-			ingresarIntConMinimo(&(*empleadoAuxliar).sector, "Ingrese sector del empleado","Ingrese sector valido",0);
+
+			do
+			{
+				if(flagMensajeError==1)
+				{
+					printf("ERROR, Ingrese sector valido\n");
+				}
+				ingresarIntConMinimo(&(*empleadoAuxliar).sector, "Ingrese sector del empleado\n","Ingrese sector valido\n",0);
+				flagMensajeError=1;
+			}while(validarSector((*empleadoAuxliar).sector,sectores,tamSectores)==-1);
+
 			(*empleadoAuxliar).isEmpety=estado;
 
 			retorno=0;
@@ -146,34 +184,37 @@ int ordenarAlfabeticamente(eEmpleado* empleados, int tam)
 	return retorno;
 }
 
-int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia )
+int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia, eSector* sector, int tamSector)
 {
 	int retorno=-1;
 	//eEmpleado auxiliar;
 	char reAxuliar[tam][102];
-	if(empleados!=NULL && tam>0)
-	{
-		printf("+--------------------+--------------------+-------+\n");
-		printf("|%*s|%*s|%*s|\n",-20,"Empleado",-20,"Salario",-7, "Sector");//
+	if(empleados!=NULL && tam>0 && sector!=NULL && tamSector>0)
+	{	printf("+--------------------+--------------------+--------------------+\n");
+		printf("|%*s|%*s|%*s|\n",-20,"Empleado",-20,"Salario",-20,"Sector");//
 		for(int posicion=0;posicion<tam;posicion++)
 		{
-			if(empleados[posicion].isEmpety==OCUPADO)
+			for(int j=0;j<tamSector;j++)
 			{
-				//PARA MOSTRAR TODO MEJOR PUEDO CONCATENAR NOMBRE Y APELLIDO;
-				//strcat(destino, origen)
-				//strcpy(destino, origen)
-				strcpy(reAxuliar[posicion],empleados[posicion].name);
-				strcat(reAxuliar[posicion]," ");
-				strcat(reAxuliar[posicion],empleados[posicion].lastName);
+					if(empleados[posicion].isEmpety==OCUPADO && empleados[posicion].sector==sector[j].idSector)
+					{
+						//PARA MOSTRAR TODO MEJOR PUEDO CONCATENAR NOMBRE Y APELLIDO;
+						//strcat(destino, origen)
+						//strcpy(destino, origen)
+						strcpy(reAxuliar[posicion],empleados[posicion].name);
+						strcat(reAxuliar[posicion]," ");
+						strcat(reAxuliar[posicion],empleados[posicion].lastName);
 
-				printf("|%*s|%*.2f|%*d|\n",-20,reAxuliar[posicion],-20,empleados[posicion].salary,-7,empleados[posicion].sector);
+						printf("|%*s|%*.2f|%*s|\n",-20,reAxuliar[posicion],-20,empleados[posicion].salary,-20,sector[j].descripcionSector);
+					}
 			}
 		}
-		printf("+--------------------+--------------------+-------+\n\n");
+		printf("+--------------------+--------------------+--------------------+\n\n");
 		printf("+------------------------------+------------------------------+------------------------------+\n");
 		printf("|%*s|%*s|%*s|\n",-30,"Suma total de sueldos",-30,"Promedio de salarios",-30, "Por encima del promedio");
 		printf("|%*.2f|%*.2f|%*d|\n",-30,resultadoAcumulado,-30,promedioDeSueldos,-30, empleadosArribaMedia);
 		printf("+------------------------------+------------------------------+------------------------------+\n");
+
 		retorno=0;
 	}
 	return retorno;

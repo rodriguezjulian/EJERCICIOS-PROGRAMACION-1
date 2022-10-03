@@ -1,29 +1,125 @@
-21:34:26 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+10:55:55 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
-..\src\empleados.c: In function 'modificarEmpleado':
-..\src\empleados.c:60:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-    printf("%*s",-40,"Menu principal");
-    ^~~~~~
-..\src\empleados.c:60:4: warning: incompatible implicit declaration of built-in function 'printf'
-..\src\empleados.c:60:4: note: include '<stdio.h>' or provide a declaration of 'printf'
-..\src\empleados.c:87:4: warning: incompatible implicit declaration of built-in function 'printf'
-    printf("El ID ingresado no corresponde a un empleado\n");
-    ^~~~~~
-..\src\empleados.c:87:4: note: include '<stdio.h>' or provide a declaration of 'printf'
-..\src\empleados.c: In function 'darDeBajaEmpleado':
-..\src\empleados.c:105:4: warning: incompatible implicit declaration of built-in function 'printf'
-    printf("<<<<<<<<<<EMPLEADO DADO DE BAJA>>>>>>>>>>\n");
-    ^~~~~~
-..\src\empleados.c:105:4: note: include '<stdio.h>' or provide a declaration of 'printf'
-..\src\empleados.c:109:4: warning: incompatible implicit declaration of built-in function 'printf'
-    printf("El ID ingresado no corresponde a un empleado\n");
-    ^~~~~~
-..\src\empleados.c:109:4: note: include '<stdio.h>' or provide a declaration of 'printf'
-..\src\empleados.c: In function 'mostrarEmpleados':
-..\src\empleados.c:156:3: warning: incompatible implicit declaration of built-in function 'printf'
-   printf("+--------------------+--------------------+-------+\n");
-   ^~~~~~
-..\src\empleados.c:156:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EEJERCICIO 10-2.o" "..\\src\\EEJERCICIO 10-2.c" 
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+10:56:20 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
 gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
 Info: Nothing to build for EJERCICIO 10-2
+10:56:42 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+Info: Nothing to build for EJERCICIO 10-2
+10:57:18 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+Info: Nothing to build for EJERCICIO 10-2
+11:21:48 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+..\src\empleados.c:187:5: error: conflicting types for 'mostrarEmpleados'
+ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia, eSector* sector, int tamSector)
+     ^~~~~~~~~~~~~~~~
+In file included from ..\src\empleados.c:12:0:
+..\src\empleados.h:35:5: note: previous declaration of 'mostrarEmpleados' was here
+ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia);
+     ^~~~~~~~~~~~~~~~
+..\src\empleados.c: In function 'mostrarEmpleados':
+..\src\empleados.c:196:16: error: 'i' undeclared (first use in this function)
+    for(int j=0;i<tamSector;j++)
+                ^
+..\src\empleados.c:196:16: note: each undeclared identifier is reported only once for each function it appears in
+11:21:59 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+..\src\empleados.c:187:5: error: conflicting types for 'mostrarEmpleados'
+ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia, eSector* sector, int tamSector)
+     ^~~~~~~~~~~~~~~~
+In file included from ..\src\empleados.c:12:0:
+..\src\empleados.h:35:5: note: previous declaration of 'mostrarEmpleados' was here
+ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia);
+     ^~~~~~~~~~~~~~~~
+11:25:11 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+..\src\empleados.c:187:5: error: conflicting types for 'mostrarEmpleados'
+ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia, eSector* sector, int tamSector)
+     ^~~~~~~~~~~~~~~~
+In file included from ..\src\empleados.c:12:0:
+..\src\empleados.h:35:5: note: previous declaration of 'mostrarEmpleados' was here
+ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia);
+     ^~~~~~~~~~~~~~~~
+..\src\empleados.c: In function 'mostrarEmpleados':
+..\src\empleados.c:210:28: warning: format '%s' expects argument of type 'char *', but argument 7 has type 'int' [-Wformat=]
+       printf("|%*s|%*.2f|%*s|\n",-20,reAxuliar[posicion],-20,empleados[posicion].salary,-7,-20,sector[j].descripcionSector);
+                            ^
+..\src\empleados.c:210:14: warning: too many arguments for format [-Wformat-extra-args]
+       printf("|%*s|%*.2f|%*s|\n",-20,reAxuliar[posicion],-20,empleados[posicion].salary,-7,-20,sector[j].descripcionSector);
+              ^~~~~~~~~~~~~~~~~~~
+11:25:40 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+..\src\empleados.c: In function 'mostrarEmpleados':
+..\src\empleados.c:210:28: warning: format '%s' expects argument of type 'char *', but argument 7 has type 'int' [-Wformat=]
+       printf("|%*s|%*.2f|%*s|\n",-20,reAxuliar[posicion],-20,empleados[posicion].salary,-7,-20,sector[j].descripcionSector);
+                            ^
+..\src\empleados.c:210:14: warning: too many arguments for format [-Wformat-extra-args]
+       printf("|%*s|%*.2f|%*s|\n",-20,reAxuliar[posicion],-20,empleados[posicion].salary,-7,-20,sector[j].descripcionSector);
+              ^~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EEJERCICIO 10-2.o" "..\\src\\EEJERCICIO 10-2.c" 
+..\src\EEJERCICIO 10-2.c: In function 'main':
+..\src\EEJERCICIO 10-2.c:78:4: error: too few arguments to function 'mostrarEmpleados'
+    mostrarEmpleados(empleados, TAM,resultadoAcumulado,promedioDeSueldos,empleadosArribaMedia);
+    ^~~~~~~~~~~~~~~~
+In file included from ..\src\EEJERCICIO 10-2.c:17:0:
+..\src\empleados.h:35:5: note: declared here
+ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia, eSector* sector, int tamSector);
+     ^~~~~~~~~~~~~~~~
+11:26:44 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EEJERCICIO 10-2.o" "..\\src\\EEJERCICIO 10-2.c" 
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+Info: Nothing to build for EJERCICIO 10-2
+11:28:40 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+..\src\empleados.c: In function 'mostrarEmpleados':
+..\src\empleados.c:210:28: warning: format '%s' expects argument of type 'char *', but argument 7 has type 'int' [-Wformat=]
+       printf("|%*s|%*.2f|%*s|\n",-20,reAxuliar[posicion],-20,empleados[posicion].salary,-7,-20,sector[j].descripcionSector);
+                            ^
+..\src\empleados.c:210:14: warning: too many arguments for format [-Wformat-extra-args]
+       printf("|%*s|%*.2f|%*s|\n",-20,reAxuliar[posicion],-20,empleados[posicion].salary,-7,-20,sector[j].descripcionSector);
+              ^~~~~~~~~~~~~~~~~~~
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+11:29:12 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+Info: Nothing to build for EJERCICIO 10-2
+11:31:04 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file EJERCICIO 10-2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:31:08 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+11:31:45 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+Info: Nothing to build for EJERCICIO 10-2
+11:32:16 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+Info: Nothing to build for EJERCICIO 10-2
+11:33:20 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EEJERCICIO 10-2.o" "..\\src\\EEJERCICIO 10-2.c" 
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 

@@ -19,10 +19,10 @@
 #define TAM 300
 #define VACIO 1
 #define OCUPADO 0
+#define TAMSECTORES 4
 
 int main(void) {
 	setbuf(stdout,NULL);
-
 
 	char respuesta;
 	int id=0;
@@ -37,7 +37,7 @@ int main(void) {
 	eSector sectores[4]={
 							{100,"Sistemas"},
 							{200,"RecursosHumanos"},
-							{300,"Administracino"},
+							{300,"Administracion"},
 							{400,"Gerencia"}
 						};
 
@@ -58,8 +58,8 @@ int main(void) {
 					break;
 				}
 			}
-			loguearEmpleado(&empleadoAuxiliar,OCUPADO,&id);
-
+			loguearEmpleado(&empleadoAuxiliar,OCUPADO,&id,sectores,TAMSECTORES);
+			//int loguearEmpleado(eEmpleado* empleadoAuxliar,int estado, int* id, eSector* sectores, int tamSectores)
 			empleados[auxPosicion]=empleadoAuxiliar;
 		break;
 		case 2:
@@ -75,7 +75,7 @@ int main(void) {
 			contarEmpleadosMayorSueldoMedio(empleados,TAM,promedioDeSueldos,&empleadosArribaMedia);
 
 			ordenarAlfabeticamente(empleados, TAM);
-			mostrarEmpleados(empleados, TAM,resultadoAcumulado,promedioDeSueldos,empleadosArribaMedia);
+			mostrarEmpleados(empleados,TAM, resultadoAcumulado, promedioDeSueldos, empleadosArribaMedia, sectores, TAMSECTORES);
 		break;
 		}
 
