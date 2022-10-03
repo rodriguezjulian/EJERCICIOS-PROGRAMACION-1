@@ -64,7 +64,12 @@ int loguearEmpleado(eEmpleado* empleadoAuxliar,int estado, int* id, eSector* sec
 			ingresarArrayCaracteres((*empleadoAuxliar).name,"Ingrese nombre de empleado","Error, ingrese nombre valido",51);
 			ingresarArrayCaracteres((*empleadoAuxliar).lastName,"Ingrese apellido de empleado","Error, ingrese apellido valido",51);
 			ingresarFloatConMinimo(&(*empleadoAuxliar).salary, "Ingrese sueldo","Ingrese sueldo valido",0);
-
+			printf("+--------SECTORES--------+\n");
+			for(int i=0;i<tamSectores;i++)
+			{
+				printf("|%*d|%*s|\n",-3,sectores[i].idSector,-20,sectores[i].descripcionSector);
+			}
+			printf("+------------------------+\n");
 			do
 			{
 				if(flagMensajeError==1)

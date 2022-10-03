@@ -45,8 +45,11 @@ int main(void) {
 
 	do
 	{
-		ingresarNumerosConRangoV1(&opcion,"MARQUE SEGUN QUIERA OPERAR\n"
-				"1.ALTAS\n2.MODIFICAR LEGAJO\n3.BAJAS\n4.INFORMAR\n" ,"Ingrese opcion valida",1,4);
+		printf("+------------------+\n");
+		printf("|%*s|\n|%*s|\n|%*s|\n|%*s|\n",-18,"1.ALTAS",-18,"2.MODIFICAR LEGAJO",-18,"3.BAJAS",-18,"4.INFORMAR");
+		printf("+------------------+\n");
+		ingresarNumerosConRangoV1(&opcion,"MARQUE SEGUN QUIERA OPERAR\n","Ingrese opcion valida",1,4);
+
 		switch(opcion)
 		{
 		case 1:
