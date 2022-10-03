@@ -1,18 +1,29 @@
-16:01:24 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+21:34:26 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EEJERCICIO 10-2.o" "..\\src\\EEJERCICIO 10-2.c" 
-..\src\EEJERCICIO 10-2.c: In function 'main':
-..\src\EEJERCICIO 10-2.c:64:10: warning: unused variable 'sectores' [-Wunused-variable]
-  eSector sectores[4]={
-          ^~~~~~~~
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 9-2.9-3.9-4.9-5.9-6
-Info: Nothing to build for EJERCICIO 9-2.9-3.9-4.9-5.9-6
-18:16:27 **** Incremental Build of configuration Debug for project EJERCICIO 9-2.9-3.9-4.9-5.9-6 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 9-2.o" "..\\src\\EJERCICIO 9-2.c" 
-gcc -o "EJERCICIO 9-2.9-3.9-4.9-5.9-6.exe" "src\\EJERCICIO 9-2.o" "src\\calculos.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 9-2.9-3.9-4.9-5.9-6
-Info: Nothing to build for EJERCICIO 9-2.9-3.9-4.9-5.9-6
-Info: Nothing to build for EJERCICIO 9-2.9-3.9-4.9-5.9-6
-Info: Nothing to build for EJERCICIO 9-2.9-3.9-4.9-5.9-6
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
+..\src\empleados.c: In function 'modificarEmpleado':
+..\src\empleados.c:60:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+    printf("%*s",-40,"Menu principal");
+    ^~~~~~
+..\src\empleados.c:60:4: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\empleados.c:60:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\empleados.c:87:4: warning: incompatible implicit declaration of built-in function 'printf'
+    printf("El ID ingresado no corresponde a un empleado\n");
+    ^~~~~~
+..\src\empleados.c:87:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\empleados.c: In function 'darDeBajaEmpleado':
+..\src\empleados.c:105:4: warning: incompatible implicit declaration of built-in function 'printf'
+    printf("<<<<<<<<<<EMPLEADO DADO DE BAJA>>>>>>>>>>\n");
+    ^~~~~~
+..\src\empleados.c:105:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\empleados.c:109:4: warning: incompatible implicit declaration of built-in function 'printf'
+    printf("El ID ingresado no corresponde a un empleado\n");
+    ^~~~~~
+..\src\empleados.c:109:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\empleados.c: In function 'mostrarEmpleados':
+..\src\empleados.c:156:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("+--------------------+--------------------+-------+\n");
+   ^~~~~~
+..\src\empleados.c:156:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
+Info: Nothing to build for EJERCICIO 10-2
