@@ -7,7 +7,12 @@
 
 #ifndef INGRESOS_H_
 #define INGRESOS_H_
-
+typedef struct
+{
+	int dia;
+	int mes;
+	int anio;
+}eFecha;
 
 float ingresarFloat(void);
 int ingresarInt(void);
@@ -26,4 +31,6 @@ int ingresarTelefonoDos(char* resultado);
 int esNumerica(char* cadena);
 int validarAlfanumerico(char* array);
 int ingresarArrayCaracteres(char*array,char* mensaje,char* mensajeError,int longitud);
+int confirmarSalida(void);
+int ingresarFecha(eFecha* resultado);
 #endif /* INGRESOS_H_ */

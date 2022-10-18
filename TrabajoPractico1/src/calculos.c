@@ -316,3 +316,4 @@ float calcularPromedio(int numeroB, int numeroA)
 	retorno=(float)numeroA/numeroB;
 	return retorno;
 }
+

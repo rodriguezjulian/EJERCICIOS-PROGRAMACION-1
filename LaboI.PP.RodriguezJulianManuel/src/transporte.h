@@ -36,4 +36,6 @@ int ordenarTransportes(eTransporte* transporte, int tam);
 void listarTipos(eTipo* tipo,int tam);
 int ingresarIdTipo(eTransporte* transporte, eTipo* tipo);
 
+int listarTransportesDeUnTipo(eTransporte* transporte, int tam, int contador,int tipo);
+
 #endif /* TRANSPORTE_H_ */

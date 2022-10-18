@@ -243,4 +243,60 @@ int listarTransportes(eTransporte* transporte, int tam, int contador)
 	return retorno;
 }
 
+int listarTransportesDeUnTipo(eTransporte* transporte, int tam, int contador,int tipo)
+{
+
+	int retorno=-1;
+	eTransporte* pTransporte;
+	pTransporte=transporte;
+
+	if(transporte!=NULL && tam>0 && contador>0)
+	{
+		printf("+---------------+--------------------+------------------------------+------------------------------+------------------------------+\n");
+		printf("|%*s|%*s|%*s|%*s|%*s|\n",-15,"ID TRANSPORTE",-20,"ID TIPO VEHICULO",-30,"Descripcion",-30,"Peso de carga",-30,"Cantidad de bultos");
+		printf("+---------------+--------------------+------------------------------+------------------------------+------------------------------+\n");
+
+		for(int i=0;i<tam;i++)
+		{
+			//if(transporte[i].isEmpty==OCUPADO)
+			if((*(pTransporte+i)).isEmpty==OCUPADO && (*(pTransporte+i)).tipoId==tipo)
+			{
+				printf("|%*d|%*d|%*s|%*.2f|%*d|\n",-15,transporte[i].idTransporte,-20,transporte[i].tipoId,-30,transporte[i].descripcion,-30,transporte[i].pesoCarga,-30,transporte[i].cantidadBultos);
+			}
+		}
+		printf("+---------------+--------------------+------------------------------+------------------------------+------------------------------+\n");
+
+	}
+	else
+	{
+		printf("ERROR, no se puede operar esta opcion si no hay transportes de tipo seleccionado dados de alta\n");
+	}
+
+
+	return retorno;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

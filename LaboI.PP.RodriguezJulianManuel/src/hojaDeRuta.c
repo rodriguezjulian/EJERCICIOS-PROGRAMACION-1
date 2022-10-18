@@ -15,7 +15,7 @@
 #define VACIO 1
 #define OCUPADO 0
 #define TAM 300
-#define ANIO 2022
+
 
 int inicializarIsEmptyHojaDeRuta(eHojaDeRuta* hojaDeRuta, int tam, int estado)
 {
@@ -32,31 +32,7 @@ int inicializarIsEmptyHojaDeRuta(eHojaDeRuta* hojaDeRuta, int tam, int estado)
 
 	return retorno;
 }
-int ingresarFecha(eFecha* resultado)
-{
 
-	eFecha fecha;
-	int retorno=-1;
-	ingresarIntConMensajeMin(&fecha.anio,"Ingrese año", "ERROR, ingrese año valido", ANIO);
-	ingresarNumerosConRangoV1(&fecha.mes,"Ingrese mes en numero", "ERROR, ingrese mes valido",1, 12);
-	if(fecha.mes==1 || fecha.mes==3 || fecha.mes==5 || fecha.mes==7 || fecha.mes==8 || fecha.mes==10 || fecha.mes==12)
-	{
-		ingresarNumerosConRangoV1(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido",1, 31);
-	}
-	else
-	{
-		if(fecha.mes==4 || fecha.mes==6 || fecha.mes==9 || fecha.mes==11)
-		{
-			ingresarNumerosConRangoV1(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido",1, 30);
-		}
-		else
-		{
-			ingresarNumerosConRangoV1(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido",1, 28);
-		}
-		*resultado=fecha;
-	}
-	return retorno;
-}
 int loguearHojaDeRuta(eTransporte* transporte,eHojaDeRuta* hojaAuxiliar, int* idHoja, int contador, int* contadorDeHojas)
 {
 	int retorno=-1;
@@ -102,7 +78,7 @@ int listarHojasDeRuta(eHojaDeRuta* hojaDeRuta, int tam,eTransporte* transporte ,
 		{
 			if(hojaDeRuta[i].isEmpty==OCUPADO)
 			{
-				//NOSE COMO IMPRIMIR LA FECHA
+				//NOSE COMO IMPRIMIR LA FECHA -CREO QUE %d/%d/%d DIA-MES-ANIO
 				printf("|%*d|%*s|$%*.2f|%*.2f Km |\n",-20,hojaDeRuta[i].idHoja,-30,transporte[i].descripcion,-19,hojaDeRuta[i].precioViaje,-6,hojaDeRuta[i].kmTotales);
 			}
 		}
@@ -113,6 +89,54 @@ int listarHojasDeRuta(eHojaDeRuta* hojaDeRuta, int tam,eTransporte* transporte ,
 		printf("No hay hojas de ruta para mostrar\n");
 	}
 
+
+	return retorno;
+}
+int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,int tam, int contadorDeHojas)
+{
+	int retorno=-1;
+	eFecha fechaAuxiliar; // EN ESTA VARIABLE GUARDO LA FECHA QUE INGRESARA EL USUARIO, LA CUAL USARE PARA COMPARAR CON LAS EXISTENTES.
+	if(hojaDeRuta!=NULL && transporte!=NULL && tam>0 && contadorDeHojas>0)
+	{
+		//printf("ENTRO");
+		ingresarFecha(&fechaAuxiliar);
+		int aviso=0; //ESTA VARIABLE ES CLAVE PARA IMPRIMIR EL CUADRO DE INFORMES, SI EXISTEN INFORMACION PARA MOSTRAR LOS ENCABEZADOS
+					//SE IMPRIMEN UNA SOLA VEZ Y SI NO LA HAY DIRECTAMENTE NUNCA SE IMPRIMEN.
+
+		for(int i=0;i<tam;i++)
+		{
+			if(fechaAuxiliar.anio==hojaDeRuta[i].fecha.anio && fechaAuxiliar.mes==hojaDeRuta[i].fecha.mes && fechaAuxiliar.dia==hojaDeRuta[i].fecha.dia && aviso==0)
+			{
+				printf("+--------------------+------------------------------+--------------------+----------+\n");
+				printf("|%*s|%*s|%*s|%*s|\n",-20,"ID HOJA DE RUTA",-30,"TRANSPORTE",-20,"PRECIO DEL VIAJE",-10,"KM TOTALES");
+				printf("+--------------------+------------------------------+--------------------+----------+\n");
+				printf("|%*d|%*s|$%*.2f|%*.2f Km |\n",-20,hojaDeRuta[i].idHoja,-30,transporte[i].descripcion,-19,hojaDeRuta[i].precioViaje,-6,hojaDeRuta[i].kmTotales);
+
+				aviso=1;
+			}
+			else
+			{
+				if(fechaAuxiliar.anio==hojaDeRuta[i].fecha.anio && fechaAuxiliar.mes==hojaDeRuta[i].fecha.mes && fechaAuxiliar.dia==hojaDeRuta[i].fecha.dia)
+				{
+					printf("|%*d|%*s|$%*.2f|%*.2f Km |\n",-20,hojaDeRuta[i].idHoja,-30,transporte[i].descripcion,-19,hojaDeRuta[i].precioViaje,-6,hojaDeRuta[i].kmTotales);
+				}
+			}
+		}
+
+		if(aviso==0)
+		{
+			printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",fechaAuxiliar.dia,fechaAuxiliar.mes,fechaAuxiliar.anio);
+		}
+		else
+		{
+			//ESTO LO AGREGO POR UN TEMA VISUAL NOMAS, COMO PARA CERRAR EL CUADRITO Y QUE QUEDE PROLIJO
+			printf("+--------------------+------------------------------+--------------------+----------+\n");
+		}
+	}
+	else
+	{
+		printf("No hay hojas de ruta para mostrar\n");
+	}
 
 	return retorno;
 }

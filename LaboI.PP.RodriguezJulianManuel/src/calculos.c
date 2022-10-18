@@ -326,3 +326,14 @@ float calcularPromedio(int numeroB, int numeroA)
 	retorno=(float)numeroA/numeroB;
 	return retorno;
 }
+int verificarCaracterSN(char letra)
+{
+	int retorno=-1;
+
+	if(letra=='S' || letra=='N')
+	{
+		retorno=0;
+	}
+
+	return retorno;
+}

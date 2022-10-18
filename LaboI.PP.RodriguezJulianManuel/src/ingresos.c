@@ -8,6 +8,10 @@
 #include <stdlib.h>
 #include<string.h>
 #include <ctype.h>
+#include "ingresos.h"
+#include "calculos.h"
+
+#define ANIO 2022 //PARA FUNCION DE FECHA
 
 float ingresarFloat(void)
 {
@@ -84,7 +88,7 @@ int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, i
 	int retorno=-1;
 	int numero;
 
-	while(retorno==-1 && reintentos>1)
+	while(retorno==-1 && reintentos>0)
 	{
 		if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL && minimo<maximo)
 		{
@@ -97,8 +101,16 @@ int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, i
 			}
 			else
 			{
-				printf("%s",mensajeError);
-				printf("Le quedan %d intentos ",reintentos);
+				if(reintentos-1==0)
+				{
+					printf("<<<<<<<<<<SIN REINTENTOS>>>>>>>>>>\n");
+				}
+				else
+				{
+					printf("%s",mensajeError);
+					printf("Le quedan %d intentos ",reintentos-1);
+				}
+
 			}
 		}
 		reintentos= reintentos -1;
@@ -409,6 +421,67 @@ int ingresarArrayCaracteres(char*array,char* mensaje,char* mensajeError,int long
 			strcpy(array,textoIngresado);
 		}
 		retorno=0;
+	}
+	return retorno;
+}
+int confirmarSalida(void)
+{
+	int retorno=-1;
+	char respuesta;
+	int reintentos=3;
+
+	do
+	{
+		printf("\nPara seguir operando presione S|N");
+		fflush(stdin);
+		scanf("%c",&respuesta);
+		respuesta=toupper(respuesta);
+
+		reintentos=reintentos-1;
+		if(verificarCaracterSN(respuesta)==-1 )
+		{
+			printf("ERROR, ingrese opcion valida\nReintentos restantes: %d\n\n",reintentos);
+		}
+	}while(verificarCaracterSN(respuesta)==-1 && reintentos>0);
+
+
+	if(respuesta!='S')
+	{
+		printf("Confirme que desea SALIR presionando X \nPara continuar operando ingrese cualquier otra tecla");
+		fflush(stdin);
+		scanf("%c",&respuesta);
+		respuesta=toupper(respuesta);
+
+		if(respuesta=='X')
+		{
+			printf("<<<<<<<<<<<<<<<<<<<<SALIR>>>>>>>>>>>>>>>>>>>");
+			retorno=0;
+		}
+	}
+	return retorno;
+}
+int ingresarFecha(eFecha* resultado)
+{
+
+	eFecha fecha;
+	int retorno=-1;
+	ingresarIntConMensajeMin(&fecha.anio,"Ingrese año", "ERROR, ingrese año valido\n", ANIO);
+	ingresarNumerosConRangoV1(&fecha.mes,"Ingrese mes en numero", "ERROR, ingrese mes valido\n",1, 12);
+	if(fecha.mes==1 || fecha.mes==3 || fecha.mes==5 || fecha.mes==7 || fecha.mes==8 || fecha.mes==10 || fecha.mes==12)
+	{
+		ingresarNumerosConRangoV1(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido\n",1, 31);
+	}
+	else
+	{
+		if(fecha.mes==4 || fecha.mes==6 || fecha.mes==9 || fecha.mes==11)
+		{
+			ingresarNumerosConRangoV1(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido\n",1, 30);
+		}
+		else
+		{
+			ingresarNumerosConRangoV1(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido\n",1, 28);
+		}
+		*resultado=fecha;
 	}
 	return retorno;
 }

@@ -25,20 +25,23 @@
 #define ANIO 2022
 #define TAM_TIPOS 4
 
-int verificarSN(char letra);
-int confirmarSalida(void);
-
-
+//int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,int tam);
+int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,int tam, int contadorDeHojas);
 int main(void) {
 	setbuf(stdout,NULL);
-//	char respuesta;
+
 	char opcion;
 	int idTransporte=0;
 	int idHoja=20000;
 	int i;
 	int contador=0;
-	//int auxPosicion;//cuando encuentro una posicion vacia la guardo aca |||| la dejo de usar por ari
+	int opcionDeInformes;//la opcion del submenu del case H, debe ser numerica.
+	//int auxPosicion;//cuando encuentro una posicion vacia la guardo aca |||| la dejo de usar por aritmetica
 	int contadorDeHojas=0;
+	int controlRetorno;//USADO PARA CONTROLAR LOS REINTENTOS AL INGRESAR LA OPCION DEL SUB MENU EN EL CASE H
+	int volver;//A ESTA VARIABLE LA UTILIZO COMO UN FLAG AL CUAL CADA VEZ QUE ITERA EL MENU PRINCIPAL PONGO
+	           //EN 0 Y SOLO CAMBIO SU VALOR SI EN EL SUBMENU DEL CASE H VOY POR LA OPCION 5.
+	int salida=0;
 
 	eTipo tipo[4]={
 					{1000,"CAMION RECTO"},
@@ -46,7 +49,7 @@ int main(void) {
 					{1002,"CAMION SEMIREMOLQUE"},
 					{1003,"CAMION ELEVADOR"}
 	};
-
+	//eFecha fecha;
 	eTransporte transporte[TAM];
 	eTransporte auxiliar;
 	eTransporte* pTransporte;
@@ -60,8 +63,10 @@ int main(void) {
 	printf("%d\n",(*(transporte+100)).isEmpty);
 
 	do{
+		volver=0;
 		mostrarOpciones();
-		ingresarOpcionAlfabetica(&opcion,"MARQUE SEGUN QUIERA OPERAR\n","ERROR,Ingrese opcion valida\n");
+		//AL PONER MINIMO Y MAXIMO HAGO LA FUNCION REUTILIZABLE Y GENERICA - ME AYUDO CON LA TABLA ASCII
+		ingresarOpcionAlfabeticaMayusc(&opcion,"MARQUE SEGUN QUIERA OPERAR\n","ERROR,Ingrese opcion valida\n",64,74);
 
 		switch(opcion)
 		{
@@ -77,17 +82,8 @@ int main(void) {
 					pTransporte++;
 				}
 
-			/*for(i=0;i<TAM;i++)
-			{
-				if(transporte[i].isEmpty==VACIO)
-				{
-					auxPosicion=i;
-					break;
-				}
-			}*/
 			loguearTransporte(&idTransporte, &auxiliar ,&contador, tipo);
 			*pTransporte=auxiliar;
-
 		break;
 		case'B':
 			modificartransporte(transporte,contador);
@@ -112,16 +108,6 @@ int main(void) {
 					}
 					pHojaDeRuta++;
 				}
-
-			/*
-			for(i=0;i<TAM;i++)
-			{
-				if(hojaDeRuta[i].isEmpty==VACIO)
-				{
-					auxPosicion=i;
-					break;
-				}
-			}*/
 			loguearHojaDeRuta(transporte,&hojaAuxiliar, &idHoja,contador, &contadorDeHojas);
 			//hojaDeRuta[auxPosicion]=hojaAuxiliar;
 			*pHojaDeRuta=hojaAuxiliar;
@@ -130,68 +116,66 @@ int main(void) {
 			listarHojasDeRuta(hojaDeRuta, TAM,transporte,contadorDeHojas);
 		break;
 		case 'H':
+			printf("\n+=================================================================================+\n");
+			printf("|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n",-81,"1.Transportes de un tipo a seleccionar.",-81,
+					"2.Hojas de ruta efectuadas en una fecha a seleccionar.",-81,
+					"3.Importe total de las hojas de ruta realizadas en un transporte a seleccionar.",-81,
+					"4.Importe total de todas las hojas de ruta de un tipo en una fecha a seleccionar.",-81,
+					"5.Volver al menu principal.");
+			printf("+=================================================================================+\n\n");
 
+			controlRetorno=ingresarNumerosConRango(&opcionDeInformes, "\nIngrese opcion segun desee informar\n","Ingrese opcion valida,", 1, 5,3);
+
+			if(controlRetorno==-1)
+			{
+				//SI SE QUEDA SIN REINTENTOS LO MANDO AL MENU PRINCIPAL OTRA VEZ
+				volver=1;
+			}
+
+			switch(opcionDeInformes)
+			{
+			case 1:
+				listarTipos(tipo,TAM_TIPOS);
+				controlRetorno=ingresarNumerosConRango(&opcionDeInformes, "Ingrese tipo por ID\n","ERROR,Ingrese ID valido\n", 1000, 1003,3);
+				if(controlRetorno!=-1)
+				{
+					listarTransportesDeUnTipo(transporte, TAM,contador,opcionDeInformes);
+				}
+				else
+				{
+					//SI SE QUEDA SIN REINTENTOS LO MANDO AL MENU PRINCIPAL OTRA VEZ
+					volver=1;
+				}
+
+			break;
+			case 2:
+				//listarHojasDeRutaPorFecha(hojaDeRuta,transporte, TAM);
+				 listarHojasDeRutaPorFecha( hojaDeRuta,  transporte,TAM, contadorDeHojas);
+			break;
+			case 3:
+			break;
+			case 4:
+			break;
+			case 5:
+				volver=1;
+			break;
+
+			}
+		break;
+		case 'I':
+			salida=1;
 		break;
 		}
-
-		/*printf("Desea seguir operando? S/N ");
-		fflush(stdin);
-		scanf("%c",&respuesta);
-		respuesta=toupper(respuesta);*/
-
-	}while(confirmarSalida()==-1);
+		//ESTE IF LO ARMO PARA ROMPER AL WHILE
+		if(salida==1)
+		{
+			printf("<<<<<<<<<<<<<<<<<<<<SALIR>>>>>>>>>>>>>>>>>>>");
+			break;
+		}
+	}while(volver==1 || confirmarSalida()==-1);
 
 	return EXIT_SUCCESS;
 }
-int verificarSN(char letra)
-{
-	int retorno=-1;
-
-	if(letra=='S' || letra=='N')
-	{
-		retorno=0;
-	}
-
-	return retorno;
-}
-int confirmarSalida(void)
-{
-	int retorno=-1;
-	char respuesta;
-	int reintentos=3;
-
-	do
-	{
-		printf("Para seguir operando presione S|N");
-		fflush(stdin);
-		scanf("%c",&respuesta);
-		respuesta=toupper(respuesta);
-
-		reintentos=reintentos-1;
-		if(verificarSN(respuesta)==-1 )
-		{
-			printf("ERROR, ingrese opcion valida\nReintentos restantes: %d\n\n",reintentos);
-		}
-	}while(verificarSN(respuesta)==-1 && reintentos>0);
-
-
-	if(respuesta!='S')
-	{
-		printf("Confirme que desea SALIR presionando X \nPara continuar operando ingrese cualquier otra tecla");
-		fflush(stdin);
-		scanf("%c",&respuesta);
-		respuesta=toupper(respuesta);
-
-		if(respuesta=='X')
-		{
-			printf("<<<<<<<<<<<<<<<<<<<<SALIR>>>>>>>>>>>>>>>>>>>");
-			retorno=0;
-		}
-	}
-	return retorno;
-}
-
-
 
 
 

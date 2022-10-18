@@ -26,5 +26,6 @@ int imprimirArrayIntSinCero(int* array,int tam, char* mensaje);
 int ordenarArrayDescendente(int* array, int tam);
 int limitarContador(int* contador ,int maxContar,char* mensaje);
 float calcularPromedio(int numeroA, int numeroB);
+int verificarCaracterSN(char letra);
 
 #endif /* CALCULOS_H_ */
