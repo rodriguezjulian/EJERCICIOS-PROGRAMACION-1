@@ -27,17 +27,6 @@ int inicializarIsEmpety(eEmpleado* empleados, int tam, int estado)
 	}
 	return retorno;
 }
-/*int cargarSector(eEmpleado* empleados)
-{
-	int retorno=-1;
-	if(empleados!=NULL)
-	{
-
-	}
-
-	return retorno;
-}
-*/
 int validarSector(int idSector,eSector* sectores, int tam)
 {
 	int retorno=-1;
@@ -201,11 +190,10 @@ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, fl
 		{
 			for(int j=0;j<tamSector;j++)
 			{
+				//MANDAR NUMERO ENTERO
 					if(empleados[posicion].isEmpety==OCUPADO && empleados[posicion].sector==sector[j].idSector)
 					{
 						//PARA MOSTRAR TODO MEJOR PUEDO CONCATENAR NOMBRE Y APELLIDO;
-						//strcat(destino, origen)
-						//strcpy(destino, origen)
 						strcpy(reAxuliar[posicion],empleados[posicion].name);
 						strcat(reAxuliar[posicion]," ");
 						strcat(reAxuliar[posicion],empleados[posicion].lastName);
@@ -221,6 +209,67 @@ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, fl
 		printf("+------------------------------+------------------------------+------------------------------+\n");
 
 		retorno=0;
+	}
+	return retorno;
+}
+int calcularSectorConMasEmpleados(eEmpleado* empleados, int tamEmpleados, int* mayor)
+{
+	int retorno=-1;
+	int contador100=0;
+	int contador200=0;
+	int contador300=0;
+	int contador400=0;
+
+	if(empleados!=NULL)
+	{
+		for(int i=0;i<tamEmpleados;i++)
+		{
+			if(empleados[i].isEmpety==OCUPADO)
+			{
+				switch(empleados[i].sector)
+				{
+				case 100:
+					contador100=contador100+1;
+				break;
+				case 200:
+					contador200=contador200+1;
+				break;
+				case 300:
+					contador300=contador300+1;
+				break;
+				case 400:
+					contador400=contador400+1;
+				break;
+
+				}
+			}
+		}
+		if(contador100>contador200 && contador100>contador300 && contador100>contador400)
+		{
+			*mayor=contador100;
+		}
+		else
+		{
+			if(contador200>contador300 && contador200>contador400 && contador200>contador100)
+			{
+				*mayor=contador200;
+			}
+			else
+			{
+				if(contador300>contador400)
+				{
+					*mayor=contador300;
+				}
+				else
+				{
+					*mayor=contador400;
+				}
+			}
+
+		}
+
+
+
 	}
 	return retorno;
 }

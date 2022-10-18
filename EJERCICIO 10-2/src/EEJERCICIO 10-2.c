@@ -42,7 +42,7 @@ int main(void) {
 						};
 
 	inicializarIsEmpety(empleados,TAM, VACIO);
-
+//
 	do
 	{
 		printf("+------------------+\n");

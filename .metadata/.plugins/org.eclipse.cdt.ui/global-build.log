@@ -1,76 +1,99 @@
-Info: Nothing to build for EJERCICIO 10-2
-Info: Nothing to build for EJERCICIO 10-2
-12:14:13 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+02:15:11 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EEJERCICIO 10-2.o" "..\\src\\EEJERCICIO 10-2.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 10-2
-12:15:32 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+02:15:51 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EEJERCICIO 10-2.o" "..\\src\\EEJERCICIO 10-2.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 10-2
-12:16:06 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
+..\src\LaboI.PP.RodriguezJulianManuel.c:60:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'eTransporte * {aka struct <anonymous> *}' [-Wformat=]
+  printf("%d",pTransporte+2);
+           ^
+..\src\LaboI.PP.RodriguezJulianManuel.c:60:2: warning: 'pTransporte' is used uninitialized in this function [-Wuninitialized]
+  printf("%d",pTransporte+2);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+02:16:21 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EEJERCICIO 10-2.o" "..\\src\\EEJERCICIO 10-2.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-12:16:19 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
+..\src\LaboI.PP.RodriguezJulianManuel.c:60:28: error: expected ')' before 'isEmpty'
+  printf("%d",(*pTransporte)isEmpty+2);
+                            ^~~~~~~
+..\src\LaboI.PP.RodriguezJulianManuel.c:60:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'eTransporte {aka struct <anonymous>}' [-Wformat=]
+  printf("%d",(*pTransporte)isEmpty+2);
+           ^
+02:16:33 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EEJERCICIO 10-2.o" "..\\src\\EEJERCICIO 10-2.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 10-2
-Info: Nothing to build for EJERCICIO 10-2
-12:23:28 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
+..\src\LaboI.PP.RodriguezJulianManuel.c:60:28: warning: 'pTransporte' is used uninitialized in this function [-Wuninitialized]
+  printf("%d",(*pTransporte).isEmpty+2);
+              ~~~~~~~~~~~~~~^~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+02:16:53 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 10-2
-12:24:03 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+02:17:20 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-12:24:13 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+02:17:49 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 10-2
-12:24:43 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+02:17:58 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 10-2
-12:25:27 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+02:21:01 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file EJERCICIO 10-2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-12:25:28 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+..\src\transporte.c: In function 'listarTransportes':
+..\src\transporte.c:214:13: error: incompatible types when assigning to type 'eTransporte {aka struct <anonymous>}' from type 'eTransporte * {aka struct <anonymous> *}'
+  pTransporte=transporte;
+             ^
+..\src\transporte.c:225:20: error: invalid operands to binary + (have 'eTransporte {aka struct <anonymous>}' and 'int')
+    if(*(pTransporte+i).isEmpty==OCUPADO)
+                    ^
+02:21:27 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-12:25:52 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+..\src\transporte.c: In function 'listarTransportes':
+..\src\transporte.c:214:13: error: incompatible types when assigning to type 'eTransporte {aka struct <anonymous>}' from type 'eTransporte * {aka struct <anonymous> *}'
+  pTransporte=transporte;
+             ^
+..\src\transporte.c:225:21: error: invalid operands to binary + (have 'eTransporte {aka struct <anonymous>}' and 'int')
+    if((*(pTransporte+i)).isEmpty==OCUPADO)
+                     ^
+02:21:53 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file EJERCICIO 10-2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-12:25:54 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+02:22:01 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 10-2
-12:26:06 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+..\src\transporte.c: In function 'listarTransportes':
+..\src\transporte.c:225:23: error: 'pTransporte + (sizetype)((unsigned int)i * 52u)' is a pointer; did you mean to use '->'?
+    if(*(pTransporte+i).isEmpty==OCUPADO)
+                       ^
+                       ->
+02:22:12 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleados.o" "..\\src\\empleados.c" 
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file EJERCICIO 10-2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-12:26:07 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+02:25:37 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file EJERCICIO 10-2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-12:26:07 **** Incremental Build of configuration Debug for project EJERCICIO 10-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+02:27:28 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -o "EJERCICIO 10-2.exe" "src\\EEJERCICIO 10-2.o" "src\\calculos.o" "src\\empleados.o" "src\\ingresos.o" 
-Info: Nothing to build for EJERCICIO 10-2
-Info: Nothing to build for EJERCICIO 10-2
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
