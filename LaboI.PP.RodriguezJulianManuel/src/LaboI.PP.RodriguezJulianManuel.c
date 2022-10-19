@@ -25,14 +25,15 @@
 #define ANIO 2022
 #define TAM_TIPOS 4
 
-//int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,int tam);
-int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,int tam, int contadorDeHojas);
+
+//int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRuta* hojaDeRuta, int contadorDeHojas);
+int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRuta* hojaDeRuta, int contadorDeHojas ,int tam);
 int main(void) {
 	setbuf(stdout,NULL);
 
 	char opcion;
 	int idTransporte=0;
-	int idHoja=20000;
+	int idHoja=19999;//EMPIEZO EN 20.000 LOS ID, EN LOGUEAR HOJA DE RUTA VOY AUTOINCREMENTANDO X ESO 19.999
 	int i;
 	int contador=0;
 	int opcionDeInformes;//la opcion del submenu del case H, debe ser numerica.
@@ -109,7 +110,7 @@ int main(void) {
 					pHojaDeRuta++;
 				}
 			loguearHojaDeRuta(transporte,&hojaAuxiliar, &idHoja,contador, &contadorDeHojas);
-			//hojaDeRuta[auxPosicion]=hojaAuxiliar;
+
 			*pHojaDeRuta=hojaAuxiliar;
 		break;
 		case 'G':
@@ -124,8 +125,8 @@ int main(void) {
 					"5.Volver al menu principal.");
 			printf("+=================================================================================+\n\n");
 
+			//controlRetorno=ingresarNumerosConRango(&opcionDeInformes, ,, 1, 5,3);
 			controlRetorno=ingresarNumerosConRango(&opcionDeInformes, "\nIngrese opcion segun desee informar\n","Ingrese opcion valida,", 1, 5,3);
-
 			if(controlRetorno==-1)
 			{
 				//SI SE QUEDA SIN REINTENTOS LO MANDO AL MENU PRINCIPAL OTRA VEZ
@@ -153,6 +154,7 @@ int main(void) {
 				 listarHojasDeRutaPorFecha( hojaDeRuta,  transporte,TAM, contadorDeHojas);
 			break;
 			case 3:
+				informarImporteDeHojasPorId(transporte,contador, hojaDeRuta, contadorDeHojas,TAM);
 			break;
 			case 4:
 			break;
@@ -176,7 +178,79 @@ int main(void) {
 
 	return EXIT_SUCCESS;
 }
+int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRuta* hojaDeRuta, int contadorDeHojas ,int tam)
+{
+	//DEBO USAR EL CONTADOR PARA LLAMAR A LA FUNCION listarTransportes(transporte, TAM,  contador);
+	//MAS ALLA QUE YA SEPA QUE HAY TRANSPORTES PORQUE SE PERMITIO EL ACCESO AL CASE
+	int retorno=-1;
+	eTransporte auxiliar;
+	eTransporte* pTransporte;
+	eHojaDeRuta* pHojaDeRutaAuxiliar;
 
+	pTransporte=transporte;
+	pHojaDeRutaAuxiliar=hojaDeRuta;
+	int posicion;
+	int flag=0; //PARA MOSTRAR EL MENU SOLA UNA VEZ
+	int importeTotal=0; //este importe corresponde al total de las hojas de ruta que pertenecen al ID elegido por el usuario.
 
+	if(transporte!=NULL && hojaDeRuta!=NULL && contadorDeHojas>0)
+	{
+		//LISTO LOS TRANSPORTES EXISTENTES PARA QUE LE SEA MAS FACIL AL USUARIO ELEGIR.
+		listarTransportes(transporte, tam, contador);
 
+		ingresarIntConMensajeMin(&auxiliar.idTransporte,"Ingrese id del transporte del que desea informar el importe total de las hojas de ruta realizadas \n", "Error, ingrese id valido\n", 0);
+
+		posicion=auxiliar.idTransporte-1;
+
+		if((*(pTransporte+posicion)).isEmpty==OCUPADO)
+		{
+			for(int i=0;i<tam;i++)
+			{
+				//if((*(pHojaDeRutaAuxiliar+i)).transporteId==(*(pTransporte+posicion)).idTransporte && flag==0)
+				if((*(pHojaDeRutaAuxiliar+i)).transporteId==(*(pTransporte+posicion)).idTransporte && flag== 0)
+				{
+					printf("+--------------------+------------------------------+--------------------+----------+--------+\n");
+					printf("|%*s|%*s|%*s|%*s|%*s|\n",-20,"ID HOJA DE RUTA",-30,"TRANSPORTE",-20,"PRECIO DEL VIAJE",-10,"KM TOTALES",-8,"FECHA");
+					printf("+--------------------+------------------------------+--------------------+----------+--------+\n");
+					printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRutaAuxiliar+i)).idHoja,-30,(*(pTransporte+i)).descripcion,-19,(*(pHojaDeRutaAuxiliar+i)).precioViaje,-6,(*(pHojaDeRutaAuxiliar+i)).kmTotales,(*(pHojaDeRutaAuxiliar+i)).fecha.dia,(*(pHojaDeRutaAuxiliar+i)).fecha.mes,(*(pHojaDeRutaAuxiliar+i)).fecha.anio);
+					importeTotal=importeTotal+hojaDeRuta[i].precioViaje;
+					flag=1;
+				}
+				else
+				{
+					if((*(pHojaDeRutaAuxiliar+i)).transporteId==(*(pTransporte+posicion)).idTransporte)
+					{
+						importeTotal=importeTotal+hojaDeRuta[i].precioViaje;
+						printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRutaAuxiliar+i)).idHoja,-30,(*(pTransporte+i)).descripcion,-19,(*(pHojaDeRutaAuxiliar+i)).precioViaje,-6,(*(pHojaDeRutaAuxiliar+i)).kmTotales,(*(pHojaDeRutaAuxiliar+i)).fecha.dia,(*(pHojaDeRutaAuxiliar+i)).fecha.mes,(*(pHojaDeRutaAuxiliar+i)).fecha.anio);
+						//printf("|%*d|%*s|$%*.2f|%*.2f Km |\n",-20,hojaDeRuta[i].idHoja,-30,transporte[i].descripcion,-19,hojaDeRuta[i].precioViaje,-6,hojaDeRuta[i].kmTotales);
+					}
+
+				}
+			}
+		}
+		else
+		{
+			printf("El ID ingresado no corresponde a un transporte existente.\n");
+		}
+	}
+	else
+	{	//se valida en el ingreso a case H la existencia de un transporte
+		printf("\nERROR, Para operar esta opcion primero debe crear al menos 1 hoja de ruta\n");
+	}
+
+	if(flag==1)
+	{
+		retorno=0;
+		printf("+--------------------+------------------------------+--------------------+----------+--------+\n");
+
+		printf("==============================================================================\n");
+		printf("+|%*s%*d||+\n",-37,"IMPORTE TOTAL ACUMULADO",-38,importeTotal);
+		printf("==============================================================================\n");
+	}/*else
+	{
+		printf("El transporte aun no tiene hojas de ruta para mostrar\n");
+	}*/
+
+	return retorno;
+}
 

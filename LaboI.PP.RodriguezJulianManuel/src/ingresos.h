@@ -33,4 +33,5 @@ int validarAlfanumerico(char* array);
 int ingresarArrayCaracteres(char*array,char* mensaje,char* mensajeError,int longitud);
 int confirmarSalida(void);
 int ingresarFecha(eFecha* resultado);
+int ingresarCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* mensajeError);
 #endif /* INGRESOS_H_ */

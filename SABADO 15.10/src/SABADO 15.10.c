@@ -13,13 +13,16 @@
 #include <stdlib.h>
 #include "calculos.h"
 #include "ingresos.h"
-
+#include <ctype.h>
+#include <string.h>
+#define TAM 30
+int utn_getCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* mensajeError);
 int buscarNegativoMayor(int* array, int tam, int* resultado);
 
 int main(void) {
 	setbuf(stdout,NULL);
 	int resultado;
-
+	char textoIngresado[TAM];
 	int array[10]={10,30,45,-10,-20,30,2,5,4000,20};
 
 	//buscarNegativoMayor(array, 10, &resultado);
@@ -31,7 +34,8 @@ int main(void) {
 	{
 		printf("No hay numeros negativos");
 	}
-
+	utn_getCadenaCaracteres(TAM,textoIngresado,"Ingrese nombre","ERROR, Ingrese nombre valido");
+	printf("%s",textoIngresado);
 
 	char hola=66;//ACA ESTOY HACIENDO REFERENCIA A LA 'B' de la tabla
 
@@ -51,6 +55,26 @@ int main(void) {
 
 	return EXIT_SUCCESS;
 }
+int utn_getCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* mensajeError)
+{
+    int retorno=-1;
+    if(textoIngresado!=NULL && mensaje!=NULL && mensajeError!=NULL && tam>0)
+    {
+        printf("%s",mensaje);
+        fflush(stdin);
+        gets(textoIngresado);//GETS SE AGARRA EL BUFFER DEL TECLADO, CORTA EL REGISTRO CON EL ENTER
+
+        if(strlen(textoIngresado)<=tam)
+        {
+        	retorno=0;
+        }else
+        {
+        	printf("%s",mensajeError);
+        }
+    }
+    return retorno;
+}
+
 
 
 

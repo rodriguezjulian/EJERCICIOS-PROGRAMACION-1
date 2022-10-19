@@ -87,31 +87,39 @@ int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, i
 {
 	int retorno=-1;
 	int numero;
-
+	int retornoScanf=0;
 	while(retorno==-1 && reintentos>0)
 	{
 		if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL && minimo<maximo)
 		{
 			printf("%s",mensaje);
-			scanf("%d",&numero);
-			if(numero>=minimo && numero<=maximo)
+			retornoScanf=scanf("%d",&numero);
+			if(retornoScanf==1)
 			{
-				*resultado=numero;
-				retorno=0;
-			}
-			else
-			{
-				if(reintentos-1==0)
+				if(numero>=minimo && numero<=maximo)
 				{
-					printf("<<<<<<<<<<SIN REINTENTOS>>>>>>>>>>\n");
+					*resultado=numero;
+					retorno=0;
 				}
 				else
 				{
-					printf("%s",mensajeError);
-					printf("Le quedan %d intentos ",reintentos-1);
-				}
+					if(reintentos-1==0)
+					{
+						printf("<<<<<<<<<<SIN REINTENTOS>>>>>>>>>>\n");
+					}
+					else
+					{
+						printf("%s",mensajeError);
+						printf("Le quedan %d intentos ",reintentos-1);
+					}
 
+				}
 			}
+			else
+			{
+				printf("ERROR, Ingrese un numero\n");
+			}
+
 		}
 		reintentos= reintentos -1;
 	}
@@ -254,31 +262,6 @@ int ingresarFloatConMinimo(float* resultado, char* mensaje,char*mensajeError,int
 
 	return retorno;
 }
-/*int ingresarIntConMinimo(int* resultado, char* mensaje,char*mensajeError,int minimo)
-{
-	int retorno=-1;
-	int numero;
-	do
-	{
-		if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL)
-		{
-			//int ingresarFloat2(float* resultado,char* mensaje)
-			ingresarIntConMensaje(&numero,mensaje);
-			if(numero>=minimo)
-			{
-				*resultado=numero;
-				retorno=0;
-			}
-			else
-			{
-				printf("%s",mensajeError);
-			}
-		}
-	}while(retorno!=0);
-
-	return retorno;
-}*/
-
 int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo)
 {
 	int retorno=-1;
@@ -485,4 +468,29 @@ int ingresarFecha(eFecha* resultado)
 	}
 	return retorno;
 }
+int ingresarCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* mensajeError)
+{
+    int retorno=-1;
+    if(textoIngresado!=NULL && mensaje!=NULL && mensajeError!=NULL && tam>0)
+    {
+    	while(retorno==-1)
+    	{
+            printf("%s",mensaje);
+            fflush(stdin);
+            gets(textoIngresado);//GETS SE AGARRA EL BUFFER DEL TECLADO, CORTA EL REGISTRO CON EL ENTER
+
+            if(strlen(textoIngresado)<=tam)
+            {
+            	retorno=0;
+            }else
+            {
+            	printf("%s",mensajeError);
+            }
+    	}
+
+    }
+    return retorno;
+}
+
+
 

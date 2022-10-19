@@ -1,221 +1,155 @@
-15:26:06 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+04:59:40 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresos.o" "..\\src\\ingresos.c" 
-..\src\ingresos.c:460:19: error: unknown type name 'eFecha'
- int ingresarFecha(eFecha* resultado)
-                   ^~~~~~
-15:26:35 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+05:02:21 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresos.o" "..\\src\\ingresos.c" 
-..\src\ingresos.c: In function 'ingresarFecha':
-..\src\ingresos.c:466:85: error: 'ANIO' undeclared (first use in this function)
-  ingresarIntConMensajeMin(&fecha.anio,"Ingrese año", "ERROR, ingrese año valido", ANIO);
-                                                                                     ^~~~
-..\src\ingresos.c:466:85: note: each undeclared identifier is reported only once for each function it appears in
-15:27:15 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+05:05:34 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresos.o" "..\\src\\ingresos.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
-15:27:40 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+05:11:28 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+05:18:37 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
-15:29:56 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+05:22:27 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
-..\src\LaboI.PP.RodriguezJulianManuel.c:150:19: error: incompatible type for argument 1 of 'ingresarFecha'
-     ingresarFecha(fecha);
-                   ^~~~~
-In file included from ..\src\LaboI.PP.RodriguezJulianManuel.c:17:0:
-..\src\ingresos.h:35:5: note: expected 'eFecha * {aka struct <anonymous> *}' but argument is of type 'eFecha {aka struct <anonymous>}'
- int ingresarFecha(eFecha* resultado);
-     ^~~~~~~~~~~~~
-15:30:14 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+05:28:13 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
 Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-15:44:23 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+05:29:34 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+05:31:01 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+05:33:18 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+06:32:18 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+06:37:23 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+06:48:43 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+..\src\LaboI.PP.RodriguezJulianManuel.c:181:5: error: conflicting types for 'informarImporteDeHojasPorId'
+ int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRuta* hojaDeRuta, int contadorDeHojas ,int tam)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\LaboI.PP.RodriguezJulianManuel.c:29:5: note: previous declaration of 'informarImporteDeHojasPorId' was here
+ int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRuta* hojaDeRuta, int contadorDeHojas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+06:48:59 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 ..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
-..\src\LaboI.PP.RodriguezJulianManuel.c:155:14: error: invalid operands to binary == (have 'eFecha {aka struct <anonymous>}' and 'eFecha {aka struct <anonymous>}')
-      if(fecha==hojaDeRuta[i].fecha && aviso==0)
-              ^~~~~~~~~~~~~~~~~~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:168:15: error: invalid operands to binary == (have 'eFecha {aka struct <anonymous>}' and 'eFecha {aka struct <anonymous>}')
-       if(fecha==hojaDeRuta[i].fecha)
-               ^~~~~~~~~~~~~~~~~~~~~
-15:46:16 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+..\src\LaboI.PP.RodriguezJulianManuel.c:157:5: error: too few arguments to function 'informarImporteDeHojasPorId'
+     informarImporteDeHojasPorId(transporte,contador, hojaDeRuta, contadorDeHojas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\LaboI.PP.RodriguezJulianManuel.c:30:5: note: declared here
+ int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRuta* hojaDeRuta, int contadorDeHojas ,int tam);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+06:49:21 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
-..\src\LaboI.PP.RodriguezJulianManuel.c:169:15: error: invalid operands to binary == (have 'eFecha {aka struct <anonymous>}' and 'eFecha {aka struct <anonymous>}')
-       if(fecha==hojaDeRuta[i].fecha)
-               ^~~~~~~~~~~~~~~~~~~~~
-15:46:52 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+07:02:12 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+07:10:27 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+07:16:54 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
 Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-15:47:25 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:17:55 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:70: error: invalid type argument of unary '*' (have 'int')
-      printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",*fecha.dia,*fecha.mes,*fecha.anio);
-                                                                      ^~~~~~~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:81: error: invalid type argument of unary '*' (have 'int')
-      printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",*fecha.dia,*fecha.mes,*fecha.anio);
-                                                                                 ^~~~~~~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:92: error: invalid type argument of unary '*' (have 'int')
-      printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",*fecha.dia,*fecha.mes,*fecha.anio);
-                                                                                            ^~~~~~~~~~~
-15:47:25 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:70: error: invalid type argument of unary '*' (have 'int')
-      printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",*fecha.dia,*fecha.mes,*fecha.anio);
-                                                                      ^~~~~~~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:81: error: invalid type argument of unary '*' (have 'int')
-      printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",*fecha.dia,*fecha.mes,*fecha.anio);
-                                                                                 ^~~~~~~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:92: error: invalid type argument of unary '*' (have 'int')
-      printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",*fecha.dia,*fecha.mes,*fecha.anio);
-                                                                                            ^~~~~~~~~~~
-15:47:45 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:70: error: invalid type argument of unary '*' (have 'int')
-      printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",*(fecha.dia),*(fecha.mes),*(fecha.anio));
-                                                                      ^~~~~~~~~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:83: error: invalid type argument of unary '*' (have 'int')
-      printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",*(fecha.dia),*(fecha.mes),*(fecha.anio));
-                                                                                   ^~~~~~~~~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:96: error: invalid type argument of unary '*' (have 'int')
-      printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",*(fecha.dia),*(fecha.mes),*(fecha.anio));
-                                                                                                ^~~~~~~~~~~~~
-15:47:57 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
 Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-15:50:01 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:19:34 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
 Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-15:51:08 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:20:45 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
-15:52:52 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:21:51 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
-16:02:09 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:22:57 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
-..\src\LaboI.PP.RodriguezJulianManuel.c:50:9: warning: unused variable 'fecha' [-Wunused-variable]
-  eFecha fecha;
-         ^~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c: At top level:
-..\src\LaboI.PP.RodriguezJulianManuel.c:178:63: error: expected declaration specifiers or '...' before ')' token
- int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta,int tam,)
-                                                               ^
-16:02:33 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'main':
-..\src\LaboI.PP.RodriguezJulianManuel.c:52:9: warning: unused variable 'fecha' [-Wunused-variable]
-  eFecha fecha;
-         ^~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'listarHojasDeRutaPorFecha':
-..\src\LaboI.PP.RodriguezJulianManuel.c:198:72: error: 'transporte' undeclared (first use in this function)
-     printf("|%*d|%*s|$%*.2f|%*.2f Km |\n",-20,hojaDeRuta[i].idHoja,-30,transporte[i].descripcion,-19,hojaDeRuta[i].precioViaje,-6,hojaDeRuta[i].kmTotales);
-                                                                        ^~~~~~~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:198:72: note: each undeclared identifier is reported only once for each function it appears in
-16:03:14 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-..\src\LaboI.PP.RodriguezJulianManuel.c:180:5: error: conflicting types for 'listarHojasDeRutaPorFecha'
- int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,int tam)
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:28:5: note: previous declaration of 'listarHojasDeRutaPorFecha' was here
- int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta,int tam);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-16:03:27 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-16:04:07 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:28:43 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-16:11:07 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresos.o" "..\\src\\ingresos.c" 
-gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-16:15:00 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file LaboI.PP.RodriguezJulianManuel.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-16:15:02 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:28:44 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-16:16:17 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:30:39 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+07:32:15 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
 Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-16:19:35 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:34:51 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
 Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-16:22:10 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-..\src\LaboI.PP.RodriguezJulianManuel.c: In function 'listarHojasDeRutaPorFecha':
-..\src\LaboI.PP.RodriguezJulianManuel.c:187:18: error: 'fecha' undeclared (first use in this function)
-   ingresarFecha(&fecha);
-                  ^~~~~
-..\src\LaboI.PP.RodriguezJulianManuel.c:187:18: note: each undeclared identifier is reported only once for each function it appears in
-16:22:17 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:42:50 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
 Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
-16:26:29 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+07:45:26 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
-Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
