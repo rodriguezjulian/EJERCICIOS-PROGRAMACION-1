@@ -10,6 +10,8 @@
 #include "ingresos.h"
 #include <ctype.h>
 #include<string.h>
+ #include<string.h>
+
 #include "transporte.h"
 #include "hojaDeRuta.h"
 #define VACIO 1
@@ -116,6 +118,24 @@ int listarHojasDeRuta(eHojaDeRuta* hojaDeRuta, int tam,eTransporte* transporte ,
 
 	return retorno;
 }
+int imprimirTransporteConId(eTransporte* transporte,int transporteId, int tam, char* descripcion)
+{
+	//TOMANDO EL ID DESDE LA ESTRUCTURA DE HOJA DE RUTA, BUSCO LA DESCRIPCION DENTRO DE TRANSPORTE
+	int retorno=-1;
+	int posicion;
+	/*eTransporte* pTransporte;
+	pTransporte=transporte;*/
+
+	posicion=transporteId-1;//MENOS -1 PORQUE ESTOY BUSCANDO TRABAJAR CON LA POSICION
+	if(transporte!=NULL && tam>0)
+	{
+		//strcpy(destino, origen)
+		strcpy(descripcion, (*(transporte+posicion)).descripcion);
+		retorno=0;
+	}
+	return retorno;
+}
+
 int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,int tam, int contadorDeHojas)
 {
 	int retorno=-1;
@@ -126,8 +146,10 @@ int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,i
 	eFecha fechaAuxiliar; // EN ESTA VARIABLE GUARDO LA FECHA QUE INGRESARA EL USUARIO, LA CUAL USARE PARA COMPARAR CON LAS EXISTENTES.
 	eHojaDeRuta* pHojaDeRuta;
 	pHojaDeRuta=hojaDeRuta;
-	eTransporte* pTransporte;
-	pTransporte=transporte;
+	//eTransporte* pTransporte;
+	//pTransporte=transporte;
+
+	char descripcion[30];
 
 	if(hojaDeRuta!=NULL && transporte!=NULL && tam>0 && contadorDeHojas>0)
 	{
@@ -135,14 +157,19 @@ int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,i
 		ingresarFecha(&fechaAuxiliar);
 		for(int i=0;i<tam;i++)
 		{
+			//printf("ENTRO  DOS");
 			//if(fechaAuxiliar.anio==hojaDeRuta[i].fecha.anio && fechaAuxiliar.mes==hojaDeRuta[i].fecha.mes && fechaAuxiliar.dia==hojaDeRuta[i].fecha.dia && flag==0)
 			if(fechaAuxiliar.anio==(*(pHojaDeRuta+i)).fecha.anio && fechaAuxiliar.mes==(*(pHojaDeRuta+i)).fecha.mes && fechaAuxiliar.dia==(*(pHojaDeRuta+i)).fecha.dia && flag==0)
 			{
+				//printf("ENTRO  TRES");
+				printf("+--------------------+------------------------------+--------------------+----------+--------+\n");
+				printf("|%*s|%*s|%*s|%*s|%*s|\n",-20,"ID HOJA DE RUTA",-30," ID TRANSPORTE",-20,"PRECIO DEL VIAJE",-10,"KM TOTALES",-8,"FECHA");
+				printf("+--------------------+------------------------------+--------------------+----------+--------+\n");
+				//ESTE ANDABA MOSTRANDO 1 VEZ DESCRIPCION
+				imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, descripcion);
+				printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRuta+i)).idHoja,-30,descripcion,-19,(*(pHojaDeRuta+i)).precioViaje,-6,(*(pHojaDeRuta+i)).kmTotales,(*(pHojaDeRuta+i)).fecha.dia,(*(pHojaDeRuta+i)).fecha.mes,(*(pHojaDeRuta+i)).fecha.anio);
 
-				printf("+--------------------+------------------------------+--------------------+----------+--------+\n");
-				printf("|%*s|%*s|%*s|%*s|%*s|\n",-20,"ID HOJA DE RUTA",-30,"TRANSPORTE",-20,"PRECIO DEL VIAJE",-10,"KM TOTALES",-8,"FECHA");
-				printf("+--------------------+------------------------------+--------------------+----------+--------+\n");
-				printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRuta+i)).idHoja,-30,(*(pTransporte+i)).descripcion,-19,(*(pHojaDeRuta+i)).precioViaje,-6,(*(pHojaDeRuta+i)).kmTotales,(*(pHojaDeRuta+i)).fecha.dia,(*(pHojaDeRuta+i)).fecha.mes,(*(pHojaDeRuta+i)).fecha.anio);
+				//printf("|%*d|%*d|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRuta+i)).idHoja,-30,(*(pHojaDeRuta+i)).transporteId,-19,(*(pHojaDeRuta+i)).precioViaje,-6,(*(pHojaDeRuta+i)).kmTotales,(*(pHojaDeRuta+i)).fecha.dia,(*(pHojaDeRuta+i)).fecha.mes,(*(pHojaDeRuta+i)).fecha.anio);
 				flag=1;
 			}
 			else
@@ -150,8 +177,17 @@ int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,i
 				//if(fechaAuxiliar.anio==hojaDeRuta[i].fecha.anio && fechaAuxiliar.mes==hojaDeRuta[i].fecha.mes && fechaAuxiliar.dia==hojaDeRuta[i].fecha.dia)
 				if(fechaAuxiliar.anio==(*(pHojaDeRuta+i)).fecha.anio && fechaAuxiliar.mes==(*(pHojaDeRuta+i)).fecha.mes && fechaAuxiliar.dia==(*(pHojaDeRuta+i)).fecha.dia)
 				{
-					//printf("|%*d|%*s|$%*.2f|%*.2f Km |\n",-20,hojaDeRuta[i].idHoja,-30,transporte[i].descripcion,-19,hojaDeRuta[i].precioViaje,-6,hojaDeRuta[i].kmTotales);
-					printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRuta+i)).idHoja,-30,(*(pTransporte+i)).descripcion,-19,(*(pHojaDeRuta+i)).precioViaje,-6,(*(pHojaDeRuta+i)).kmTotales,(*(pHojaDeRuta+i)).fecha.dia,(*(pHojaDeRuta+i)).fecha.mes,(*(pHojaDeRuta+i)).fecha.anio);
+					//ESTE ANDABA MOSTRANDO ID %D
+					//printf("|%*d|%*d|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRuta+i)).idHoja,-30,(*(pHojaDeRuta+i)).transporteId,-19,(*(pHojaDeRuta+i)).precioViaje,-6,(*(pHojaDeRuta+i)).kmTotales,(*(pHojaDeRuta+i)).fecha.dia,(*(pHojaDeRuta+i)).fecha.mes,(*(pHojaDeRuta+i)).fecha.anio);
+
+					imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, descripcion);
+					printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRuta+i)).idHoja,-30,descripcion,-19,(*(pHojaDeRuta+i)).precioViaje,-6,(*(pHojaDeRuta+i)).kmTotales,(*(pHojaDeRuta+i)).fecha.dia,(*(pHojaDeRuta+i)).fecha.mes,(*(pHojaDeRuta+i)).fecha.anio);
+
+
+
+					//MOSTRANDO DESCRIPCION
+					//printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRuta+i)).idHoja,-30,(*(pTransporte+i)).descripcion,-19,(*(pHojaDeRuta+i)).precioViaje,-6,(*(pHojaDeRuta+i)).kmTotales,(*(pHojaDeRuta+i)).fecha.dia,(*(pHojaDeRuta+i)).fecha.mes,(*(pHojaDeRuta+i)).fecha.anio);
+
 				}
 			}
 		}
@@ -173,7 +209,6 @@ int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,i
 
 	return retorno;
 }
-
 
 
 

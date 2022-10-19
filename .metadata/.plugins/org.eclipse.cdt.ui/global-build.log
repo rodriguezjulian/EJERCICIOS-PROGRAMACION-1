@@ -153,3 +153,495 @@ Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+07:54:21 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+08:03:53 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+09:35:54 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+09:56:40 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+14:46:24 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+14:47:34 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+14:51:35 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+14:53:49 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+14:56:27 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+14:57:44 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:129:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+15:04:32 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:12:31 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:129:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+15:34:41 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'imprimirTransporteConId':
+..\src\hojaDeRuta.c:126:13: error: incompatible types when assigning to type 'eTransporte {aka struct <anonymous>}' from type 'eTransporte * {aka struct <anonymous> *}'
+  pTransporte=transporte;
+             ^
+..\src\hojaDeRuta.c:131:42: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:131:42: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:131:35: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                   ^~
+..\src\hojaDeRuta.c:131:47: warning: suggest parentheses around comparison in operand of '!=' [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                               ^
+..\src\hojaDeRuta.c:134:29: error: invalid operands to binary + (have 'eTransporte {aka struct <anonymous>}' and 'int')
+   descripcion=(*(pTransporte+posicion)).descripcion;
+                             ^
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:183:67: error: 'descripcion' undeclared (first use in this function)
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                                                   ^~~~~~~~~~~
+..\src\hojaDeRuta.c:183:67: note: each undeclared identifier is reported only once for each function it appears in
+..\src\hojaDeRuta.c:183:41: error: incompatible type for argument 2 of 'imprimirTransporteConId'
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'eHojaDeRuta {aka struct <anonymous>}'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:150:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+15:35:28 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'imprimirTransporteConId':
+..\src\hojaDeRuta.c:126:2: error: invalid type argument of unary '*' (have 'eTransporte {aka struct <anonymous>}')
+  *pTransporte=transporte;
+  ^~~~~~~~~~~~
+..\src\hojaDeRuta.c:128:14: error: incompatible types when assigning to type 'eHojaDeRuta {aka struct <anonymous>}' from type 'eHojaDeRuta * {aka struct <anonymous> *}'
+  *pHojaDeRuta=hojaDeRuta;
+              ^
+..\src\hojaDeRuta.c:132:42: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:132:42: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:132:35: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                   ^~
+..\src\hojaDeRuta.c:132:47: warning: suggest parentheses around comparison in operand of '!=' [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                               ^
+..\src\hojaDeRuta.c:135:29: error: invalid operands to binary + (have 'eTransporte {aka struct <anonymous>}' and 'int')
+   descripcion=(*(pTransporte+posicion)).descripcion;
+                             ^
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:184:67: error: 'descripcion' undeclared (first use in this function)
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                                                   ^~~~~~~~~~~
+..\src\hojaDeRuta.c:184:67: note: each undeclared identifier is reported only once for each function it appears in
+..\src\hojaDeRuta.c:184:41: error: incompatible type for argument 2 of 'imprimirTransporteConId'
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'eHojaDeRuta {aka struct <anonymous>}'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+15:35:43 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'imprimirTransporteConId':
+..\src\hojaDeRuta.c:126:13: error: incompatible types when assigning to type 'eTransporte {aka struct <anonymous>}' from type 'eTransporte * {aka struct <anonymous> *}'
+  pTransporte=transporte;
+             ^
+..\src\hojaDeRuta.c:132:42: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:132:42: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:132:35: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                   ^~
+..\src\hojaDeRuta.c:132:47: warning: suggest parentheses around comparison in operand of '!=' [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                               ^
+..\src\hojaDeRuta.c:135:29: error: invalid operands to binary + (have 'eTransporte {aka struct <anonymous>}' and 'int')
+   descripcion=(*(pTransporte+posicion)).descripcion;
+                             ^
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:184:67: error: 'descripcion' undeclared (first use in this function)
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                                                   ^~~~~~~~~~~
+..\src\hojaDeRuta.c:184:67: note: each undeclared identifier is reported only once for each function it appears in
+..\src\hojaDeRuta.c:184:41: error: incompatible type for argument 2 of 'imprimirTransporteConId'
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'eHojaDeRuta {aka struct <anonymous>}'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+15:36:58 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'imprimirTransporteConId':
+..\src\hojaDeRuta.c:126:13: error: incompatible types when assigning to type 'eTransporte {aka struct <anonymous>}' from type 'eTransporte * {aka struct <anonymous> *}'
+  pTransporte=transporte;
+             ^
+..\src\hojaDeRuta.c:132:42: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:132:42: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:132:35: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                   ^~
+..\src\hojaDeRuta.c:132:47: warning: suggest parentheses around comparison in operand of '!=' [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                               ^
+..\src\hojaDeRuta.c:135:29: error: invalid operands to binary + (have 'eTransporte {aka struct <anonymous>}' and 'int')
+   descripcion=(*(pTransporte+posicion)).descripcion;
+                             ^
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:184:67: error: 'descripcion' undeclared (first use in this function)
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                                                   ^~~~~~~~~~~
+..\src\hojaDeRuta.c:184:67: note: each undeclared identifier is reported only once for each function it appears in
+..\src\hojaDeRuta.c:184:41: error: incompatible type for argument 2 of 'imprimirTransporteConId'
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'eHojaDeRuta {aka struct <anonymous>}'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+15:37:09 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'imprimirTransporteConId':
+..\src\hojaDeRuta.c:132:42: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:132:42: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                          ^
+..\src\hojaDeRuta.c:132:35: warning: comparison between pointer and integer
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                   ^~
+..\src\hojaDeRuta.c:132:47: warning: suggest parentheses around comparison in operand of '!=' [-Wparentheses]
+  if(transporte!=NULL && hojaDeRuta!=NULL > tam>0)
+                                               ^
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:184:67: error: 'descripcion' undeclared (first use in this function)
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                                                   ^~~~~~~~~~~
+..\src\hojaDeRuta.c:184:67: note: each undeclared identifier is reported only once for each function it appears in
+..\src\hojaDeRuta.c:184:41: error: incompatible type for argument 2 of 'imprimirTransporteConId'
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'eHojaDeRuta {aka struct <anonymous>}'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+15:37:22 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:184:67: error: 'descripcion' undeclared (first use in this function)
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                                                   ^~~~~~~~~~~
+..\src\hojaDeRuta.c:184:67: note: each undeclared identifier is reported only once for each function it appears in
+..\src\hojaDeRuta.c:184:41: error: incompatible type for argument 2 of 'imprimirTransporteConId'
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'eHojaDeRuta {aka struct <anonymous>}'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+15:37:47 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:186:41: error: incompatible type for argument 2 of 'imprimirTransporteConId'
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'eHojaDeRuta {aka struct <anonymous>}'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:186:66: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)), TAM, &descripcion);
+                                                                  ^
+..\src\hojaDeRuta.c:119:5: note: expected 'char *' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+15:38:50 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:186:41: warning: passing argument 2 of 'imprimirTransporteConId' makes pointer from integer without a cast [-Wint-conversion]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'int'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:186:79: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                                                               ^
+..\src\hojaDeRuta.c:119:5: note: expected 'char *' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:39:23 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'imprimirTransporteConId':
+..\src\hojaDeRuta.c:135:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   *descripcion=(*(pTransporte+posicion)).descripcion;
+               ^
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:186:41: warning: passing argument 2 of 'imprimirTransporteConId' makes pointer from integer without a cast [-Wint-conversion]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'int'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:186:79: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                                                               ^
+..\src\hojaDeRuta.c:119:5: note: expected 'char *' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:39:35 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c:119:5: error: conflicting types for 'imprimirTransporteConId'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion[30])
+     ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\hojaDeRuta.c:14:0:
+..\src\hojaDeRuta.h:31:5: note: previous declaration of 'imprimirTransporteConId' was here
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:186:41: warning: passing argument 2 of 'imprimirTransporteConId' makes pointer from integer without a cast [-Wint-conversion]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'int'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion[30])
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:186:79: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                                                               ^
+..\src\hojaDeRuta.c:119:5: note: expected 'char **' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion[30])
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+15:39:52 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:186:41: warning: passing argument 2 of 'imprimirTransporteConId' makes pointer from integer without a cast [-Wint-conversion]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                         ^
+..\src\hojaDeRuta.c:119:5: note: expected 'eHojaDeRuta * {aka struct <anonymous> *}' but argument is of type 'int'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion[30])
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:186:79: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                                                               ^
+..\src\hojaDeRuta.c:119:5: note: expected 'char **' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion[30])
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:41:22 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c:119:5: error: conflicting types for 'imprimirTransporteConId'
+ int imprimirTransporteConId(eTransporte* transporte,int transporteId, int tam, char* descripcion[30])
+     ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\hojaDeRuta.c:14:0:
+..\src\hojaDeRuta.h:31:5: note: previous declaration of 'imprimirTransporteConId' was here
+ int imprimirTransporteConId(eTransporte* transporte,eHojaDeRuta* hojaDeRuta, int tam, char* descripcion[30]);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:186:79: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                                                               ^
+..\src\hojaDeRuta.c:119:5: note: expected 'char **' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,int transporteId, int tam, char* descripcion[30])
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+15:41:34 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:186:79: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                                                               ^
+..\src\hojaDeRuta.c:119:5: note: expected 'char **' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,int transporteId, int tam, char* descripcion[30])
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:41:54 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'imprimirTransporteConId':
+..\src\hojaDeRuta.c:135:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   *descripcion=(*(pTransporte+posicion)).descripcion;
+               ^
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:186:79: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                                                               ^
+..\src\hojaDeRuta.c:119:5: note: expected 'char *' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,int transporteId, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:151:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:43:57 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'imprimirTransporteConId':
+..\src\hojaDeRuta.c:139:10: warning: passing argument 1 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(*descripcion, (*(pTransporte+posicion)).descripcion);
+          ^
+In file included from ..\src\hojaDeRuta.c:12:0:
+c:\mingw\include\string.h:79:40: note: expected 'char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  char *strcpy (char *, const char *);
+                                        ^~~~~~
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:190:79: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                                                               ^
+..\src\hojaDeRuta.c:121:5: note: expected 'char *' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,int transporteId, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:155:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:44:18 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:190:79: warning: passing argument 4 of 'imprimirTransporteConId' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirTransporteConId(transporte,(*(pHojaDeRuta+i)).transporteId, TAM, &descripcion);
+                                                                               ^
+..\src\hojaDeRuta.c:121:5: note: expected 'char *' but argument is of type 'char (*)[30]'
+ int imprimirTransporteConId(eTransporte* transporte,int transporteId, int tam, char* descripcion)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\hojaDeRuta.c:155:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:44:51 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:155:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:45:47 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:149:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+15:46:59 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+..\src\hojaDeRuta.c: In function 'listarHojasDeRutaPorFecha':
+..\src\hojaDeRuta.c:149:15: warning: variable 'pTransporte' set but not used [-Wunused-but-set-variable]
+  eTransporte* pTransporte;
+               ^~~~~~~~~~~
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+16:12:58 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\calculos.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel

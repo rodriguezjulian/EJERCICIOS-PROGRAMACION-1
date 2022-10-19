@@ -212,7 +212,8 @@ int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRut
 					printf("+--------------------+------------------------------+--------------------+----------+--------+\n");
 					printf("|%*s|%*s|%*s|%*s|%*s|\n",-20,"ID HOJA DE RUTA",-30,"TRANSPORTE",-20,"PRECIO DEL VIAJE",-10,"KM TOTALES",-8,"FECHA");
 					printf("+--------------------+------------------------------+--------------------+----------+--------+\n");
-					printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRutaAuxiliar+i)).idHoja,-30,(*(pTransporte+i)).descripcion,-19,(*(pHojaDeRutaAuxiliar+i)).precioViaje,-6,(*(pHojaDeRutaAuxiliar+i)).kmTotales,(*(pHojaDeRutaAuxiliar+i)).fecha.dia,(*(pHojaDeRutaAuxiliar+i)).fecha.mes,(*(pHojaDeRutaAuxiliar+i)).fecha.anio);
+					printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRutaAuxiliar+i)).idHoja,-30,(*(pTransporte+posicion)).descripcion,-19,(*(pHojaDeRutaAuxiliar+i)).precioViaje,-6,(*(pHojaDeRutaAuxiliar+i)).kmTotales,(*(pHojaDeRutaAuxiliar+i)).fecha.dia,(*(pHojaDeRutaAuxiliar+i)).fecha.mes,(*(pHojaDeRutaAuxiliar+i)).fecha.anio);
+					//(*(pTransporte+i))
 					importeTotal=importeTotal+hojaDeRuta[i].precioViaje;
 					flag=1;
 				}
@@ -221,10 +222,8 @@ int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRut
 					if((*(pHojaDeRutaAuxiliar+i)).transporteId==(*(pTransporte+posicion)).idTransporte)
 					{
 						importeTotal=importeTotal+hojaDeRuta[i].precioViaje;
-						printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRutaAuxiliar+i)).idHoja,-30,(*(pTransporte+i)).descripcion,-19,(*(pHojaDeRutaAuxiliar+i)).precioViaje,-6,(*(pHojaDeRutaAuxiliar+i)).kmTotales,(*(pHojaDeRutaAuxiliar+i)).fecha.dia,(*(pHojaDeRutaAuxiliar+i)).fecha.mes,(*(pHojaDeRutaAuxiliar+i)).fecha.anio);
-						//printf("|%*d|%*s|$%*.2f|%*.2f Km |\n",-20,hojaDeRuta[i].idHoja,-30,transporte[i].descripcion,-19,hojaDeRuta[i].precioViaje,-6,hojaDeRuta[i].kmTotales);
+						printf("|%*d|%*s|$%*.2f|%*.2f Km |%d/%d/%d|\n",-20,(*(pHojaDeRutaAuxiliar+i)).idHoja,-30,(*(pTransporte+posicion)).descripcion,-19,(*(pHojaDeRutaAuxiliar+i)).precioViaje,-6,(*(pHojaDeRutaAuxiliar+i)).kmTotales,(*(pHojaDeRutaAuxiliar+i)).fecha.dia,(*(pHojaDeRutaAuxiliar+i)).fecha.mes,(*(pHojaDeRutaAuxiliar+i)).fecha.anio);
 					}
-
 				}
 			}
 		}
