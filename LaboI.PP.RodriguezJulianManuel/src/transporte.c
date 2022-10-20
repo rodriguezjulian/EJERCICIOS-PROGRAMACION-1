@@ -6,7 +6,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include "calculos.h"
+
 #include "ingresos.h"
 #include <ctype.h>
 #include<string.h>
@@ -43,7 +43,7 @@ int ingresarIdTipo(eTransporte* transporte, eTipo* tipo)
 	if(transporte!=NULL)
 	{
 		listarTipos(tipo,TAM_TIPOS);
-		ingresarNumerosConRangoV1(&(*(pTransporte)).tipoId, "Ingrese ID segun tipo\n", "ERROR, Ingrese ID valido\n", 1000, 1003);
+		ingresarNumIntConRango(&(*(pTransporte)).tipoId, "Ingrese ID segun tipo\n", "ERROR, Ingrese ID valido\n", 1000, 1003);
 		retorno=0;
 	}
 	return retorno;
@@ -66,10 +66,6 @@ int inicializarIsEmpty(eTransporte* transporte, int tam, int estado)
 			(*(pInt+i)).isEmpty=VACIO;//EN UNO PARA QUE DE VERDADERO, ES DECIR SE PUEDE USAR.
 		}
 
-		/*for(int i=0;i<TAM;i++)//HABRIA QUE PASARLO A UNA FUNCION.
-		{
-			transporte[i].isEmpty=VACIO;//
-		}*/
 		retorno=0;
 	}
 	return retorno;
@@ -85,7 +81,9 @@ int loguearTransporte(int* idTransporte, eTransporte* auxiliar , int* contador, 
 	{
 		*contador=*contador+1;
 		*idTransporte=*idTransporte+1;
-		auxiliar->idTransporte=*idTransporte;
+		(*(auxiliar)).idTransporte=*idTransporte;
+
+
 		//ENTIENDO QUE LA DESCRIPCION ESTA RELACIONADA CON LA ESTRUCUTRA eTipo
 		//ingresarArrayCaracteres((*(pAuxiliar)).descripcion,"Ingrese descripcion del transporte\n","ERROR, Ingrese descripcion valida\n",31);
 		ingresarCadenaCaracteres(31,(*(pAuxiliar)).descripcion,"Ingrese descripcion del transporte\n","ERROR, Ingrese descripcion valida\n");
@@ -94,12 +92,29 @@ int loguearTransporte(int* idTransporte, eTransporte* auxiliar , int* contador, 
 		ingresarIntConMensajeMin(&(*(pAuxiliar)).cantidadBultos,"Ingrese cantidad de bultos\n","ERROR, Ingrese cantidad valida\n",0);
 
 		ingresarIdTipo(auxiliar,tipo);
+		retorno=0;
 
+		(*(auxiliar)).isEmpty=OCUPADO;
 
-		auxiliar->isEmpty=OCUPADO;
 
 	}
 	return retorno;
+}
+int calcularCantidadI(eTransporte* transporte, int iDBuscado)
+{
+	int retorno=-1;
+
+	for(int i=0;i<TAM;i++)
+	{
+		if((*(transporte+i)).idTransporte==iDBuscado && (*(transporte+i)).isEmpty==OCUPADO)
+		//if(transporte[i].idTransporte==iDBuscado && transporte[i].isEmpty==OCUPADO)
+		{
+			retorno=i;
+			break;
+		}
+	}
+	return retorno;
+
 }
 int modificartransporte(eTransporte* transporte,int contador)
 {
@@ -107,41 +122,47 @@ int modificartransporte(eTransporte* transporte,int contador)
 	eTransporte auxiliar;
 	int posicion;
 	int opcion;
-	eTransporte* pTransporte;
-	pTransporte=transporte;
+	int idBuscado;
+	/*eTransporte* pTransporte;
+	pTransporte=transporte;*/
+
 
 	if(transporte!=NULL && contador>0)
 	{
-		ingresarIntConMensajeMin(&auxiliar.idTransporte,"Ingrese id del transporte a modificar\n", "Error, ingrese id valido\n", 0);
-		//ingresarIntConMensaje(&auxiliar.idTransporte,"Ingrese id", "Error, ingrese un numero");
-		posicion=auxiliar.idTransporte-1;
+		ingresarIntConMensajeMin(&idBuscado,"Ingrese id del transporte a modificar\n", "Error, ingrese id valido\n", 0);
 
-		if((*(pTransporte)).isEmpty==OCUPADO)
+		posicion=calcularCantidadI(transporte,idBuscado);
+
+		if(posicion!=-1)
 		{
-			printf("+----------------------------------------+\n");
-			printf("|%*s|\n|%*s|\n|%*s|\n",-40,"          MODIFICAR TRANSPORTE",-40,"1-PESO DE CARGA",-40,"2-CANTIDAD DE BULTOS");
-			printf("+----------------------------------------+\n");
-			ingresarNumerosConRangoV1(&opcion, "MARQUE SEGUN DESEE OPERAR\n","ERROR, Ingrese opcion valida\n" ,1, 2);
-
-			switch(opcion)
+			if((*(transporte+posicion)).isEmpty==OCUPADO)
 			{
-				case 1:
+				printf("+----------------------------------------+\n");
+				printf("|%*s|\n|%*s|\n|%*s|\n",-40,"          MODIFICAR TRANSPORTE",-40,"1-PESO DE CARGA",-40,"2-CANTIDAD DE BULTOS");
+				printf("+----------------------------------------+\n");
+				ingresarNumIntConRango(&opcion, "MARQUE SEGUN DESEE OPERAR\n","ERROR, Ingrese opcion valida\n" ,1, 2);
+
+				switch(opcion)
+				{
+					case 1:
 					ingresarFloatConMinimo(&auxiliar.pesoCarga, "Ingrese peso de carga nuevo\n","ERROR, Ingrese peso valido\n",0);
 					//transporte[posicion].pesoCarga=auxiliar.pesoCarga;
-					(*(pTransporte+posicion)).pesoCarga=auxiliar.pesoCarga;
-				break;
-				case 2:
+					(*(transporte+posicion)).pesoCarga=auxiliar.pesoCarga;
+					break;
+					case 2:
 					ingresarIntConMensajeMin(&auxiliar.cantidadBultos,"Ingrese nueva cantidad de bultos\n","ERROR, Ingrese cantidad valida\n",0);
 					//transporte[posicion].cantidadBultos=auxiliar.cantidadBultos;
-					(*(pTransporte+posicion)).cantidadBultos=auxiliar.cantidadBultos;
+					(*(transporte+posicion)).cantidadBultos=auxiliar.cantidadBultos;
 					break;
+					retorno=0;
+				}
 			}
 		}
 		else
 		{
 			printf("El ID ingresado no corresponde a un transporte\n");
 		}
-		retorno=0;
+
 	}
 	else
 	{
@@ -149,24 +170,36 @@ int modificartransporte(eTransporte* transporte,int contador)
 	}
 	return retorno;
 }
+
+
 int bajaTransporte(eTransporte* transporte,int *contador)
 {
 	int retorno=-1;
-	eTransporte auxiliar;
-	eTransporte* pTransporte;
-	pTransporte=transporte;
+	//eTransporte auxiliar;
+	/*eTransporte* pTransporte;
+	pTransporte=transporte;*/
+	int auxiliar=0;
 
-	int posicion;
+	int posicion=0;
 	if(transporte!=NULL && *contador>0)
 	{
-		ingresarIntConMensajeMin(&auxiliar.idTransporte,"Ingrese id del transporte que desea dar de baja\n", "Error, ingrese id valido\n", 0);
-		posicion=auxiliar.idTransporte-1;
-		if((*(pTransporte+posicion)).isEmpty==OCUPADO)
+		ingresarIntConMensajeMin(&auxiliar,"Ingrese id del transporte que desea dar de baja\n", "Error, ingrese id valido\n", 0);
+		posicion=calcularCantidadI(transporte, auxiliar);
+
+		if(posicion!=-1)
 		{
-			printf("Transporte con ID %d dado de baja satisfactoriamente \n",transporte[posicion].idTransporte);
-			//transporte[posicion].isEmpty=VACIO;
-			(*(pTransporte+posicion)).isEmpty=VACIO;
-			*contador=*contador-1;
+			if((*(transporte+posicion)).isEmpty==OCUPADO)
+			//if(transporte[posicion].isEmpty==OCUPADO)
+			{
+				printf("Transporte con ID %d dado de baja satisfactoriamente \n",(*(transporte+posicion)).idTransporte);
+				//printf("Transporte con ID %d dado de baja satisfactoriamente \n",transporte[posicion].idTransporte);
+
+				//transporte[posicion].isEmpty=VACIO;
+
+				(*(transporte+posicion)).isEmpty=VACIO;
+				*contador=*contador-1;
+				retorno=0;
+			}
 		}
 		else
 		{
@@ -181,6 +214,11 @@ int bajaTransporte(eTransporte* transporte,int *contador)
 
 	return retorno;
 }
+
+
+
+
+
 int ordenarTransportes(eTransporte* transporte, int tam)
 {
 	int retorno=-1;
@@ -195,6 +233,7 @@ int ordenarTransportes(eTransporte* transporte, int tam)
 		{
 			if((*(pTransporte+i)).isEmpty==OCUPADO)
 			{
+				retorno=0;
 				for(int j=i+1;j<tam;j++)
 				{
 					if((*(pTransporte+j)).isEmpty==OCUPADO)
@@ -242,6 +281,7 @@ int listarTransportes(eTransporte* transporte, int tam, int contador)
 		{
 			if((*(pTransporte+i)).isEmpty==OCUPADO)
 			{
+				retorno=0;
 				printf("|%*d|%*d|%*s|%*.2f|%*d|\n",-15,(*(pTransporte+i)).idTransporte,-20,(*(pTransporte+i)).tipoId,-30,(*(pTransporte+i)).descripcion,-30,(*(pTransporte+i)).pesoCarga,-30,(*(pTransporte+i)).cantidadBultos);
 			}
 		}
@@ -256,14 +296,33 @@ int listarTransportes(eTransporte* transporte, int tam, int contador)
 	return retorno;
 }
 
-int listarTransportesDeUnTipo(eTransporte* transporte, int tam, int contador,int tipo)
+//CON ESTA FUNCION BUSCA EVITAR MOSTRAR UN MENU VACIO EN CASO DE QUE EL USUARIO LISTE UN TIPO DE TRANSPORTE QUE AUN NO HAYA SIDO INGRESADO
+int verificarExistenciaDeTipoDeTransporte(eTransporte* transporte, int tipoBuscado, int tam)
+{
+	int retorno=-1;
+
+	for(int i=0;i<tam;i++)
+	{
+		if((*(transporte+i)).tipoId==tipoBuscado)
+		{
+			retorno=0;
+		}
+	}
+	if(retorno==-1)
+	{
+		printf("NO EXISTEN TRANSPORTES DE ESE TIPO CARGADOS AUN\n");
+	}
+	return retorno;
+}
+
+int listarTransportesDeUnTipo(eTransporte* transporte, int tam,int tipo)
 {
 
 	int retorno=-1;
 	eTransporte* pTransporte;
 	pTransporte=transporte;
 
-	if(transporte!=NULL && tam>0 && contador>0)
+	if(transporte!=NULL && tam>0)
 	{
 		printf("+---------------+--------------------+------------------------------+------------------------------+------------------------------+\n");
 		printf("|%*s|%*s|%*s|%*s|%*s|\n",-15,"ID TRANSPORTE",-20,"ID TIPO VEHICULO",-30,"Descripcion",-30,"Peso de carga",-30,"Cantidad de bultos");
@@ -274,6 +333,7 @@ int listarTransportesDeUnTipo(eTransporte* transporte, int tam, int contador,int
 			//if(transporte[i].isEmpty==OCUPADO)
 			if((*(pTransporte+i)).isEmpty==OCUPADO && (*(pTransporte+i)).tipoId==tipo)
 			{
+				retorno=0;
 				//printf("|%*d|%*d|%*s|%*.2f|%*d|\n",-15,transporte[i].idTransporte,-20,transporte[i].tipoId,-30,transporte[i].descripcion,-30,transporte[i].pesoCarga,-30,transporte[i].cantidadBultos);
 				printf("|%*d|%*d|%*s|%*.2f|%*d|\n",-15,(*(pTransporte+i)).idTransporte,-20,(*(pTransporte+i)).tipoId,-30,(*(pTransporte+i)).descripcion,-30,(*(pTransporte+i)).pesoCarga,-30,(*(pTransporte+i)).cantidadBultos);
 			}
@@ -281,19 +341,8 @@ int listarTransportesDeUnTipo(eTransporte* transporte, int tam, int contador,int
 		printf("+---------------+--------------------+------------------------------+------------------------------+------------------------------+\n");
 
 	}
-	else
-	{
-		printf("ERROR, no se puede operar esta opcion si no hay transportes del tipo seleccionado dados de alta\n");
-	}
-
-
 	return retorno;
 }
-
-
-
-
-
 
 
 

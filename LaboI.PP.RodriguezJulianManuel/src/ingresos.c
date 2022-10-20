@@ -9,26 +9,34 @@
 #include<string.h>
 #include <ctype.h>
 #include "ingresos.h"
-#include "calculos.h"
+
 
 #define ANIO 2022 //PARA FUNCION DE FECHA
 
-float ingresarFloat(void)
+int ingresarOpcionAlfabeticaMayusc(char* resultado,char* mensaje,char* mensajeError, int minimo ,int maximo )
 {
-	float numeroIngresado;
-	printf("Ingrese numero\n");
-	scanf("%f",&numeroIngresado);
+	int retorno=-1;
+	char auxiliar;
+	if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL)
+	{
+		do
+		{
+			printf("%s",mensaje);
+			fflush(stdin);
+			scanf("%c",&auxiliar);
+			auxiliar=toupper(auxiliar);
 
-	return numeroIngresado;
-}
-int ingresarInt(void)
-{
-	int numeroIngresado;
-	printf("Ingrese numero\n");
-	scanf("%d",&numeroIngresado);
-
-	return numeroIngresado;
-
+			if(auxiliar>minimo  &&  auxiliar<maximo)
+			{
+				*resultado=auxiliar;
+				retorno=0;
+			}else
+			{
+				printf("%s",mensajeError);
+			}
+		}while(retorno==-1);
+	}
+	return retorno;
 }
 int ingresarIntConMensajeMin(int* resultado,char* mensaje, char* mensajeError, int minimo)
 {
@@ -57,33 +65,8 @@ int ingresarIntConMensajeMin(int* resultado,char* mensaje, char* mensajeError, i
 		return retorno;
 
 }
-int ingresarIntConMensaje(int* resultado,char* mensaje, char* mensajeError)
-{
-	int retorno=-1;
-	int numeroIngresado;
-	int verificacionScanf;
-	if(resultado!=NULL && mensaje!=NULL)
-	{
-		while(retorno==-1)
-		{
-			printf("%s",mensaje);
-			fflush(stdin);
-			verificacionScanf=scanf("%d",&numeroIngresado);
 
-			if(verificacionScanf==1)
-			{
-				*resultado=numeroIngresado;
-				retorno=0;
-			}
-			else
-			{
-				printf("%s",mensajeError);
-			}
-		}
-	}
-	return retorno;
-}
-int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
+int ingresarNumConRangoYReintentos(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
 {
 	int retorno=-1;
 	int numero;
@@ -125,89 +108,9 @@ int ingresarNumerosConRango(int* resultado, char* mensaje, char* mensajeError, i
 	}
 	return retorno;
 }
-int ingresarNumeroDistintoCero(int* array,int reintentos,int *resultado)
-{
-	//DEBERIA FIJARME QUE HACER CUANDO SE TERMINAN LOS REINTENTOS
-	int retorno=-1;
-	int numero;
-	if(array!=NULL && resultado!=NULL && reintentos>0)
-	{
-		while(reintentos>1)
-		{
-			printf("Ingrese un numero entero distinto de cero");
-			scanf("%d",&numero);
-			if(numero==0)
-			{
-				printf("ERROR, Recuerde que el numero debe ser distinto a cero\n");
-				reintentos=reintentos-1;
-				printf("Le quedan %d reintentos \n",reintentos);
 
-			}
-			else
-			{
-				*resultado=numero;
-				retorno=0;
-			}
 
-		}
 
-	}
-	return retorno;
-}
-int ingresarNumerosConRangoMenosCero(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
-{
-	int retorno=-1;
-	int numero;
-
-	while(retorno==-1 && reintentos>1)
-	{
-		if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL && minimo<maximo)
-		{
-			printf("%s",mensaje);
-			scanf("%d",&numero);
-			if(numero>=minimo && numero<maximo && numero!=0)
-			{
-				*resultado=numero;
-				retorno=0;
-			}
-			else
-			{
-				printf("%s",mensajeError);
-				reintentos= reintentos -1;
-				printf("Le quedan %d intentos \n",reintentos);
-
-			}
-		}
-
-	}
-	return retorno;
-}
-int ingresarInt2(int* resultado)
-{
-	int retorno=-1;
-	int numeroIngresado;
-	int verificacionScanf;
-	if(resultado!=NULL)
-	{
-		while(retorno==-1)
-		{
-			printf("Ingrese numero entero\n");
-			fflush(stdin);
-			verificacionScanf=scanf("%d",&numeroIngresado);
-
-			if(verificacionScanf==1)
-			{
-				*resultado=numeroIngresado;
-				retorno=0;
-			}
-			else
-			{
-				printf("ERROR, Ingrese un numero\n");
-			}
-		}
-	}
-	return retorno;
-}
 int ingresarFloat2(float* resultado,char* mensaje)
 {
 	int retorno=-1;
@@ -262,7 +165,7 @@ int ingresarFloatConMinimo(float* resultado, char* mensaje,char*mensajeError,int
 
 	return retorno;
 }
-int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo)
+int ingresarNumIntConRango(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo)
 {
 	int retorno=-1;
 	int numero;
@@ -296,115 +199,16 @@ int ingresarNumerosConRangoV1(int* resultado, char* mensaje, char* mensajeError,
 	return retorno;
 }
 
-int validarAlfanumerico(char* array)
-{
-	int controlIsDigit=0;
-	int controlIsAlpha=0;
-	int retorno;
-	if(array!=NULL)
-	{
-		for(int i=0;i<strlen(array);i++)
-		{
-			if(isdigit(array[i])!=0)
-			{
-				controlIsDigit=controlIsDigit+1;
-			}
-			if(isalpha(array[i])!=0)
-			{
-				controlIsAlpha=controlIsAlpha+1;
-			}
-		}
-		if((controlIsDigit+controlIsAlpha)==strlen(array) && controlIsDigit>0 && controlIsAlpha>0)
-		{
-			retorno=0;
-		}else
-		{
-			retorno=-1;
-		}
-	}
 
-	return retorno;
-}
-int esNumerica(char* cadena)
-{
-	int retorno=0;
-	if(cadena!=NULL)
-	{
-		for(int i=0;cadena[i]!='\0';i++)
-		{
-			if(cadena[i]>'9' || cadena[i]<'0')
-			{
-				retorno=-1;
-				break;
-			}
-		}
-	}
-
-	return retorno;
-}
-int ingresarTelefonoDos(char* resultado)
+int verificarCaracterSN(char letra)
 {
 	int retorno=-1;
-	char auxiliar[8];
-	int longitud;
-	int verificacionDeCaracter;
 
-	if(resultado!=NULL)
+	if(letra=='S' || letra=='N')
 	{
-		while(retorno==-1)
-		{
-			printf("Ingrese numero telefonico ");
-			fflush(stdin);
-			scanf("%s",auxiliar);
-
-			longitud=strlen(auxiliar);
-			verificacionDeCaracter=esNumerica(auxiliar);
-
-			//printf("ES NUMERICA %d\n",verificacionDeCaracter);
-			if(longitud==8 && verificacionDeCaracter==0)
-			{
-				strcpy(resultado, auxiliar);
-				retorno=0;
-			}
-			else
-			{
-				printf("ERROR, ingrese 8 numeros\n");
-			}
-		}
-		for(int i=0;i<4;i++)
-		{
-			printf("%c",resultado[i]);
-		}
-		printf("-");
-		for(int i=4;i<8;i++)
-		{
-
-			printf("%c",resultado[i]);
-		}
-
-	}
-	return retorno;
-}
-
-int ingresarArrayCaracteres(char*array,char* mensaje,char* mensajeError,int longitud)
-{
-	char textoIngresado[longitud];
-	int retorno=-1;
-	if(array!=NULL && mensaje!=NULL && mensajeError!=NULL && longitud>0)
-	{
-		printf("%s",mensaje);
-		fflush(stdin);
-		scanf("%s",textoIngresado);
-		strcpy(array,textoIngresado);
-		while(strlen(textoIngresado)>=longitud)
-		{
-			printf("%s",mensajeError);
-			fflush(stdin);
-			scanf("%s",textoIngresado);
-			strcpy(array,textoIngresado);
-		}
 		retorno=0;
 	}
+
 	return retorno;
 }
 int confirmarSalida(void)
@@ -448,22 +252,23 @@ int ingresarFecha(eFecha* resultado)
 
 	eFecha fecha;
 	int retorno=-1;
-	ingresarIntConMensajeMin(&fecha.anio,"Ingrese año", "ERROR, ingrese año valido\n", ANIO);
-	ingresarNumerosConRangoV1(&fecha.mes,"Ingrese mes en numero", "ERROR, ingrese mes valido\n",1, 12);
+	ingresarIntConMensajeMin(&fecha.anio,"Ingrese anio", "ERROR, ingrese año valido\n", ANIO);
+	ingresarNumIntConRango(&fecha.mes,"Ingrese mes en numero", "ERROR, ingrese mes valido\n",1, 12);
 	if(fecha.mes==1 || fecha.mes==3 || fecha.mes==5 || fecha.mes==7 || fecha.mes==8 || fecha.mes==10 || fecha.mes==12)
 	{
-		ingresarNumerosConRangoV1(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido\n",1, 31);
+		ingresarNumIntConRango(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido\n",1, 31);
 	}
 	else
 	{
 		if(fecha.mes==4 || fecha.mes==6 || fecha.mes==9 || fecha.mes==11)
 		{
-			ingresarNumerosConRangoV1(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido\n",1, 30);
+			ingresarNumIntConRango(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido\n",1, 30);
 		}
 		else
 		{
-			ingresarNumerosConRangoV1(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido\n",1, 28);
+			ingresarNumIntConRango(&fecha.dia,"Ingrese dia", "ERROR, ingrese dia valido\n",1, 28);
 		}
+		retorno=0;
 		*resultado=fecha;
 	}
 	return retorno;
