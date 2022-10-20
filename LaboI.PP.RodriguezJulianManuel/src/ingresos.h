@@ -77,12 +77,7 @@ int ingresarIntConMensajeMin(int* resultado,char* mensaje, char* mensajeError, i
 /// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int ingresarNumIntConRango(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
 
-/// \fn int verificarCaracterSN(char)
-/// \brief Verifica si se ingreso una letra mayuscula S || N, sirve utilizar el retorno de esta funcion para iteraciones.
-///
-/// \param letra , letra recibida a evaluar.
-/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
-int verificarCaracterSN(char letra);
+
 
 /// \fn int confirmarSalida(void)
 /// \brief Cuando el usuario ingresa una opcion para dejar de operar un programa,

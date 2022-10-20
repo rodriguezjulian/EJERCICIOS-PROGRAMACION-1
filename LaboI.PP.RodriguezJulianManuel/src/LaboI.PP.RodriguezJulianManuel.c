@@ -7,7 +7,7 @@
  Description : Hello World in C, Ansi-style
  ============================================================================
  */
-//
+//RODRIGUEZ JULIAN MANUEL DIV J
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -89,7 +89,7 @@ int main(void) {
 			{
 				printf("SIN ESPACIO EN MEMORIA");
 			}
-			printf("CONTADOR %d\n",contador);
+
 		break;
 		case'B':
 			modificartransporte(transportes,contador);

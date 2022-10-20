@@ -3288,3 +3288,95 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeR
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.PP.o" "..\\src\\menu.PP.c" 
 gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+10:38:44 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.PP.o" "..\\src\\menu.PP.c" 
+..\src\menu.PP.c: In function 'ejecutarMenuInformes':
+..\src\menu.PP.c:70:8: warning: implicit declaration of function 'listarTransportesDeUnTipo' [-Wimplicit-function-declaration]
+        listarTransportesDeUnTipo(transporte, TAM,opcionDeInformes);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\InformesPP.o" "..\\src\\InformesPP.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\InformesPP.o" "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+10:39:39 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\InformesPP.o" "..\\src\\InformesPP.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\InformesPP.o" "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+10:40:24 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\InformesPP.o" "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+10:42:28 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\InformesPP.o" "..\\src\\InformesPP.c" 
+..\src\InformesPP.c:51:31: error: unknown type name 'eHojaDeRuta'
+ int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,int tam, int contadorDeHojas)
+                               ^~~~~~~~~~~
+10:42:55 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.PP.o" "..\\src\\menu.PP.c" 
+..\src\menu.PP.c: In function 'ejecutarMenuInformes':
+..\src\menu.PP.c:70:8: warning: implicit declaration of function 'listarTransportesDeUnTipo' [-Wimplicit-function-declaration]
+        listarTransportesDeUnTipo(transporte, TAM,opcionDeInformes);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\menu.PP.c:80:8: warning: implicit declaration of function 'listarHojasDeRutaPorFecha' [-Wimplicit-function-declaration]
+        listarHojasDeRutaPorFecha( hojaDeRuta,  transporte,TAM, contadorDeHojas);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\InformesPP.o" "..\\src\\InformesPP.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\InformesPP.o" "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+10:44:05 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.PP.o" "..\\src\\menu.PP.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\InformesPP.o" "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+10:44:53 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.PP.o" "..\\src\\menu.PP.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\InformesPP.o" "..\\src\\InformesPP.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\InformesPP.o" "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" 
+10:50:24 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresos.o" "..\\src\\ingresos.c" 
+..\src\ingresos.c: In function 'confirmarSalida':
+..\src\ingresos.c:218:6: warning: implicit declaration of function 'verificarCaracterSN' [-Wimplicit-function-declaration]
+   if(verificarCaracterSN(respuesta)==-1 )
+      ^~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LaboI.PP.RodriguezJulianManuel.o" "..\\src\\LaboI.PP.RodriguezJulianManuel.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hojaDeRuta.o" "..\\src\\hojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.PP.o" "..\\src\\menu.PP.c" 
+..\src\menu.PP.c: In function 'ejecutarMenuInformes':
+..\src\menu.PP.c:68:32: warning: implicit declaration of function 'verificarExistenciaDeTipoDeTransporte' [-Wimplicit-function-declaration]
+       if(controlRetorno!=-1 && verificarExistenciaDeTipoDeTransporte(transporte, opcionDeInformes, tam)==0)
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\InformesPP.o" "..\\src\\InformesPP.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transporte.o" "..\\src\\transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c:22:43: error: unknown type name 'eTransporte'
+ int verificarExistenciaDeTipoDeTransporte(eTransporte* transporte, int tipoBuscado, int tam)
+                                           ^~~~~~~~~~~
+10:50:44 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'verificarExistenciaDeTipoDeTransporte':
+..\src\validaciones.c:35:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("NO EXISTEN TRANSPORTES DE ESE TIPO CARGADOS AUN\n");
+   ^~~~~~
+..\src\validaciones.c:35:3: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\validaciones.c:35:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\InformesPP.o" "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" "src\\validaciones.o" 
+10:50:59 **** Incremental Build of configuration Debug for project LaboI.PP.RodriguezJulianManuel ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o LaboI.PP.RodriguezJulianManuel.exe "src\\InformesPP.o" "src\\LaboI.PP.RodriguezJulianManuel.o" "src\\hojaDeRuta.o" "src\\ingresos.o" "src\\menu.PP.o" "src\\transporte.o" "src\\validaciones.o" 
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel
+Info: Nothing to build for LaboI.PP.RodriguezJulianManuel

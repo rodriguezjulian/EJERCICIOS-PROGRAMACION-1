@@ -200,17 +200,7 @@ int ingresarNumIntConRango(int* resultado, char* mensaje, char* mensajeError, in
 }
 
 
-int verificarCaracterSN(char letra)
-{
-	int retorno=-1;
 
-	if(letra=='S' || letra=='N')
-	{
-		retorno=0;
-	}
-
-	return retorno;
-}
 int confirmarSalida(void)
 {
 	int retorno=-1;

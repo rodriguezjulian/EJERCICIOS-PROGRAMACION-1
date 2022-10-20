@@ -296,53 +296,6 @@ int listarTransportes(eTransporte* transporte, int tam, int contador)
 	return retorno;
 }
 
-//CON ESTA FUNCION BUSCA EVITAR MOSTRAR UN MENU VACIO EN CASO DE QUE EL USUARIO LISTE UN TIPO DE TRANSPORTE QUE AUN NO HAYA SIDO INGRESADO
-int verificarExistenciaDeTipoDeTransporte(eTransporte* transporte, int tipoBuscado, int tam)
-{
-	int retorno=-1;
-
-	for(int i=0;i<tam;i++)
-	{
-		if((*(transporte+i)).tipoId==tipoBuscado)
-		{
-			retorno=0;
-		}
-	}
-	if(retorno==-1)
-	{
-		printf("NO EXISTEN TRANSPORTES DE ESE TIPO CARGADOS AUN\n");
-	}
-	return retorno;
-}
-
-int listarTransportesDeUnTipo(eTransporte* transporte, int tam,int tipo)
-{
-
-	int retorno=-1;
-	eTransporte* pTransporte;
-	pTransporte=transporte;
-
-	if(transporte!=NULL && tam>0)
-	{
-		printf("+---------------+--------------------+------------------------------+------------------------------+------------------------------+\n");
-		printf("|%*s|%*s|%*s|%*s|%*s|\n",-15,"ID TRANSPORTE",-20,"ID TIPO VEHICULO",-30,"Descripcion",-30,"Peso de carga",-30,"Cantidad de bultos");
-		printf("+---------------+--------------------+------------------------------+------------------------------+------------------------------+\n");
-
-		for(int i=0;i<tam;i++)
-		{
-			//if(transporte[i].isEmpty==OCUPADO)
-			if((*(pTransporte+i)).isEmpty==OCUPADO && (*(pTransporte+i)).tipoId==tipo)
-			{
-				retorno=0;
-				//printf("|%*d|%*d|%*s|%*.2f|%*d|\n",-15,transporte[i].idTransporte,-20,transporte[i].tipoId,-30,transporte[i].descripcion,-30,transporte[i].pesoCarga,-30,transporte[i].cantidadBultos);
-				printf("|%*d|%*d|%*s|%*.2f|%*d|\n",-15,(*(pTransporte+i)).idTransporte,-20,(*(pTransporte+i)).tipoId,-30,(*(pTransporte+i)).descripcion,-30,(*(pTransporte+i)).pesoCarga,-30,(*(pTransporte+i)).cantidadBultos);
-			}
-		}
-		printf("+---------------+--------------------+------------------------------+------------------------------+------------------------------+\n");
-
-	}
-	return retorno;
-}
 
 
 

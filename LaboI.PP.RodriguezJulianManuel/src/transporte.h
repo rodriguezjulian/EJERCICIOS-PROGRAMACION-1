@@ -110,25 +110,9 @@ int listarTransportes(eTransporte* transporte, int tam, int contador);
 /// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int ingresarIdTipo(eTransporte* transporte, eTipo* tipo);
 
-/// \fn int verificarExistenciaDeTipoDeTransporte(eTransporte*, int, int)
-/// \brief Se recibe como parametro el tipo a verificar y se empieza a comparar con el campo tipo de la estructura de tipo eTransporte.
-///
-/// \param transporte , estructura a recorrer (campo del tipo unicamente).
-/// \param tipoBuscado ,tipo a verificar.
-/// \param tam ,utilizado para establecer las iteraciones.
-/// \return return=0 SI HAY COINCIDENCIA || return=-1 si NO hay coincidencia (es decir se verifica que no existe un transporte de ese tipo).
-int verificarExistenciaDeTipoDeTransporte(eTransporte* transporte, int tipoBuscado, int tam);
 
 
-/// \fn int listarTransportesDeUnTipo(eTransporte*, int, int, int)
-/// \brief Se listaran los transportes de un tipo seleccionado(viene por parametro). Antes de llamar a esta funcion se debe verificar que
-/// exista al menos 1 transporte del tipo seleccionado si no se hace, se imprimira una grilla sin datos.
-///
-/// \param transporte , array de estructuras que se recorrera buscando aquellas con el tipo seleccionado.
-/// \param tam ,utilizado para iterar cierta cantidad de veces dependiendo el tamanio.
-/// \param tipo ,utilizado para comparar a la estructura con el tipo recibido por el usuario.
-/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
-int listarTransportesDeUnTipo(eTransporte* transporte, int tam,int tipo);
+
 
 
 

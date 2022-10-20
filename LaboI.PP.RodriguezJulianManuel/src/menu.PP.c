@@ -15,6 +15,7 @@
 //#include "menu.PP.h"
 #include "transporte.h"
 #include "hojaDeRuta.h"
+#include "InformesPP.h"
 
 
 #define VACIO 1
