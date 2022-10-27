@@ -99,3 +99,120 @@ int asignarDescripcion(eJugador* jugadores,eConfederacion* confederaciones,int t
 
 	return retorno;
 }
+int ordenarJugadoresAlfabeticamente(eJugador* jugadores,eConfederacion* confederaciones,int contadorJugadores,int tam)
+{
+	int retorno=-1;
+	char descripcionUno[50];
+	char descripcionDos[50];
+
+	eJugador jugadorAuxiliar; //PARA EL SWAP
+
+	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores>0)
+	{
+		for(int i=0;i<tam-1;i++)
+		{
+			if((*(jugadores+i)).isEmpty==OCUPADO)
+			{
+				retorno=0;
+				for(int j=i+1;j<tam;j++)
+				{
+					if((*(jugadores+j)).isEmpty==OCUPADO)
+					{
+						asignarDescripcion(jugadores,confederaciones,6, descripcionUno ,i);
+						asignarDescripcion(jugadores,confederaciones,6, descripcionDos ,j);
+
+						if(descripcionUno>descripcionDos)
+						{
+							jugadorAuxiliar=(*(jugadores+i));
+							(*(jugadores+i))=(*(jugadores+j));
+							(*(jugadores+j))=jugadorAuxiliar;
+						}
+						else
+						{
+							if(descripcionUno==descripcionDos)
+							{
+								if( (*(jugadores+i)).nombre>(*(jugadores+j)).nombre)
+								{
+									jugadorAuxiliar=(*(jugadores+i));
+									(*(jugadores+i))=(*(jugadores+j));
+									(*(jugadores+j))=jugadorAuxiliar;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	return retorno;
+}
+int ordenarJugadoresXId(eJugador* jugadores, int tam)
+{
+	int retorno=-1;
+	eJugador jugadorAuxiliar;
+
+	if(jugadores!=NULL)
+	{
+		for(int i=0;i<tam;i++)
+		{
+			if((*(jugadores+i)).isEmpty==OCUPADO)
+			{
+				for(int j=i+1;j<tam;j++)
+				{
+					if((*(jugadores+j)).isEmpty==OCUPADO)
+					{
+						if((*(jugadores+i)).id>(*(jugadores+j)).id)
+						{
+								jugadorAuxiliar=(*(jugadores+i));
+								(*(jugadores+i))=(*(jugadores+j));
+								(*(jugadores+j))=jugadorAuxiliar;
+						}
+					}
+				}
+			}
+		}
+	}
+	return retorno;
+}
+int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento)
+{
+	//referenciaOrdenamiento -> 1. ordeno por orden alfabetico
+	//referenciaOrdenamiento -> 2.ordeno por id
+	int retorno=-1;
+	char descripcion[50];
+	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores)
+	{
+		if(referenciaOrdenamiento==1)
+		{
+			ordenarJugadoresAlfabeticamente(jugadores,confederaciones,contadorJugadores,tam);
+		}
+		else
+		{
+			ordenarJugadoresXId(jugadores, tam);
+		}
+
+		printf("+=============================================================================================================================================================================+\n");
+		printf("|%*s|%*s|%*s|%*s|%*s|%*s|%*s|\n",-4," ID",-50,"                     NOMBRE",-50,"                     POSICION",
+					-13," N°CAMISETA",-16,"     SUELDO",-15," CONFEDERACION",-20,"  ANIOS DE CONTRATO");
+		printf("+=============================================================================================================================================================================+\n");
+		for(int i=0;i<tam;i++)
+		{
+			if((*(jugadores+i)).isEmpty==OCUPADO)
+			{
+
+				//entre=entre+1;
+				//printf("ENTRE %d\n",entre);
+				asignarDescripcion(jugadores,confederaciones,6, descripcion ,i);
+				printf("|%*d|%*s|%*s|%*d|%*.2f|%*s|%*d|\n",-4,(*(jugadores+i)).id,-50,(*(jugadores+i)).nombre,-50,(*(jugadores+i)).posicion,-12,(*(jugadores+i)).numeroCamiseta,-16,(*(jugadores+i)).salario,-15,descripcion,-20,(*(jugadores+i)).aniosContrato);
+			}
+		}
+		printf("+=============================================================================================================================================================================+\n");
+
+	}
+	else
+	{
+		printf("ERROR, Para operar esta opcion debe existir al menos 1 jugador cargado\n");
+	}
+	return retorno;
+}
+

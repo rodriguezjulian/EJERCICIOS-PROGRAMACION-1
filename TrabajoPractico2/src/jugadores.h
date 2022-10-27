@@ -26,4 +26,14 @@
 int inicializarIsEmpty(eJugador* jugadores, int tam, int estado);
 int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores,int tamJugadores);
 int asignarDescripcion(eJugador* jugadores,eConfederacion* confederaciones,int tamConfederaciones, char* descripcion ,int posicion);
+int ordenarJugadoresAlfabeticamente(eJugador* jugadores,eConfederacion* confederaciones,int contadorJugadores,int tam);
+int ordenarJugadoresXId(eJugador* jugadores, int tam);
+
+
+//int listarJugadoresOrdenAfalbetico(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores);
+int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento);
+
+
+
+
 #endif /* JUGADORES_H_ */
