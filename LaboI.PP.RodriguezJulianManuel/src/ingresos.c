@@ -9,6 +9,7 @@
 #include<string.h>
 #include <ctype.h>
 #include "ingresos.h"
+#include "validaciones.h"
 
 
 #define ANIO 2022 //PARA FUNCION DE FECHA
@@ -242,7 +243,7 @@ int ingresarFecha(eFecha* resultado)
 
 	eFecha fecha;
 	int retorno=-1;
-	ingresarIntConMensajeMin(&fecha.anio,"Ingrese anio", "ERROR, ingrese año valido\n", ANIO);
+	ingresarIntConMensajeMin(&fecha.anio,"Ingrese anio", "ERROR, ingrese anio valido\n", ANIO);
 	ingresarNumIntConRango(&fecha.mes,"Ingrese mes en numero", "ERROR, ingrese mes valido\n",1, 12);
 	if(fecha.mes==1 || fecha.mes==3 || fecha.mes==5 || fecha.mes==7 || fecha.mes==8 || fecha.mes==10 || fecha.mes==12)
 	{

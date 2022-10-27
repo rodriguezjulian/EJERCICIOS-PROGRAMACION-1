@@ -11,34 +11,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ingresos.h"
-#define TAM 3000
+#include "jugadores.h"
+#include<string.h>
+#include "confederaciones.h"
 
+#define TAM 3000
 #define VACIO 1
 #define OCUPADO 0
 
-	typedef struct
-	{
-		int id;
-		char nombre[50];
-		char region[50];
-		int anioCreacion;
+int ordenarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int contadorJugadores,int tam);
 
-	}eConfederacion;
-	typedef struct
-	{
-		int id;
-		char nombre[50];
-		char posicion[50];
-		short numeroCamiseta;
-		int idConfederacion;
-		float salario;
-		short aniosContrato;
-		short isEmpty;
-
-	}eJugador;
-
-int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores);
-int listarConfederaciones(eConfederacion* confederaciones);
 int main(void) {
 
 	setbuf(stdout,NULL);
@@ -57,25 +39,27 @@ int main(void) {
 			{105,"OFC","OCEANIA",1966}
 
 	};
-	//MOSTRAR OPCIONES
-	printf("+=========================+\n|%*s|\n+=========================+\n",-25,"MENU PRINCIPAL");
 
-	printf("|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n+=========================+\n",-25,
-			"1.ALTA JUGADOR",-25,
-			"2.BAJA JUGADOR",-25,
-			"3.MODIFICACION JUGADOR",-25,
-			"4.INFORMES",-25,
-			"5.SALIR");
-
-	ingresarShortConRango(&opcionMenu, "Ingrese opcion segun desee operar\n", "ERROR, ingrese opcion valida\n",  1,5);
-
+	 inicializarIsEmpty(jugadores,TAM, VACIO);
 
 	do
 	{
+		//MOSTRAR OPCIONES
+		printf("+=========================+\n|%*s|\n+=========================+\n",-25,"MENU PRINCIPAL");
+
+		printf("|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n+=========================+\n",-25,
+				"1.ALTA JUGADOR",-25,
+				"2.BAJA JUGADOR",-25,
+				"3.MODIFICACION JUGADOR",-25,
+				"4.INFORMES",-25,
+				"5.SALIR");
+
+		ingresarShortConRango(&opcionMenu, "Ingrese opcion segun desee operar\n", "ERROR, ingrese opcion valida\n",  1,5);
+
 		switch(opcionMenu)
 		{
 			case 1:
-				 loguearJugador(jugadores,confederaciones, &idJugadores,&contadorJugadores);
+				 loguearJugador(jugadores,confederaciones, &idJugadores,&contadorJugadores, TAM);
 			break;
 			case 2:
 			break;
@@ -87,75 +71,61 @@ int main(void) {
 				salida=1;
 			break;
 		}
+		//ESTE IF ESTA PARA ROMPER EL DO WHILE
 		if(salida==1)
 		{
-			//printf("<<<<<<<<<<<<<<<<<<<<SALIR>>>>>>>>>>>>>>>>>>>");
+			printf("<<<<<<<<<<<<<<<<<<<<SALIR>>>>>>>>>>>>>>>>>>>");
 			break;
 		}
 
-	}while(salida==0);
+	}while(confirmarSalida()==-1);
 
 
 
 	return EXIT_SUCCESS;
 }
-
-
-
-int listarConfederaciones(eConfederacion* confederaciones)
+int ordenarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int contadorJugadores,int tam)
 {
 	int retorno=-1;
+	char descripcionUno[50];
+	char descripcionDos[50];
 
-	if(confederaciones!=NULL)
-	{
-		retorno=0;
+	eJugador jugadorAxuliar; //PARA EL SWAP
 
-		 printf("+=========================================================================================================================+\n");
-		 printf("|%*s|%*s|%*s|%*s|\n",-3,"ID",-50,"NOMBRE",-50,"REGION",-15,"ANIO CREACION");
-		 printf("+=========================================================================================================================+\n");
-
-		 for(int i=0;i<6;i++)
-		 {
-			 printf("|%*d|%*s|%*s|%*d|\n",-3,(*(confederaciones+i)).id,-50,(*(confederaciones+i)).nombre,-50,(*(confederaciones+i)).region,-15,(*(confederaciones+i)).anioCreacion);
-		 }
-		 printf("+=========================================================================================================================+\n");
-	}
-
-		return retorno;
-}
-
-int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores)
-{
-	int retorno=-1;
-	eJugador jugadorAuxiliar;
 	if(jugadores!=NULL && confederaciones!=NULL)
 	{
-		*id=*id+1;//CADA VEZ QUE INGRESE TOMO AL VALOR QUE LLEGA COMO PARAMETRO PARA SUMARLE UNO Y ASI QUEDE AUTOINCREMENTAL
-		*contadorJugadores=*contadorJugadores+1;
+		if(contadorJugadores>0)
+		{
+			for(int i=0;i<tam-1;i++)
+			{
+				if((*(jugadores+i)).isEmpty==OCUPADO)
+				{
+					retorno=0;
+					for(int j=i+1;j<tam;j++)
+					{
+						if((*(jugadores+j)).isEmpty==OCUPADO)
+						{
+							asignarDescripcion(jugadores,confederaciones,6, descripcionUno ,i);
+							asignarDescripcion(jugadores,confederaciones,6, descripcionDos ,j);
 
-		 ingresarCadenaCaracteres( 50,jugadorAuxiliar.nombre,"Ingrese nombre del jugador\n","ERROR, Ingrese nombre valido\n");
-
-		 ingresarCadenaCaracteres( 50,jugadorAuxiliar.posicion,"Ingrese posicion del jugador\n","ERROR, Ingrese posicion valida\n");
-
-		 ingresarShortConRango(&jugadorAuxiliar.numeroCamiseta,"Ingrese numero de camiseta entre 1 y 100\n", "Ingrese numero valido\n", 1,  100);
-
-
-		 listarConfederaciones(confederaciones);
-		 //MOSTRAR LISTADO DE CONFEDERACIONES.
-
-		 ingresarIntConRango(&jugadorAuxiliar.idConfederacion, "Ingrese ID de confederacion\n", "ERROR,Ingrese ID valido", 100, 105);
-
-		 ingresarFloatConMinimo(&jugadorAuxiliar.salario,"Ingrese salario","ERROR, ingrese salario valido",1);
-
-		 ingresarShortConRango(&jugadorAuxiliar.aniosContrato,"Ingrese anios de contrato entre 1 y 10\n", "Ingrese cantidad valida\n", 1, 10);
-
-		 jugadorAuxiliar.isEmpty=OCUPADO;
-
+							if(descripcionUno>descripcionDos)
+							{
+								jugadorAxuliar=(*(jugadores+i));
+								(*(jugadores+i))=(*(jugadores+j));
+								(*(jugadores+j))=jugadorAxuliar;
+							}
+						}
+					}
+				}
+			}
+		}
+		else
+		{
+			printf("ERROR, Para operar esta opcion debe existir al menos 1 jugador cargado");
+		}
 	}
-
 	return retorno;
 }
-
 
 
 

@@ -214,11 +214,6 @@ int bajaTransporte(eTransporte* transporte,int *contador)
 
 	return retorno;
 }
-
-
-
-
-
 int ordenarTransportes(eTransporte* transporte, int tam)
 {
 	int retorno=-1;
@@ -282,6 +277,7 @@ int listarTransportes(eTransporte* transporte, int tam, int contador)
 			if((*(pTransporte+i)).isEmpty==OCUPADO)
 			{
 				retorno=0;
+				//aca  eTipo tipos ,int tam, char*descripcion
 				printf("|%*d|%*d|%*s|%*.2f|%*d|\n",-15,(*(pTransporte+i)).idTransporte,-20,(*(pTransporte+i)).tipoId,-30,(*(pTransporte+i)).descripcion,-30,(*(pTransporte+i)).pesoCarga,-30,(*(pTransporte+i)).cantidadBultos);
 			}
 		}
@@ -295,7 +291,20 @@ int listarTransportes(eTransporte* transporte, int tam, int contador)
 
 	return retorno;
 }
+/*int mostrarTipo(eTipo tipos,int tam, char* descripcion,int tipo)
+{
+	int retorno=-1;
 
+	if(tipos!=NULL)
+	{
+		for(int i=0;i<tam;i++)
+		{
+
+		}
+	}
+
+	return retorno;
+}*/
 
 
 

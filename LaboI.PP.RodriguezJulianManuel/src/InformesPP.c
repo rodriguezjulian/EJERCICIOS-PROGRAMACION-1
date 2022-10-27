@@ -11,7 +11,7 @@
 #include <ctype.h>
 #include "transporte.h"
 #include "hojaDeRuta.h"
-
+#include "validaciones.h"
 #define VACIO 1
 #define OCUPADO 0
 #define TAM 300
@@ -57,7 +57,6 @@ int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,i
 	eFecha fechaAuxiliar; // EN ESTA VARIABLE GUARDO LA FECHA QUE INGRESARA EL USUARIO, LA CUAL USARE PARA COMPARAR CON LAS EXISTENTES.
 	eHojaDeRuta* pHojaDeRuta;
 	pHojaDeRuta=hojaDeRuta;
-
 
 	char descripcion[30];
 
@@ -156,14 +155,16 @@ int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRut
 					printf("+--------------------+------------------------------+--------------------+--------------+--------+\n");
 					printf("|%*d|%*s|$%*.2f|%*.2f|%d/%d/%d|\n",-20,(*(pHojaDeRutaAuxiliar+i)).idHoja,-30,(*(pTransporte+posicion)).descripcion,-19,(*(pHojaDeRutaAuxiliar+i)).precioViaje,-14,(*(pHojaDeRutaAuxiliar+i)).kmTotales,(*(pHojaDeRutaAuxiliar+i)).fecha.dia,(*(pHojaDeRutaAuxiliar+i)).fecha.mes,(*(pHojaDeRutaAuxiliar+i)).fecha.anio);
 					//(*(pTransporte+i))
-					importeTotal=importeTotal+hojaDeRuta[i].precioViaje;
+					importeTotal=importeTotal+(*(hojaDeRuta+i)).precioViaje;
+					//importeTotal=importeTotal+hojaDeRuta[i].precioViaje;
 					flag=1;
 				}
 				else
 				{
 					if((*(pHojaDeRutaAuxiliar+i)).transporteId==(*(pTransporte+posicion)).idTransporte)
 					{
-						importeTotal=importeTotal+hojaDeRuta[i].precioViaje;
+						//importeTotal=importeTotal+hojaDeRuta[i].precioViaje;
+						importeTotal=importeTotal+(*(hojaDeRuta+i)).precioViaje;
 						printf("|%*d|%*s|$%*.2f|%*.2f|%d/%d/%d|\n",-20,(*(pHojaDeRutaAuxiliar+i)).idHoja,-30,(*(pTransporte+posicion)).descripcion,-19,(*(pHojaDeRutaAuxiliar+i)).precioViaje,-14,(*(pHojaDeRutaAuxiliar+i)).kmTotales,(*(pHojaDeRutaAuxiliar+i)).fecha.dia,(*(pHojaDeRutaAuxiliar+i)).fecha.mes,(*(pHojaDeRutaAuxiliar+i)).fecha.anio);
 					}
 				}
@@ -192,6 +193,75 @@ int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRut
 		printf("El transporte aun no tiene hojas de ruta para mostrar\n");
 	}*/
 
+	return retorno;
+}
+int informarImpTotalDeHojasPorTipoyFecha(int tam, int tamTipos,eTipo* tipos,int opcionDeInformes , eTransporte* transportes,eHojaDeRuta*  hojaDeRuta,int* volverMenu ,int contadorDeHojas)
+{
+	int retorno=-1;
+	int controlRetorno;
+	eFecha fechaAuxiliar;
+	int flag=0;
+	int importeTotal=0;
+	char descripcion[31];
+	if(tipos!=NULL && transportes!=NULL && contadorDeHojas>0)
+	{
+		listarTipos(tipos,tamTipos);
+		controlRetorno=ingresarNumConRangoYReintentos(&opcionDeInformes, "Ingrese tipo por ID\n","ERROR,Ingrese ID valido\n", 1000, 1003,3);
+
+		if(controlRetorno!=-1 && verificarExistenciaDeTipoDeTransporte(transportes, opcionDeInformes, tam)==0)
+		{
+			ingresarFecha(&fechaAuxiliar);
+
+			for(int i=0;i<tam;i++)
+			{
+				if(fechaAuxiliar.anio==(*(hojaDeRuta+i)).fecha.anio && fechaAuxiliar.mes==(*(hojaDeRuta+i)).fecha.mes && fechaAuxiliar.dia==(*(hojaDeRuta+i)).fecha.dia && flag==0)
+				{
+
+					flag=1;
+					retorno=0;
+					importeTotal=importeTotal+(*(hojaDeRuta+i)).precioViaje;
+
+					printf("+--------------------+------------------------------+--------------------+--------------+--------+\n");
+					printf("|%*s|%*s|%*s|%*s|%*s|\n",-20,"ID HOJA DE RUTA",-30,"TRANSPORTE",-20,"PRECIO DEL VIAJE",-14,"KM TOTALES",-8,"FECHA");
+					printf("+--------------------+------------------------------+--------------------+--------------+--------+\n");
+					asignarDescripcionTransporteConId(transportes,(*(hojaDeRuta+i)).transporteId, TAM, descripcion);
+					printf("|%*d|%*s|$%*.2f|%*.2f|%d/%d/%d|\n",-20,(*(hojaDeRuta+i)).idHoja,-30,descripcion,-19,(*(hojaDeRuta+i)).precioViaje,-14,(*(hojaDeRuta+i)).kmTotales,(*(hojaDeRuta+i)).fecha.dia,(*(hojaDeRuta+i)).fecha.mes,(*(hojaDeRuta+i)).fecha.anio);
+				}
+				else
+				{
+
+					if(fechaAuxiliar.anio==(*(hojaDeRuta+i)).fecha.anio && fechaAuxiliar.mes==(*(hojaDeRuta+i)).fecha.mes && fechaAuxiliar.dia==(*(hojaDeRuta+i)).fecha.dia)
+					{
+						importeTotal=importeTotal+(*(hojaDeRuta+i)).precioViaje;
+						asignarDescripcionTransporteConId(transportes,(*(hojaDeRuta+i)).transporteId, TAM, descripcion);
+						printf("|%*d|%*s|$%*.2f|%*.2f|%d/%d/%d|\n",-20,(*(hojaDeRuta+i)).idHoja,-30,descripcion,-19,(*(hojaDeRuta+i)).precioViaje,-14,(*(hojaDeRuta+i)).kmTotales,(*(hojaDeRuta+i)).fecha.dia,(*(hojaDeRuta+i)).fecha.mes,(*(hojaDeRuta+i)).fecha.anio);
+					}
+				}
+			}
+			if(flag==0)
+			{
+				printf("No hay hojas de rutas asignadas para la fecha %d/%d/%d",fechaAuxiliar.dia,fechaAuxiliar.mes,fechaAuxiliar.anio);
+			}
+			else
+			{
+				printf("+--------------------+------------------------------+--------------------+--------------+--------+\n");
+
+				printf("==============================================================================\n");
+				printf("+|%*s%*d||+\n",-37,"IMPORTE TOTAL ACUMULADO",-38,importeTotal);
+				printf("==============================================================================\n");
+			}
+
+		}
+		else
+		{
+			//SI SE QUEDA SIN REITENTOS VA AL MENU PRINCIPAL OTRA VEZ
+			*volverMenu=1;
+		}
+	}
+	else
+	{
+		printf("\nERROR, Para operar esta opcion primero debe crear al menos 1 hoja de ruta\n");
+	}
 	return retorno;
 }
 

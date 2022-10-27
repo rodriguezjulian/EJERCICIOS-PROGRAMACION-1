@@ -78,12 +78,12 @@ int ingresarIntConMensajeMin(int* resultado,char* mensaje, char* mensajeError, i
 int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
 
 
-/*
+
 /// \fn int confirmarSalida(void)
 /// \brief Cuando el usuario ingresa una opcion para dejar de operar un programa,
 /// esta funcion verifica que es lo que realmente quiere y no que se equivoco.
 /// \return return en 0 cuando se confirma la salida del usuario.
-int confirmarSalida(void);*/
+int confirmarSalida(void);
 
 /// \fn int ingresarFecha(eFecha*)
 /// \brief Ingresar una fecha, la misma se guardara dentro de una estructura de tipo eFecha
@@ -104,5 +104,6 @@ int ingresarCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* me
 
 
 int ingresarShortConRango(short* resultado, char* mensaje, char* mensajeError, short minimo, short maximo);
+int verificarCaracterSN(char letra);
 
 #endif /* INGRESOS_H_ */

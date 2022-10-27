@@ -16,7 +16,7 @@
 #include "transporte.h"
 #include "hojaDeRuta.h"
 #include "InformesPP.h"
-
+#include "validaciones.h"
 
 #define VACIO 1
 #define OCUPADO 0
@@ -33,7 +33,6 @@ void mostrarOpciones(void)
 	printf("+------------------------+\n");
 
 }
-
 int ejecutarMenuInformes (int contador, eTransporte* transporte,eHojaDeRuta* hojaDeRuta, eTipo* tipo, int contadorDeHojas,int* volverMenuPrincipal, int tam)
 {
 	int retorno=-1;
@@ -56,7 +55,7 @@ int ejecutarMenuInformes (int contador, eTransporte* transporte,eHojaDeRuta* hoj
 					controlRetorno=ingresarNumConRangoYReintentos(&opcionDeInformes, "\nIngrese opcion segun desee informar\n","Ingrese opcion valida,", 1, 5,3);
 					if(controlRetorno==-1)
 					{
-						//SI SE QUEDA SIN REINTENTOS LO MANDO AL MENU PRINCIPAL OTRA VEZ
+						//SI SE QUEDA SIN REINTENTOS LO MANDO AL MENU PRINCIPAL OTRA  VEZ
 						*volverMenuPrincipal=1;
 					}
 
@@ -84,6 +83,7 @@ int ejecutarMenuInformes (int contador, eTransporte* transporte,eHojaDeRuta* hoj
 						informarImporteDeHojasPorId(transporte,contador, hojaDeRuta, contadorDeHojas,TAM);
 					break;
 					case 4:
+						informarImpTotalDeHojasPorTipoyFecha(TAM, TAM_TIPOS,tipo, opcionDeInformes,transporte, hojaDeRuta,volverMenuPrincipal,contadorDeHojas);
 					break;
 					case 5:
 						*volverMenuPrincipal=1;

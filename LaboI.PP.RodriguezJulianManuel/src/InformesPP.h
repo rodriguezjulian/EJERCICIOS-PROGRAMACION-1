@@ -42,6 +42,18 @@ int listarHojasDeRutaPorFecha(eHojaDeRuta* hojaDeRuta, eTransporte* transporte,i
 /// \return
 int informarImporteDeHojasPorId(eTransporte* transporte,int contador, eHojaDeRuta* hojaDeRuta, int contadorDeHojas ,int tam);
 
-
+/// \fn int informarImpTotalDeHojasPorTipoyFecha(int, int, eTipo*, int, eTransporte*, eHojaDeRuta*, int*)
+/// \brief El usuario ingresara un tipo de transporte, en caso de existir hojas de ruta para su seleccion se le pedira una fecha
+/// y en caso existir hojas de ruta asignadas para esa fecha, las mismas se listaran para luego mostrarse el importe que acumularon entre todas.
+///
+/// \param tam ,Tamanio para establecer cantidad de iteraciones.
+/// \param tamTipos ,Tamanio del array de estructura de tipo eTipo, para ejecutar una funcion que muestra los distintos tipos.
+/// \param tipos ,estructura de tipos a mostrar.
+/// \param opcionDeInformes ,en esta variable se guardara el id que el usuario ingrese por teclado.
+/// \param transportes ,array de estructuras a recorrer y utilizado para mostrar descripcion (funcion asignarDescripcionTransporteConId).
+/// \param hojaDeRuta ,estructura a recorrer y utilizado para listar hojas de ruta.
+/// \param volverMenuPrincipal ,Si el usuario se queda sin reintentos para colocar un ID correcto, esta variable sera la referencia para mandarlo al menu principal.
+/// \return
+int informarImpTotalDeHojasPorTipoyFecha(int tam, int tamTipos,eTipo* tipos,int opcionDeInformes , eTransporte* transportes,eHojaDeRuta*  hojaDeRuta,int* volverMenu, int contadorDeHojas);
 #endif /* INFORMESPP_H_ */
 

@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-
+//
 //#include "calculos.h"
 #include "ingresos.h"
 #include "menu.PP.h"
@@ -50,7 +50,6 @@ int main(void) {
 	eTransporte transportes[TAM];
 	eTransporte auxiliar;
 	eTransporte* pTransportes;
-
 
 	eHojaDeRuta hojaAuxiliar;
 	eHojaDeRuta hojasDeRuta[TAM];
@@ -98,7 +97,7 @@ int main(void) {
 			bajaTransporte(transportes,&contador);
 		break;
 		case 'D':
-			printf("CONTADOR= %d\n",contador);
+			//printf("CONTADOR= %d\n",contador);
 			ordenarTransportes(transportes, TAM);
 			listarTransportes(transportes,TAM,contador);
 		break;
@@ -106,7 +105,7 @@ int main(void) {
 			listarTipos(tipo,TAM_TIPOS);
 		break;
 		case 'F':
-			if(contador<TAM)
+			if(contadorDeHojas<TAM)
 			{
 				if(contador>0)
 				{

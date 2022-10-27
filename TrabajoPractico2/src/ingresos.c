@@ -201,8 +201,18 @@ int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int m
 }
 
 
+int verificarCaracterSN(char letra)
+{
+	int retorno=-1;
 
-/*int confirmarSalida(void)
+	if(letra=='S' || letra=='N')
+	{
+		retorno=0;
+	}
+
+	return retorno;
+}
+int confirmarSalida(void)
 {
 	int retorno=-1;
 	char respuesta;
@@ -237,7 +247,7 @@ int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int m
 		}
 	}
 	return retorno;
-}*/
+}
 int ingresarFecha(eFecha* resultado)
 {
 

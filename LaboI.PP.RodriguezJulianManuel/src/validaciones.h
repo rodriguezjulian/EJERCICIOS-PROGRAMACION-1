@@ -4,7 +4,7 @@
  *  Created on: 20 oct. 2022
  *      Author: Julian Rodriguez
  */
-
+#include "transporte.h"
 #ifndef VALIDACIONES_H_
 #define VALIDACIONES_H_
 
