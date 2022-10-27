@@ -10,6 +10,7 @@
 #include "jugadores.h"
 #include "confederaciones.h"
 #include "ingresos.h"
+#include<string.h>
 
 
 #define TAM 3000
@@ -121,17 +122,20 @@ int ordenarJugadoresAlfabeticamente(eJugador* jugadores,eConfederacion* confeder
 						asignarDescripcion(jugadores,confederaciones,6, descripcionUno ,i);
 						asignarDescripcion(jugadores,confederaciones,6, descripcionDos ,j);
 
-						if(descripcionUno>descripcionDos)
+						printf("DESCRIPCION 1: %s\n",descripcionUno);
+						printf("DESCRIPCION 2: %s\n",descripcionDos);
+
+						if(strcmp(descripcionUno, descripcionDos)>0)
 						{
 							jugadorAuxiliar=(*(jugadores+i));
 							(*(jugadores+i))=(*(jugadores+j));
 							(*(jugadores+j))=jugadorAuxiliar;
 						}
 						else
-						{
-							if(descripcionUno==descripcionDos)
+						{	if(strcmp(descripcionUno, descripcionDos)==0)
 							{
-								if( (*(jugadores+i)).nombre>(*(jugadores+j)).nombre)
+								//if( (*(jugadores+i)).nombre>(*(jugadores+j)).nombre)
+								if(strcmp( (*(jugadores+i)).nombre,(*(jugadores+j)).nombre)>0)
 								{
 									jugadorAuxiliar=(*(jugadores+i));
 									(*(jugadores+i))=(*(jugadores+j));
@@ -180,8 +184,9 @@ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam,
 	//referenciaOrdenamiento -> 2.ordeno por id
 	int retorno=-1;
 	char descripcion[50];
-	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores)
+	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores>0)
 	{
+		retorno=0;
 		if(referenciaOrdenamiento==1)
 		{
 			ordenarJugadoresAlfabeticamente(jugadores,confederaciones,contadorJugadores,tam);

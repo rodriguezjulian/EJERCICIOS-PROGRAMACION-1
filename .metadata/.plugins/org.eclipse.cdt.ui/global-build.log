@@ -1886,3 +1886,349 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
 gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:46:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c:22:42: error: unknown type name 'confederaciones'
+ int modificarJugador(eJugador jugadores, confederaciones, int tam ,eConfederacion contadorJugadores);
+                                          ^~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:94:42: error: unknown type name 'confederaciones'
+ int modificarJugador(eJugador jugadores, confederaciones, int tam ,eConfederacion contadorJugadores)
+                                          ^~~~~~~~~~~~~~~
+05:46:31 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'modificarJugador':
+..\src\TrabajoPractico2.c:98:21: error: incompatible type for argument 1 of 'listarJugadores'
+  if(listarJugadores(jugadores,confederaciones,tam, contadorJugadores,2)==0)
+                     ^~~~~~~~~
+In file included from ..\src\TrabajoPractico2.c:14:0:
+..\src\jugadores.h:34:5: note: expected 'eJugador * {aka struct <anonymous> *}' but argument is of type 'eJugador {aka struct <anonymous>}'
+ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento);
+     ^~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:98:31: error: incompatible type for argument 2 of 'listarJugadores'
+  if(listarJugadores(jugadores,confederaciones,tam, contadorJugadores,2)==0)
+                               ^~~~~~~~~~~~~~~
+In file included from ..\src\TrabajoPractico2.c:14:0:
+..\src\jugadores.h:34:5: note: expected 'eConfederacion * {aka struct <anonymous> *}' but argument is of type 'eConfederacion {aka struct <anonymous>}'
+ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento);
+     ^~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:98:52: error: incompatible type for argument 4 of 'listarJugadores'
+  if(listarJugadores(jugadores,confederaciones,tam, contadorJugadores,2)==0)
+                                                    ^~~~~~~~~~~~~~~~~
+In file included from ..\src\TrabajoPractico2.c:14:0:
+..\src\jugadores.h:34:5: note: expected 'int' but argument is of type 'eConfederacion {aka struct <anonymous>}'
+ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento);
+     ^~~~~~~~~~~~~~~
+05:46:48 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c:94:83: error: unknown type name 'contadorJugadores'
+ int modificarJugador(eJugador jugadores,eConfederacion confederaciones, int tam , contadorJugadores)
+                                                                                   ^~~~~~~~~~~~~~~~~
+05:47:01 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'modificarJugador':
+..\src\TrabajoPractico2.c:98:21: error: incompatible type for argument 1 of 'listarJugadores'
+  if(listarJugadores(jugadores,confederaciones,tam, contadorJugadores,2)==0)
+                     ^~~~~~~~~
+In file included from ..\src\TrabajoPractico2.c:14:0:
+..\src\jugadores.h:34:5: note: expected 'eJugador * {aka struct <anonymous> *}' but argument is of type 'eJugador {aka struct <anonymous>}'
+ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento);
+     ^~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:98:31: error: incompatible type for argument 2 of 'listarJugadores'
+  if(listarJugadores(jugadores,confederaciones,tam, contadorJugadores,2)==0)
+                               ^~~~~~~~~~~~~~~
+In file included from ..\src\TrabajoPractico2.c:14:0:
+..\src\jugadores.h:34:5: note: expected 'eConfederacion * {aka struct <anonymous> *}' but argument is of type 'eConfederacion {aka struct <anonymous>}'
+ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento);
+     ^~~~~~~~~~~~~~~
+05:47:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:47:44 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:54:41 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'modificarJugador':
+..\src\TrabajoPractico2.c:102:131: error: expected identifier before '-' token
+   printf("|%*s\n|%*s\n|%*s\n|%*s\n|%*s\n|%*s|\n",-25,"1.NOMBRE",-25,"2.POSICION",-25,"3.NUMERO DE CAMISETA",-25,"4.CONFEDERACION".-25,"5.SALARIO",-25,"6.ANIOS DE CONTRATO");
+                                                                                                                                   ^
+05:54:54 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'modificarJugador':
+..\src\TrabajoPractico2.c:102:131: error: expected identifier before '-' token
+   printf("|%*s\n|%*s\n|%*s\n|%*s\n|%*s\n|%*s|\n",-25,"1.NOMBRE",-25,"2.POSICION",-25,"3.NUMERO DE CAMISETA",-25,"4.CONFEDERACION".-25,"5.SALARIO",-25,"6.ANIOS DE CONTRATO");
+                                                                                                                                   ^
+05:55:09 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:55:30 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:55:42 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:56:21 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:56:54 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:57:29 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:58:39 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:00:08 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:10:02 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:12:06 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:12:26 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'contarIteraciones':
+..\src\TrabajoPractico2.c:161:9: error: 'i' undeclared (first use in this function)
+  return i;
+         ^
+..\src\TrabajoPractico2.c:161:9: note: each undeclared identifier is reported only once for each function it appears in
+..\src\TrabajoPractico2.c:162:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+06:12:45 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:13:56 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'contarIteraciones':
+..\src\TrabajoPractico2.c:150:33: error: 'tam' undeclared (first use in this function)
+   for(iteraciones=0;iteraciones<tam;iteraciones++)
+                                 ^~~
+..\src\TrabajoPractico2.c:150:33: note: each undeclared identifier is reported only once for each function it appears in
+..\src\TrabajoPractico2.c:152:20: error: 'i' undeclared (first use in this function)
+    if((*(jugadores+i)).id==idModificar && (*(jugadores+i)).isEmpty==OCUPADO)
+                    ^
+06:14:20 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'contarIteraciones':
+..\src\TrabajoPractico2.c:150:17: error: 'tam' undeclared (first use in this function)
+   for(int i=0;i<tam;i++)
+                 ^~~
+..\src\TrabajoPractico2.c:150:17: note: each undeclared identifier is reported only once for each function it appears in
+..\src\TrabajoPractico2.c:156:5: error: expected ';' before 'break'
+     break;
+     ^~~~~
+06:14:33 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'contarIteraciones':
+..\src\TrabajoPractico2.c:150:17: error: 'tam' undeclared (first use in this function)
+   for(int i=0;i<tam;i++)
+                 ^~~
+..\src\TrabajoPractico2.c:150:17: note: each undeclared identifier is reported only once for each function it appears in
+06:14:43 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:17:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'modificarJugador':
+..\src\TrabajoPractico2.c:107:3: error: too many arguments to function 'contarIteraciones'
+   contarIteraciones(jugadores,&i, tam, idModificar);
+   ^~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:23:5: note: declared here
+ int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam);
+     ^~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c: At top level:
+..\src\TrabajoPractico2.c:142:5: error: conflicting types for 'contarIteraciones'
+ int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModificar)
+     ^~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:23:5: note: previous declaration of 'contarIteraciones' was here
+ int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam);
+     ^~~~~~~~~~~~~~~~~
+06:17:51 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:20:22 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+06:23:40 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+06:28:56 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'modificarJugador':
+..\src\TrabajoPractico2.c:128:26: warning: passing argument 1 of 'ingresarShortConRango' makes pointer from integer without a cast [-Wint-conversion]
+    ingresarShortConRango((*(jugadores+i)).numeroCamiseta,"Ingrese nuevo numero de camiseta entre 1 y 100\n", "Ingrese numero valido\n", 1,  100);
+                          ^
+In file included from ..\src\TrabajoPractico2.c:13:0:
+..\src\ingresos.h:106:5: note: expected 'short int *' but argument is of type 'short int'
+ int ingresarShortConRango(short* resultado, char* mensaje, char* mensajeError, short minimo, short maximo);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:132:25: warning: passing argument 1 of 'ingresarIntConRango' makes pointer from integer without a cast [-Wint-conversion]
+     ingresarIntConRango((*(jugadores+i)).idConfederacion, "Ingrese nuevo ID de confederacion\n", "ERROR,Ingrese ID valido\n", 100, 105);
+                         ^
+In file included from ..\src\TrabajoPractico2.c:13:0:
+..\src\ingresos.h:78:5: note: expected 'int *' but argument is of type 'int'
+ int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
+     ^~~~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:135:27: error: incompatible type for argument 1 of 'ingresarFloatConMinimo'
+    ingresarFloatConMinimo((*(jugadores+i)).salario,"Ingrese nuevo salario","ERROR, ingrese salario valido\n",1);
+                           ^
+In file included from ..\src\TrabajoPractico2.c:13:0:
+..\src\ingresos.h:56:5: note: expected 'float *' but argument is of type 'float'
+ int ingresarFloatConMinimo(float* resultado, char* mensaje,char*mensajeError,int minimo);
+     ^~~~~~~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:138:26: warning: passing argument 1 of 'ingresarShortConRango' makes pointer from integer without a cast [-Wint-conversion]
+    ingresarShortConRango((*(jugadores+i)).aniosContrato,"Ingrese nueva cantidad de anios de contrato entre 1 y 10\n", "Ingrese cantidad valida\n", 1, 10);
+                          ^
+In file included from ..\src\TrabajoPractico2.c:13:0:
+..\src\ingresos.h:106:5: note: expected 'short int *' but argument is of type 'short int'
+ int ingresarShortConRango(short* resultado, char* mensaje, char* mensajeError, short minimo, short maximo);
+     ^~~~~~~~~~~~~~~~~~~~~
+06:29:14 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'modificarJugador':
+..\src\TrabajoPractico2.c:132:25: warning: passing argument 1 of 'ingresarIntConRango' makes pointer from integer without a cast [-Wint-conversion]
+     ingresarIntConRango((*(jugadores+i)).idConfederacion, "Ingrese nuevo ID de confederacion\n", "ERROR,Ingrese ID valido\n", 100, 105);
+                         ^
+In file included from ..\src\TrabajoPractico2.c:13:0:
+..\src\ingresos.h:78:5: note: expected 'int *' but argument is of type 'int'
+ int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo);
+     ^~~~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:135:27: error: incompatible type for argument 1 of 'ingresarFloatConMinimo'
+    ingresarFloatConMinimo((*(jugadores+i)).salario,"Ingrese nuevo salario","ERROR, ingrese salario valido\n",1);
+                           ^
+In file included from ..\src\TrabajoPractico2.c:13:0:
+..\src\ingresos.h:56:5: note: expected 'float *' but argument is of type 'float'
+ int ingresarFloatConMinimo(float* resultado, char* mensaje,char*mensajeError,int minimo);
+     ^~~~~~~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:138:26: warning: passing argument 1 of 'ingresarShortConRango' makes pointer from integer without a cast [-Wint-conversion]
+    ingresarShortConRango((*(jugadores+i)).aniosContrato,"Ingrese nueva cantidad de anios de contrato entre 1 y 10\n", "Ingrese cantidad valida\n", 1, 10);
+                          ^
+In file included from ..\src\TrabajoPractico2.c:13:0:
+..\src\ingresos.h:106:5: note: expected 'short int *' but argument is of type 'short int'
+ int ingresarShortConRango(short* resultado, char* mensaje, char* mensajeError, short minimo, short maximo);
+     ^~~~~~~~~~~~~~~~~~~~~
+06:29:24 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'modificarJugador':
+..\src\TrabajoPractico2.c:138:26: warning: passing argument 1 of 'ingresarShortConRango' makes pointer from integer without a cast [-Wint-conversion]
+    ingresarShortConRango((*(jugadores+i)).aniosContrato,"Ingrese nueva cantidad de anios de contrato entre 1 y 10\n", "Ingrese cantidad valida\n", 1, 10);
+                          ^
+In file included from ..\src\TrabajoPractico2.c:13:0:
+..\src\ingresos.h:106:5: note: expected 'short int *' but argument is of type 'short int'
+ int ingresarShortConRango(short* resultado, char* mensaje, char* mensajeError, short minimo, short maximo);
+     ^~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:29:30 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:33:54 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+06:37:15 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:37:30 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+06:37:48 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+06:38:54 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:41:07 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+06:43:54 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+06:44:46 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:47:30 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+06:55:19 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:56:00 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:59:59 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'ordenarJugadoresAlfabeticamente':
+..\src\jugadores.c:144:9: error: expected expression before '/' token
+       }*/
+         ^
+07:00:10 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+07:02:22 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
