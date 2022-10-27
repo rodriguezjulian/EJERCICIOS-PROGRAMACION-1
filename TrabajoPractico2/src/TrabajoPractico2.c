@@ -20,15 +20,17 @@
 #define OCUPADO 0
 
 int ordenarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int contadorJugadores,int tam);
-
+int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores);
 int main(void) {
 
 	setbuf(stdout,NULL);
+
 	short opcionMenu;
 	short salida=0;//
 	int idJugadores=0;//LO INICIALIZO EN 0 YA QUE EL ID SERA AUTOINCREMENTAL
 	int contadorJugadores=0;//INICIALIZADO EN 0 YA QUE SE USARA COMO VARIABLE DE CONTROL EN EL MENU
 	eJugador jugadores[3000];
+	eJugador jugadorAuxiliar;
 	eConfederacion confederaciones[6]=
 	{
 			{100,"CONMEBOL","SUDAMERICA",1916},
@@ -59,13 +61,24 @@ int main(void) {
 		switch(opcionMenu)
 		{
 			case 1:
+
+					/*for(int i=0;i<TAM;i++)
+						{
+							if((*(jugadores+i)).isEmpty==VACIO)
+							{
+								break;
+							}
+							jugadores++;
+						}*/
 				 loguearJugador(jugadores,confederaciones, &idJugadores,&contadorJugadores, TAM);
+				 //(*(jugadores+i))= jugadorAuxiliar;
 			break;
 			case 2:
 			break;
 			case 3:
 			break;
 			case 4:
+				 listarJugadores(jugadores,confederaciones,TAM, contadorJugadores);
 			break;
 			case 5:
 				salida=1;
@@ -92,40 +105,65 @@ int ordenarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int con
 
 	eJugador jugadorAxuliar; //PARA EL SWAP
 
-	if(jugadores!=NULL && confederaciones!=NULL)
+	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores>0)
 	{
-		if(contadorJugadores>0)
+		for(int i=0;i<tam-1;i++)
 		{
-			for(int i=0;i<tam-1;i++)
+			if((*(jugadores+i)).isEmpty==OCUPADO)
 			{
-				if((*(jugadores+i)).isEmpty==OCUPADO)
+				retorno=0;
+				for(int j=i+1;j<tam;j++)
 				{
-					retorno=0;
-					for(int j=i+1;j<tam;j++)
+					if((*(jugadores+j)).isEmpty==OCUPADO)
 					{
-						if((*(jugadores+j)).isEmpty==OCUPADO)
-						{
-							asignarDescripcion(jugadores,confederaciones,6, descripcionUno ,i);
-							asignarDescripcion(jugadores,confederaciones,6, descripcionDos ,j);
+						asignarDescripcion(jugadores,confederaciones,6, descripcionUno ,i);
+						asignarDescripcion(jugadores,confederaciones,6, descripcionDos ,j);
 
-							if(descripcionUno>descripcionDos)
-							{
-								jugadorAxuliar=(*(jugadores+i));
-								(*(jugadores+i))=(*(jugadores+j));
-								(*(jugadores+j))=jugadorAxuliar;
-							}
+						if(descripcionUno>descripcionDos)
+						{
+							jugadorAxuliar=(*(jugadores+i));
+							(*(jugadores+i))=(*(jugadores+j));
+							(*(jugadores+j))=jugadorAxuliar;
 						}
 					}
 				}
 			}
 		}
-		else
-		{
-			printf("ERROR, Para operar esta opcion debe existir al menos 1 jugador cargado");
-		}
 	}
 	return retorno;
 }
+int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores)
+{
+	//
+	int retorno=-1;
+	char descripcion[50];
+	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores)
+	{
+		int entre=0;
+		ordenarJugadores(jugadores,confederaciones,contadorJugadores,tam);
+		printf("+=============================================================================================================================================================================+\n");
+		printf("|%*s|%*s|%*s|%*s|%*s|%*s|%*s|\n",-4," ID",-50,"                     NOMBRE",-50,"                     POSICION",
+					-13," N°CAMISETA",-16,"     SUELDO",-15," CONFEDERACION",-20,"  ANIOS DE CONTRATO");
+		printf("+=============================================================================================================================================================================+\n");
+		for(int i=0;i<tam;i++)
+		{
+			if((*(jugadores+i)).isEmpty==OCUPADO)
+			{
 
+				//entre=entre+1;
+				//printf("ENTRE %d\n",entre);
+				asignarDescripcion(jugadores,confederaciones,6, descripcion ,i);
+				printf("|%*d|%*s|%*s|%*d|%*.2f|%*s|%*d|\n",-4,(*(jugadores+i)).id,-50,(*(jugadores+i)).nombre,-50,(*(jugadores+i)).posicion,-12,(*(jugadores+i)).numeroCamiseta,-16,(*(jugadores+i)).salario,-15,descripcion,-20,(*(jugadores+i)).aniosContrato);
+			}
+		}
+		printf("+=============================================================================================================================================================================+\n");
+
+	}
+	else
+	{
+		printf("ERROR, Para operar esta opcion debe existir al menos 1 jugador cargado\n");
+	}
+	return retorno;
+}
 
 

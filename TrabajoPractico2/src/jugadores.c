@@ -42,6 +42,8 @@ int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,
 		if(*contadorJugadores<tamJugadores)
 		{
 			*id=*id+1;//CADA VEZ QUE INGRESE TOMO AL VALOR QUE LLEGA COMO PARAMETRO PARA SUMARLE UNO Y ASI QUEDE AUTOINCREMENTAL
+			jugadorAuxiliar.id=*id;
+
 			*contadorJugadores=*contadorJugadores+1;
 
 			 ingresarCadenaCaracteres( 50,jugadorAuxiliar.nombre,"Ingrese nombre del jugador\n","ERROR, Ingrese nombre valido\n");
@@ -59,6 +61,15 @@ int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,
 			 ingresarShortConRango(&jugadorAuxiliar.aniosContrato,"Ingrese anios de contrato entre 1 y 10\n", "Ingrese cantidad valida\n", 1, 10);
 
 			 jugadorAuxiliar.isEmpty=OCUPADO;
+
+			for(int i=0;i<tamJugadores;i++)
+			 {
+				 if((*(jugadores+i)).isEmpty==VACIO)
+				 {
+					 (*(jugadores+i))=jugadorAuxiliar;
+					 break;
+				 }
+			 }
 		}
 		else
 		{
