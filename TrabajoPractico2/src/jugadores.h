@@ -32,6 +32,9 @@ int ordenarJugadoresXId(eJugador* jugadores, int tam);
 
 //int listarJugadoresOrdenAfalbetico(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores);
 int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento);
+int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModificar);
+int modificarJugador(eJugador* jugadores, eConfederacion* confederaciones, int tam ,int contadorJugadores);
+int darLaBajaJugador(eJugador* jugadores,int tam, int* contadorJugadores, eConfederacion* confederaciones);
 
 
 

@@ -19,8 +19,8 @@
 #define VACIO 1
 #define OCUPADO 0
 
-int modificarJugador(eJugador* jugadores, eConfederacion* confederaciones, int tam ,int contadorJugadores);
-int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModificar);
+
+
 int main(void) {
 
 	setbuf(stdout,NULL);
@@ -66,6 +66,7 @@ int main(void) {
 			break;
 			case 2:
 				//BAJA DE JUGADOR
+				darLaBajaJugador(jugadores,TAM, &contadorJugadores, confederaciones);
 			break;
 			case 3:
 				modificarJugador(jugadores,confederaciones, TAM , contadorJugadores);
@@ -92,83 +93,6 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 
-int modificarJugador(eJugador* jugadores,eConfederacion* confederaciones, int tam , int contadorJugadores)
-{
-	int retorno=-1;
-	int opcion;
-	int idModificar;
-	int i;
-
-	//SI EL LISTAR ME RETORNA 0 ES PORQUE HAY JUGADORES CARGADOS YA!
-	//EN CASO QUE NO EXISTA JUGADOR CARGADO, DIRECTAMENTE EL AVISO LO IMPRIME LA FUINCION listarJugadores.
-	if(listarJugadores(jugadores,confederaciones,tam, contadorJugadores,2)==0)
-	{
-
-		do
-		{
-			ingresarIntConRango(&idModificar, "Ingrese ID a modificar", "ERROR, Ingrese ID valido\n",1,3000);
-			//EN CONTAR ITERACIONES, SI HAY PROBLEMAS CON EL ID, RETORNO -1
-		}while(contarIteraciones(jugadores,&i, tam, idModificar)==-1);
 
 
-
-		printf("+=========================+\n|%*s|\n+=========================+\n",-25,"SUB MENU - MODIFICACIONES");
-		printf("|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n",-25,"1.NOMBRE",-25,"2.POSICION",-25,"3.NUMERO DE CAMISETA",-25,"4.CONFEDERACION",-25,"5.SALARIO",-25,"6.ANIOS DE CONTRATO");
-
-		ingresarIntConRango(&opcion, "Ingrese opcion segun desee operar", "ERROR, Ingrese opcion valida\n",1,7);
-
-		switch(opcion)
-		{
-		case 1:
-			ingresarCadenaCaracteres( 50,(*(jugadores+i)).nombre,"Ingrese nuevo nombre del jugador\n","ERROR, Ingrese nombre valido\n");
-		break;
-		case 2:
-			ingresarCadenaCaracteres( 50,(*(jugadores+i)).posicion,"Ingrese nueva posicion del jugador\n","ERROR, Ingrese posicion valida\n");
-		break;
-		case 3:
-			ingresarShortConRango(&(*(jugadores+i)).numeroCamiseta,"Ingrese nuevo numero de camiseta entre 1 y 100\n", "Ingrese numero valido\n", 1,  100);
-		break;
-		case 4:
-			 listarConfederaciones(confederaciones);
-			 ingresarIntConRango(&(*(jugadores+i)).idConfederacion, "Ingrese nuevo ID de confederacion\n", "ERROR,Ingrese ID valido\n", 100, 105);
-		break;
-		case 5:
-			ingresarFloatConMinimo(&(*(jugadores+i)).salario,"Ingrese nuevo salario","ERROR, ingrese salario valido\n",1);
-		break;
-		case 6:
-			ingresarShortConRango(&(*(jugadores+i)).aniosContrato,"Ingrese nueva cantidad de anios de contrato entre 1 y 10\n", "Ingrese cantidad valida\n", 1, 10);
-		break;
-
-		}
-
-
-	}
-	//HACER QUE PUEDA VOLVER AL MENU PRINCIPAL
-
-
-	return retorno;
-}
-int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModificar)
-{
-	int flag=0;
-
-	int retorno=-1;
-
-
-	for(int i=0;i<tam;i++)
-	{
-		if((*(jugadores+i)).id==idModificar && (*(jugadores+i)).isEmpty==OCUPADO)
-		{
-			flag=1;
-			retorno=0;
-			*iteraciones=i;
-			break;
-		}
-	}
-	if(flag==0)
-	{
-		printf("ERROR, Ingrese ID valido\n");
-	}
-	return retorno;
-}
 

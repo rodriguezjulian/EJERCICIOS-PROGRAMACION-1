@@ -2232,3 +2232,112 @@ Info: Nothing to build for TrabajoPractico2
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
 gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+07:05:19 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+07:05:23 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+07:16:34 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+07:23:42 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'darLaBajaJugador':
+..\src\TrabajoPractico2.c:109:25: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+   printf("<<<<<<<<<<ID %d DADO DE BAJA SATISFACTORIAMENTE>>>>>>>>>>\n");
+                         ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+07:24:11 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'darLaBajaJugador':
+..\src\TrabajoPractico2.c:110:25: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+   printf("<<<<<<<<<<ID %d DADO DE BAJA SATISFACTORIAMENTE>>>>>>>>>>\n");
+                         ^
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+07:24:31 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+07:26:26 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+07:27:31 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+07:28:01 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c:299:5: error: conflicting types for 'darLaBajaJugador'
+ int darLaBajaJugador(eJugador* jugadores,int tam, int* contadorJugadores, eConfederacion* confederaciones)
+     ^~~~~~~~~~~~~~~~
+In file included from ..\src\jugadores.c:10:0:
+..\src\jugadores.h:37:5: note: previous declaration of 'darLaBajaJugador' was here
+ int darLaBajaJugador(eJugador* jugadores,int tam, int contadorJugadores, eConfederacion* confederaciones);
+     ^~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'darLaBajaJugador':
+..\src\jugadores.c:304:52: warning: passing argument 4 of 'listarJugadores' makes integer from pointer without a cast [-Wint-conversion]
+  if(listarJugadores(jugadores,confederaciones,tam, contadorJugadores,2)==0)
+                                                    ^~~~~~~~~~~~~~~~~
+..\src\jugadores.c:181:5: note: expected 'int' but argument is of type 'int *'
+ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento)
+     ^~~~~~~~~~~~~~~
+07:28:13 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:69:37: warning: passing argument 3 of 'darLaBajaJugador' makes pointer from integer without a cast [-Wint-conversion]
+     darLaBajaJugador(jugadores,TAM, contadorJugadores, confederaciones);
+                                     ^~~~~~~~~~~~~~~~~
+In file included from ..\src\TrabajoPractico2.c:14:0:
+..\src\jugadores.h:37:5: note: expected 'int *' but argument is of type 'int'
+ int darLaBajaJugador(eJugador* jugadores,int tam, int* contadorJugadores, eConfederacion* confederaciones);
+     ^~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'darLaBajaJugador':
+..\src\jugadores.c:304:52: warning: passing argument 4 of 'listarJugadores' makes integer from pointer without a cast [-Wint-conversion]
+  if(listarJugadores(jugadores,confederaciones,tam, contadorJugadores,2)==0)
+                                                    ^~~~~~~~~~~~~~~~~
+..\src\jugadores.c:181:5: note: expected 'int' but argument is of type 'int *'
+ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento)
+     ^~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+07:28:37 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+07:29:44 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'darLaBajaJugador':
+..\src\jugadores.c:304:52: warning: passing argument 4 of 'listarJugadores' makes integer from pointer without a cast [-Wint-conversion]
+  if(listarJugadores(jugadores,confederaciones,tam, contadorJugadores,2)==0)
+                                                    ^~~~~~~~~~~~~~~~~
+..\src\jugadores.c:181:5: note: expected 'int' but argument is of type 'int *'
+ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento)
+     ^~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+07:30:03 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
