@@ -1,7 +1,7 @@
-01:36:32 **** Rebuild of configuration Debug for project EJERCICIO 3-6 ****
+11:54:52 **** Rebuild of configuration Debug for project EJERCICIO 3-6 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 3-6.o" "..\\src\\EJERCICIO 3-6.c" 
 gcc -o "EJERCICIO 3-6.exe" "src\\EJERCICIO 3-6.o" 
 
-01:36:33 Build Finished. 0 errors, 0 warnings. (took 347ms)
+11:54:53 Build Finished. 0 errors, 0 warnings. (took 347ms)
 

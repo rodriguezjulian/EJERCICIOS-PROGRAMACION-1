@@ -2341,3 +2341,828 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
 gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
 Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+08:33:52 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:12:38 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'listarJugadoresXUnaConf':
+..\src\TrabajoPractico2.c:115:23: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+    printf("|%*s|%*s|%*d|",-50,(*(jugadores+i)).nombre,-50,(*(jugadores+i)).posicion,(*(jugadores+i)).numeroCamiseta);
+                       ^
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:13:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'listarJugadoresXUnaConf':
+..\src\TrabajoPractico2.c:115:24: warning: format '%hi' expects a matching 'int' argument [-Wformat=]
+    printf("|%*s|%*s|%*hi|",-50,(*(jugadores+i)).nombre,-50,(*(jugadores+i)).posicion,(*(jugadores+i)).numeroCamiseta);
+                        ^
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:13:37 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:14:31 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:15:19 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:18:21 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:50:12: error: redeclaration of 'jugadores' with no linkage
+   eJugador jugadores[3000]=
+            ^~~~~~~~~
+..\src\TrabajoPractico2.c:34:11: note: previous declaration of 'jugadores' was here
+  eJugador jugadores[3000];
+           ^~~~~~~~~
+11:18:28 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:19:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:19:21 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:19:42 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:20:19 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:34:31: warning: missing braces around initializer [-Wmissing-braces]
+  eJugador jugadores[3000]=    { 1,"Julian","Delantero",10,100,102545,1,OCUPADO},
+                               ^
+..\src\TrabajoPractico2.c:34:31: note: (near initialization for 'jugadores')
+..\src\TrabajoPractico2.c:35:5: error: expected identifier or '(' before '{' token
+     {2,"Nige","Mediocampista",5,102,1544,2,OCUPADO};
+     ^
+11:20:30 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:20:53 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:21:01 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:21:04 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:21:11 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:21:59 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:22:27 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:51:3: error: expected expression before '{' token
+   {
+   ^
+11:22:43 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:50:11: warning: statement with no effect [-Wunused-value]
+  jugadores[TAM]
+  ~~~~~~~~~^~~~~
+..\src\TrabajoPractico2.c:51:3: error: expected ';' before '{' token
+   {
+   ^
+11:22:51 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:50:17: error: expected expression before '{' token
+  jugadores[TAM]={
+                 ^
+11:22:59 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:50:17: error: expected expression before '{' token
+  jugadores[TAM]={
+                 ^
+11:23:10 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:50:18: error: conflicting types for 'jugadores'
+   eConfederacion jugadores[TAM]={
+                  ^~~~~~~~~
+..\src\TrabajoPractico2.c:34:11: note: previous declaration of 'jugadores' was here
+  eJugador jugadores[TAM];
+           ^~~~~~~~~
+..\src\TrabajoPractico2.c:51:32: warning: excess elements in struct initializer
+     {1,"Julian","Delantero",10,100,102545,1,OCUPADO},
+                                ^~~
+..\src\TrabajoPractico2.c:51:32: note: (near initialization for 'jugadores[0]')
+..\src\TrabajoPractico2.c:51:36: warning: excess elements in struct initializer
+     {1,"Julian","Delantero",10,100,102545,1,OCUPADO},
+                                    ^~~~~~
+..\src\TrabajoPractico2.c:51:36: note: (near initialization for 'jugadores[0]')
+..\src\TrabajoPractico2.c:51:43: warning: excess elements in struct initializer
+     {1,"Julian","Delantero",10,100,102545,1,OCUPADO},
+                                           ^
+..\src\TrabajoPractico2.c:51:43: note: (near initialization for 'jugadores[0]')
+..\src\TrabajoPractico2.c:21:17: warning: excess elements in struct initializer
+ #define OCUPADO 0
+                 ^
+..\src\TrabajoPractico2.c:51:45: note: in expansion of macro 'OCUPADO'
+     {1,"Julian","Delantero",10,100,102545,1,OCUPADO},
+                                             ^~~~~~~
+..\src\TrabajoPractico2.c:21:17: note: (near initialization for 'jugadores[0]')
+ #define OCUPADO 0
+                 ^
+..\src\TrabajoPractico2.c:51:45: note: in expansion of macro 'OCUPADO'
+     {1,"Julian","Delantero",10,100,102545,1,OCUPADO},
+                                             ^~~~~~~
+..\src\TrabajoPractico2.c:52:33: warning: excess elements in struct initializer
+     {2,"Nige","Mediocampista",5,102,1544,2,OCUPADO}
+                                 ^~~
+..\src\TrabajoPractico2.c:52:33: note: (near initialization for 'jugadores[1]')
+..\src\TrabajoPractico2.c:52:37: warning: excess elements in struct initializer
+     {2,"Nige","Mediocampista",5,102,1544,2,OCUPADO}
+                                     ^~~~
+..\src\TrabajoPractico2.c:52:37: note: (near initialization for 'jugadores[1]')
+..\src\TrabajoPractico2.c:52:42: warning: excess elements in struct initializer
+     {2,"Nige","Mediocampista",5,102,1544,2,OCUPADO}
+                                          ^
+..\src\TrabajoPractico2.c:52:42: note: (near initialization for 'jugadores[1]')
+..\src\TrabajoPractico2.c:21:17: warning: excess elements in struct initializer
+ #define OCUPADO 0
+                 ^
+..\src\TrabajoPractico2.c:52:44: note: in expansion of macro 'OCUPADO'
+     {2,"Nige","Mediocampista",5,102,1544,2,OCUPADO}
+                                            ^~~~~~~
+..\src\TrabajoPractico2.c:21:17: note: (near initialization for 'jugadores[1]')
+ #define OCUPADO 0
+                 ^
+..\src\TrabajoPractico2.c:52:44: note: in expansion of macro 'OCUPADO'
+     {2,"Nige","Mediocampista",5,102,1544,2,OCUPADO}
+                                            ^~~~~~~
+..\src\TrabajoPractico2.c:73:21: warning: passing argument 1 of 'loguearJugador' from incompatible pointer type [-Wincompatible-pointer-types]
+      loguearJugador(jugadores,confederaciones, &idJugadores,&contadorJugadores, TAM);
+                     ^~~~~~~~~
+In file included from ..\src\TrabajoPractico2.c:14:0:
+..\src\jugadores.h:27:5: note: expected 'eJugador * {aka struct <anonymous> *}' but argument is of type 'eConfederacion * {aka struct <anonymous> *}'
+ int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores,int tamJugadores);
+     ^~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:77:22: warning: passing argument 1 of 'darLaBajaJugador' from incompatible pointer type [-Wincompatible-pointer-types]
+     darLaBajaJugador(jugadores,TAM, &contadorJugadores, confederaciones);
+                      ^~~~~~~~~
+In file included from ..\src\TrabajoPractico2.c:14:0:
+..\src\jugadores.h:37:5: note: expected 'eJugador * {aka struct <anonymous> *}' but argument is of type 'eConfederacion * {aka struct <anonymous> *}'
+ int darLaBajaJugador(eJugador* jugadores,int tam, int* contadorJugadores, eConfederacion* confederaciones);
+     ^~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:80:22: warning: passing argument 1 of 'modificarJugador' from incompatible pointer type [-Wincompatible-pointer-types]
+     modificarJugador(jugadores,confederaciones, TAM , contadorJugadores);
+                      ^~~~~~~~~
+In file included from ..\src\TrabajoPractico2.c:14:0:
+..\src\jugadores.h:36:5: note: expected 'eJugador * {aka struct <anonymous> *}' but argument is of type 'eConfederacion * {aka struct <anonymous> *}'
+ int modificarJugador(eJugador* jugadores, eConfederacion* confederaciones, int tam ,int contadorJugadores);
+     ^~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:85:38: warning: passing argument 1 of 'listarJugadoresXConfederaciones' from incompatible pointer type [-Wincompatible-pointer-types]
+     listarJugadoresXConfederaciones( jugadores, confederaciones, TAM, contadorJugadores,  TAM_CONFEDERACIONES);
+                                      ^~~~~~~~~
+..\src\TrabajoPractico2.c:24:5: note: expected 'eJugador * {aka struct <anonymous> *}' but argument is of type 'eConfederacion * {aka struct <anonymous> *}'
+ int listarJugadoresXConfederaciones(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores, int tamConfederaciones);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+11:23:15 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:50:18: error: expected expression before '{' token
+   jugadores[TAM]={
+                  ^
+11:31:16 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+11:31:56 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:33:20 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:33:46 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:47:3: error: 'jugadores' undeclared (first use in this function)
+   jugadores[TAM]={
+   ^~~~~~~~~
+..\src\TrabajoPractico2.c:47:3: note: each undeclared identifier is reported only once for each function it appears in
+..\src\TrabajoPractico2.c:47:18: error: expected expression before '{' token
+   jugadores[TAM]={
+                  ^
+11:33:56 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+11:34:12 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:34:56 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:49:13: error: redeclaration of 'jugadores' with no linkage
+    eJugador jugadores[TAM]={
+             ^~~~~~~~~
+..\src\TrabajoPractico2.c:34:11: note: previous declaration of 'jugadores' was here
+  eJugador jugadores[TAM];
+           ^~~~~~~~~
+11:35:00 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:49:20: error: expected expression before '{' token
+     jugadores[TAM]={
+                    ^
+11:35:12 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:49:14: error: redeclaration of 'jugadores' with no linkage
+    eJugador  jugadores[TAM]={
+              ^~~~~~~~~
+..\src\TrabajoPractico2.c:34:11: note: previous declaration of 'jugadores' was here
+  eJugador jugadores[TAM];
+           ^~~~~~~~~
+11:35:18 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:47:23: error: 'jugadores' undeclared (first use in this function)
+    inicializarIsEmpty(jugadores,TAM, VACIO);
+                       ^~~~~~~~~
+..\src\TrabajoPractico2.c:47:23: note: each undeclared identifier is reported only once for each function it appears in
+11:36:09 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:56:17: error: expected expression before '{' token
+    jugadores[0]={
+                 ^
+11:36:35 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:36:41 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:36:48 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:37:05 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:37:35 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:37:52 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:38:49 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:39:15 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:39:58 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:40:09 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'listarJugadoresXUnaConf':
+..\src\TrabajoPractico2.c:119:16: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                ^
+..\src\TrabajoPractico2.c:119:17: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                 ^
+..\src\TrabajoPractico2.c:119:18: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                  ^
+..\src\TrabajoPractico2.c:119:19: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                   ^
+..\src\TrabajoPractico2.c:119:20: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                    ^
+..\src\TrabajoPractico2.c:119:21: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                     ^
+..\src\TrabajoPractico2.c:119:22: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                      ^
+..\src\TrabajoPractico2.c:119:23: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                       ^
+..\src\TrabajoPractico2.c:119:24: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                        ^
+..\src\TrabajoPractico2.c:119:25: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                         ^
+..\src\TrabajoPractico2.c:119:26: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                          ^
+..\src\TrabajoPractico2.c:119:27: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                           ^
+..\src\TrabajoPractico2.c:119:28: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                            ^
+..\src\TrabajoPractico2.c:119:29: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                             ^
+..\src\TrabajoPractico2.c:119:30: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                              ^
+..\src\TrabajoPractico2.c:119:31: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                               ^
+..\src\TrabajoPractico2.c:119:32: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                ^
+..\src\TrabajoPractico2.c:119:33: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                 ^
+..\src\TrabajoPractico2.c:119:34: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                  ^
+..\src\TrabajoPractico2.c:119:35: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                   ^
+..\src\TrabajoPractico2.c:119:36: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                    ^
+..\src\TrabajoPractico2.c:119:37: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                     ^
+..\src\TrabajoPractico2.c:119:38: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                      ^
+..\src\TrabajoPractico2.c:119:39: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                       ^
+..\src\TrabajoPractico2.c:119:40: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                        ^
+..\src\TrabajoPractico2.c:119:41: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                         ^
+..\src\TrabajoPractico2.c:119:42: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                          ^
+..\src\TrabajoPractico2.c:119:43: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                           ^
+..\src\TrabajoPractico2.c:119:44: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                            ^
+..\src\TrabajoPractico2.c:119:45: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                             ^
+..\src\TrabajoPractico2.c:119:46: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                              ^
+..\src\TrabajoPractico2.c:119:47: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                               ^
+..\src\TrabajoPractico2.c:119:48: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                ^
+..\src\TrabajoPractico2.c:119:49: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                 ^
+..\src\TrabajoPractico2.c:119:50: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                  ^
+..\src\TrabajoPractico2.c:119:51: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                   ^
+..\src\TrabajoPractico2.c:119:52: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                    ^
+..\src\TrabajoPractico2.c:119:53: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                     ^
+..\src\TrabajoPractico2.c:119:54: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                      ^
+..\src\TrabajoPractico2.c:119:55: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                       ^
+..\src\TrabajoPractico2.c:119:56: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                        ^
+..\src\TrabajoPractico2.c:119:57: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                         ^
+..\src\TrabajoPractico2.c:119:58: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                          ^
+..\src\TrabajoPractico2.c:119:59: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                           ^
+..\src\TrabajoPractico2.c:119:60: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                            ^
+..\src\TrabajoPractico2.c:119:61: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                             ^
+..\src\TrabajoPractico2.c:119:62: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                              ^
+..\src\TrabajoPractico2.c:119:63: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                               ^
+..\src\TrabajoPractico2.c:119:64: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                ^
+..\src\TrabajoPractico2.c:119:65: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                 ^
+..\src\TrabajoPractico2.c:119:66: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                  ^
+..\src\TrabajoPractico2.c:119:67: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                   ^
+..\src\TrabajoPractico2.c:119:68: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                    ^
+..\src\TrabajoPractico2.c:119:69: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                     ^
+..\src\TrabajoPractico2.c:119:70: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                      ^
+..\src\TrabajoPractico2.c:119:71: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                       ^
+..\src\TrabajoPractico2.c:119:72: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                        ^
+..\src\TrabajoPractico2.c:119:73: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                         ^
+..\src\TrabajoPractico2.c:119:74: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                          ^
+..\src\TrabajoPractico2.c:119:75: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                           ^
+..\src\TrabajoPractico2.c:119:76: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                            ^
+..\src\TrabajoPractico2.c:119:77: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                             ^
+..\src\TrabajoPractico2.c:119:78: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                              ^
+..\src\TrabajoPractico2.c:119:79: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                               ^
+..\src\TrabajoPractico2.c:119:80: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                                ^
+..\src\TrabajoPractico2.c:119:81: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                                 ^
+..\src\TrabajoPractico2.c:119:82: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                                  ^
+..\src\TrabajoPractico2.c:119:83: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                                   ^
+..\src\TrabajoPractico2.c:119:84: warning: repeated ' ' flag in format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                                    ^
+..\src\TrabajoPractico2.c:119:86: warning: ' ' flag used with '%s' ms_printf format [-Wformat=]
+     printf("|%                                                                      *s|\n",-122,descripcionConf);
+                                                                                      ^
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:40:55 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:42:13 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:42:48 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:42:58 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:43:09 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:43:27 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:43:42 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:43:50 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:43:59 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:46:37 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'listarJugadoresXUnaConf':
+..\src\TrabajoPractico2.c:135:10: warning: too many arguments for format [-Wformat-extra-args]
+   printf("+                                  NO EXISTEN JUGADORES EN LA CONDEFERACION:                                                +",descripcionConf);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:46:50 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'listarJugadoresXUnaConf':
+..\src\TrabajoPractico2.c:135:10: warning: too many arguments for format [-Wformat-extra-args]
+   printf("+                                  NO EXISTEN JUGADORES EN LA CONDEFERACION:                                               +\n",descripcionConf);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:47:26 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:48:11 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:48:29 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:54:50 **** Incremental Build of configuration Debug for project .EJERCICIO 10-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 10-2.o" "..\\src\\EJERCICIO 10-2.c" 
+..\src\EJERCICIO 10-2.c:13:22: fatal error: calculos.h: No such file or directory
+ #include "calculos.h"
+                      ^
+compilation terminated.
+Info: Nothing to build for EJERCICIO 1-1
+Info: Nothing to build for EJERCICIO 1-2
+Info: Nothing to build for EJERCICIO 1-3
+Info: Nothing to build for EJERCICIO 10-1
+Info: Nothing to build for EJERCICIO 10-2
+Info: Nothing to build for EJERCICIO 11-1
+Info: Nothing to build for EJERCICIO 11-2
+Info: Nothing to build for EJERCICIO 2-1
+Info: Nothing to build for EJERCICIO 2-2
+Info: Nothing to build for EJERCICIO 2-3
+Info: Nothing to build for EJERCICIO 2-4
+Info: Nothing to build for EJERCICIO 2-5
+Info: Nothing to build for EJERCICIO 2-5.2
+Info: Nothing to build for EJERCICIO 2-6
+11:54:51 **** Rebuild of configuration Debug for project EJERCICIO 3-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 3-1.o" "..\\src\\EJERCICIO 3-1.c" 
+gcc -o "EJERCICIO 3-1.exe" "src\\EJERCICIO 3-1.o" 
+11:54:51 **** Rebuild of configuration Debug for project EJERCICIO 3-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 3-2.o" "..\\src\\EJERCICIO 3-2.c" 
+gcc -o "EJERCICIO 3-2.exe" "src\\EJERCICIO 3-2.o" 
+11:54:51 **** Rebuild of configuration Debug for project EJERCICIO 3-3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 3-3.o" "..\\src\\EJERCICIO 3-3.c" 
+gcc -o "EJERCICIO 3-3.exe" "src\\EJERCICIO 3-3.o" 
+11:54:52 **** Rebuild of configuration Debug for project EJERCICIO 3-4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 3-4.o" "..\\src\\EJERCICIO 3-4.c" 
+gcc -o "EJERCICIO 3-4.exe" "src\\EJERCICIO 3-4.o" 
+11:54:52 **** Rebuild of configuration Debug for project EJERCICIO 3-5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 3-5.o" "..\\src\\EJERCICIO 3-5.c" 
+gcc -o "EJERCICIO 3-5.exe" "src\\EJERCICIO 3-5.o" 
+11:54:52 **** Rebuild of configuration Debug for project EJERCICIO 3-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 3-6.o" "..\\src\\EJERCICIO 3-6.c" 
+gcc -o "EJERCICIO 3-6.exe" "src\\EJERCICIO 3-6.o" 
+11:54:53 **** Rebuild of configuration Debug for project EJERCICIO 3-7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 3-7.o" "..\\src\\EJERCICIO 3-7.c" 
+Command canceled
+11:56:20 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c:106:5: error: conflicting types for 'listarJugadoresXUnaConf'
+ int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,int tam, int idConf, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:23:5: note: previous declaration of 'listarJugadoresXUnaConf' was here
+ int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,int tam, int idConf);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c: In function 'listarJugadoresXConfederaciones':
+..\src\TrabajoPractico2.c:156:4: error: too few arguments to function 'listarJugadoresXUnaConf'
+    listarJugadoresXUnaConf(jugadores,confederaciones,tam,idConf);
+    ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\TrabajoPractico2.c:106:5: note: declared here
+ int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,int tam, int idConf, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+11:56:53 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:57:11 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:57:45 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:58:08 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:58:20 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'listarJugadoresXUnaConf':
+..\src\TrabajoPractico2.c:133:2: error: 'else' without a previous 'if'
+  else
+  ^~~~
+11:58:39 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+11:59:20 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:59:33 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+11:59:56 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+12:01:38 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'listarJugadoresXUnaConf':
+..\src\TrabajoPractico2.c:124:5: error: expected ';' before 'printf'
+     printf("|%*s|%*s|%*s|\n",-50,"                     NOMBRE",-50,"                     POSICION",-20,"     N CAMISETA");
+     ^~~~~~
+12:01:47 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+12:02:22 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+12:04:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+12:04:51 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+12:06:28 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+12:14:12 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+12:14:20 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+12:14:40 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+12:14:59 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+12:15:14 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+12:15:24 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 

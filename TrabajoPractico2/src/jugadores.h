@@ -35,6 +35,8 @@ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam,
 int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModificar);
 int modificarJugador(eJugador* jugadores, eConfederacion* confederaciones, int tam ,int contadorJugadores);
 int darLaBajaJugador(eJugador* jugadores,int tam, int* contadorJugadores, eConfederacion* confederaciones);
+int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,int tam, int idConf, int tamConfederaciones);
+int listarJugadoresXConfederaciones(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores, int tamConfederaciones);
 
 
 

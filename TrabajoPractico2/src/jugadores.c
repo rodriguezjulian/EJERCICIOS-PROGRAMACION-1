@@ -95,9 +95,6 @@ int asignarDescripcion(eJugador* jugadores,eConfederacion* confederaciones,int t
 				}
 			}
 		}
-
-
-
 	return retorno;
 }
 int ordenarJugadoresAlfabeticamente(eJugador* jugadores,eConfederacion* confederaciones,int contadorJugadores,int tam)
@@ -316,3 +313,83 @@ int darLaBajaJugador(eJugador* jugadores,int tam, int* contadorJugadores, eConfe
 	}
 	return retorno;
 }
+
+int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,int tam, int idConf, int tamConfederaciones)
+{
+	int retorno=-1;
+	int flag=0;
+	char descripcionConf[50];
+	for(int i=0;i<tam;i++)
+	{
+		if((*(jugadores+i)).isEmpty==OCUPADO && (*(jugadores+i)).idConfederacion==idConf)
+		{
+			if(flag==0)
+			{
+				flag=1;
+				printf("+==========================================================================================================================+\n");
+				asignarDescripcion(jugadores,confederaciones,6, descripcionConf ,i);
+				printf("|                                                     %*s|\n",-69,descripcionConf);
+				printf("+--------------------------------------------------------------------------------------------------------------------------+\n");
+				//printf("+==========================================================================================================================+\n");
+				printf("|%*s|%*s|%*s|\n",-50,"                     NOMBRE",-50,"                     POSICION",-21,"     N° CAMISETA");
+				//printf("+==========================================================================================================================+\n");
+				printf("+--------------------------------------------------------------------------------------------------------------------------+\n");
+			}
+			printf("|%*s|%*s|%*d|\n",-50,(*(jugadores+i)).nombre,-50,(*(jugadores+i)).posicion,-20,(*(jugadores+i)).numeroCamiseta);
+		}
+	}
+	if(flag==0)
+	{
+		for(int i=0;i<tamConfederaciones;i++)
+		{
+			if((*(confederaciones+i)).id==idConf)
+			{
+				printf("+==========================================================================================================================+\n");
+				printf("                                   NO EXISTEN JUGADORES EN LA CONDEFERACION:%s                                      \n",(*(confederaciones+i)).nombre);
+				printf("+==========================================================================================================================+\n");
+			}
+		}
+	}
+
+	return retorno;
+}
+int listarJugadoresXConfederaciones(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores, int tamConfederaciones)
+{
+	int retorno=-1;
+	int idConf=100;
+
+	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores>0)
+	{
+		for(int i=0;i<tamConfederaciones;i++)
+		{
+			listarJugadoresXUnaConf(jugadores,confederaciones,tam,idConf,tamConfederaciones);
+			//listarJugadoresXUnaConf(jugadores,confederaciones,tam,idConf);
+			idConf=idConf+1;
+		}
+	}
+	else
+	{
+		printf("ERROR, Para operar esta opcion debe existir al menos 1 jugador cargado\n");
+	}
+	return retorno;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

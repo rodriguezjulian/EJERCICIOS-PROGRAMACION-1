@@ -1,7 +1,1 @@
-05:24:53 **** Rebuild of configuration Debug for project EJERCICIO 2-5.2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 2-5.2.o" "..\\src\\EJERCICIO 2-5.2.c" 
-gcc -o "EJERCICIO 2-5.2.exe" "src\\EJERCICIO 2-5.2.o" 
-
-05:24:53 Build Finished. 0 errors, 0 warnings. (took 404ms)
-
+Info: Nothing to build for EJERCICIO 2-5.2

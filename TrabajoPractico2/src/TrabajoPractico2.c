@@ -16,9 +16,11 @@
 #include "confederaciones.h"
 
 #define TAM 3000
+#define TAM_CONFEDERACIONES 6
 #define VACIO 1
 #define OCUPADO 0
 
+//int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,int tam, int idConf);
 
 
 int main(void) {
@@ -26,10 +28,10 @@ int main(void) {
 	setbuf(stdout,NULL);
 
 	short opcionMenu;
-	short salida=0;//
+	short salida=0;
 	int idJugadores=0;//LO INICIALIZO EN 0 YA QUE EL ID SERA AUTOINCREMENTAL
-	int contadorJugadores=0;//INICIALIZADO EN 0 YA QUE SE USARA COMO VARIABLE DE CONTROL EN EL MENU
-	eJugador jugadores[3000];
+	int contadorJugadores=1;//INICIALIZADO EN 0 YA QUE SE USARA COMO VARIABLE DE CONTROL EN EL MENU
+	//eJugador jugadores[TAM];
 
 	eConfederacion confederaciones[6]=
 	{
@@ -42,7 +44,17 @@ int main(void) {
 
 	};
 
-	 inicializarIsEmpty(jugadores,TAM, VACIO);
+
+
+		 eJugador  jugadores[TAM]={
+				 {1,"Julian","Delantero",10,100,102545,1,OCUPADO},
+				 {2,"Nige","Mediocampista",5,102,1544,2,OCUPADO},
+				 {3,"Messi","Arquero",1,104,155555,OCUPADO},
+				 {4,"Tony","Gil",5,105,1545,OCUPADO}
+		 };
+
+
+		//inicializarIsEmpty(jugadores,TAM, VACIO);
 
 
 	do
@@ -73,8 +85,8 @@ int main(void) {
 			break;
 			case 4:
 				//METER SUB MENU
-				listarJugadores(jugadores,confederaciones,TAM, contadorJugadores,1);
-
+				//listarJugadores(jugadores,confederaciones,TAM, contadorJugadores,1);
+				listarJugadoresXConfederaciones( jugadores, confederaciones, TAM, contadorJugadores,  TAM_CONFEDERACIONES);
 			break;
 			case 5:
 				salida=1;
@@ -92,7 +104,6 @@ int main(void) {
 
 	return EXIT_SUCCESS;
 }
-
 
 
 
