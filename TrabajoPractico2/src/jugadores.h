@@ -65,6 +65,6 @@ int calcularRegionMasJug(eJugador* jugadores,int tamConfederaciones, int tamJuga
 int calcConfConMasAniosDeContrato(eJugador* jugadores,int tamConfederaciones, int tamJugadores, int* resultadoAnios,eConfederacion* confederaciones);
 void inicializarArray(int* array,int tam);
 int contarAniosDeContratoPorConf(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones,int* arrayAniosAcumulados );
-int mostrarConfConMasAniosContrato(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones);
+void mostrarConfConMasAniosContrato(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones);
 
 #endif /* JUGADORES_H_ */

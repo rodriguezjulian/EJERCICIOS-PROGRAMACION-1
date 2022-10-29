@@ -48,7 +48,7 @@ int main(void) {
 	//inicializarIsEmpty(jugadores,TAM, VACIO);
 
 	eJugador jugadores [TAM]={
-				 {1,"Dario","Delantero",10,100,131,11,OCUPADO},
+				 {1,"Dario","Delantero",10,101,131,11,OCUPADO},
 				 {2,"Nige","Mediocampista",5,100,1,1,OCUPADO},
 				 {3,"Messi","Arquero",1,105,155,1,OCUPADO},
 				 {4,"Atony","Gil",5,105,145,100,OCUPADO},

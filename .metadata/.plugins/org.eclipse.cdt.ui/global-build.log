@@ -6616,3 +6616,303 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
 gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
 Info: Nothing to build for TrabajoPractico2
+03:16:00 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:23:04 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'buscarMayorNumJugPorRegion':
+..\src\jugadores.c:684:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("A VER QUE SE GUARDO X POSICION:",arrayCantidadAcumulados[0],arrayCantidadAcumulados[1],arrayCantidadAcumulados[2],arrayCantidadAcumulados[3],arrayCantidadAcumulados[4],arrayCantidadAcumulados[5]);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:23:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:24:07 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+03:32:08 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'informarRegionMasAsistida':
+..\src\jugadores.c:692:6: warning: variable 'maximoContador' set but not used [-Wunused-but-set-variable]
+  int maximoContador;
+      ^~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:735:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:32:45 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:741:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:33:41 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:741:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:34:06 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+03:34:53 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:44:25 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:813:5: error: too many arguments to function 'informarRegionMasAsistida'
+     informarRegionMasAsistida( jugadores, tam, tamConfederaciones, confederaciones,arrayCantidadAcumulados);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:689:5: note: declared here
+ int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+03:44:51 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:781:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+03:50:40 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:796:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:52:59 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:795:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:53:04 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:795:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+03:55:01 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:796:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+03:56:51 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:796:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:57:58 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:796:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+03:58:07 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:796:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+03:58:22 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:796:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:58:40 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:58:48 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:58:56 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:59:04 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:59:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:59:25 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+03:59:58 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:00:22 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:00:28 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:00:33 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:00:46 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:01:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:01:29 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:01:44 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:01:51 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:02:00 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:02:33 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:02:53 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:797:6: warning: unused variable 'arrayCantidadAcumulados' [-Wunused-variable]
+  int arrayCantidadAcumulados[tamConfederaciones];
+      ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:03:18 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 

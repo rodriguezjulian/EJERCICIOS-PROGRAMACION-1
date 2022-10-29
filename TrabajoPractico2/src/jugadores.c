@@ -367,10 +367,10 @@ int listarJugadoresXConfederaciones(eJugador* jugadores,eConfederacion* confeder
 			idConf=idConf+1;
 		}
 	}
-	else
+	/*else
 	{
 		printf("ERROR, Para operar esta opcion debe existir al menos 1 jugador cargado\n");
-	}
+	}*/
 	return retorno;
 }
 
@@ -481,11 +481,12 @@ void inicializarArray(int* array,int tam)
 int contarAniosDeContratoPorConf(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones,int* arrayAniosAcumulados )
 {
 	int retorno=-1;
-	//int aniosAcumulados[tamConfederaciones];//DEBERIA TENER UNA FUNCION PARA PONERLO EN 0
+
 	//CADA POSICION DEL ARRAY RESPETA EL ORDEN DE LAS CONFEDERACIONES
 	int idConfeAux=100;
 	int acumulador;
 
+	//INICIALIZO EN 0 AL ARRAY
 	inicializarArray(arrayAniosAcumulados, tam);
 
 	for(int i=0;i<tamConfederaciones;i++)
@@ -498,17 +499,14 @@ int contarAniosDeContratoPorConf(eJugador* jugadores, int tam, int tamConfederac
 				acumulador=acumulador+(*(jugadores+j)).aniosContrato;
 			}
 		}
-		//(*(aniosAcumulados+i))=acumulador;
 		(*(arrayAniosAcumulados+i))=acumulador;
 		idConfeAux=idConfeAux+1;
 	}
-	//arrayAniosAcumulados=aniosAcumulados;
-	//printf("ANIOS ACUMULADOS POSICIONES %d %d %d %d %d %d\n",aniosAcumulados[0],aniosAcumulados[1],aniosAcumulados[2],aniosAcumulados[3],aniosAcumulados[4],aniosAcumulados[5]);
 	return retorno;
 }
-int mostrarConfConMasAniosContrato(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones)
+void mostrarConfConMasAniosContrato(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones)
 {
-	int retorno=-1;
+
 	int maxAniosContrato;
 	int arrayAniosAcumulados[tamConfederaciones];
 	calcConfConMasAniosDeContrato(jugadores, tamConfederaciones,  tam, &maxAniosContrato,confederaciones);
@@ -525,10 +523,6 @@ int mostrarConfConMasAniosContrato(eJugador* jugadores, int tam, int tamConfeder
 		}
 	}
 	printf("+============================================================+\n");
-
-
-
-	return retorno;
 }
 
 float calcPorcentaje(int total, int parcial)
@@ -610,12 +604,7 @@ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfed
 
 	return retorno;
 }
-
-
-
-
-
-
+/*
 int calcularConfconMasJug(eJugador* jugadores,int tamConfederaciones, int tamJugadores, char* confederacionConMasJug,eConfederacion* confederaciones)
 {
 	int retorno=-1;
@@ -666,13 +655,146 @@ int calcularConfconMasJug(eJugador* jugadores,int tamConfederaciones, int tamJug
 	}
 	return retorno;
 }
+*/
+
+
+int buscarMayorNumJugPorRegion(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones,int* arrayCantidadAcumulados)
+{
+	int retorno=-1;
+
+	//CADA POSICION DEL ARRAY RESPETA EL ORDEN DE LAS CONFEDERACIONES
+	int idConfeAux=100;//INICIALIZADO EN 100 TENIENDO EN CUENTA QUE LOS ID DE CONFEDERACION ARRANCAN EN ESE NUMERO
+	int acumulador;
+
+	//INICIALIZO EN 0 AL ARRAY
+	inicializarArray(arrayCantidadAcumulados, tam);
+
+	for(int i=0;i<tamConfederaciones;i++)
+	{
+		acumulador=0;
+		for(int j=0;j<tam;j++)
+		{
+			if((*(jugadores)).isEmpty==OCUPADO && (*(jugadores+j)).idConfederacion==idConfeAux)
+			{
+				acumulador=acumulador+1;
+			}
+		}
+		(*(arrayCantidadAcumulados+i))=acumulador;
+		idConfeAux=idConfeAux+1;
+	}
+	//printf("A VER QUE SE GUARDO X POSICION: %d %d %d %d %d %d",arrayCantidadAcumulados[0],arrayCantidadAcumulados[1],arrayCantidadAcumulados[2],arrayCantidadAcumulados[3],arrayCantidadAcumulados[4],arrayCantidadAcumulados[5]);
+	return retorno;
+}
+
+int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones)
+{
+	int retorno=-1;
+	int maximoContador;
+	int flag=0;
+	int idConfeAux=100;//INICIALIZADO EN 100 TENIENDO EN CUENTA QUE LOS ID DE CONFEDERACION ARRANCAN EN ESE NUMERO
+
+	int arrayCantidadAcumulados[tamConfederaciones];
+	buscarMayorNumJugPorRegion(jugadores,  tam,  tamConfederaciones,  confederaciones,arrayCantidadAcumulados);
+
+
+	for(int i=0;i<tamConfederaciones;i++)
+	{
+		if(flag==0)
+		{
+			maximoContador=(*(arrayCantidadAcumulados+i));
+		}
+		else
+		{
+			if(maximoContador<(*(arrayCantidadAcumulados+i)))
+			{
+				maximoContador=(*(arrayCantidadAcumulados+i));
+			}
+		}
+
+		idConfeAux=idConfeAux+1;
+	}
+
+	for(int i=0;i<tamConfederaciones;i++)
+	{
+
+		if((*(arrayCantidadAcumulados+i))==maximoContador)
+		{
+			printf("+==================================================+\n|CONFEDERACION %*s|"
+					"\n+==================================================+\n",-36,(*(confederaciones+i)).nombre);
+			for(int j=0;j<tam;j++)
+			{
+				if((*(jugadores)).isEmpty==OCUPADO  && (*(jugadores+j)).idConfederacion==(*(confederaciones+i)).id)
+				{
+					printf("|%*s|\n",-50,(*(jugadores+j)).nombre);
+				}
+			}
+
+		}
+	}
+	printf("+==================================================+\n");
+
+	return retorno;
+}
+
+
+/*
+ int calcConfConMasAniosDeContrato(eJugador* jugadores,int tamConfederaciones, int tamJugadores, int* resultadoAnios,eConfederacion* confederaciones)
+{
+	int retorno=-1;
+	int resultadoAux=0;
+	int idConfeAux=100;
+	int acumulador=0;
+	//retorno la cantidad maxima de contratos encontrados
+	for(int i=0;i<tamConfederaciones;i++)
+	{
+		acumulador=0;
+		for(int j=0;j<tamJugadores;j++)
+		{
+
+			if((*(jugadores+j)).isEmpty==OCUPADO && (*(jugadores+j)).idConfederacion==idConfeAux)
+			{
+				acumulador=acumulador+(*(jugadores+j)).aniosContrato;
+				retorno=0;
+			}
+		}
+
+		if(resultadoAux<acumulador)
+		{
+			resultadoAux=acumulador;
+
+		}
+		idConfeAux=idConfeAux+1;
+	}
+	*resultadoAnios=resultadoAux;
+	return retorno;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int menuInformes(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores, int tamConfederaciones)
 {
 	int retorno=-1;
 	short opcionSubMenu;
 	//char confederacionConMasAniosDeContrato[50];
-
+	int arrayCantidadAcumulados[tamConfederaciones];
 	//char regionConMasJugadores [50];
 	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores>0 )
 	{
@@ -704,6 +826,9 @@ int menuInformes(eJugador* jugadores,eConfederacion* confederaciones,int tam, in
 			informarPorcPorConf(jugadores, TAM,  contadorJugadores,confederaciones);
 		break;
 		case 6:
+			informarRegionMasAsistida(jugadores,  tam,  tamConfederaciones,  confederaciones);
+			 //informarRegionMasAsistida( jugadores, tam, tamConfederaciones, confederaciones,arrayCantidadAcumulados);
+			//buscarMayorNumJugPorRegion(jugadores,  tam,  tamConfederaciones,  confederaciones, arrayCantidadAcumulados);
 			//calcularRegionMasJug(jugadores,tamConfederaciones, tam, regionConMasJugadores,confederaciones);
 		break;
 		}
