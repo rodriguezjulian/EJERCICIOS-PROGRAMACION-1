@@ -6942,3 +6942,582 @@ Info: Nothing to build for TrabajoPractico2
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
 gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:30:30 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:32:01 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:32:07 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:33:24 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:34:04 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:39:30 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:46:35 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c:585:5: error: conflicting types for 'calcPorcentajePorConf'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\jugadores.c:10:0:
+..\src\jugadores.h:59:5: note: previous declaration of 'calcPorcentajePorConf' was here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* porcentajeConmebol, float* porcentajeUefa,float* porcentajeAfc, float* porcentajeCaf,float* porcentajeConcacaf,float* porcentajeOfc);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'calcPorcentajePorConf':
+..\src\jugadores.c:608:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+1))=calcPorcentaje(contJugadores, contConmebol);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:612:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+2))=calcPorcentaje(contJugadores, contUefa);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:616:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+3))=calcPorcentaje(contJugadores, contAfc);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:620:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+4))=calcPorcentaje(contJugadores, contCaf);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:624:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+5))=calcPorcentaje(contJugadores, contConcacaf);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:628:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+6))=calcPorcentaje(contJugadores, contOfc);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:690:76: warning: passing argument 5 of 'calcPorcentajePorConf' makes integer from pointer without a cast [-Wint-conversion]
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+                                                                            ^
+..\src\jugadores.c:585:5: note: expected 'int' but argument is of type 'float *'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:690:2: error: too many arguments to function 'calcPorcentajePorConf'
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+  ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:585:5: note: declared here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+04:46:59 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c:585:5: error: conflicting types for 'calcPorcentajePorConf'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\jugadores.c:10:0:
+..\src\jugadores.h:59:5: note: previous declaration of 'calcPorcentajePorConf' was here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* porcentajeConmebol, float* porcentajeUefa,float* porcentajeAfc, float* porcentajeCaf,float* porcentajeConcacaf,float* porcentajeOfc);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'calcPorcentajePorConf':
+..\src\jugadores.c:608:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+i))=calcPorcentaje(contJugadores, contConmebol);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:612:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+2))=calcPorcentaje(contJugadores, contUefa);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:616:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+3))=calcPorcentaje(contJugadores, contAfc);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:620:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+4))=calcPorcentaje(contJugadores, contCaf);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:624:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+5))=calcPorcentaje(contJugadores, contConcacaf);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:628:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+6))=calcPorcentaje(contJugadores, contOfc);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:690:76: warning: passing argument 5 of 'calcPorcentajePorConf' makes integer from pointer without a cast [-Wint-conversion]
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+                                                                            ^
+..\src\jugadores.c:585:5: note: expected 'int' but argument is of type 'float *'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:690:2: error: too many arguments to function 'calcPorcentajePorConf'
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+  ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:585:5: note: declared here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+04:47:10 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c:585:5: error: conflicting types for 'calcPorcentajePorConf'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\jugadores.c:10:0:
+..\src\jugadores.h:59:5: note: previous declaration of 'calcPorcentajePorConf' was here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* porcentajeConmebol, float* porcentajeUefa,float* porcentajeAfc, float* porcentajeCaf,float* porcentajeConcacaf,float* porcentajeOfc);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'calcPorcentajePorConf':
+..\src\jugadores.c:608:8: error: invalid type argument of unary '*' (have 'int')
+       (*(tamConfederaciones+1))=calcPorcentaje(contJugadores, contConmebol);
+        ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:612:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+2))=calcPorcentaje(contJugadores, contUefa);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:616:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+3))=calcPorcentaje(contJugadores, contAfc);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:620:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+4))=calcPorcentaje(contJugadores, contCaf);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:624:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+5))=calcPorcentaje(contJugadores, contConcacaf);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:628:9: error: invalid type argument of unary '*' (have 'int')
+       *(*(tamConfederaciones+6))=calcPorcentaje(contJugadores, contOfc);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:690:76: warning: passing argument 5 of 'calcPorcentajePorConf' makes integer from pointer without a cast [-Wint-conversion]
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+                                                                            ^
+..\src\jugadores.c:585:5: note: expected 'int' but argument is of type 'float *'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:690:2: error: too many arguments to function 'calcPorcentajePorConf'
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+  ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:585:5: note: declared here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+04:47:26 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c:585:5: error: conflicting types for 'calcPorcentajePorConf'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\jugadores.c:10:0:
+..\src\jugadores.h:59:5: note: previous declaration of 'calcPorcentajePorConf' was here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* porcentajeConmebol, float* porcentajeUefa,float* porcentajeAfc, float* porcentajeCaf,float* porcentajeConcacaf,float* porcentajeOfc);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'calcPorcentajePorConf':
+..\src\jugadores.c:612:7: error: invalid type argument of unary '*' (have 'float')
+       *(*(arrayPorcentajes+2))=calcPorcentaje(contJugadores, contUefa);
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:616:7: error: invalid type argument of unary '*' (have 'float')
+       *(*(arrayPorcentajes+3))=calcPorcentaje(contJugadores, contAfc);
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:620:7: error: invalid type argument of unary '*' (have 'float')
+       *(*(arrayPorcentajes+4))=calcPorcentaje(contJugadores, contCaf);
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:624:7: error: invalid type argument of unary '*' (have 'float')
+       *(*(arrayPorcentajes+5))=calcPorcentaje(contJugadores, contConcacaf);
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:628:7: error: invalid type argument of unary '*' (have 'float')
+       *(*(arrayPorcentajes+6))=calcPorcentaje(contJugadores, contOfc);
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:690:76: warning: passing argument 5 of 'calcPorcentajePorConf' makes integer from pointer without a cast [-Wint-conversion]
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+                                                                            ^
+..\src\jugadores.c:585:5: note: expected 'int' but argument is of type 'float *'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:690:2: error: too many arguments to function 'calcPorcentajePorConf'
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+  ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:585:5: note: declared here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+04:47:38 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c:585:5: error: conflicting types for 'calcPorcentajePorConf'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\jugadores.c:10:0:
+..\src\jugadores.h:59:5: note: previous declaration of 'calcPorcentajePorConf' was here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* porcentajeConmebol, float* porcentajeUefa,float* porcentajeAfc, float* porcentajeCaf,float* porcentajeConcacaf,float* porcentajeOfc);
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:690:76: warning: passing argument 5 of 'calcPorcentajePorConf' makes integer from pointer without a cast [-Wint-conversion]
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+                                                                            ^
+..\src\jugadores.c:585:5: note: expected 'int' but argument is of type 'float *'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:690:2: error: too many arguments to function 'calcPorcentajePorConf'
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+  ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:585:5: note: declared here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+04:49:26 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:685:76: warning: passing argument 5 of 'calcPorcentajePorConf' makes integer from pointer without a cast [-Wint-conversion]
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+                                                                            ^
+..\src\jugadores.c:585:5: note: expected 'int' but argument is of type 'float *'
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:685:2: error: too many arguments to function 'calcPorcentajePorConf'
+  calcPorcentajePorConf(jugadores, contJugadores,  tam, &porcentajeConmebol,&porcentajeUefa,&porcentajeAfc, &porcentajeCaf,&porcentajeConcacaf,&porcentajeOfc);
+  ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:585:5: note: declared here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+04:51:40 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c:673:5: error: conflicting types for 'informarPorcPorConf'
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~
+In file included from ..\src\jugadores.c:10:0:
+..\src\jugadores.h:69:5: note: previous declaration of 'informarPorcPorConf' was here
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones);
+     ^~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:685:24: error: expected expression before 'eJugador'
+  calcPorcentajePorConf(eJugador* jugadores, contJugadores,  tam, arrayPorcentajes,  tamConfederaciones);
+                        ^~~~~~~~
+..\src\jugadores.c:685:2: error: too few arguments to function 'calcPorcentajePorConf'
+  calcPorcentajePorConf(eJugador* jugadores, contJugadores,  tam, arrayPorcentajes,  tamConfederaciones);
+  ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:585:5: note: declared here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:688:24: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  printf("%s|%*s|%*s|\n%s\n","+====================================+\n",-25,"         NOMBRE",-10,"PORCENTAJE"
+                        ^
+..\src\jugadores.c:683:8: warning: unused variable 'arrayPorcentajes' [-Wunused-variable]
+  float arrayPorcentajes[tamConfederaciones];
+        ^~~~~~~~~~~~~~~~
+..\src\jugadores.c:675:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:813:4: error: too few arguments to function 'informarPorcPorConf'
+    informarPorcPorConf(jugadores, TAM,  contadorJugadores,confederaciones);
+    ^~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:673:5: note: declared here
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:700:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+04:52:53 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c:673:5: error: conflicting types for 'informarPorcPorConf'
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~
+In file included from ..\src\jugadores.c:10:0:
+..\src\jugadores.h:69:5: note: previous declaration of 'informarPorcPorConf' was here
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones);
+     ^~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:685:24: error: expected expression before 'eJugador'
+  calcPorcentajePorConf(eJugador* jugadores, contJugadores,  tam, arrayPorcentajes,  tamConfederaciones);
+                        ^~~~~~~~
+..\src\jugadores.c:685:2: error: too few arguments to function 'calcPorcentajePorConf'
+  calcPorcentajePorConf(eJugador* jugadores, contJugadores,  tam, arrayPorcentajes,  tamConfederaciones);
+  ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:585:5: note: declared here
+ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:688:24: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  printf("%s|%*s|%*s|\n%s\n","+====================================+\n",-25,"         NOMBRE",-10,"PORCENTAJE"
+                        ^
+..\src\jugadores.c:683:8: warning: unused variable 'arrayPorcentajes' [-Wunused-variable]
+  float arrayPorcentajes[tamConfederaciones];
+        ^~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:813:4: error: too few arguments to function 'informarPorcPorConf'
+    informarPorcPorConf(jugadores, TAM,  contadorJugadores,confederaciones);
+    ^~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:673:5: note: declared here
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~
+04:53:03 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c:673:5: error: conflicting types for 'informarPorcPorConf'
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~
+In file included from ..\src\jugadores.c:10:0:
+..\src\jugadores.h:69:5: note: previous declaration of 'informarPorcPorConf' was here
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones);
+     ^~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:688:24: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  printf("%s|%*s|%*s|\n%s\n","+====================================+\n",-25,"         NOMBRE",-10,"PORCENTAJE"
+                        ^
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:813:4: error: too few arguments to function 'informarPorcPorConf'
+    informarPorcPorConf(jugadores, TAM,  contadorJugadores,confederaciones);
+    ^~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:673:5: note: declared here
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~
+04:53:25 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'informarPorcPorConf':
+..\src\jugadores.c:688:24: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  printf("%s|%*s|%*s|\n%s\n","+====================================+\n",-25,"         NOMBRE",-10,"PORCENTAJE"
+                        ^
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:813:4: error: too few arguments to function 'informarPorcPorConf'
+    informarPorcPorConf(jugadores, TAM,  contadorJugadores,confederaciones);
+    ^~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:673:5: note: declared here
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~
+04:53:36 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:813:4: error: too few arguments to function 'informarPorcPorConf'
+    informarPorcPorConf(jugadores, TAM,  contadorJugadores,confederaciones);
+    ^~~~~~~~~~~~~~~~~~~
+..\src\jugadores.c:673:5: note: declared here
+ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
+     ^~~~~~~~~~~~~~~~~~~
+04:54:02 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'menuInformes':
+..\src\jugadores.c:814:43: error: 'contJugadores' undeclared (first use in this function)
+    informarPorcPorConf( jugadores,  tam,  contJugadores,  confederaciones,  tamConfederaciones);
+                                           ^~~~~~~~~~~~~
+..\src\jugadores.c:814:43: note: each undeclared identifier is reported only once for each function it appears in
+04:54:10 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:54:37 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:56:01 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:56:45 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:57:02 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+04:58:50 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'calcPorcentajePorConf':
+..\src\jugadores.c:595:2: warning: parameter names (without types) in function declaration
+  void inicializarArray(arrayPorcentajes,tamConfederaciones);
+  ^~~~
+..\src\jugadores.c:604:7: error: 'contConmebol' undeclared (first use in this function)
+       contConmebol=contConmebol+1;
+       ^~~~~~~~~~~~
+..\src\jugadores.c:604:7: note: each undeclared identifier is reported only once for each function it appears in
+..\src\jugadores.c:609:7: error: 'contUefa' undeclared (first use in this function)
+       contUefa=contUefa+1;
+       ^~~~~~~~
+..\src\jugadores.c:613:7: error: 'contAfc' undeclared (first use in this function)
+       contAfc=contAfc+1;
+       ^~~~~~~
+..\src\jugadores.c:617:7: error: 'contCaf' undeclared (first use in this function)
+       contCaf=contCaf+1;
+       ^~~~~~~
+..\src\jugadores.c:621:7: error: 'contConcacaf' undeclared (first use in this function)
+       contConcacaf=contConcacaf+1;
+       ^~~~~~~~~~~~
+..\src\jugadores.c:625:7: error: 'contOfc' undeclared (first use in this function)
+       contOfc=contOfc+1;
+       ^~~~~~~
+04:59:20 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'calcPorcentajePorConf':
+..\src\jugadores.c:595:2: warning: parameter names (without types) in function declaration
+  void inicializarArray(arrayPorcentajes,tamConfederaciones);
+  ^~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:59:26 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'calcPorcentajePorConf':
+..\src\jugadores.c:595:20: warning: passing argument 1 of 'inicializarArray' from incompatible pointer type [-Wincompatible-pointer-types]
+   inicializarArray(arrayPorcentajes,tamConfederaciones);
+                    ^~~~~~~~~~~~~~~~
+..\src\jugadores.c:471:6: note: expected 'int *' but argument is of type 'float *'
+ void inicializarArray(int* array,int tam)
+      ^~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+04:59:48 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'calcPorcentajePorConf':
+..\src\jugadores.c:595:19: error: incompatible type for argument 1 of 'inicializarArray'
+  inicializarArray(*arrayPorcentajes,tamConfederaciones);
+                   ^
+..\src\jugadores.c:471:6: note: expected 'int *' but argument is of type 'float'
+ void inicializarArray(int* array,int tam)
+      ^~~~~~~~~~~~~~~~
+04:59:51 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+..\src\jugadores.c: In function 'calcPorcentajePorConf':
+..\src\jugadores.c:595:19: warning: passing argument 1 of 'inicializarArray' from incompatible pointer type [-Wincompatible-pointer-types]
+  inicializarArray(arrayPorcentajes,tamConfederaciones);
+                   ^~~~~~~~~~~~~~~~
+..\src\jugadores.c:471:6: note: expected 'int *' but argument is of type 'float *'
+ void inicializarArray(int* array,int tam)
+      ^~~~~~~~~~~~~~~~
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:01:10 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+05:02:51 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:03:32 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:07:44 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:07:57 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:08:48 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:30:58 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+05:32:39 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:35:55 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:36:38 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:38:11 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:103:15: error: expected ')' before '!' token
+  }while(salida!-0 && confirmarSalida()==-1);
+               ^
+05:38:17 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+..\src\TrabajoPractico2.c: In function 'main':
+..\src\TrabajoPractico2.c:103:15: error: expected ')' before '!' token
+  }while(salida!-0 && confirmarSalida()==-1);
+               ^
+05:38:23 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:38:44 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:39:34 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:40:47 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+05:42:01 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:42:18 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+Info: Nothing to build for TrabajoPractico2
+05:43:21 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+05:43:55 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
+06:26:27 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:36:27 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:38:59 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\confederaciones.o" "..\\src\\confederaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\jugadores.o" "..\\src\\jugadores.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+06:41:00 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TrabajoPractico2.o" "..\\src\\TrabajoPractico2.c" 
+gcc -o TrabajoPractico2.exe "src\\TrabajoPractico2.o" "src\\confederaciones.o" "src\\ingresos.o" "src\\jugadores.o" 
+Info: Nothing to build for TrabajoPractico2
