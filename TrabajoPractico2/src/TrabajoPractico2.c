@@ -29,10 +29,9 @@ int main(void) {
 	setbuf(stdout,NULL);
 
 	short opcionMenu;
-	//short salida=1;
 	int idJugadores=0;//LO INICIALIZO EN 0 YA QUE EL ID SERA AUTOINCREMENTAL
-	int contadorJugadores=0;//INICIALIZADO EN 0 YA QUE SE USARA COMO VARIABLE DE CONTROL EN EL MENU
-	eJugador jugadores[TAM];
+	int contadorJugadores=8;//INICIALIZADO EN 0 YA QUE SE USARA COMO VARIABLE DE CONTROL EN EL MENU
+	//eJugador jugadores[TAM];
 
 	eConfederacion confederaciones[6]=
 	{
@@ -45,18 +44,18 @@ int main(void) {
 
 	};
 
-	inicializarIsEmpty(jugadores,TAM, VACIO);
+	//inicializarIsEmpty(jugadores,TAM, VACIO);
 
-	/*eJugador jugadores [TAM]={
-				 {1,"Dario","Delantero",10,101,131,11,OCUPADO},
+	eJugador jugadores [TAM]={
+				 {1,"Dario","Delantero",10,100,131,11,OCUPADO},
 				 {2,"Nige","Mediocampista",5,100,1,1,OCUPADO},
-				 {3,"Messi","Arquero",1,105,155,1,OCUPADO},
-				 {4,"Atony","Gil",5,105,145,100,OCUPADO},
-				 {5,"El monta carga","Centro",8,105,15,1,OCUPADO},
-				 {6,"Tevez","Delantero",9,100,1,20,OCUPADO},
+				 {3,"Messi","Arquero",1,101,155,1,OCUPADO},
+				 {4,"Atony","Gil",5,100,145,100,OCUPADO},
+				 {5,"El monta carga","Centro",8,101,15,1,OCUPADO},
+				 {6,"Tevez","Delantero",9,101,1,20,OCUPADO},
 				 {7,"Bufarini","Delantero",10,102,47,121,OCUPADO},
-				 {8,"Atos","Centrocampista",5,105,4,2,OCUPADO}
-		 };*/
+				 {8,"Atos","Centrocampista",5,102,4,2,OCUPADO}
+		 };
 
 
 	do

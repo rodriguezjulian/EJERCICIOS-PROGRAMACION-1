@@ -172,6 +172,29 @@ int ordenarJugadoresXId(eJugador* jugadores, int tam)
 	}
 	return retorno;
 }
+int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModificar)
+{
+	int flag=0;
+
+	int retorno=-1;
+
+
+	for(int i=0;i<tam;i++)
+	{
+		if((*(jugadores+i)).id==idModificar && (*(jugadores+i)).isEmpty==OCUPADO)
+		{
+			flag=1;
+			retorno=0;
+			*iteraciones=i;
+			break;
+		}
+	}
+	if(flag==0)
+	{
+		printf("ERROR, Ingrese ID valido\n");
+	}
+	return retorno;
+}
 int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento)
 {
 	//referenciaOrdenamiento -> 1. ordeno por orden alfabetico
@@ -214,29 +237,7 @@ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam,
 	}
 	return retorno;
 }
-int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModificar)
-{
-	int flag=0;
 
-	int retorno=-1;
-
-
-	for(int i=0;i<tam;i++)
-	{
-		if((*(jugadores+i)).id==idModificar && (*(jugadores+i)).isEmpty==OCUPADO)
-		{
-			flag=1;
-			retorno=0;
-			*iteraciones=i;
-			break;
-		}
-	}
-	if(flag==0)
-	{
-		printf("ERROR, Ingrese ID valido\n");
-	}
-	return retorno;
-}
 int modificarJugador(eJugador* jugadores,eConfederacion* confederaciones, int tam , int contadorJugadores)
 {
 	int retorno=-1;
@@ -297,6 +298,7 @@ int darLaBajaJugador(eJugador* jugadores,int tam, int* contadorJugadores, eConfe
 	//NO VERIFICO POR NULL PORQUE YA LO HACE listarJugadores
 	if(listarJugadores(jugadores,confederaciones,tam, *contadorJugadores,2)==0)
 	{
+		retorno=0;
 
 		do
 		{
@@ -320,6 +322,7 @@ int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,
 	{
 		if((*(jugadores+i)).isEmpty==OCUPADO && (*(jugadores+i)).idConfederacion==idConf)
 		{
+			retorno=0;
 			if(flag==0)
 			{
 				flag=1;
@@ -357,23 +360,17 @@ int listarJugadoresXConfederaciones(eJugador* jugadores,eConfederacion* confeder
 
 	if(jugadores!=NULL && confederaciones!=NULL)
 	{
+		retorno=0;
 		for(int i=0;i<tamConfederaciones;i++)
 		{
 			listarJugadoresXUnaConf(jugadores,confederaciones,tam,idConf,tamConfederaciones);
-			//listarJugadoresXUnaConf(jugadores,confederaciones,tam,idConf);
+
 			idConf=idConf+1;
 		}
 	}
-	/*else
-	{
-		printf("ERROR, Para operar esta opcion debe existir al menos 1 jugador cargado\n");
-	}*/
+
 	return retorno;
 }
-
-
-
-
 
 float calcularPromedio(float numeroA, int numeroB)
 {
@@ -414,9 +411,8 @@ int calcularJugPorArribaDeLaMedia(eJugador* jugadores, float promedioSalarios)
 	return total;
 }
 
-int informarTotalyMediaDeSalarios(eJugador* jugadores, int tam, int contadorJugadores)
+void informarTotalyMediaDeSalarios(eJugador* jugadores, int tam, int contadorJugadores)
 {
-	int retorno=-1;
 	int jugPorArribaDeLaMedia;
 	float totalSalarios;
 	float promedioSalarios;
@@ -432,10 +428,9 @@ int informarTotalyMediaDeSalarios(eJugador* jugadores, int tam, int contadorJuga
 	printf("|%*s|   %*.2f|\n|%*s|   %*.2f|\n|%*s|         %*d|\n%s\n",-35,"TOTAL DE SALARIOS",-17,totalSalarios,-35,
 			"PROMEDIO DE SALARIOS",-17,promedioSalarios,-35,"JUGADORES POR ARRIBA DEL PROMEDIO",-11,jugPorArribaDeLaMedia,
 			"+========================================================+");
-	return retorno;
 }
 
-int calcConfConMasAniosDeContrato(eJugador* jugadores,int tamConfederaciones, int tamJugadores, int* resultadoAnios,eConfederacion* confederaciones)
+int calcConfConMasAniosDeContrato(eJugador* jugadores,int tamConfederaciones, int tamJugadores, int* resultadoAnios)
 {
 	int retorno=-1;
 	int resultadoAux=0;
@@ -486,7 +481,7 @@ void inicializarArrayFloat(float* array,int tam)
 	}
 }
 
-int contarAniosDeContratoPorConf(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones,int* arrayAniosAcumulados )
+int contarAniosDeContratoPorConf(eJugador* jugadores, int tam, int tamConfederaciones,int* arrayAniosAcumulados )
 {
 	int retorno=-1;
 
@@ -504,6 +499,7 @@ int contarAniosDeContratoPorConf(eJugador* jugadores, int tam, int tamConfederac
 		{
 			if((*(jugadores)).isEmpty==OCUPADO && (*(jugadores+j)).idConfederacion==idConfeAux)
 			{
+				retorno=0;
 				acumulador=acumulador+(*(jugadores+j)).aniosContrato;
 			}
 		}
@@ -517,8 +513,8 @@ void mostrarConfConMasAniosContrato(eJugador* jugadores, int tam, int tamConfede
 
 	int maxAniosContrato;
 	int arrayAniosAcumulados[tamConfederaciones];
-	calcConfConMasAniosDeContrato(jugadores, tamConfederaciones,  tam, &maxAniosContrato,confederaciones);
-	contarAniosDeContratoPorConf(jugadores,  tam,  tamConfederaciones,  confederaciones,arrayAniosAcumulados);
+	calcConfConMasAniosDeContrato(jugadores, tamConfederaciones,  tam, &maxAniosContrato);
+	contarAniosDeContratoPorConf(jugadores,  tam,  tamConfederaciones,arrayAniosAcumulados);
 
 	printf("+============================================================+\n"
 				"|%*s|\n%s",-60,"CONFEDERACION CON MAYOR CANTIDAD DE AÑOS DE CONTRATOS TOTAL:",
@@ -606,6 +602,7 @@ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float*
 		{
 			if((*(jugadores+i)).isEmpty==OCUPADO)
 			{
+				retorno=0;
 				switch((*(jugadores+i)).idConfederacion)
 				{
 					case 100:
@@ -638,9 +635,8 @@ int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float*
 			}
 	return retorno;
 }
-int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
+void informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones)
 {
-	int retorno=-1;
 	float arrayPorcentajes[tamConfederaciones];
 	//CALCULO PORCENTAJES
 	calcPorcentajePorConf(jugadores, contJugadores,  tam, arrayPorcentajes,  tamConfederaciones);
@@ -652,9 +648,8 @@ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfed
 	{
 		printf("|%*s|   %*.2f|\n",-24,(*(confederaciones+i)).nombre,-8,(*(arrayPorcentajes+i)));
 	}
-	return retorno;
 }
-int buscarMayorNumJugPorRegion(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones,int* arrayCantidadAcumulados)
+int buscarMayorNumJugPorRegion(eJugador* jugadores, int tam, int tamConfederaciones,int* arrayCantidadAcumulados)
 {
 	int retorno=-1;
 
@@ -671,7 +666,7 @@ int buscarMayorNumJugPorRegion(eJugador* jugadores, int tam, int tamConfederacio
 		for(int j=0;j<tam;j++)
 		{
 			if((*(jugadores)).isEmpty==OCUPADO && (*(jugadores+j)).idConfederacion==idConfeAux)
-			{
+			{	retorno=0;
 				acumulador=acumulador+1;
 			}
 		}
@@ -681,7 +676,6 @@ int buscarMayorNumJugPorRegion(eJugador* jugadores, int tam, int tamConfederacio
 	//printf("A VER QUE SE GUARDO X POSICION: %d %d %d %d %d %d",arrayCantidadAcumulados[0],arrayCantidadAcumulados[1],arrayCantidadAcumulados[2],arrayCantidadAcumulados[3],arrayCantidadAcumulados[4],arrayCantidadAcumulados[5]);
 	return retorno;
 }
-
 int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones)
 {
 	int retorno=-1;
@@ -690,7 +684,7 @@ int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederacion
 	int idConfeAux=100;//INICIALIZADO EN 100 TENIENDO EN CUENTA QUE LOS ID DE CONFEDERACION ARRANCAN EN ESE NUMERO
 
 	int arrayCantidadAcumulados[tamConfederaciones];
-	buscarMayorNumJugPorRegion(jugadores,  tam,  tamConfederaciones,  confederaciones,arrayCantidadAcumulados);
+	buscarMayorNumJugPorRegion(jugadores,  tam,  tamConfederaciones,arrayCantidadAcumulados);
 
 	for(int i=0;i<tamConfederaciones;i++)
 	{
@@ -719,6 +713,7 @@ int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederacion
 			{
 				if(flag==0)
 				{
+					retorno=0;
 					flag=1;
 					printf("+==================================================+\n|REGION %*s|"
 							"\n+==================================================+\n",-43,(*(confederaciones+i)).region);
@@ -734,12 +729,14 @@ int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederacion
 
 	return retorno;
 }
+
 int menuInformes(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores, int tamConfederaciones)
 {
 	int retorno=-1;
 	short opcionSubMenu;
 	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores>0 )
 	{
+		retorno=0;
 		printf("%s\n|%*s|\n%s\n","+====================================================================================================+"
 				,-100,"                                       MENU DE INFORMES","+====================================================================================================+");
 
