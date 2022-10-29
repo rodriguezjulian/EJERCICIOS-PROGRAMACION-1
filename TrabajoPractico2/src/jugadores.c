@@ -17,7 +17,7 @@
 #define VACIO 1
 #define OCUPADO 0
 
-int inicializarIsEmpty(eJugador* jugadores, int tam, int estado)
+int inicializarIsEmptyEjugador(eJugador* jugadores, int tam, int estado)
 {
 	int retorno=-1;
 
@@ -34,7 +34,7 @@ int inicializarIsEmpty(eJugador* jugadores, int tam, int estado)
 	return retorno;
 
 }
-int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores,int tamJugadores)
+int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores,int tamJugadores, int tamConfederaciones)
 {
 	int retorno=-1;
 	eJugador jugadorAuxiliar;
@@ -54,7 +54,7 @@ int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,
 			 ingresarShortConRango(&jugadorAuxiliar.numeroCamiseta,"Ingrese numero de camiseta entre 1 y 100\n", "Ingrese numero valido\n", 1,  100);
 
 			 //MOSTRAR LISTADO DE CONFEDERACIONES.
-			 listarConfederaciones(confederaciones);
+			 listarConfederaciones(confederaciones,tamConfederaciones);
 			 ingresarIntConRango(&jugadorAuxiliar.idConfederacion, "Ingrese ID de confederacion\n", "ERROR,Ingrese ID valido\n", 100, 105);
 
 			 ingresarFloatConMinimo(&jugadorAuxiliar.salario,"Ingrese salario","ERROR, ingrese salario valido\n",1);
@@ -238,7 +238,7 @@ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam,
 	return retorno;
 }
 
-int modificarJugador(eJugador* jugadores,eConfederacion* confederaciones, int tam , int contadorJugadores)
+int modificarJugador(eJugador* jugadores,eConfederacion* confederaciones, int tam , int contadorJugadores ,int tamConfederaciones)
 {
 	int retorno=-1;
 	int opcion;
@@ -274,7 +274,7 @@ int modificarJugador(eJugador* jugadores,eConfederacion* confederaciones, int ta
 			ingresarShortConRango(&(*(jugadores+i)).numeroCamiseta,"Ingrese nuevo numero de camiseta entre 1 y 100\n", "Ingrese numero valido\n", 1,  100);
 		break;
 		case 4:
-			 listarConfederaciones(confederaciones);
+			 listarConfederaciones(confederaciones,tamConfederaciones);
 			 ingresarIntConRango(&(*(jugadores+i)).idConfederacion, "Ingrese nuevo ID de confederacion\n", "ERROR,Ingrese ID valido\n", 100, 105);
 		break;
 		case 5:

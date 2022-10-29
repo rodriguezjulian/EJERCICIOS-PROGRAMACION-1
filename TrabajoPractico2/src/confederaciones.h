@@ -15,9 +15,10 @@ typedef struct
 	char nombre[50];
 	char region[50];
 	int anioCreacion;
+	int isEmpty;
 
 }eConfederacion;
 
-int listarConfederaciones(eConfederacion* confederaciones);
+int listarConfederaciones(eConfederacion* confederaciones, int tamConfederaciones);
 
 #endif /* CONFEDERACIONES_H_ */

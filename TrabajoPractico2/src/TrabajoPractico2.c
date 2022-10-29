@@ -35,16 +35,16 @@ int main(void) {
 
 	eConfederacion confederaciones[6]=
 	{
-			{100,"CONMEBOL","SUDAMERICA",1916},
-			{101,"UEFA","EUROPA",1954},
-			{102,"AFC","ASIA",1954},
-			{103,"CAF","AFRICA",1957},
-			{104,"CONCACAF","NORTE Y CENTRO AMERICA",1961},
-			{105,"OFC","OCEANIA",1966}
+			{100,"CONMEBOL","SUDAMERICA",1916,OCUPADO},
+			{101,"UEFA","EUROPA",1954,OCUPADO},
+			{102,"AFC","ASIA",1954,OCUPADO},
+			{103,"CAF","AFRICA",1957,OCUPADO},
+			{104,"CONCACAF","NORTE Y CENTRO AMERICA",1961,OCUPADO},
+			{105,"OFC","OCEANIA",1966,OCUPADO}
 
 	};
 
-	//inicializarIsEmpty(jugadores,TAM, VACIO);
+	//inicializarIsEmptyEjugador(jugadores,TAM, VACIO);
 
 	eJugador jugadores [TAM]={
 				 {1,"Dario","Delantero",10,100,131,11,OCUPADO},
@@ -75,14 +75,14 @@ int main(void) {
 		switch(opcionMenu)
 		{
 			case 1:
-				 loguearJugador(jugadores,confederaciones, &idJugadores,&contadorJugadores, TAM);
+				 loguearJugador(jugadores,confederaciones, &idJugadores,&contadorJugadores, TAM,TAM_CONFEDERACIONES);
 			break;
 			case 2:
 				//BAJA DE JUGADOR
 				darLaBajaJugador(jugadores,TAM, &contadorJugadores, confederaciones);
 			break;
 			case 3:
-				modificarJugador(jugadores,confederaciones, TAM , contadorJugadores);
+				modificarJugador(jugadores,confederaciones, TAM , contadorJugadores,TAM_CONFEDERACIONES);
 			break;
 			case 4:
 				menuInformes(jugadores,confederaciones,TAM, contadorJugadores,TAM_CONFEDERACIONES);

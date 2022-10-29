@@ -29,7 +29,7 @@
 /// \param tam , tamanio del array de estructura.
 /// \param estado , estado que el usuario desea darle al campo isEmpty.
 /// \return return=0 SALIO BIEN / return=-1 SALIO MAL
-int inicializarIsEmpty(eJugador* jugadores, int tam, int estado);
+int inicializarIsEmptyEjugador(eJugador* jugadores, int tam, int estado);
 
 /// \fn int loguearJugador(eJugador*, eConfederacion*, int*, int*, int)
 /// \brief Esta funcion se encarga de completar todos los campos de la estructura eJugador, dependiendo cual sera
@@ -41,7 +41,7 @@ int inicializarIsEmpty(eJugador* jugadores, int tam, int estado);
 /// \param contadorJugadores , serviria para posteriormente utilizar esta variable como control de acceso a otras opciones (autoincremental).
 /// \param tamJugadores
 /// \return
-int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores,int tamJugadores);
+int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores,int tamJugadores,int tamConfederaciones);
 
 
 /// \fn int asignarDescripcion(eJugador*, eConfederacion*, int, char*, int)
@@ -98,7 +98,7 @@ int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModif
 /// \param tam ,  tamanio del array de estructuras de tipo eJugador.
 /// \param contadorJugadores , utilizado para llamar a la funcion "listarJugadores".
 /// \return
-int modificarJugador(eJugador* jugadores, eConfederacion* confederaciones, int tam ,int contadorJugadores);
+int modificarJugador(eJugador* jugadores, eConfederacion* confederaciones, int tam ,int contadorJugadores,int tamConfederaciones);
 
 /// \fn int darLaBajaJugador(eJugador*, int, int*, eConfederacion*)
 /// \brief Esta funcion llamara a  "listarJugadores" para mostrar aquellos existentes, pedira un id (por medio de la funcion "ingresarIntConRango") y
@@ -284,7 +284,6 @@ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam,
 /// \fn int menuInformes(eJugador*, eConfederacion*, int, int, int)
 /// \brief Se mostraran opciones, el usuario ingresara una (funcion ingresarShortConRango), lo cual derivara a la llamada de multiples funciones
 /// segun corresponda.
-///
 /// \param jugadores array, de estructuras de tipo eJugador.
 /// \param confederaciones ,array de estructuras de tipo eConfederacion
 /// \param tam ,tamanio del array de estructuras de tipo eJugador.
@@ -292,7 +291,6 @@ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam,
 /// \param tamConfederaciones , tamanio del array de estructuras de tipo eConfederacion.
 /// \return return=0 SALIO BIEN / return=-1 SALIO MAL.
 int menuInformes(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int tamConfederaciones);
-
 
 /// \fn void inicializarArrayFloat(float*, int)
 /// \brief Asignar valor 0 por referencia a todas las posiciones de un array tipo float.
