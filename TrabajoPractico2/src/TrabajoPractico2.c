@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include "ingresos.h"
 #include "jugadores.h"
-#include<string.h>
+#include <string.h>
 #include "confederaciones.h"
 
 #define TAM 8
@@ -48,15 +48,16 @@ int main(void) {
 	//inicializarIsEmpty(jugadores,TAM, VACIO);
 
 	eJugador jugadores [TAM]={
-				 {1,"Dario","Delantero",10,100,105,1,OCUPADO},
-				 {2,"Nige","Mediocampista",5,102,1,1,OCUPADO},
-				 {3,"Messi","Arquero",1,100,155,1,OCUPADO},
-				 {4,"Atony","Gil",5,100,145,1,OCUPADO},
-				 {5,"El monta carga","Centro",8,104,15,11,OCUPADO},
-				 {6,"Tevez","Delantero",9,102,1,1,OCUPADO},
-				 {7,"Bufarini","Delantero",10,105,47,1,OCUPADO},
-				 {8,"Atos","Centrocampista",5,100,4,2,OCUPADO}
+				 {1,"Dario","Delantero",10,100,131,11,OCUPADO},
+				 {2,"Nige","Mediocampista",5,100,1,1,OCUPADO},
+				 {3,"Messi","Arquero",1,105,155,1,OCUPADO},
+				 {4,"Atony","Gil",5,105,145,100,OCUPADO},
+				 {5,"El monta carga","Centro",8,100,15,1,OCUPADO},
+				 {6,"Tevez","Delantero",9,105,1,20,OCUPADO},
+				 {7,"Bufarini","Delantero",10,102,47,121,OCUPADO},
+				 {8,"Atos","Centrocampista",5,101,4,2,OCUPADO}
 		 };
+
 
 	do
 	{
@@ -103,7 +104,6 @@ int main(void) {
 
 	return EXIT_SUCCESS;
 }
-
 
 
 
