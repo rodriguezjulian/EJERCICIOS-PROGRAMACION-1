@@ -15,10 +15,11 @@
 #include<string.h>
 #include "confederaciones.h"
 
-#define TAM 3000
+#define TAM 8
 #define TAM_CONFEDERACIONES 6
 #define VACIO 1
 #define OCUPADO 0
+
 
 //int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,int tam, int idConf);
 
@@ -30,7 +31,7 @@ int main(void) {
 	short opcionMenu;
 	short salida=0;
 	int idJugadores=0;//LO INICIALIZO EN 0 YA QUE EL ID SERA AUTOINCREMENTAL
-	int contadorJugadores=1;//INICIALIZADO EN 0 YA QUE SE USARA COMO VARIABLE DE CONTROL EN EL MENU
+	int contadorJugadores=8;//INICIALIZADO EN 0 YA QUE SE USARA COMO VARIABLE DE CONTROL EN EL MENU
 	//eJugador jugadores[TAM];
 
 	eConfederacion confederaciones[6]=
@@ -44,18 +45,18 @@ int main(void) {
 
 	};
 
+	//inicializarIsEmpty(jugadores,TAM, VACIO);
 
-
-		 eJugador  jugadores[TAM]={
-				 {1,"Julian","Delantero",10,100,102545,1,OCUPADO},
-				 {2,"Nige","Mediocampista",5,102,1544,2,OCUPADO},
-				 {3,"Messi","Arquero",1,104,155555,OCUPADO},
-				 {4,"Tony","Gil",5,105,1545,OCUPADO}
+	eJugador jugadores [TAM]={
+				 {1,"Dario","Delantero",10,100,105,1,OCUPADO},
+				 {2,"Nige","Mediocampista",5,102,1,1,OCUPADO},
+				 {3,"Messi","Arquero",1,100,155,1,OCUPADO},
+				 {4,"Atony","Gil",5,100,145,1,OCUPADO},
+				 {5,"El monta carga","Centro",8,104,15,11,OCUPADO},
+				 {6,"Tevez","Delantero",9,102,1,1,OCUPADO},
+				 {7,"Bufarini","Delantero",10,105,47,1,OCUPADO},
+				 {8,"Atos","Centrocampista",5,100,4,2,OCUPADO}
 		 };
-
-
-		//inicializarIsEmpty(jugadores,TAM, VACIO);
-
 
 	do
 	{
@@ -84,9 +85,7 @@ int main(void) {
 				modificarJugador(jugadores,confederaciones, TAM , contadorJugadores);
 			break;
 			case 4:
-				//METER SUB MENU
-				//listarJugadores(jugadores,confederaciones,TAM, contadorJugadores,1);
-				listarJugadoresXConfederaciones( jugadores, confederaciones, TAM, contadorJugadores,  TAM_CONFEDERACIONES);
+				menuInformes(jugadores,confederaciones,TAM, contadorJugadores,TAM_CONFEDERACIONES);
 			break;
 			case 5:
 				salida=1;
@@ -104,6 +103,49 @@ int main(void) {
 
 	return EXIT_SUCCESS;
 }
+
+
+
+
+
+
+
+
+
+/*int altaForzada(eJugador* jugadores, int tamJugadores,int id,char* nombre, char* posicion, short numeroCamiseta, int idConf,float salario,short AniosCont)
+{
+	int retorno=-1;
+	eJugador jugadorAuxiliar;
+	if(jugadores!=NULL)
+	jugadorAuxiliar.id=id;
+	strcpy(jugadorAuxiliar.nombre, nombre);
+	strcpy(jugadorAuxiliar.posicion, posicion);
+	jugadorAuxiliar.numeroCamiseta =numeroCamiseta;
+	jugadorAuxiliar.idConfederacion=idConf;
+	jugadorAuxiliar.salario=salario;
+	jugadorAuxiliar.aniosContrato=AniosCont;
+	jugadorAuxiliar.isEmpty=OCUPADO;
+	retorno=0;
+	for(int i=0;i<tamJugadores;i++)
+	 {
+		 if((*(jugadores+i)).isEmpty==VACIO)
+		 {
+			 (*(jugadores+i))=jugadorAuxiliar;
+			 break;
+		 }
+	 }
+
+	return retorno;
+}*/
+/*int seleccionarPosicion(eJugador* jugadores, int tam)
+{
+	int retorno=-1;
+
+
+
+	return retorno;
+}*/
+
 
 
 

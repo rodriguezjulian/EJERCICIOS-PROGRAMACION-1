@@ -36,9 +36,28 @@ int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModif
 int modificarJugador(eJugador* jugadores, eConfederacion* confederaciones, int tam ,int contadorJugadores);
 int darLaBajaJugador(eJugador* jugadores,int tam, int* contadorJugadores, eConfederacion* confederaciones);
 int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,int tam, int idConf, int tamConfederaciones);
-int listarJugadoresXConfederaciones(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores, int tamConfederaciones);
+int listarJugadoresXConfederaciones(eJugador* jugadores,eConfederacion* confederaciones,int tam, int tamConfederaciones);
+
+
+int menuInformes(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int tamConfederaciones);
 
 
 
+int acumularTotalSalarios(eJugador* jugadores,int tam, float* totalSalarios);
+int calcularJugPorArribaDeLaMedia(eJugador* jugadores, float promedioSalarios);
+float calcularPromedio(float numeroA, int numeroB);
+
+
+int acumularAnios(eJugador* jugadores, int tam, int* aniosAcumulados);
+int calcConfConMasAniosDeContrato(eJugador* jugadores,int tamConfederaciones, int tamJugadores, char* confederacionConMasAniosDeContrato,eConfederacion* confederaciones);
+
+
+int informarTotalyMediaDeSalarios(eJugador* jugadores, int tam, int contadorJugadores);
+
+
+float calcPorcentaje(int contJugadores, int conf);
+int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* porcentajeConmebol, float* porcentajeUefa,float* porcentajeAfc, float* porcentajeCaf,float* porcentajeConcacaf,float* porcentajeOfc);
+//int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores);
+int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones);
 
 #endif /* JUGADORES_H_ */
