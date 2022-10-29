@@ -604,60 +604,6 @@ int informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfed
 
 	return retorno;
 }
-/*
-int calcularConfconMasJug(eJugador* jugadores,int tamConfederaciones, int tamJugadores, char* confederacionConMasJug,eConfederacion* confederaciones)
-{
-	int retorno=-1;
-	int resultadoAux=0;
-	int idConfeAux=100;
-	char confederacionMaxAux[50];
-
-	int acumulador=0;
-	int posicion;
-	int posicionAux;
-	int flag=0;
-	for(int i=0;i<tamConfederaciones;i++)
-	{
-		acumulador=0;
-		for(int j=0;j<tamJugadores;j++)
-		{
-
-			if((*(jugadores+j)).isEmpty==OCUPADO && (*(jugadores+j)).idConfederacion==idConfeAux)
-			{
-				acumulador=acumulador+1;
-				retorno=0;
-				posicionAux=j;
-			}
-		}
-
-		if(resultadoAux<acumulador)
-		{
-			resultadoAux =acumulador;
-			posicion=posicionAux;
-			asignarDescripcion(jugadores,confederaciones,tamConfederaciones, confederacionMaxAux ,posicion);
-			strcpy(confederacionConMasJug, confederacionMaxAux);
-			flag=1;
-
-		}
-		else
-			//muestro perfecto las 2 confederaciones el problema es como muestro a los jugadores
-		{
-			if(resultadoAux==acumulador && flag==1)
-			{
-				posicion=posicionAux;
-				asignarDescripcion(jugadores,confederaciones,tamConfederaciones, confederacionMaxAux ,posicion);
-				strcat(confederacionConMasJug, " | ");
-				strcat(confederacionConMasJug, confederacionMaxAux);
-
-			}
-		}
-		idConfeAux=idConfeAux+1;
-	}
-	return retorno;
-}
-*/
-
-
 int buscarMayorNumJugPorRegion(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones,int* arrayCantidadAcumulados)
 {
 	int retorno=-1;
@@ -719,8 +665,8 @@ int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederacion
 
 		if((*(arrayCantidadAcumulados+i))==maximoContador)
 		{
-			printf("+==================================================+\n|CONFEDERACION %*s|"
-					"\n+==================================================+\n",-36,(*(confederaciones+i)).nombre);
+			printf("+==================================================+\n|REGION %*s|"
+					"\n+==================================================+\n",-43,(*(confederaciones+i)).region);
 			for(int j=0;j<tam;j++)
 			{
 				if((*(jugadores)).isEmpty==OCUPADO  && (*(jugadores+j)).idConfederacion==(*(confederaciones+i)).id)
@@ -728,74 +674,16 @@ int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederacion
 					printf("|%*s|\n",-50,(*(jugadores+j)).nombre);
 				}
 			}
-
 		}
 	}
 	printf("+==================================================+\n");
 
 	return retorno;
 }
-
-
-/*
- int calcConfConMasAniosDeContrato(eJugador* jugadores,int tamConfederaciones, int tamJugadores, int* resultadoAnios,eConfederacion* confederaciones)
-{
-	int retorno=-1;
-	int resultadoAux=0;
-	int idConfeAux=100;
-	int acumulador=0;
-	//retorno la cantidad maxima de contratos encontrados
-	for(int i=0;i<tamConfederaciones;i++)
-	{
-		acumulador=0;
-		for(int j=0;j<tamJugadores;j++)
-		{
-
-			if((*(jugadores+j)).isEmpty==OCUPADO && (*(jugadores+j)).idConfederacion==idConfeAux)
-			{
-				acumulador=acumulador+(*(jugadores+j)).aniosContrato;
-				retorno=0;
-			}
-		}
-
-		if(resultadoAux<acumulador)
-		{
-			resultadoAux=acumulador;
-
-		}
-		idConfeAux=idConfeAux+1;
-	}
-	*resultadoAnios=resultadoAux;
-	return retorno;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int menuInformes(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores, int tamConfederaciones)
 {
 	int retorno=-1;
 	short opcionSubMenu;
-	//char confederacionConMasAniosDeContrato[50];
-	int arrayCantidadAcumulados[tamConfederaciones];
-	//char regionConMasJugadores [50];
 	if(jugadores!=NULL && confederaciones!=NULL && contadorJugadores>0 )
 	{
 		printf("%s\n|%*s|\n%s\n","+====================================================================================================+"
@@ -827,9 +715,6 @@ int menuInformes(eJugador* jugadores,eConfederacion* confederaciones,int tam, in
 		break;
 		case 6:
 			informarRegionMasAsistida(jugadores,  tam,  tamConfederaciones,  confederaciones);
-			 //informarRegionMasAsistida( jugadores, tam, tamConfederaciones, confederaciones,arrayCantidadAcumulados);
-			//buscarMayorNumJugPorRegion(jugadores,  tam,  tamConfederaciones,  confederaciones, arrayCantidadAcumulados);
-			//calcularRegionMasJug(jugadores,tamConfederaciones, tam, regionConMasJugadores,confederaciones);
 		break;
 		}
 	}
