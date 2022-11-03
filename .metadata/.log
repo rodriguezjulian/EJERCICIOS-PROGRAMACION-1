@@ -14151,3 +14151,6 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.core.resources.IResou
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-03 12:53:25.239
+!MESSAGE Indexed 'EJERCICIO 14-2' (1 sources, 10 headers) in 0,174 sec: 875 declarations; 1.698 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)

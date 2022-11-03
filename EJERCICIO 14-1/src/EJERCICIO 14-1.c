@@ -17,8 +17,12 @@ int main(void) {
 	setbuf(stdout,NULL);
 
 	int id=0;
-	eEmpleado empleados[TAM];
 	int opcion;
+	//MEMORIA DINAMICA
+	//TENGO QUE REASIGNAR EL TAMANIO SEGUN SE REQUIERA, TENIENDO COMO MINIMO 1 EMPLEADO.
+	//TENDRIA QUE UTILIZAR realloc para sumar espacio al loguear y tambien cuando doy de baja???
+	eEmpleado* empleados=(eEmpleado*) malloc(sizeof(eEmpleado)*1);
+
 	float resultadoAcumulado;
 	float promedioDeSueldos;
 	int empleadosArribaMedia;
@@ -39,7 +43,6 @@ int main(void) {
 		switch(opcion)
 		{
 		case 1:
-
 			loguearEmpleado(empleados,OCUPADO,&id, &contadorEmpleados, sectores);
 		break;
 		case 2:
