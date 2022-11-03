@@ -28,15 +28,42 @@ typedef struct
 int inicializarIsEmptyEConfederacion(eConfederacion* confederaciones, int tamConfederaciones, int estado);
 int loguearConfederacion(int *id,eConfederacion* confederaciones, int tamConfederaciones, int* contadorConf);
 int listarConfederaciones(eConfederacion* confederaciones,int tamConfederaciones, int contadorConf);
+int modificarConfederacion(eConfederacion* confederaciones, int tamConfederaciones , int contadorConf);
+int darDeBajaConf(eConfederacion* confederaciones, int tamConfederaciones , int* contadorConf);
 
 int main(void) {
 	setbuf(stdout,NULL);
-	eConfederacion confederaciones[10];
+	int opcion;
+	int tamConfederaciones=2;
 	int id=100;
 	int contadorConf=0;
+	int contador=0;
+	eConfederacion confederaciones[2];
+	/*eConfederacion confederaciones[2]={
+			{100,"EDESUR","ZONA SUR",2000,OCUPADO},
+			{101,"METRO GAS","ZONA NORTE",1990,OCUPADO}
+	};*/
+	do
+	{
+		printf("1.LOGUEAR\n2.MODIFICAR\n3.BAJA\n");
+		ingresarIntConRango(&opcion, "Ingrese opcion segun desee operar", "ERROR, Ingrese opcion valida\n",1,3);
+		switch(opcion)
+		{
+			case 1:
+				loguearConfederacion(&id,confederaciones, 10, &contadorConf);
+			break;
+			case 2:
+				modificarConfederacion(confederaciones, tamConfederaciones , contadorConf);
+			break;
+			case 3:
+				 darDeBajaConf(confederaciones,  tamConfederaciones ,  &contadorConf);
+			break;
+		}
+		contador=contador+1;
+	}while(contador!=20);
 
 	 //inicializarIsEmptyEConfederacion(confederaciones, 10, VACIO);
-	// loguearConfederacion(&id,confederaciones, 10, &contadorConf);
+	//
 	 //listarConfederaciones(confederaciones,10,contadorConf);
 	return EXIT_SUCCESS;
 }
@@ -134,7 +161,7 @@ int contarIteraciones(eConfederacion* confederaciones,int* iteraciones, int tamC
 	}
 	return retorno;
 }
-int modificarConfederacion(int *id,eConfederacion* confederaciones, int tamConfederaciones , int contadorConf)
+int modificarConfederacion(eConfederacion* confederaciones, int tamConfederaciones , int contadorConf)
 {
 	int retorno=-1;
 	int i;
@@ -149,23 +176,48 @@ int modificarConfederacion(int *id,eConfederacion* confederaciones, int tamConfe
 		}while(contarIteraciones(confederaciones,&i, tamConfederaciones, idModificar)==-1);
 
 		printf("+=========================+\n|%*s|\n+=========================+\n"
-				"|%*s|\n|%*s|\n|%*s|\n+=========================+\n",-25,"        MODICAR",-25,"1.ID",-25,"2.REGION",-25,"3.ANIO DE CREACION");
+				"|%*s|\n|%*s|\n|%*s|\n+=========================+\n",-25,"        MODICAR",-25,"1.NOMBRE",-25,"2.REGION",-25,"3.ANIO DE CREACION");
 
 		ingresarIntConRango(&opcion, "Ingrese opcion segun desee operar", "ERROR, Ingrese opcion valida\n",1,3);
 		switch(opcion)
 		{
 		case 1:
+			ingresarCadenaCaracteres(50, (*(confederaciones+i)).nombre, "Ingrese nuevo nombre de la confederacion\n", "ERROR,Ingrese nombre valido\n");
 		break;
 		case 2:
+			ingresarCadenaCaracteres(50, (*(confederaciones+i)).region, "Ingrese nueva region de la confederacion\n", "ERROR,Ingrese region valida\n");
 		break;
 		case 3:
+			ingresarIntConRango(&(*(confederaciones+i)).anioCreacion, "Ingrese nuevo anio de creacion\n", "ERROR, ingrese anio valido\n", 1800, ANIO_ACTUAL);
 		break;
 		}
 	}
-	else
-	{
-		printf("ERROR, debe existir al menos 1 confederacion cargada.\n");
-	}
-
 	return retorno;
 }
+int darDeBajaConf(eConfederacion* confederaciones, int tamConfederaciones , int* contadorConf)
+{
+	int retorno=-1;
+	int i;
+	int idModificar;
+	if(listarConfederaciones(confederaciones,tamConfederaciones, *contadorConf)==0)
+	{
+		retorno=0;
+		do
+			{
+				ingresarIntConRango(&idModificar, "Ingrese ID a dar de baja", "ERROR, Ingrese ID valido\n",1,5000);
+				//EN CONTAR ITERACIONES, SI HAY PROBLEMAS CON EL ID, RETORNO -1
+			}while(contarIteraciones(confederaciones,&i, tamConfederaciones, idModificar)==-1);
+
+		(*(confederaciones+i)).isEmpty=VACIO;
+		*contadorConf=*contadorConf-1;
+		printf("<<<<<<<<<< ID %d DADO DE BAJA SATISFACTORIAMENTE>>>>>>>>>>\n ",(*(confederaciones+i)).id);
+
+	}
+	return retorno;
+}
+
+
+
+
+
+

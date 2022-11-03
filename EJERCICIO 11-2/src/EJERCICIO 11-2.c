@@ -1,26 +1,22 @@
-/*
- ============================================================================
- Name        : EJERCICIO.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
-
+//RODRIGUEZ JULIAN MANUEL DIV J EJERCICIO 11-2
 #include <stdio.h>
 #include <stdlib.h>
 int contiene(int* vectorUno, int* vectorDos, int tamVectorUno, int tamVectorDos);
 
-
 int main(void) {
 	setbuf(stdout,NULL);
 
-	int vectorUno[5]={3,0,1,0,2};
-	int vectorDos[3]={1,0,2};
+	int vectorUno[3]={3,0,1};
+	int vectorDos[3]={1,3,0};
 
-
-	printf("%d",contiene(vectorUno,vectorDos, 5, 3));
+	if(contiene(vectorUno,vectorDos, 5, 3)==0)
+	{
+		printf("El vector 2 esta incluido en el vector 1\n");
+	}
+	else
+	{
+		printf("El vector 2 NO esta incluido en el vector 1\n");
+	}
 
 	return EXIT_SUCCESS;
 }
@@ -32,17 +28,19 @@ int contiene(int* vectorUno, int* vectorDos, int tamVectorUno, int tamVectorDos)
 	{
 		for(int i=0;i<tamVectorUno;i++)
 		{
-
 			for(int j=0;j<tamVectorDos;j++)
 			{
-				if(*(vectorUno+i)==*(vectorDos+j))
+				if((*(vectorUno+i))==(*(vectorDos+j)))
 				{
 					contador=contador+1;
-					retorno=contador;
+					break;
 				}
 			}
 		}
 	}
-
+	if(contador==tamVectorDos)
+	{
+		retorno=0;
+	}
 	return retorno;
 }

@@ -1,482 +1,306 @@
-10:46:58 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+02:35:35 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c: In function 'contarIteraciones':
-..\src\PRUEBAS CONFEDERACION.c:124:70: error: invalid operands to binary == (have 'eConfederacion {aka struct <anonymous>}' and 'int')
-   if((*(confederaciones+i)).id==idModificar && (*(confederaciones+i))==OCUPADO)
-                                                ~~~~~~~~~~~~~~~~~~~~~~^~
-Info: Nothing to build for TrabajoPractico2
-10:47:09 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:52:7: warning: unused variable 'aux' [-Wunused-variable]
+  int* aux;
+       ^~~
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+02:35:40 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c: In function 'contarIteraciones':
-..\src\PRUEBAS CONFEDERACION.c:124:70: error: invalid operands to binary == (have 'eConfederacion {aka struct <anonymous>}' and 'int')
-   if((*(confederaciones+i)).id==idModificar && (*(confederaciones+i))==OCUPADO)
-                                                ~~~~~~~~~~~~~~~~~~~~~~^~
-10:47:21 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:52:7: warning: unused variable 'aux' [-Wunused-variable]
+  int* aux;
+       ^~~
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+02:36:00 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-Info: Nothing to build for PRUEBAS CONFEDERACION
-10:48:09 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:53:7: warning: unused variable 'aux' [-Wunused-variable]
+  int* aux;
+       ^~~
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+02:36:36 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c: At top level:
-..\src\PRUEBAS CONFEDERACION.c:61:5: error: conflicting types for 'listarConfederaciones'
- int listarConfederaciones(eConfederacion* confederaciones,int tamConfederaciones, int contadorConf)
-     ^~~~~~~~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:30:5: note: previous declaration of 'listarConfederaciones' was here
- int listarConfederaciones(eConfederacion* confederaciones, int tamConfederaciones);
-     ^~~~~~~~~~~~~~~~~~~~~
-10:48:21 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:59:3: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+   print("ENTRE");
+   ^~~~~
+..\src\EJERCICIO 13-1.c:53:7: warning: unused variable 'aux' [-Wunused-variable]
+  int* aux;
+       ^~~
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+src\EJERCICIO 13-1.o: In function `borrarOcurrencia':
+C:\Users\Julian Rodriguez\Desktop\PROGRAMACION 1\EJERCICIO 13-1\Debug/../src/EJERCICIO 13-1.c:59: undefined reference to `print'
+collect2.exe: error: ld returned 1 exit status
+02:36:36 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:41:3: error: too few arguments to function 'listarConfederaciones'
-   listarConfederaciones(confederaciones,10);
-   ^~~~~~~~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:30:5: note: declared here
- int listarConfederaciones(eConfederacion* confederaciones,int tamConfederaciones, int contadorConf);
-     ^~~~~~~~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-10:48:30 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+src\EJERCICIO 13-1.o: In function `borrarOcurrencia':
+C:\Users\Julian Rodriguez\Desktop\PROGRAMACION 1\EJERCICIO 13-1\Debug/../src/EJERCICIO 13-1.c:59: undefined reference to `print'
+collect2.exe: error: ld returned 1 exit status
+02:36:39 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-Info: Nothing to build for PRUEBAS CONFEDERACION
-10:49:36 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+src\EJERCICIO 13-1.o: In function `borrarOcurrencia':
+C:\Users\Julian Rodriguez\Desktop\PROGRAMACION 1\EJERCICIO 13-1\Debug/../src/EJERCICIO 13-1.c:59: undefined reference to `print'
+collect2.exe: error: ld returned 1 exit status
+02:36:46 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'contarIteraciones':
-..\src\PRUEBAS CONFEDERACION.c:124:70: error: invalid operands to binary == (have 'eConfederacion {aka struct <anonymous>}' and 'int')
-   if((*(confederaciones+i)).id==idModificar && (*(confederaciones+i))==OCUPADO)
-                                                ~~~~~~~~~~~~~~~~~~~~~~^~
-10:49:50 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:53:7: warning: unused variable 'aux' [-Wunused-variable]
+  int* aux;
+       ^~~
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+02:38:11 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-10:58:57 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+02:38:24 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:38:36: warning: unknown conversion type character '|' in format [-Wformat=]
-  printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                    ^
-..\src\PRUEBAS CONFEDERACION.c:38:9: warning: too many arguments for format [-Wformat-extra-args]
-  printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:152:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:152:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-Info: Nothing to build for PRUEBAS CONFEDERACION
-10:59:30 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+02:38:30 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:38:32: warning: unknown conversion type character '|' in format [-Wformat=]
-  printf("|%*s|\n|%*s|\n|%*s|\n%|*s|\n",-25,"    MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                ^
-..\src\PRUEBAS CONFEDERACION.c:38:9: warning: too many arguments for format [-Wformat-extra-args]
-  printf("|%*s|\n|%*s|\n|%*s|\n%|*s|\n",-25,"    MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:152:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:152:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-10:59:47 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+02:38:47 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:152:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:152:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-Info: Nothing to build for PRUEBAS CONFEDERACION
-11:00:04 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+02:39:04 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:152:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:152:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-Info: Nothing to build for PRUEBAS CONFEDERACION
-11:00:35 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+02:39:15 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:153:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:153:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-Info: Nothing to build for PRUEBAS CONFEDERACION
-11:00:41 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+02:39:35 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:153:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:153:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-Info: Nothing to build for PRUEBAS CONFEDERACION
-11:01:46 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+02:41:03 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:39:16: warning: field width specifier '*' expects argument of type 'int', but argument 3 has type 'char *' [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                ^
-..\src\PRUEBAS CONFEDERACION.c:39:22: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                      ^
-..\src\PRUEBAS CONFEDERACION.c:39:27: warning: field width specifier '*' expects argument of type 'int', but argument 6 has type 'char *' [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                           ^
-..\src\PRUEBAS CONFEDERACION.c:39:28: warning: format '%s' expects argument of type 'char *', but argument 7 has type 'int' [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                            ^
-..\src\PRUEBAS CONFEDERACION.c:39:34: warning: field width specifier '*' expects argument of type 'int', but argument 8 has type 'char *' [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:55:6: warning: variable 'posicion' set but not used [-Wunused-but-set-variable]
+  int posicion=0;
+      ^~~~~~~~
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+02:44:11 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:75:34: error: 'i' undeclared (first use in this function)
+    for(int j=posicion;j<(*tam)-1;i++)
                                   ^
-..\src\PRUEBAS CONFEDERACION.c:39:35: warning: format '%s' expects argument of type 'char *', but argument 9 has type 'int' [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                                   ^
-..\src\PRUEBAS CONFEDERACION.c:39:41: warning: field width specifier '*' expects argument of type 'int', but argument 10 has type 'char *' [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                                         ^
-..\src\PRUEBAS CONFEDERACION.c:39:42: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                                          ^
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:154:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:154:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-11:02:02 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+..\src\EJERCICIO 13-1.c:75:34: note: each undeclared identifier is reported only once for each function it appears in
+02:44:25 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:39:16: warning: field width specifier '*' expects argument of type 'int', but argument 3 has type 'char *' [-Wformat=]
-  printf("%s\n|%*s|\n|%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                ^
-..\src\PRUEBAS CONFEDERACION.c:39:23: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
-  printf("%s\n|%*s|\n|%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                       ^
-..\src\PRUEBAS CONFEDERACION.c:39:28: warning: field width specifier '*' expects argument of type 'int', but argument 6 has type 'char *' [-Wformat=]
-  printf("%s\n|%*s|\n|%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                            ^
-..\src\PRUEBAS CONFEDERACION.c:39:29: warning: format '%s' expects argument of type 'char *', but argument 7 has type 'int' [-Wformat=]
-  printf("%s\n|%*s|\n|%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                             ^
-..\src\PRUEBAS CONFEDERACION.c:39:35: warning: field width specifier '*' expects argument of type 'int', but argument 8 has type 'char *' [-Wformat=]
-  printf("%s\n|%*s|\n|%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                                   ^
-..\src\PRUEBAS CONFEDERACION.c:39:36: warning: format '%s' expects argument of type 'char *', but argument 9 has type 'int' [-Wformat=]
-  printf("%s\n|%*s|\n|%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                                    ^
-..\src\PRUEBAS CONFEDERACION.c:39:42: warning: field width specifier '*' expects argument of type 'int', but argument 10 has type 'char *' [-Wformat=]
-  printf("%s\n|%*s|\n|%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                                          ^
-..\src\PRUEBAS CONFEDERACION.c:39:43: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
-  printf("%s\n|%*s|\n|%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                                           ^
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:154:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:154:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-11:02:44 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+Info: Nothing to build for EJERCICIO 13-1
+02:45:29 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:39:16: warning: field width specifier '*' expects argument of type 'int', but argument 3 has type 'char *' [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                ^
-..\src\PRUEBAS CONFEDERACION.c:39:17: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                 ^
-..\src\PRUEBAS CONFEDERACION.c:39:41: warning: field width specifier '*' expects a matching 'int' argument [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                                         ^
-..\src\PRUEBAS CONFEDERACION.c:39:42: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
-  printf("%s\n|%*s|\n%s\n|%*s|\n|%*s|\n|%*s|\n","+=========================+"
-                                          ^
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:154:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:154:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-11:03:03 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+02:47:10 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:39:14: warning: field width specifier '*' expects argument of type 'int', but argument 3 has type 'char *' [-Wformat=]
-  printf("%s|%*s|\n|%*s|\n|%*s|\n|%*s|\n","+=========================+\n"-25,"        MODICAR",-25,"1.ID",-25,"2.REGION",-25,"3.ANIO DE CREACION");
-              ^
-..\src\PRUEBAS CONFEDERACION.c:39:15: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
-  printf("%s|%*s|\n|%*s|\n|%*s|\n|%*s|\n","+=========================+\n"-25,"        MODICAR",-25,"1.ID",-25,"2.REGION",-25,"3.ANIO DE CREACION");
-               ^
-..\src\PRUEBAS CONFEDERACION.c:39:21: warning: field width specifier '*' expects argument of type 'int', but argument 5 has type 'char *' [-Wformat=]
-  printf("%s|%*s|\n|%*s|\n|%*s|\n|%*s|\n","+=========================+\n"-25,"        MODICAR",-25,"1.ID",-25,"2.REGION",-25,"3.ANIO DE CREACION");
-                     ^
-..\src\PRUEBAS CONFEDERACION.c:39:22: warning: format '%s' expects argument of type 'char *', but argument 6 has type 'int' [-Wformat=]
-  printf("%s|%*s|\n|%*s|\n|%*s|\n|%*s|\n","+=========================+\n"-25,"        MODICAR",-25,"1.ID",-25,"2.REGION",-25,"3.ANIO DE CREACION");
-                      ^
-..\src\PRUEBAS CONFEDERACION.c:39:28: warning: field width specifier '*' expects argument of type 'int', but argument 7 has type 'char *' [-Wformat=]
-  printf("%s|%*s|\n|%*s|\n|%*s|\n|%*s|\n","+=========================+\n"-25,"        MODICAR",-25,"1.ID",-25,"2.REGION",-25,"3.ANIO DE CREACION");
-                            ^
-..\src\PRUEBAS CONFEDERACION.c:39:29: warning: format '%s' expects argument of type 'char *', but argument 8 has type 'int' [-Wformat=]
-  printf("%s|%*s|\n|%*s|\n|%*s|\n|%*s|\n","+=========================+\n"-25,"        MODICAR",-25,"1.ID",-25,"2.REGION",-25,"3.ANIO DE CREACION");
-                             ^
-..\src\PRUEBAS CONFEDERACION.c:39:35: warning: field width specifier '*' expects argument of type 'int', but argument 9 has type 'char *' [-Wformat=]
-  printf("%s|%*s|\n|%*s|\n|%*s|\n|%*s|\n","+=========================+\n"-25,"        MODICAR",-25,"1.ID",-25,"2.REGION",-25,"3.ANIO DE CREACION");
-                                   ^
-..\src\PRUEBAS CONFEDERACION.c:39:36: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
-  printf("%s|%*s|\n|%*s|\n|%*s|\n|%*s|\n","+=========================+\n"-25,"        MODICAR",-25,"1.ID",-25,"2.REGION",-25,"3.ANIO DE CREACION");
-                                    ^
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:153:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:153:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-11:03:11 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+02:47:20 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:153:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:153:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-11:03:33 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+02:48:45 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:154:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:154:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-11:03:44 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+Info: Nothing to build for EJERCICIO 13-1
+02:50:30 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c: In function 'modificarConfederacion':
-..\src\PRUEBAS CONFEDERACION.c:154:37: warning: unknown conversion type character '|' in format [-Wformat=]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-                                     ^
-..\src\PRUEBAS CONFEDERACION.c:154:10: warning: too many arguments for format [-Wformat-extra-args]
-   printf("|    %*s|\n|%*s|\n|%*s|\n%|*s|",-25,"MODICAR",-25,"ID",-25,"REGION",-25,"ANIO DE CREACION");
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
-11:04:06 **** Incremental Build of configuration Debug for project PRUEBAS CONFEDERACION ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+02:58:00 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PRUEBAS CONFEDERACION.o" "..\\src\\PRUEBAS CONFEDERACION.c" 
-..\src\PRUEBAS CONFEDERACION.c: In function 'main':
-..\src\PRUEBAS CONFEDERACION.c:36:6: warning: unused variable 'contadorConf' [-Wunused-variable]
-  int contadorConf=0;
-      ^~~~~~~~~~~~
-..\src\PRUEBAS CONFEDERACION.c:35:6: warning: unused variable 'id' [-Wunused-variable]
-  int id=100;
-      ^~
-..\src\PRUEBAS CONFEDERACION.c:34:17: warning: unused variable 'confederaciones' [-Wunused-variable]
-  eConfederacion confederaciones[10];
-                 ^~~~~~~~~~~~~~~
-gcc -o "PRUEBAS CONFEDERACION.exe" "src\\PRUEBAS CONFEDERACION.o" "src\\ingresos.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:87:10: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+       aux=*(arrayInt+j);
+          ^
+..\src\EJERCICIO 13-1.c:60:7: warning: variable 'aux' set but not used [-Wunused-but-set-variable]
+  int* aux;
+       ^~~
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+02:58:36 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:60:6: error: size of array 'aux' has non-integer type
+  int aux[tam];
+      ^~~
+..\src\EJERCICIO 13-1.c:91:7: error: assignment to expression with array type
+    aux=arrayInt;
+       ^
+02:59:03 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:60:6: error: size of array 'aux' has non-integer type
+  int aux[tam];
+      ^~~
+..\src\EJERCICIO 13-1.c:61:7: warning: variable 'paux' set but not used [-Wunused-but-set-variable]
+  int* paux=aux;
+       ^~~~
+02:59:22 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:60:6: error: size of array 'aux' has non-integer type
+  int aux[tam];
+      ^~~
+..\src\EJERCICIO 13-1.c:61:12: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  int* paux=&aux;
+            ^
+..\src\EJERCICIO 13-1.c:61:7: warning: variable 'paux' set but not used [-Wunused-but-set-variable]
+  int* paux=&aux;
+       ^~~~
+03:17:06 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:87:9: error: 'aux' undeclared (first use in this function)
+       *(aux+j)=*(arrayInt+j);
+         ^~~
+..\src\EJERCICIO 13-1.c:87:9: note: each undeclared identifier is reported only once for each function it appears in
+..\src\EJERCICIO 13-1.c:60:7: warning: variable 'pAux' set but not used [-Wunused-but-set-variable]
+  int* pAux;
+       ^~~~
+03:17:18 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:87:13: warning: 'pAux' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       *(pAux+j)=*(arrayInt+j);
+        ~~~~~^~~
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:17:56 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:60:7: warning: variable 'pAux' set but not used [-Wunused-but-set-variable]
+  int* pAux;
+       ^~~~
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+03:20:25 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+03:21:22 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+03:21:36 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+03:23:14 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:23:36 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+03:23:48 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:24:16 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:24:36 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+03:26:11 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:27:34 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:80:51: error: invalid operands to binary * (have 'unsigned int' and 'int *')
+    pAux = (int *) realloc (arrayInt , sizeof(int) * tam-1);
+                                                   ^
+03:28:05 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+..\src\EJERCICIO 13-1.c: In function 'borrarOcurrencia':
+..\src\EJERCICIO 13-1.c:58:19: error: invalid type argument of unary '*' (have 'int')
+    for(int i=0;i<(*tam);i++)
+                   ^~~~
+..\src\EJERCICIO 13-1.c:69:27: error: invalid type argument of unary '*' (have 'int')
+     for(int j=posicion;j<(*tam-1);j++)
+                           ^~~~
+03:28:14 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+03:29:03 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+Info: Nothing to build for EJERCICIO 13-1
+03:29:26 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:29:34 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:30:04 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:30:11 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:30:36 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:30:42 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 
+03:30:49 **** Incremental Build of configuration Debug for project EJERCICIO 13-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 13-1.o" "..\\src\\EJERCICIO 13-1.c" 
+gcc -o "EJERCICIO 13-1.exe" "src\\EJERCICIO 13-1.o" 

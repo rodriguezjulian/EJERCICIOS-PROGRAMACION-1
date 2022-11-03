@@ -13,104 +13,55 @@
 #include "ingresos.h"
 #include<string.h>
 
-#define TAM 2
+void borrarNum(int *numeros, int tam, int numBorrar);
 
-	//UNA FORMA DE HACERLO
-	/*struct ePersona
-	{
-		char nombre[20];//ESTO ES UN CAMPO
-		char apellido[20];
-		int edad;
-		char estadoCivil;
-		float altura;
-	};
-	*/
-	//OTRA FORMA DE HACERLO
-	typedef struct
-	{
-		char nombre[20];//ESTO ES UN CAMPO
-		char apellido[20];
-		int edad;
-		char estadoCivil;
-		float altura;
-	}ePersona;//ePersona seria el tipo de la estructura, es un tipo especifico que creamos nosotros
-//%[^ para el scanf hasta \0 || \n
-
-
-	/////////	ESTRUCTURA ANIDADA
-	typedef struct
-	{
-		int dia;
-		int mes;
-		int anio;
-	}eFecha;
-	typedef struct
-	{
-		char nombre[20];//ESTO ES UN CAMPO
-		char apellido[20];
-		int edad;
-		char estadoCivil;
-		float altura;
-		eFecha fechaNacimiento;
-	}ePersonitaa;
-
-int main(void){
-
-	/******************************************************************************
-
-	Welcome to GDB Online.
-	GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
-	C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
-	Code, Compile, Run and Debug online from anywhere in world.
-
-	*******************************************************************************/
-	#include <stdio.h>
-
-	int main()
-	{
-	    int numeroIngresado;
-	    int retornoScanf;
-	    int retorno=-1;
-
-	    do{
-	        printf("Ingrese un numero");
-	       retornoScanf=scanf("%d",&numeroIngresado);
-	        if(retornoScanf==1)
-	        {
-	            printf("SALIO TODO BIEN ASIQUE CAMBIO EL RETORNO\n");
-	            retorno=0;
-	        }
-	        else
-	        {
-	            printf("SALIO MAL ASIQUE DEJO EL RETORNO Y SIGUE ITERANDO\n");
-	        }
-
-	    }while(retorno==-1);
-
-
-	    return 0;
+int main(void) {
+	setbuf(stdout, NULL);
+	int *numeros;
+	numeros = (int*)malloc(sizeof(int)*5);
+	if (numeros != NULL) {
+		for(int i = 0; i < 5; i++){
+			*(numeros + i) = i;
+		}
+		for(int i = 0; i < 5; i++){
+			printf("%d\n", *(numeros + i));
+		}
 	}
-
-
-
-
-
-
-
-
-/*
-	setbuf(stdout,NULL);
-	ePersona personita;
-	personita.edad=23;
-	strcpy(personita.nombre,"julian");
-
-	printf("EDAD %d | nombre %s",personita.edad,personita.nombre);
-
-*/
+	borrarNum(numeros, 5, 2);
+	printf("Borramos el numero 2\n");
+	for(int i = 0; i < 4; i++){
+		printf("%d\n", *(numeros + i));
+	}
+	free(numeros);
 	return EXIT_SUCCESS;
 }
 
+void borrarNum(int *numeros, int tam, int numBorrar)
+{
+	if (numeros != NULL)
+	{
+		int *aux;
+		int j = 0;
 
+		aux = (int*)realloc(numeros,sizeof(int)*(tam-1));
+		if (aux != NULL)
+		{
+			for(int i = 0; i < tam; i++)
+			{
+				if (*(numeros + i) != numBorrar)
+				{
+					*(aux + j) = *(numeros + i);
+					j++;
+				}
+			}
+			numeros = aux;
+			free(aux);
+		}
+	}else
+	{
+		printf("ocurrio un error");
+	}
+}
 
 
 

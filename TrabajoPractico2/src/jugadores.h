@@ -41,7 +41,7 @@ int inicializarIsEmptyEjugador(eJugador* jugadores, int tam, int estado);
 /// \param contadorJugadores , serviria para posteriormente utilizar esta variable como control de acceso a otras opciones (autoincremental).
 /// \param tamJugadores
 /// \return
-int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores,int tamJugadores,int tamConfederaciones);
+int loguearJugador(eJugador* jugadores,eConfederacion* confederaciones, int* id,int* contadorJugadores,int tamJugadores,int tamConfederaciones, int contadorConf);
 
 
 /// \fn int asignarDescripcion(eJugador*, eConfederacion*, int, char*, int)
@@ -98,7 +98,7 @@ int contarIteraciones(eJugador* jugadores,int* iteraciones, int tam, int idModif
 /// \param tam ,  tamanio del array de estructuras de tipo eJugador.
 /// \param contadorJugadores , utilizado para llamar a la funcion "listarJugadores".
 /// \return
-int modificarJugador(eJugador* jugadores, eConfederacion* confederaciones, int tam ,int contadorJugadores,int tamConfederaciones);
+int modificarJugador(eJugador* jugadores, eConfederacion* confederaciones, int tam ,int contadorJugadores,int tamConfederaciones, int contadorConf);
 
 /// \fn int darLaBajaJugador(eJugador*, int, int*, eConfederacion*)
 /// \brief Esta funcion llamara a  "listarJugadores" para mostrar aquellos existentes, pedira un id (por medio de la funcion "ingresarIntConRango") y
@@ -123,25 +123,6 @@ int darLaBajaJugador(eJugador* jugadores,int tam, int* contadorJugadores, eConfe
 int listarJugadoresXUnaConf(eJugador* jugadores,eConfederacion* confederaciones,int tam, int idConf, int tamConfederaciones);
 
 
-/// \fn int listarJugadoresXConfederaciones(eJugador*, eConfederacion*, int, int)
-/// \brief Esta funcion llama dentro de un bucle for a la funcion "listarJugadoresXUnaConf", teniendo en cuenta el tamanio de las confederaciones.
-/// De esta manera se listaran los jugadores de la confederacion correspondiente o bien en caso de NO haber jugadores cargados en esa conferencia
-/// se hara un print aclarando la NO existencia de jugadores.
-///
-/// \param jugadores , array de estructuras utilizado en el llamado a la funcion "listarJugadoresXUnaConf".
-/// \param confederaciones , array de estructuras de tipo eConfederacion utilizado para llamar a la funcion "listarJugadoresXUnaConf".
-/// \param tam , tamanio del array de estructuras de tipo eJugador.
-/// \param tamConfederaciones , tamanio de array de confederaciones.
-/// \return return=0 SALIO BIEN / return=-1 SALIO MAL.
-int listarJugadoresXConfederaciones(eJugador* jugadores,eConfederacion* confederaciones,int tam, int tamConfederaciones);
-
-/// \fn float calcularPromedio(float, int)
-/// \brief Recibe por parametro 2 numeros, el numero A sera dividido por el numero B (cantidad de casos).
-///
-/// \param numeroA , numero que sera divido (total)
-/// \param numeroB cantidad de casos
-/// \return resultado
-float calcularPromedio(float numeroA, int numeroB);
 
 /// \fn int acumularTotalSalarios(eJugador*, int, float*)
 /// \brief Se acumularan los salarios de TODOS los jugadores cargados, se utiliza un bucle for para recorrer el array de estructuras e ir acumulando los
@@ -162,14 +143,7 @@ int acumularTotalSalarios(eJugador* jugadores,int tam, float* totalSalarios);
 /// \return resultado
 int calcularJugPorArribaDeLaMedia(eJugador* jugadores, float promedioSalarios);
 
-/// \fn int informarTotalyMediaDeSalarios(eJugador*, int, int)
-/// \brief En esta funcion se llamara a "acumularTotalSalarios","calcularPromedio"y "calcularJugPorArribaDeLaMedia""
-/// Una vez obtenidos estos datos se mostraran ordenadamente.
-///
-/// \param jugadores , array de estructuras de tipo eJugador.
-/// \param tam ,  tamanio del array de estructuras de tipo eJugador.
-/// \param contadorJugadores , cantidad total de jugadores logueados.
-void informarTotalyMediaDeSalarios(eJugador* jugadores, int tam, int contadorJugadores);
+
 
 /// \fn int calcConfConMasAniosDeContrato(eJugador*, int, int, int*)
 /// \brief Se calculara la mayor cantidad de años total acumulada en una confederacion (puede haber 2 o mas confederaciones con
@@ -208,15 +182,6 @@ void mostrarConfConMasAniosContrato(eJugador* jugadores, int tam, int tamConfede
 
 
 
-/// \fn float calcPorcentaje(int, int)
-/// \brief Se recibe como parametro un total que representa el 100% y el parcial.
-/// Se retornara el porcentaje que representa el valor parcial respecto al total.
-///
-/// \param total
-/// \param parcial
-/// \return resultado
-float calcPorcentaje(int total, int parcial);
-
 /// \fn int calcPorcentajePorConf(eJugador*, int, int, float*, int)
 /// \brief Se llama a inicializarArrayFloat para inicializar en 0 al array en donde luego se guardaran valores por referencia segun corresponda en cada posicion.
 /// Con el uso de contadores y la funcion "calcPorcentaje", se calculara el porcentaje que representa cada confederacion respecto a la cantidad de jugadores que tiene.
@@ -228,19 +193,6 @@ float calcPorcentaje(int total, int parcial);
 /// \param tamConfederaciones , tamanio de array de estructura de tipo eConfederacion.
 /// \return return=0 SALIO BIEN / return=-1 SALIO MAL.
 int calcPorcentajePorConf(eJugador* jugadores,int contJugadores, int tam, float* arrayPorcentajes, int tamConfederaciones);
-
-
-/// \fn int informarPorcPorConf(eJugador*, int, int, eConfederacion*, int)
-/// \brief Se llama a la funcion "calcPorcentajePorConf" y se recorre con un bucle for al array de estructuras de tipo eJugador utilizando como condicion
-/// al campo isEmpty y al valor del campo id del arrays de estructuras de tipo eConfederacion (se tiene en cuenta que los id de las confederaciones comienzan
-/// en 100).
-///
-/// \param jugadores , array de estructuras de tipo eJugador a recorrer.
-/// \param tam ,tamanio del array de estructuras de tipo eJugador.
-/// \param contJugadores , utilizado para llamar a la funcion "calcPorcentajePorConf".
-/// \param confederaciones , array de estructuras de tipo eConfederacion.
-/// \param tamConfederaciones , tamanio de array de estructura de tipo eConfederacion.
-void informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfederacion* confederaciones, int tamConfederaciones);
 
 /// \fn int buscarMayorNumJugPorRegion(eJugador*, int, int, int*)
 /// \brief En esta funcion se le dara valor a cada posicion de un array (inicializado en 0 con funcion "inicializarArray") de
@@ -256,31 +208,6 @@ void informarPorcPorConf(eJugador* jugadores, int tam, int contJugadores, eConfe
 int buscarMayorNumJugPorRegion(eJugador* jugadores, int tam, int tamConfederaciones,int* arrayCantidadAcumulados);
 
 
-
-/// \fn int informarRegionMasAsistida(eJugador*, int, int, eConfederacion*)
-/// \brief Se llama a la funcion "buscarMayorNumJugPorRegion", mediante un bucle for se determina la mayor cantidad acumulada de jugadores en alguna de las
-/// confederaciones y se toma como referencia para hacer print teniendo en cuenta cuales posiciones del array al cual se le asignaron valores en la funcion
-/// "buscarMayorNumJugPorRegion", coinciden con este numero maximo.
-///
-/// \param jugadores , array de estructuras de tipo eJugador a recorrer.
-/// \param tam ,tamanio del array de estructuras de tipo eJugador.
-/// \param tamConfederaciones ,utilizado en los bucles for.
-/// \param confederaciones , array de estructuras de tipo eConfederacion a recorrer.
-/// \return return=0 SALIO BIEN / return=-1 SALIO MAL.
-int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederaciones, eConfederacion* confederaciones);
-
-/// \fn int listarJugadores(eJugador*, eConfederacion*, int, int, int)
-/// \brief Listara jugadores mostrando NOMBRE, POSICION, NUMERO DE CAMISETA, SUELDO, CONFEDERACION, ANIOS DE CONTRATO.
-/// El orden que esta informacion se lista dependera de la variable "referenciaOrdenamiento".
-///
-/// \param jugadores , array de estructuras de tipo eJugador a recorrer.
-/// \param confederaciones ,array de estructuras de tipo eConfederacion a recorrer.
-/// \param tam ,tamanio del array de estructuras de tipo eJugador.
-/// \param contadorJugadores , utilizado como variable de control.
-/// \param referenciaOrdenamiento	referenciaOrdenamiento -> 1. ordeno por orden alfabetico | referenciaOrdenamiento -> 2.ordeno por id
-/// \return return=0 SALIO BIEN / return=-1 SALIO MAL.
-int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int referenciaOrdenamiento);
-
 /// \fn int menuInformes(eJugador*, eConfederacion*, int, int, int)
 /// \brief Se mostraran opciones, el usuario ingresara una (funcion ingresarShortConRango), lo cual derivara a la llamada de multiples funciones
 /// segun corresponda.
@@ -292,18 +219,6 @@ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam,
 /// \return return=0 SALIO BIEN / return=-1 SALIO MAL.
 int menuInformes(eJugador* jugadores,eConfederacion* confederaciones,int tam, int contadorJugadores,int tamConfederaciones);
 
-/// \fn void inicializarArrayFloat(float*, int)
-/// \brief Asignar valor 0 por referencia a todas las posiciones de un array tipo float.
-///
-/// \param array , array a inicializar.
-/// \param tam , tamanio del array.
-void inicializarArrayFloat(float* array,int tam);
 
-/// \fn void inicializarArray(int*, int)
-/// \brief Asignar valor 0 por referencia a todas las posiciones de un array tipo int,
-///
-/// \param array , array a inicializar.
-/// \param tam , tamanio del array.
-void inicializarArray(int* array,int tam);
 
 #endif /* JUGADORES_H_ */

@@ -19,7 +19,10 @@ int main(void) {
 
 	char cadena[7]={'j','u','l','i','a','n'};
 
-	printf("Cantidad de reemplazos: %d",reemplazarChar(cadena,'a','o'));
+	printf("ANTES DE EJECUTAR LA FUNCION %s\n",cadena);
+	printf("Cantidad de reemplazos: %d\n",reemplazarChar(cadena,'a','o'));
+
+	printf("Asi quedo la palabra:%s\n",cadena);
 
 	return EXIT_SUCCESS;
 }
@@ -33,10 +36,9 @@ int reemplazarChar(char* string,char busqueda,char reemplazo)
 		for(int i=0;i<strlen(string);i++)
 		{
 
-			if(*string==busqueda)
+			if((*(string+i))==busqueda)
 			{
-				printf("BUENASS");
-				*string=reemplazo;
+				(*(string+i))=reemplazo;
 				contador=contador+1;
 				retorno=contador;
 			}

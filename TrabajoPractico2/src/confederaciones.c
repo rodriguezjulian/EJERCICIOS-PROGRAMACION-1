@@ -31,13 +31,12 @@ int inicializarIsEmptyEConfederacion(eConfederacion* confederaciones, int tamCon
 		retorno=0;
 	}
 	return retorno;
-
 }
-int listarConfederaciones(eConfederacion* confederaciones,int tamConfederaciones)
+int listarConfederaciones(eConfederacion* confederaciones,int tamConfederaciones, int contadorConf)
 {
 	int retorno=-1;
 
-	if(confederaciones!=NULL)
+	if(confederaciones!=NULL && contadorConf>0)
 	{
 		retorno=0;
 
@@ -53,6 +52,10 @@ int listarConfederaciones(eConfederacion* confederaciones,int tamConfederaciones
 			 }
 		 }
 		 printf("+============================================================================================================================+\n");
+	}
+	else
+	{
+		printf("ERROR, Debe existir al menos una confederacion cargada.\n");
 	}
 
 		return retorno;
@@ -80,19 +83,91 @@ int loguearConfederacion(int *id,eConfederacion* confederaciones, int tamConfede
 			if((*(confederaciones+i)).isEmpty==VACIO)
 			{
 				(*(confederaciones+i))=confederacionAux;
+				break;
 			}
 		}
 	}
 	return retorno;
 }
-
-int modificarConfederacion(int *id,eConfederacion* confederaciones, int tamConfederaciones)
+int contarIteracionesConf(eConfederacion* confederaciones,int* iteraciones, int tamConfederaciones, int idModificar)
 {
 	int retorno=-1;
-
-
+	int flag=0;
+	for(int i=0;i<tamConfederaciones;i++)
+	{
+		if((*(confederaciones+i)).id==idModificar && (*(confederaciones+i)).isEmpty==OCUPADO)
+		{
+			flag=1;
+			retorno=0;
+			*iteraciones=i;
+			break;
+		}
+	}
+	if(flag==0)
+	{
+		printf("ERROR, Ingrese ID valido\n");
+	}
 	return retorno;
 }
+int modificarConfederacion(eConfederacion* confederaciones, int tamConfederaciones , int contadorConf)
+{
+	int retorno=-1;
+	int i;
+	int idModificar;
+	int opcion;
+	if(listarConfederaciones(confederaciones,tamConfederaciones, contadorConf)==0)
+	{
+		do
+		{
+			ingresarIntConRango(&idModificar, "Ingrese ID a modificar", "ERROR, Ingrese ID valido\n",1,5000);
+			//EN CONTAR ITERACIONES, SI HAY PROBLEMAS CON EL ID, RETORNO -1
+		}while(contarIteracionesConf(confederaciones,&i, tamConfederaciones, idModificar)==-1);
+
+		printf("+=========================+\n|%*s|\n+=========================+\n"
+				"|%*s|\n|%*s|\n|%*s|\n+=========================+\n",-25,"        MODICAR",-25,"1.NOMBRE",-25,"2.REGION",-25,"3.ANIO DE CREACION");
+
+		ingresarIntConRango(&opcion, "Ingrese opcion segun desee operar", "ERROR, Ingrese opcion valida\n",1,3);
+		switch(opcion)
+		{
+		case 1:
+			ingresarCadenaCaracteres(50, (*(confederaciones+i)).nombre, "Ingrese nuevo nombre de la confederacion\n", "ERROR,Ingrese nombre valido\n");
+		break;
+		case 2:
+			ingresarCadenaCaracteres(50, (*(confederaciones+i)).region, "Ingrese nueva region de la confederacion\n", "ERROR,Ingrese region valida\n");
+		break;
+		case 3:
+			ingresarIntConRango(&(*(confederaciones+i)).anioCreacion, "Ingrese nuevo anio de creacion\n", "ERROR, ingrese anio valido\n", 1800, ANIO_ACTUAL);
+		break;
+		}
+	}
+	//SI NO HAY CARGAS, EL AVISO LO MUESTRA listarConfederaciones
+	return retorno;
+}
+int darDeBajaConf(eConfederacion* confederaciones, int tamConfederaciones , int* contadorConf)
+{
+	int retorno=-1;
+	int i;
+	int idModificar;
+	if(listarConfederaciones(confederaciones,tamConfederaciones, *contadorConf)==0)
+	{
+		retorno=0;
+		do
+			{
+				ingresarIntConRango(&idModificar, "Ingrese ID a dar de baja", "ERROR, Ingrese ID valido\n",1,5000);
+				//EN CONTAR ITERACIONES, SI HAY PROBLEMAS CON EL ID, RETORNO -1
+			}while(contarIteracionesConf(confederaciones,&i, tamConfederaciones, idModificar)==-1);
+
+		(*(confederaciones+i)).isEmpty=VACIO;
+		*contadorConf=*contadorConf-1;
+		printf("<<<<<<<<<< ID %d DADO DE BAJA SATISFACTORIAMENTE>>>>>>>>>>\n ",(*(confederaciones+i)).id);
+
+	}
+	//SI NO HAY CARGAS, EL AVISO LO MUESTRA listarConfederaciones
+	return retorno;
+}
+
+
+
 
 
 
