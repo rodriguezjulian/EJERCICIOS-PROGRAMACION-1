@@ -1,7 +1,88 @@
-12:54:01 **** Rebuild of configuration Debug for project EJERCICIO 14-2 ****
+01:39:43 **** Incremental Build of configuration Debug for project EJERCICIO 14-1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\empleado.o" "..\\src\\empleado.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresos.o" "..\\src\\ingresos.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\calculos.o" "..\\src\\calculos.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 14-2.o" "..\\src\\EJERCICIO 14-2.c" 
-gcc -o "EJERCICIO 14-2.exe" "src\\EJERCICIO 14-2.o" "src\\calculos.o" "src\\empleado.o" "src\\ingresos.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\EJERCICIO 14-1.o" "..\\src\\EJERCICIO 14-1.c" 
+..\src\EJERCICIO 14-1.c: In function 'main':
+..\src\EJERCICIO 14-1.c:35:11: error: assignment to expression with array type
+  empleados=(eEmpleado*) malloc(sizeof(eEmpleado)*1);
+           ^
+..\src\EJERCICIO 14-1.c:48:22: warning: passing argument 1 of 'inicializarIsEmpety' from incompatible pointer type [-Wincompatible-pointer-types]
+  inicializarIsEmpety(empleados,TAM, VACIO);
+                      ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:25:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int inicializarIsEmpety(eEmpleado* empleados, int tam, int estado);
+     ^~~~~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:57:20: warning: passing argument 1 of 'loguearEmpleado' from incompatible pointer type [-Wincompatible-pointer-types]
+    loguearEmpleado(empleados,OCUPADO,&id, &contadorEmpleados, sectores);
+                    ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:26:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int loguearEmpleado(eEmpleado* empleados,int estado, int* id , int* contadorEmpleados, eSector* sectores);
+     ^~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:60:22: warning: passing argument 1 of 'modificarEmpleado' from incompatible pointer type [-Wincompatible-pointer-types]
+    modificarEmpleado(empleados,TAM, contadorEmpleados, sectores);
+                      ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:27:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int modificarEmpleado(eEmpleado* empleados, int tam,int contadorEmpleados, eSector* sectores);
+     ^~~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:63:22: warning: passing argument 1 of 'darDeBajaEmpleado' from incompatible pointer type [-Wincompatible-pointer-types]
+    darDeBajaEmpleado(empleados, TAM, &contadorEmpleados);
+                      ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:28:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int darDeBajaEmpleado(eEmpleado* empleados, int tam, int* contadorEmpleados);
+     ^~~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:75:30: warning: passing argument 1 of 'calcacularTotalSalarios' from incompatible pointer type [-Wincompatible-pointer-types]
+      calcacularTotalSalarios(empleados,TAM,&resultadoAcumulado);
+                              ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:31:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int calcacularTotalSalarios(eEmpleado* empleados, int tam, float* resultadoAcumulado);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:76:24: warning: passing argument 1 of 'promediarSalarios' from incompatible pointer type [-Wincompatible-pointer-types]
+      promediarSalarios(empleados,TAM,resultadoAcumulado,&promedioDeSueldos);
+                        ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:32:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int promediarSalarios(eEmpleado* empleados, int tam, float totalEnSueldos,float* promedio);
+     ^~~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:77:38: warning: passing argument 1 of 'contarEmpleadosMayorSueldoMedio' from incompatible pointer type [-Wincompatible-pointer-types]
+      contarEmpleadosMayorSueldoMedio(empleados,TAM,promedioDeSueldos,&empleadosArribaMedia);
+                                      ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:33:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int contarEmpleadosMayorSueldoMedio(eEmpleado* empleados,int tam,float promedio, int* resultado);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:78:23: warning: passing argument 1 of 'mostrarEmpleados' from incompatible pointer type [-Wincompatible-pointer-types]
+      mostrarEmpleados(empleados, TAM,resultadoAcumulado,promedioDeSueldos,empleadosArribaMedia,1,sectores);
+                       ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:30:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia, int referencia,eSector* sectores);
+     ^~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:81:29: warning: passing argument 1 of 'ordenarAlfabeticamente' from incompatible pointer type [-Wincompatible-pointer-types]
+      ordenarAlfabeticamente(empleados, TAM);
+                             ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:29:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int ordenarAlfabeticamente(eEmpleado* empleados, int tam);
+     ^~~~~~~~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:82:23: warning: passing argument 1 of 'mostrarEmpleados' from incompatible pointer type [-Wincompatible-pointer-types]
+      mostrarEmpleados(empleados, TAM,resultadoAcumulado,promedioDeSueldos,empleadosArribaMedia,2, sectores);
+                       ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:30:5: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia, int referencia,eSector* sectores);
+     ^~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c:85:46: warning: passing argument 2 of 'imprimirSectorConMasEmpleados' from incompatible pointer type [-Wincompatible-pointer-types]
+      imprimirSectorConMasEmpleados(sectores, empleados, TAM, 4);
+                                              ^~~~~~~~~
+In file included from ..\src\EJERCICIO 14-1.c:7:0:
+..\src\empleado.h:39:6: note: expected 'eEmpleado * {aka struct <anonymous> *}' but argument is of type 'eEmpleado ** {aka struct <anonymous> **}'
+ void imprimirSectorConMasEmpleados(eSector* sectores, eEmpleado* empleados, int tamEmpleados, int tamSectores);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\EJERCICIO 14-1.c: In function 'crearEmpleadoConParametro':
+..\src\EJERCICIO 14-1.c:116:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^

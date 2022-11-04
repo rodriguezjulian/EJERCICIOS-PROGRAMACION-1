@@ -4,24 +4,35 @@
 #include <stdlib.h>
 #include<string.h>
 #include <ctype.h>
-
-#include "ingresos.h"
 #include "empleado.h"
+#include "ingresos.h"
+
 //#include "sector.h"
 
-#define TAM 300
+#define TAM 1
 #define VACIO 1
 #define OCUPADO 0
-
+//Empleado* crearEmpleado(void);
+eEmpleado* crearEmpleado(void);//Constructor Por defecto
+int inicializarArrayEmpleados(eEmpleado* arrayPunteros[], int limite);
+int buscarLibreArray(eEmpleado* arrayPunteros[], int limite, int* posicionLibre);
 int main(void) {
 	setbuf(stdout,NULL);
 
 	int id=0;
 	int opcion;
+	int tam=1;
 	//MEMORIA DINAMICA
 	//TENGO QUE REASIGNAR EL TAMANIO SEGUN SE REQUIERA, TENIENDO COMO MINIMO 1 EMPLEADO.
 	//TENDRIA QUE UTILIZAR realloc para sumar espacio al loguear y tambien cuando doy de baja???
-	eEmpleado* empleados=(eEmpleado*) malloc(sizeof(eEmpleado)*1);
+
+	eEmpleado* pEmpleados[TAM];
+	if(inicializarArrayEmpleados(pEmpleados, tam)==0)
+	{
+		puts("array inicilizado\n");
+	}
+	eEmpleado* empleados[TAM];
+	empleados=(eEmpleado*) malloc(sizeof(eEmpleado)*1);
 
 	float resultadoAcumulado;
 	float promedioDeSueldos;
@@ -84,8 +95,59 @@ int main(void) {
 		break;
 		}
 	}while(confirmarSalida()==-1);
-
-
 	return EXIT_SUCCESS;
 }
+eEmpleado* crearEmpleado(void)//Constructor Por defecto
+{
+	eEmpleado* puntero;
+	puntero=(eEmpleado*) malloc(sizeof(eEmpleado)*1);
+	if(puntero!=NULL)
+	{
+		return puntero;
+	}
+	return puntero;
+}
+eEmpleado* crearEmpleadoConParametro(int id,char name[51], char lastName[51], float salary, int sector, int isEmpty)
+{
+	eEmpleado* puntero;
+	puntero=crearEmpleado();
+	if(puntero!=NULL)
+	return puntero;
+}
+int inicializarArrayEmpleados(eEmpleado* arrayPunteros[], int limite)
+{
+	int retorno=-1;
+	int i;
+	if(arrayPunteros!=NULL && limite>0)
+	{
+		retorno=0;
+		//VOY A HACER QUE EL ARRAY VACIO APUNTE  A NULL.
+		for(i=0;i<limite;i++)
+		{
+			arrayPunteros[i]=NULL;
+		}
+	}
 
+	return retorno;
+}
+int buscarLibreArray(eEmpleado* arrayPunteros[], int limite, int* posicionLibre)
+{
+	int retorno=-1;
+	int i;
+	if(arrayPunteros!=NULL && limite>0)
+	{
+		retorno=0;
+		//VOY A HACER QUE EL ARRAY VACIO APUNTE  A NULL.
+		for(i=0;i<limite;i++)
+		{
+			if((arrayPunteros+i)==NULL)
+			{
+				retorno=0;
+				//INDICE DEL ELEMENTO LIBRE
+				*posicionLibre=i;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
