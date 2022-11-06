@@ -22,10 +22,10 @@ typedef struct
 	char descripcionSector[50];
 }eSector;
 
-int inicializarIsEmpety(eEmpleado* empleados, int tam, int estado);
-int loguearEmpleado(eEmpleado* empleados,int estado, int* id , int* contadorEmpleados, eSector* sectores);
-int modificarEmpleado(eEmpleado* empleados, int tam,int contadorEmpleados, eSector* sectores);
-int darDeBajaEmpleado(eEmpleado* empleados, int tam, int* contadorEmpleados);
+void inicializarIsEmpety(eEmpleado* empleados, int tam);
+int loguearEmpleado(eEmpleado** empleados,int estado, int* id , int* contadorEmpleados, eSector* sectores);
+int modificarEmpleado(eEmpleado* empleados,int contadorEmpleados, eSector* sectores);
+int darDeBajaEmpleado(eEmpleado* empleados,int *contadorEmpleados);
 int ordenarAlfabeticamente(eEmpleado* empleados, int tam);
 int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia, int referencia,eSector* sectores);
 int calcacularTotalSalarios(eEmpleado* empleados, int tam, float* resultadoAcumulado);

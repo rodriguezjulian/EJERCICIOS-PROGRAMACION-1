@@ -9,10 +9,11 @@
 #include<string.h>
 #include <ctype.h>
 
+
 #include "ingresos.h"
 #include "empleado.h"
 
-#define TAM 300
+#define TAM 1
 #define VACIO 1
 #define OCUPADO 0
 void mostrarSectores(eSector* sectores, int tam)
@@ -69,29 +70,28 @@ int asignarDescripcion(eEmpleado* empleados,eSector* sectores,int tamSectores, c
 		}
 	return retorno;
 }
-int inicializarIsEmpety(eEmpleado* empleados, int tam, int estado)
+void inicializarIsEmpety(eEmpleado* empleados, int tam)
 {
-	int retorno=OCUPADO;
 	if(empleados!=NULL  && tam>0)
 	{
 		for(int i=0;i<TAM;i++)//HABRIA QUE PASARLO A UNA FUNCION.
 		{
-			(*(empleados+i)).isEmpty=VACIO;//EN UNO PARA QUE DE VERDADERO, ES DECIR SE PUEDE USAR.
+			(*(empleados+i)).id=0;//EN UNO PARA QUE DE VERDADERO, ES DECIR SE PUEDE USAR.
 		}
-		retorno=0;
 	}
-	return retorno;
 }
-int loguearEmpleado(eEmpleado* empleados,int estado, int* id , int* contadorEmpleados,eSector* sectores)
+int loguearEmpleado(eEmpleado** empleados,int estado, int* id , int* contadorEmpleados,eSector* sectores)
 {
 	int retorno=-1;
 	eEmpleado empleadoAuxliar;
 	int flagSectores=0;
-	if(empleados!=NULL && id!=NULL)
+	eEmpleado* pAux;
+	int flag=1;
+	if(*empleados!=NULL && id!=NULL)
 	{
 
 			*id=*id+1;
-			*contadorEmpleados=*contadorEmpleados+1;
+
 			(empleadoAuxliar).id=*id;
 			ingresarArrayCaracteres(empleadoAuxliar.name,"Ingrese nombre de empleado","Error, ingrese nombre valido",51);
 			ingresarArrayCaracteres(empleadoAuxliar.lastName,"Ingrese apellido de empleado","Error, ingrese apellido valido",51);
@@ -111,15 +111,35 @@ int loguearEmpleado(eEmpleado* empleados,int estado, int* id , int* contadorEmpl
 
 			empleadoAuxliar.isEmpty=estado;
 
-			for(int i=0;i<TAM;i++)
+			if((*(*empleados)).id!=0)
 			{
-				if((*(empleados+i)).isEmpty==VACIO)
+				//pAux = (int *) realloc (arrayInt , sizeof(int) * tam-1);
+				pAux=(eEmpleado*) realloc (*empleados, sizeof(eEmpleado)*((*contadorEmpleados)+1));
+				if(pAux!=NULL)
 				{
-					(*(empleados+i))=empleadoAuxliar;
-					break;
+					*empleados=pAux;
+				}
+				else
+				{
+					flag=0;
 				}
 			}
-			retorno=0;
+			if(flag==1)
+			{
+				retorno=0;
+				/*(*(*empleados+*contadorEmpleados)).id=empleadoAuxliar.id;
+				(*(*empleados+*contadorEmpleados)).isEmpty=empleadoAuxliar.isEmpty;
+				strcpy((*(*empleados+*contadorEmpleados)).lastName, empleadoAuxliar.lastName);
+				//(*(empleados+*contadorEmpleados)).lastName=empleadoAuxliar.lastName;
+				//(*(empleados+*contadorEmpleados)).name=empleadoAuxliar.name;
+				strcpy((*(*empleados+*contadorEmpleados)).name, empleadoAuxliar.name);
+				(*(*empleados+*contadorEmpleados)).salary=empleadoAuxliar.salary;
+				(*(*empleados+*contadorEmpleados)).sector=empleadoAuxliar.sector;*/
+
+				(*(*empleados+*contadorEmpleados))=empleadoAuxliar;
+			}
+			*contadorEmpleados=*contadorEmpleados+1;
+
 	}
 
 	return retorno;
@@ -134,7 +154,7 @@ int contarIteraciones(eEmpleado* empleados,int* iteraciones, int tam, int idModi
 	{
 		for(int i=0;i<tam;i++)
 		{
-			if((*(empleados+i)).id==idModificar && (*(empleados+i)).isEmpty==OCUPADO)
+			if((*(empleados+i)).id==idModificar)
 			{
 				flag=1;
 				retorno=0;
@@ -150,7 +170,7 @@ int contarIteraciones(eEmpleado* empleados,int* iteraciones, int tam, int idModi
 
 	return retorno;
 }
-int modificarEmpleado(eEmpleado* empleados, int tam, int contadorEmpleados, eSector* sectores)
+int modificarEmpleado(eEmpleado* empleados, int contadorEmpleados, eSector* sectores)
 {
 	int retorno=-1;
 	int posicion;
@@ -161,7 +181,7 @@ int modificarEmpleado(eEmpleado* empleados, int tam, int contadorEmpleados, eSec
 	{
 		do{
 			ingresarIntConMensaje(&idModificar,"Ingresar numero identificacion ID de empleado a modificar");
-		}while(contarIteraciones(empleados,&posicion,tam,idModificar)==-1);
+		}while(contarIteraciones(empleados,&posicion,contadorEmpleados,idModificar)==-1);
 
 		if(empleados[posicion].isEmpty==OCUPADO)
 		{
@@ -202,7 +222,7 @@ int modificarEmpleado(eEmpleado* empleados, int tam, int contadorEmpleados, eSec
 	}
 	return retorno;
 }
-int darDeBajaEmpleado(eEmpleado* empleados, int tam,int *contadorEmpleados)
+int darDeBajaEmpleado(eEmpleado* empleados,int *contadorEmpleados)
 {
 	int retorno=-1;
 	int posicion;
@@ -212,7 +232,7 @@ int darDeBajaEmpleado(eEmpleado* empleados, int tam,int *contadorEmpleados)
 	{
 		do{
 			ingresarIntConMensaje(&idModificar,"Ingresar numero identificacion ID de empleado a dar de baja\n");
-		}while(contarIteraciones(empleados,&posicion,tam,idModificar)==-1);
+		}while(contarIteraciones(empleados,&posicion,*contadorEmpleados,idModificar)==-1);
 
 		if(empleados[posicion].isEmpty==OCUPADO)
 		{
@@ -228,28 +248,27 @@ int darDeBajaEmpleado(eEmpleado* empleados, int tam,int *contadorEmpleados)
 	}
 	return retorno;
 }
-int ordenarAlfabeticamente(eEmpleado* empleados, int tam)
+int ordenarAlfabeticamente(eEmpleado* empleados, int contadorEmpleados)
 {
 	int retorno=-1;
-	eEmpleado auxiliar[tam];
+	eEmpleado auxiliar[contadorEmpleados];
 
 	if(empleados!= NULL)
 	{
-		for(int i=0;i<tam-1;i++)
+		for(int i=0;i<contadorEmpleados-1;i++)
 		{
-			if((*(empleados+i)).isEmpty==OCUPADO)
-			{
-				for(int j=i+1;j<tam;j++)
-				{
-					//strcmp(cadena1,cadena2)  para comparar las cadenas
-					if(strcmp(empleados[i].name,empleados[j].name)>0)
-					{
-						//COMO VOY A MOVER DIRECTAMENTE TODA LA ESTRUCTURA USO EL =
-						(*(auxiliar+i))=(*(empleados+i));
-						(*(empleados+i))=(*(empleados+j));
-						(*(empleados+j))=(*(auxiliar+i));
 
-					}
+			for(int j=i+1;j<contadorEmpleados;j++)
+			{
+				//strcmp(cadena1,cadena2)  para comparar las cadenas
+				//if(strcmp(empleados[i].name,empleados[j].name)>0)
+				if(strcmp((*(empleados+i)).name,(*(empleados+j)).name)>0)
+				{
+					//COMO VOY A MOVER DIRECTAMENTE TODA LA ESTRUCTURA USO EL =
+					(*(auxiliar+i))=(*(empleados+i));
+					(*(empleados+i))=(*(empleados+j));
+					(*(empleados+j))=(*(auxiliar+i));
+
 				}
 			}
 		}
@@ -259,7 +278,7 @@ int ordenarAlfabeticamente(eEmpleado* empleados, int tam)
 }
 
 int mostrarEmpleados(eEmpleado* empleados, int tam, float resultadoAcumulado, float promedioDeSueldos, int empleadosArribaMedia , int referencia,eSector* sectores)
-{
+{//EL TAM LO USO CON CONTADOR DE EMPLEADOSSSS
 	int retorno=-1;
 	char reAxuliar[tam][102];
 	char descripcionSector[50];
@@ -319,10 +338,7 @@ int calcacularTotalSalarios(eEmpleado* empleados, int tam, float* resultadoAcumu
 	{
 		for(int i=0;i<tam;i++)
 		{
-			if((*(empleados+i)).isEmpty==OCUPADO)
-			{
-				acumulador=acumulador+(*(empleados+i)).salary;
-			}
+			acumulador=acumulador+(*(empleados+i)).salary;
 		}
 		*resultadoAcumulado=acumulador;
 		retorno=0;
@@ -333,17 +349,9 @@ int calcacularTotalSalarios(eEmpleado* empleados, int tam, float* resultadoAcumu
 int promediarSalarios(eEmpleado* empleados, int tam, float totalEnSueldos,float* promedio)
 {
 	int retorno=-1;
-	int contadorEmpleados=0;
 	if(empleados!=NULL)
 	{
-		for(int i=0;i<tam;i++)
-		{
-			if((*(empleados+i)).isEmpty==OCUPADO)
-			{
-				contadorEmpleados=contadorEmpleados+1;
-			}
-		}
-		*promedio=totalEnSueldos/contadorEmpleados;
+		*promedio=totalEnSueldos/tam;
 		retorno=0;
 	}
 	return retorno;
@@ -356,7 +364,7 @@ int contarEmpleadosMayorSueldoMedio(eEmpleado* empleados,int tam,float promedio,
 	{
 		for(int i=0;i<tam;i++)
 		{
-			if((*(empleados+i)).isEmpty==OCUPADO && (*(empleados+i)).salary>promedio)
+			if((*(empleados+i)).salary>promedio)
 			{
 				contadorEmpleadosMayorIngresos=contadorEmpleadosMayorIngresos+1;
 			}
@@ -385,7 +393,7 @@ int buscarSectoresMasEmp(eSector* sectores, eEmpleado* empleados, int tamEmplead
 		{
 			for(int j=0;j<tamEmpleados;j++)
 			{
-				if((*(empleados+j)).isEmpty==OCUPADO && (*(sectores+i)).idSector==(*(empleados+j)).sector)
+				if((*(sectores+i)).idSector==(*(empleados+j)).sector)
 				{
 					(*(acumuladorSectores+i))=(*(acumuladorSectores+i))+1;
 				}
@@ -425,7 +433,7 @@ void imprimirSectorConMasEmpleados(eSector* sectores, eEmpleado* empleados, int 
 		strcat(nombreApellido," ");
 		strcat(nombreApellido, (*(empleados+i)).lastName);
 
-		if((*(empleados+i)).isEmpty==OCUPADO && (*(empleados+i)).sector==sectorMasPopular)
+		if((*(empleados+i)).sector==sectorMasPopular)
 		{
 			printf("|%*d|%*s|\n",-10,(*(empleados+i)).sector,-70,nombreApellido);
 		}

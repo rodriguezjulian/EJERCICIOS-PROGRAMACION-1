@@ -16,7 +16,7 @@ int main()
         switch(option)
         {
             case 1:
-            	//controller_cargarJugadoresDesdeTexto("C:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION 1\\EJERCICIO 14-2.csv",listaJugadores);
+            	controller_cargarJugadoresDesdeTexto("jugadores.csv",listaJugadores);
 
                 break;
         }

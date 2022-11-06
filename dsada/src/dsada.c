@@ -2,66 +2,47 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef struct
+{
+	int id;
+	char lastName[51];
+	float salary;
+	int sector;
+}ePractica;
 
-int arrayRemove(int array[], int *tam, int valueRemove);
-void arrayPrint(int array[], int tam);
 
 int main(void) {
 	setbuf(stdout, NULL);
+	FILE *bin;
+	ePractica* pPuntero;
+	int cant;
+	int r;
+	char var1,var2,var3,var4;
+	if ((bin=fopen("data - data.csv","r"))!=NULL)
+	{
+		while(!feof(bin))
+		{
+			//cant=fread(&pPuntero,sizeof(pPuntero),1,bin);
+			if(cant!=1)
+			{
+				r = fscanf(bin,"%s[^,],%s[^,],%s[^,],%s[^\n]\n",var1,var2,var3,var4);
+				if(r==4)
+				{
+					printf("Lei: %s %s %s %s\n",var1,var2,var3,var4);
+				}
 
-	int sizeArray = 5;
-	int *array = (int*) malloc(sizeof(int) * sizeArray);
-
-	for (int i = 0; i < sizeArray; i++) {
-		*(array + i) = i + 1;
+				//printf("\n%d\t%s\t%f\t%d\n",pPuntero->id,pPuntero->lastName,pPuntero->salary,pPuntero->sector);
+			}
+		}
+		fclose(bin);
 	}
-
-	*(array + 3) = 2;
-	arrayPrint(array, sizeArray);
-	arrayRemove(array, &sizeArray, 2);
-	arrayPrint(array, sizeArray);
+	else
+	{
+		printf("No se pudo abrir el archivo");
+		exit(1);
+	}
 
 	return 0;
-}
-
-int arrayRemove(int array[], int *tam, int valueRemove) {
-	/*
-	 * La función se encargará de buscar el valor
-	 * entero y borrará la primera ocurrencia del mismo.
-	 * El array deberá reestructurarse dinámicamente.
-	 */
-	int rtn = 0;
-
-	//BUSQUEDA
-	int index = -1;
-	for (int i = 0; i < (*tam); i++) {
-		if (*(array + i) == valueRemove) {
-			index = i;
-			break;
-		}
-	}
-
-	if (index != -1) {
-		for (int i = index; i < (*tam) - 1; i++) {
-			*(array + i) = *(array + (i + 1));
-		}
-	}
-
-	//REDIMENSIONAR
-	int *pAux = (int*) realloc(array, sizeof(int) * ((*tam) - 1));
-
-	if (pAux != NULL) {
-		array = pAux;
-		(*tam)--;
-	}
-
-	return rtn;
-}
-
-void arrayPrint(int array[], int tam) {
-	for (int i = 0; i < tam; i++) {
-		printf("array[%d] = %d\n", i, array[i]);
-	}
 }
 
 

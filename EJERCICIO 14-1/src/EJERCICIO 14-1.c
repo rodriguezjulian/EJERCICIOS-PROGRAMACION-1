@@ -1,5 +1,5 @@
 
-//RODRIGUEZ JULIAN MANUEL DIV J EJERCICIO 10-2
+//RODRIGUEZ JULIAN MANUEL DIV J EJERCICIO 14-1
 #include <stdio.h>
 #include <stdlib.h>
 #include<string.h>
@@ -13,26 +13,18 @@
 #define VACIO 1
 #define OCUPADO 0
 //Empleado* crearEmpleado(void);
-eEmpleado* crearEmpleado(void);//Constructor Por defecto
-int inicializarArrayEmpleados(eEmpleado* arrayPunteros[], int limite);
-int buscarLibreArray(eEmpleado* arrayPunteros[], int limite, int* posicionLibre);
+//eEmpleado* crearEmpleado(void);//Constructor Por defecto
+/*int inicializarArrayEmpleados(eEmpleado* arrayPunteros, int limite);
+int buscarLibreArray(eEmpleado* arrayPunteros, int limite, int* posicionLibre);*/
+//int mostrarEmpleadoNueva(eEmpleado* empleados, int contadorEmpleados, eSector* sectores);
 int main(void) {
 	setbuf(stdout,NULL);
 
 	int id=0;
 	int opcion;
-	int tam=1;
 	//MEMORIA DINAMICA
 	//TENGO QUE REASIGNAR EL TAMANIO SEGUN SE REQUIERA, TENIENDO COMO MINIMO 1 EMPLEADO.
 	//TENDRIA QUE UTILIZAR realloc para sumar espacio al loguear y tambien cuando doy de baja???
-
-	eEmpleado* pEmpleados[TAM];
-	if(inicializarArrayEmpleados(pEmpleados, tam)==0)
-	{
-		puts("array inicilizado\n");
-	}
-	eEmpleado* empleados[TAM];
-	empleados=(eEmpleado*) malloc(sizeof(eEmpleado)*1);
 
 	float resultadoAcumulado;
 	float promedioDeSueldos;
@@ -45,7 +37,11 @@ int main(void) {
 			{300,"Administracion"},
 			{400,"Gerencia"}
 	};
-	inicializarIsEmpety(empleados,TAM, VACIO);
+	eEmpleado* empleados;
+	empleados=(eEmpleado*) malloc(sizeof(eEmpleado)*1);
+	//ARMAR FUNCION TENIENDO EN CUENTA TAMANIO POR #DEFINE
+	//(*(empleados+0)).id=0;
+	inicializarIsEmpety(empleados, TAM);
 
 	do
 	{
@@ -54,13 +50,13 @@ int main(void) {
 		switch(opcion)
 		{
 		case 1:
-			loguearEmpleado(empleados,OCUPADO,&id, &contadorEmpleados, sectores);
+			loguearEmpleado(&empleados,OCUPADO,&id, &contadorEmpleados, sectores);
 		break;
 		case 2:
-			modificarEmpleado(empleados,TAM, contadorEmpleados, sectores);
+			modificarEmpleado(empleados,contadorEmpleados, sectores);
 		break;
 		case 3:
-			darDeBajaEmpleado(empleados, TAM, &contadorEmpleados);
+			darDeBajaEmpleado(empleados, &contadorEmpleados);
 		break;
 		case 4:
 			if(contadorEmpleados>0)
@@ -72,17 +68,17 @@ int main(void) {
 				switch(opcion)
 				{
 				case 1:
-					calcacularTotalSalarios(empleados,TAM,&resultadoAcumulado);
-					promediarSalarios(empleados,TAM,resultadoAcumulado,&promedioDeSueldos);
-					contarEmpleadosMayorSueldoMedio(empleados,TAM,promedioDeSueldos,&empleadosArribaMedia);
-					mostrarEmpleados(empleados, TAM,resultadoAcumulado,promedioDeSueldos,empleadosArribaMedia,1,sectores);
+					calcacularTotalSalarios(empleados,contadorEmpleados,&resultadoAcumulado);
+					promediarSalarios(empleados,contadorEmpleados,resultadoAcumulado,&promedioDeSueldos);
+					contarEmpleadosMayorSueldoMedio(empleados,contadorEmpleados,promedioDeSueldos,&empleadosArribaMedia);
+					mostrarEmpleados(empleados, contadorEmpleados,resultadoAcumulado,promedioDeSueldos,empleadosArribaMedia,1,sectores);
 				break;
 				case 2:
-					ordenarAlfabeticamente(empleados, TAM);
-					mostrarEmpleados(empleados, TAM,resultadoAcumulado,promedioDeSueldos,empleadosArribaMedia,2, sectores);
+					ordenarAlfabeticamente(empleados, contadorEmpleados);
+					mostrarEmpleados(empleados, contadorEmpleados,resultadoAcumulado,promedioDeSueldos,empleadosArribaMedia,2, sectores);
 				break;
 				case 3:
-					imprimirSectorConMasEmpleados(sectores, empleados, TAM, 4);
+					imprimirSectorConMasEmpleados(sectores, empleados, contadorEmpleados, 4);
 
 				break;
 				}
@@ -93,11 +89,25 @@ int main(void) {
 			}
 
 		break;
-		}
+		}//
 	}while(confirmarSalida()==-1);
 	return EXIT_SUCCESS;
 }
-eEmpleado* crearEmpleado(void)//Constructor Por defecto
+/*int mostrarEmpleadoNueva(eEmpleado* empleados, int contadorEmpleados, eSector* sectores)
+{
+	int retorno=-1;
+	//char descripcionSector[50];
+	for(int i=0;i<contadorEmpleados;i++)
+	{
+		retorno=0;
+		printf("%s", (*(empleados+i)).name);
+	}
+	return retorno;
+}*/
+
+
+
+/*eEmpleado* crearEmpleado(void)//Constructor Por defecto
 {
 	eEmpleado* puntero;
 	puntero=(eEmpleado*) malloc(sizeof(eEmpleado)*1);
@@ -106,31 +116,31 @@ eEmpleado* crearEmpleado(void)//Constructor Por defecto
 		return puntero;
 	}
 	return puntero;
-}
-eEmpleado* crearEmpleadoConParametro(int id,char name[51], char lastName[51], float salary, int sector, int isEmpty)
+*/
+/*eEmpleado* crearEmpleadoConParametro(int id,char name[51], char lastName[51], float salary, int sector, int isEmpty)
 {
 	eEmpleado* puntero;
 	puntero=crearEmpleado();
 	if(puntero!=NULL)
 	return puntero;
-}
-int inicializarArrayEmpleados(eEmpleado* arrayPunteros[], int limite)
+}*/
+/*int inicializarArrayEmpleados(eEmpleado* apunteros[], int limite)
 {
 	int retorno=-1;
 	int i;
-	if(arrayPunteros!=NULL && limite>0)
+	if(apunteros!=NULL && limite>0)
 	{
 		retorno=0;
 		//VOY A HACER QUE EL ARRAY VACIO APUNTE  A NULL.
 		for(i=0;i<limite;i++)
 		{
-			arrayPunteros[i]=NULL;
+			(*(apunteros+i))=NULL;
 		}
 	}
 
 	return retorno;
 }
-int buscarLibreArray(eEmpleado* arrayPunteros[], int limite, int* posicionLibre)
+int buscarLibreArray(eEmpleado* arrayPunteros, int limite, int* posicionLibre)
 {
 	int retorno=-1;
 	int i;
@@ -151,3 +161,4 @@ int buscarLibreArray(eEmpleado* arrayPunteros[], int limite, int* posicionLibre)
 	}
 	return retorno;
 }
+*/
