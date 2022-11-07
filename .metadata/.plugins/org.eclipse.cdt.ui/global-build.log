@@ -1840,3 +1840,1328 @@ gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_
 Info: Nothing to build for pruebaTp3
 Info: Nothing to build for pruebaTp3
 Info: Nothing to build for pruebaTp3
+00:06:39 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:07:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:08:28 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:08:45 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:08:56 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:09:19 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:09:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:14:03 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_listarSelecciones':
+..\Controller.c:203:34: error: expected ')' before string constant
+   printf("|%*s|%*s|%*s|%*s|\n",-3" ID",-25,"      PAIS",-15,"  CONFEDERACION",-10,"CONVOCADOS");
+                                  ^~~~~
+..\Controller.c:203:14: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+   printf("|%*s|%*s|%*s|%*s|\n",-3" ID",-25,"      PAIS",-15,"  CONFEDERACION",-10,"CONVOCADOS");
+              ^
+..\Controller.c:203:17: warning: field width specifier '*' expects a matching 'int' argument [-Wformat=]
+   printf("|%*s|%*s|%*s|%*s|\n",-3" ID",-25,"      PAIS",-15,"  CONFEDERACION",-10,"CONVOCADOS");
+                 ^
+..\Controller.c:203:18: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+   printf("|%*s|%*s|%*s|%*s|\n",-3" ID",-25,"      PAIS",-15,"  CONFEDERACION",-10,"CONVOCADOS");
+                  ^
+..\Controller.c:203:21: warning: field width specifier '*' expects a matching 'int' argument [-Wformat=]
+   printf("|%*s|%*s|%*s|%*s|\n",-3" ID",-25,"      PAIS",-15,"  CONFEDERACION",-10,"CONVOCADOS");
+                     ^
+..\Controller.c:203:22: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+   printf("|%*s|%*s|%*s|%*s|\n",-3" ID",-25,"      PAIS",-15,"  CONFEDERACION",-10,"CONVOCADOS");
+                      ^
+..\Controller.c:203:25: warning: field width specifier '*' expects a matching 'int' argument [-Wformat=]
+   printf("|%*s|%*s|%*s|%*s|\n",-3" ID",-25,"      PAIS",-15,"  CONFEDERACION",-10,"CONVOCADOS");
+                         ^
+..\Controller.c:203:26: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+   printf("|%*s|%*s|%*s|%*s|\n",-3" ID",-25,"      PAIS",-15,"  CONFEDERACION",-10,"CONVOCADOS");
+                          ^
+00:14:10 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:14:30 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:14:53 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:15:09 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:22:58 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_listarSelecciones':
+..\Controller.c:204:3: error: expected ';' before 'printf'
+   printf("|%*s|%*s|%*s|%*s|\n",-4," ID",-25,"         PAIS",-15," CONFEDERACION",-10,"CONVOCADOS");
+   ^~~~~~
+00:23:02 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:23:11 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:23:23 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:53:22 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:11: warning: variable 'pJugador' set but not used [-Wunused-but-set-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:64:7: warning: unused variable 'nacionalidad' [-Wunused-variable]
+  char nacionalidad[30];
+       ^~~~~~~~~~~~
+..\Controller.c:63:7: warning: unused variable 'posicion' [-Wunused-variable]
+  char posicion[30];
+       ^~~~~~~~
+..\Controller.c:62:6: warning: unused variable 'edad' [-Wunused-variable]
+  int edad;
+      ^~~~
+..\Controller.c:61:7: warning: unused variable 'nombreCompleto' [-Wunused-variable]
+  char nombreCompleto[100];
+       ^~~~~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:00:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:71:6: warning: implicit declaration of function 'ingresarCadenaCaracteres' [-Wimplicit-function-declaration]
+   if(ingresarCadenaCaracteres(100, nombreCompleto, "Ingrese nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n")==0 &&
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:72:5: warning: implicit declaration of function 'ingresarIntConRango' [-Wimplicit-function-declaration]
+     ingresarIntConRango(&edad, "Ingrese edad del jugador.\t", "ERROR, Ingrese edad valida.", 16, 50)==0 &&
+     ^~~~~~~~~~~~~~~~~~~
+..\Controller.c:75:3: error: expected ')' before '{' token
+   {
+   ^
+..\Controller.c:81:2: error: expected expression before '}' token
+  }
+  ^
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+01:01:12 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:71:6: warning: implicit declaration of function 'ingresarCadenaCaracteres' [-Wimplicit-function-declaration]
+   if(ingresarCadenaCaracteres(100, nombreCompleto, "Ingrese nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n")==0 &&
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:72:5: warning: implicit declaration of function 'ingresarIntConRango' [-Wimplicit-function-declaration]
+     ingresarIntConRango(&edad, "Ingrese edad del jugador.\t", "ERROR, Ingrese edad valida.", 16, 50)==0 &&
+     ^~~~~~~~~~~~~~~~~~~
+..\Controller.c:80:3: error: expected statement before ')' token
+   )
+   ^
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+01:01:40 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:71:6: warning: implicit declaration of function 'ingresarCadenaCaracteres' [-Wimplicit-function-declaration]
+   if(ingresarCadenaCaracteres(100, nombreCompleto, "Ingrese nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n")==0 &&
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:72:5: warning: implicit declaration of function 'ingresarIntConRango' [-Wimplicit-function-declaration]
+     ingresarIntConRango(&edad, "Ingrese edad del jugador.\t", "ERROR, Ingrese edad valida.", 16, 50)==0 &&
+     ^~~~~~~~~~~~~~~~~~~
+..\Controller.c:260:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:260:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:257:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:245:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:217:5: warning: 'controller_listarSelecciones' defined but not used [-Wunused-function]
+ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:204:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:177:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:163:5: warning: 'controller_guardarJugadoresModoBinario' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:151:5: warning: 'controller_guardarJugadoresModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:139:5: warning: 'controller_ordenarJugadores' defined but not used [-Wunused-function]
+ int controller_ordenarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:113:5: warning: 'controller_listarJugadores' defined but not used [-Wunused-function]
+ int controller_listarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:101:5: warning: 'controller_removerJugador' defined but not used [-Wunused-function]
+ int controller_removerJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:89:5: warning: 'controller_editarJugador' defined but not used [-Wunused-function]
+ int controller_editarJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+01:02:00 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:260:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:260:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:257:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:245:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:217:5: warning: 'controller_listarSelecciones' defined but not used [-Wunused-function]
+ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:204:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:177:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:163:5: warning: 'controller_guardarJugadoresModoBinario' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:151:5: warning: 'controller_guardarJugadoresModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:139:5: warning: 'controller_ordenarJugadores' defined but not used [-Wunused-function]
+ int controller_ordenarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:113:5: warning: 'controller_listarJugadores' defined but not used [-Wunused-function]
+ int controller_listarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:101:5: warning: 'controller_removerJugador' defined but not used [-Wunused-function]
+ int controller_removerJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:89:5: warning: 'controller_editarJugador' defined but not used [-Wunused-function]
+ int controller_editarJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+01:02:39 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:260:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:260:1: error: expected declaration or statement at end of input
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:260:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:257:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:245:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:217:5: warning: 'controller_listarSelecciones' defined but not used [-Wunused-function]
+ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:204:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:177:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:163:5: warning: 'controller_guardarJugadoresModoBinario' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:151:5: warning: 'controller_guardarJugadoresModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:139:5: warning: 'controller_ordenarJugadores' defined but not used [-Wunused-function]
+ int controller_ordenarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:113:5: warning: 'controller_listarJugadores' defined but not used [-Wunused-function]
+ int controller_listarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:101:5: warning: 'controller_removerJugador' defined but not used [-Wunused-function]
+ int controller_removerJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:89:5: warning: 'controller_editarJugador' defined but not used [-Wunused-function]
+ int controller_editarJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+01:03:04 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:261:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:261:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:258:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:246:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:218:5: warning: 'controller_listarSelecciones' defined but not used [-Wunused-function]
+ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:205:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:178:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:164:5: warning: 'controller_guardarJugadoresModoBinario' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:152:5: warning: 'controller_guardarJugadoresModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:140:5: warning: 'controller_ordenarJugadores' defined but not used [-Wunused-function]
+ int controller_ordenarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:114:5: warning: 'controller_listarJugadores' defined but not used [-Wunused-function]
+ int controller_listarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:102:5: warning: 'controller_removerJugador' defined but not used [-Wunused-function]
+ int controller_removerJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:90:5: warning: 'controller_editarJugador' defined but not used [-Wunused-function]
+ int controller_editarJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+01:03:44 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:261:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:261:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:258:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:246:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:218:5: warning: 'controller_listarSelecciones' defined but not used [-Wunused-function]
+ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:205:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:178:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:164:5: warning: 'controller_guardarJugadoresModoBinario' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:152:5: warning: 'controller_guardarJugadoresModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:140:5: warning: 'controller_ordenarJugadores' defined but not used [-Wunused-function]
+ int controller_ordenarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:114:5: warning: 'controller_listarJugadores' defined but not used [-Wunused-function]
+ int controller_listarJugadores(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:102:5: warning: 'controller_removerJugador' defined but not used [-Wunused-function]
+ int controller_removerJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:90:5: warning: 'controller_editarJugador' defined but not used [-Wunused-function]
+ int controller_editarJugador(LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+01:05:11 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:07:34 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:10:09 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:85:15: warning: passing argument 1 of 'jug_delete' from incompatible pointer type [-Wincompatible-pointer-types]
+    jug_delete(pArrayListJugador);
+               ^~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Jugador.h:21:6: note: expected 'Jugador * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ void jug_delete(Jugador* this);
+      ^~~~~~~~~~
+..\Controller.c:91:14: warning: passing argument 1 of 'jug_delete' from incompatible pointer type [-Wincompatible-pointer-types]
+   jug_delete(pArrayListJugador);
+              ^~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Jugador.h:21:6: note: expected 'Jugador * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ void jug_delete(Jugador* this);
+      ^~~~~~~~~~
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:10:26 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:13:48 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:14:11 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:15:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:65:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:17:26 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+01:17:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:18:09 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:18:26 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:12: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+   printf("%d\n",idAux);
+            ^
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:19:12 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:20:31 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:76:38: warning: unknown conversion type character '^' in format [-Wformat=]
+   retornoFscanf=fscanf(pArchivoId,"[%^\n]",idAux);
+                                      ^
+..\Controller.c:76:35: warning: too many arguments for format [-Wformat-extra-args]
+   retornoFscanf=fscanf(pArchivoId,"[%^\n]",idAux);
+                                   ^~~~~~~~
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:20:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:76:38: warning: unknown conversion type character '^' in format [-Wformat=]
+   retornoFscanf=fscanf(pArchivoId,"[%^\n]\n",idAux);
+                                      ^
+..\Controller.c:76:35: warning: too many arguments for format [-Wformat-extra-args]
+   retornoFscanf=fscanf(pArchivoId,"[%^\n]\n",idAux);
+                                   ^~~~~~~~~~
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:20:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:77:38: warning: unknown conversion type character '^' in format [-Wformat=]
+   retornoFscanf=fscanf(pArchivoId,"[%^\n]\n",idAux);
+                                      ^
+..\Controller.c:77:35: warning: too many arguments for format [-Wformat-extra-args]
+   retornoFscanf=fscanf(pArchivoId,"[%^\n]\n",idAux);
+                                   ^~~~~~~~~~
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:21:13 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:21:23 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:21:42 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:21:53 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:22:20 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:23:49 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:24:08 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: variable 'retornoFscanf' set but not used [-Wunused-but-set-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:25:20 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+01:26:01 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:26:35 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:28:01 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:28:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:28:39 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:29:19 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+                                      ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:29:37 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+                                      ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:29:38 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:30:06 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:32:40 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:41: warning: no closing ']' for '%[' format [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%[^]\n",idAux);
+                                         ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:33:01 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+01:34:01 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%d\n",id);
+                                      ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:34:15 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%d\n",id);
+                                      ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux [100];
+       ^~~~~
+..\Controller.c:78:17: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    retornoFscanf=fscanf(pArchivoId,"%d\n",id);
+    ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:35:05 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%d\n",id);
+                                      ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux [100];
+       ^~~~~
+..\Controller.c:78:17: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    retornoFscanf=fscanf(pArchivoId,"%d\n",id);
+    ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:35:41 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+                                      ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux [100];
+       ^~~~~
+..\Controller.c:78:17: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+    ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:35:49 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux [100];
+       ^~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:35:49 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:36:57 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:37:11 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%s",*(idAux));
+                                      ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:37:29 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+                                      ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux [100];
+       ^~~~~
+..\Controller.c:78:17: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+    ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:38:51 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+                                      ^
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux [100];
+       ^~~~~
+..\Controller.c:78:17: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+    ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:41:06 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: unused variable 'retornoFscanf' [-Wunused-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+01:42:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: unused variable 'retornoFscanf' [-Wunused-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+..\Controller.c:66:6: warning: unused variable 'idSeleccion' [-Wunused-variable]
+  int idSeleccion=0;
+      ^~~~~~~~~~~
+..\Controller.c:61:6: warning: unused variable 'id' [-Wunused-variable]
+  int id=371;
+      ^~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:48:03 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:67:6: warning: unused variable 'retornoFscanf' [-Wunused-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:48:11 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:104:34: error: 'idSeleccion' undeclared (first use in this function)
+     jug_setIdSeleccion(pJugador, idSeleccion)==0)
+                                  ^~~~~~~~~~~
+..\Controller.c:104:34: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:67:6: warning: unused variable 'retornoFscanf' [-Wunused-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+01:48:13 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:104:34: error: 'idSeleccion' undeclared (first use in this function)
+     jug_setIdSeleccion(pJugador, idSeleccion)==0)
+                                  ^~~~~~~~~~~
+..\Controller.c:104:34: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:67:6: warning: unused variable 'retornoFscanf' [-Wunused-variable]
+  int retornoFscanf;
+      ^~~~~~~~~~~~~
+01:48:23 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:55:26 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:4: error: 'retornoFscanf' undeclared (first use in this function)
+    retornoFscanf=fscanf(pArchivoId,"%s",idAux);
+    ^~~~~~~~~~~~~
+..\Controller.c:78:4: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:78:38: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%s",idAux);
+                                      ^
+..\Controller.c:79:13: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+    printf("%s\n",idAux);
+             ^
+01:55:37 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%s",idAux);
+                                      ^
+..\Controller.c:79:13: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+    printf("%s\n",idAux);
+             ^
+..\Controller.c:78:18: warning: 'idAux' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    retornoFscanf=fscanf(pArchivoId,"%s",idAux);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:99:7: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if(jug_setId(pJugador, id)==0 &&
+       ^~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:56:05 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:99:7: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if(jug_setId(pJugador, id)==0 &&
+       ^~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+01:56:53 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%c' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%c",idAux);
+                                      ^
+..\Controller.c:79:13: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+    printf("%s\n",idAux);
+             ^
+..\Controller.c:78:18: warning: 'idAux' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    retornoFscanf=fscanf(pArchivoId,"%c",idAux);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:99:7: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if(jug_setId(pJugador, id)==0 &&
+       ^~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:56:57 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:57:18 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%c' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%c",idAux);
+                                      ^
+..\Controller.c:79:19: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+    printf("idAux %s\n",idAux);
+                   ^
+..\Controller.c:78:18: warning: 'idAux' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    retornoFscanf=fscanf(pArchivoId,"%c",idAux);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:99:7: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if(jug_setId(pJugador, id)==0 &&
+       ^~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:57:19 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:57:32 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:99:7: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if(jug_setId(pJugador, id)==0 &&
+       ^~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:57:48 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:99:7: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if(jug_setId(pJugador, id)==0 &&
+       ^~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:58:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:59:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:99:7: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if(jug_setId(pJugador, id)==0 &&
+       ^~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:00:24 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:78:38: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+                                      ^
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux[4];
+       ^~~~~
+..\Controller.c:78:17: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    retornoFscanf=fscanf(pArchivoId,"%d",id);
+    ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+02:00:35 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux[4];
+       ^~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:04:46 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux[4];
+       ^~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:05:13 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux[4];
+       ^~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:05:24 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:98:25: warning: format '%d' expects argument of type 'int', but argument 3 has type 'int *' [-Wformat=]
+    fprintf(pArchivoId,"%d",&id);
+                         ^
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux[4];
+       ^~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+02:06:58 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:98:25: warning: format '%d' expects argument of type 'int', but argument 3 has type 'int *' [-Wformat=]
+    fprintf(pArchivoId,"%d",&id);
+                         ^
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux[4];
+       ^~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:07:56 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux[4];
+       ^~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+02:09:12 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux[4];
+       ^~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+02:11:15 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_agregarJugador':
+..\Controller.c:60:7: warning: unused variable 'idAux' [-Wunused-variable]
+  char idAux[4];
+       ^~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:26:46 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:148:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'pIdMaximo'
+  pIdMaximo=fopen("id.txt", "r");
+  ^~~~~~~~~
+..\Controller.c:148:2: error: 'pIdMaximo' undeclared (first use in this function)
+..\Controller.c:148:2: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:158:3: warning: implicit declaration of function 'controller_listarJugadores' [-Wimplicit-function-declaration]
+   controller_listarJugadores(pArrayListJugador);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:143:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+02:27:10 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:158:3: warning: implicit declaration of function 'controller_listarJugadores' [-Wimplicit-function-declaration]
+   controller_listarJugadores(pArrayListJugador);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:143:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:27:23 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:158:3: warning: implicit declaration of function 'controller_listarJugadores' [-Wimplicit-function-declaration]
+   controller_listarJugadores(pArrayListJugador);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:27:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:28:04 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3

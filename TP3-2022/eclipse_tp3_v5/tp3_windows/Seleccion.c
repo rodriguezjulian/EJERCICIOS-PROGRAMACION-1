@@ -102,7 +102,7 @@ int imprimirSeleccion(LinkedList* pArrayListSeleccion, int index)
 		selec_getConvocados(seleccionAux, &convocados)==0)
 		{
 			//printf("IMPRIMIR SELECCION ENTRO");
-			printf("| %*d|%*s|%*s| %*d|\n",-3,id,-25,pais,-10,confederacion,-3,convocados);
+			printf("| %*d|%*s|%*s| %*d|\n",-3,id,-25,pais,-15,confederacion,-9,convocados);
 		}
 	}
 

@@ -23,31 +23,30 @@ int parser_JugadorFromText(FILE* pFile , LinkedList* pArrayListJugador)
 	{
 		fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",(*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
 		//cantidad=fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",texto[0],texto[1],texto[2],texto[3],texto[4],texto[5]);
-		if(pFile!=NULL)
+
+		while(!feof(pFile))
 		{
-			while(!feof(pFile))
+			//USO AL RETORNO DE SCANF PARA VERIFICAR QUE ESTA TODO BIEN
+			cantidad=fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",(*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
+			if(cantidad>6)
 			{
-				//USO AL RETORNO DE SCANF PARA VERIFICAR QUE ESTA TODO BIEN
-				cantidad=fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",(*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
-				if(cantidad>6)
+				jug_delete(jugadorAux);
+				jugadorAux=NULL;
+				retorno=-1;
+				break;
+			}
+			else
+			{
+				jugadorAux=jug_newParametros((*(texto+0)), (*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
+				if(jugadorAux!=NULL)
 				{
-					jug_delete(jugadorAux);
-					jugadorAux=NULL;
-					retorno=-1;
-					break;
-				}
-				else
-				{
-					jugadorAux=jug_newParametros((*(texto+0)), (*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
-					if(jugadorAux!=NULL)
-					{
-						//printf("%d---%s---%d---%s---%s---%d\n",jugadorAux->id,jugadorAux->nombreCompleto,jugadorAux->edad,jugadorAux->posicion,jugadorAux->nacionalidad,jugadorAux->idSeleccion);
-						ll_add(pArrayListJugador,(Jugador*) jugadorAux);
-						retorno=0;
-					}
+					//printf("%d---%s---%d---%s---%s---%d\n",jugadorAux->id,jugadorAux->nombreCompleto,jugadorAux->edad,jugadorAux->posicion,jugadorAux->nacionalidad,jugadorAux->idSeleccion);
+					ll_add(pArrayListJugador,(Jugador*) jugadorAux);
+					retorno=0;
 				}
 			}
 		}
+
 	}
     return retorno;
 }

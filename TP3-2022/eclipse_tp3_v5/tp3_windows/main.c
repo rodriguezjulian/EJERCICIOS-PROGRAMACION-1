@@ -27,30 +27,18 @@ int main()
 
             	controller_cargarJugadoresDesdeTexto("jugadores.csv",listaJugadores);
             	controller_cargarSeleccionesDesdeTexto("selecciones.csv", listaConfederaciones);
-            	//controller_listarSelecciones(listaJugadores);
-
-            	/*ll_sort(listaJugadores, jug_OrdenarPorNacionalidad, 1);
-            	for(int i=0;i<370;i++)
-            	{
-            		auxiliar=ll_get(listaJugadores, i);
-
-            		printf("%s\n",(*(auxiliar+i)).nombreCompleto);
-
-            	}
-			controller_listarSelecciones
-
-            	ll_sort(listaJugadores, jug_OrdenarPorNacionalidad, 1);*/
-
             break;
             case 2:
+            	controller_agregarJugador(listaJugadores);
 
-            	controller_listarSelecciones(listaConfederaciones);
             break;
             case 3:
+            	controller_editarJugador(listaJugadores);
             break;
             case 4:
             break;
             case 5:
+            	controller_listarJugadores(listaJugadores);
             	controller_listarSelecciones(listaConfederaciones);
             break;
         }

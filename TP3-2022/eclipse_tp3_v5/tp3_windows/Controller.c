@@ -5,7 +5,7 @@
 #include "Seleccion.h"
 #include "LinkedList.h"
 #include "parser.h"
-
+#include "ingresos.h"
 /** \brief Carga los datos de los jugadores desde el archivo jugadores.csv (modo texto).
  *
  * \param path char*
@@ -53,8 +53,107 @@ int controller_cargarJugadoresDesdeBinario(char* path , LinkedList* pArrayListJu
  * \return int
  *
  */
+//ALTA MANUAL
 int controller_agregarJugador(LinkedList* pArrayListJugador)
 {
+	int retorno=-1;
+	int id;
+	char nombreCompleto[100];
+	int edad;
+	char posicion[30];
+	char nacionalidad[30];
+	int idSeleccion=0;
+	int retornoFscanf;
+	FILE *pArchivoId;
+
+	Jugador* pJugador;
+	pJugador=jug_new();
+
+	pArchivoId=fopen("id.txt", "r");
+	if(pArrayListJugador!=NULL && pJugador!=NULL && pArchivoId!=NULL)
+	{
+		while(!feof(pArchivoId))
+		{
+			retornoFscanf=fscanf(pArchivoId,"%d",&id);
+			printf("idAux %d\n",id);
+			printf("RETORNO SCANF: %d",retornoFscanf);
+			if(retornoFscanf==1)
+			{
+				id=id+1;
+				puts("SE ABRIO OK\n");
+
+			}
+			else
+			{
+				puts("FALLA EL FSCANF\n");
+				break;
+			}
+
+		}
+		fclose(pArchivoId);
+		pArchivoId=fopen("id.txt", "w");
+		if(pArchivoId!=NULL)
+		{
+			fprintf(pArchivoId,"%d",id);
+		}
+		fclose(pArchivoId);
+		printf("NUEVO ID %d\n",id);
+
+		if(ingresarCadenaCaracteres(100, nombreCompleto, "Ingrese nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n")==0 &&
+				ingresarIntConRango(&edad, "Ingrese edad del jugador.\t", "ERROR, Ingrese edad valida.", 16, 50)==0 &&
+				ingresarCadenaCaracteres(30, posicion, "Ingrese posicion del jugador.\nArquero - Defensor - Delantero - Mediocampista\t", "ERROR, Ingrese posicion valida\n")==0 &&
+				ingresarCadenaCaracteres(30, nacionalidad, "Ingrese nacionalidad del jugador.\t", "ERROR, Ingrese nacionalidad valida")==0)
+		{
+			//HACER EL SET DE TOOOODOS LOS DATOS
+			if(jug_setId(pJugador, id)==0 &&
+				jug_setNombreCompleto(pJugador, nombreCompleto)==0 &&
+				jug_setPosicion(pJugador, posicion)==0 &&
+				jug_setNacionalidad(pJugador, nacionalidad)==0 &&
+				jug_setEdad(pJugador, edad)==0 &&
+				jug_setIdSeleccion(pJugador, idSeleccion)==0)
+			{
+				ll_add(pArrayListJugador, pJugador);
+				retorno=0;
+				printf("\n<<<<<<<<<<ALTA EXITOSA>>>>>>>>>>\n");
+			}
+		}
+		else
+		{
+			printf("\n<<<<<<<<<<ERROR AL LOGUEAR NUEVO JUGADOR>>>>>>>>>>\n");
+			jug_delete(pJugador);
+		}
+	}
+	else
+	{
+		printf("\n<<<<<<<<<<ERROR AL LOGUEAR NUEVO JUGADOR>>>>>>>>>>\n");
+		jug_delete(pJugador);
+	}
+    return retorno;
+
+}
+/** \brief Listar jugadores
+ *
+ * \param path char*
+ * \param pArrayListJugador LinkedList*
+ * \return int
+ *
+ */
+int controller_listarJugadores(LinkedList* pArrayListJugador)
+{
+	int cantidad;
+	printf("+===========================================================================================================+\n");
+	printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n",-6,"  ID",-40,"         NOMBRE COMPLETO",-4,"EDAD",-25,"      POSICION",-18,"    NACIONALIDAD",-8,"ID SELEC.");
+	printf("+===========================================================================================================+\n");
+	if(pArrayListJugador)
+	{
+		cantidad=ll_len(pArrayListJugador);
+		for(int i=0;i<cantidad;i++)
+		{
+			imprimirJugador(pArrayListJugador,i);
+
+		}
+		printf("+===========================================================================================================+\n");
+	}
     return 1;
 }
 
@@ -67,6 +166,25 @@ int controller_agregarJugador(LinkedList* pArrayListJugador)
  */
 int controller_editarJugador(LinkedList* pArrayListJugador)
 {
+	//Jugador* pJugador;
+	int idModificado;
+	int idMaximo; //PARA DARLE RANGO AL INGRESO DE ID.
+
+	FILE* pIdMaximo;
+	pIdMaximo=fopen("id.txt", "r");
+	if(pIdMaximo!=NULL)
+	{
+		fscanf(pIdMaximo,"%d",&idMaximo);
+	}
+	fclose(pIdMaximo);
+	printf("ID MAXIMO HASTA EL MOMENTO %d \n",idMaximo);
+	if(pArrayListJugador!=NULL)
+	{
+		//void ll_remove>Elimina un elemento en LinkedList, en el índice especificado.
+		controller_listarJugadores(pArrayListJugador);
+		ingresarIntConRango(&idModificado, "Ingrese ID que desea modificar.\n", "ERROR, Ingrese ID valido", 1, idMaximo);
+
+	}
     return 1;
 }
 
@@ -82,28 +200,6 @@ int controller_removerJugador(LinkedList* pArrayListJugador)
     return 1;
 }
 
-/** \brief Listar jugadores
- *
- * \param path char*
- * \param pArrayListJugador LinkedList*
- * \return int
- *
- */
-int controller_listarJugadores(LinkedList* pArrayListJugador)
-{
-	int cantidad;
-	printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n",-6,"  ID",-40,"         NOMBRE COMPLETO",-4,"EDAD",-25,"      POSICION",-18,"    NACIONALIDAD",-8,"ID SELEC.");
-	if(pArrayListJugador)
-	{
-		cantidad=ll_len(pArrayListJugador);
-		for(int i=0;i<cantidad;i++)
-		{
-			imprimirJugador(pArrayListJugador,i);
-
-		}
-	}
-    return 1;
-}
 
 /** \brief Ordenar jugadores
  *
@@ -196,12 +292,16 @@ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
 	int retorno=-1;
 	if(pArrayListSeleccion!=NULL)
 	{
+		//printf("| %*d|%*s|%*s| %*d|\n",-3,id,-25,pais,-10,confederacion,-3,convocados);
+		printf("+=========================================================+\n");
+		printf("|%*s|%*s|%*s|%*s|\n",-4," ID",-25,"         PAIS",-15," CONFEDERACION",-10,"CONVOCADOS");
+		printf("+=========================================================+\n");
 		cantidad=ll_len(pArrayListSeleccion);
 		for(int i=0;i<cantidad;i++)
 		{
-			//printf("CANTIDAD %d",cantidad);
 			imprimirSeleccion(pArrayListSeleccion, i);
 		}
+		printf("+=========================================================+\n");
 	}
 
     return retorno;
