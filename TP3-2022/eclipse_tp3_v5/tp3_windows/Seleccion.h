@@ -28,6 +28,6 @@ int selec_getConfederacion(Seleccion* this,char* confederacion);
 int selec_setConvocados(Seleccion* this,int convocados);
 int selec_getConvocados(Seleccion* this,int* convocados);
 
-
+int imprimirSeleccion(LinkedList* pArrayListSeleccion, int index);
 
 #endif // selec_H_INCLUDED

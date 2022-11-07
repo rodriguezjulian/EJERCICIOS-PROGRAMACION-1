@@ -38,5 +38,7 @@ int jug_getEdad(Jugador* this,int* edad);
 int jug_setIdSeleccion(Jugador* this,int idSeleccion);
 int jug_getSIdSeleccion(Jugador* this,int* idSeleccion);
 
+
+int imprimirJugador(LinkedList* pArrayListJugador, int index);
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
 #endif // jug_H_INCLUDED

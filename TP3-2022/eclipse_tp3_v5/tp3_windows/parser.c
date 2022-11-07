@@ -22,14 +22,13 @@ int parser_JugadorFromText(FILE* pFile , LinkedList* pArrayListJugador)
 	if(pFile!=NULL && pArrayListJugador!=NULL)
 	{
 		fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",(*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
+		//cantidad=fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",texto[0],texto[1],texto[2],texto[3],texto[4],texto[5]);
 		if(pFile!=NULL)
 		{
 			while(!feof(pFile))
 			{
-				//fscanf(pFile,"%[^,],",(*(texto+0)));
 				//USO AL RETORNO DE SCANF PARA VERIFICAR QUE ESTA TODO BIEN
 				cantidad=fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",(*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
-				//printf("%s---%s---%s---%s---%s---%s\n",(*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
 				if(cantidad>6)
 				{
 					jug_delete(jugadorAux);
@@ -42,11 +41,10 @@ int parser_JugadorFromText(FILE* pFile , LinkedList* pArrayListJugador)
 					jugadorAux=jug_newParametros((*(texto+0)), (*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
 					if(jugadorAux!=NULL)
 					{
-						printf("%d---%s---%d---%s---%s---%d\n",jugadorAux->id,jugadorAux->nombreCompleto,jugadorAux->edad,jugadorAux->posicion,jugadorAux->nacionalidad,jugadorAux->idSeleccion);
+						//printf("%d---%s---%d---%s---%s---%d\n",jugadorAux->id,jugadorAux->nombreCompleto,jugadorAux->edad,jugadorAux->posicion,jugadorAux->nacionalidad,jugadorAux->idSeleccion);
 						ll_add(pArrayListJugador,(Jugador*) jugadorAux);
 						retorno=0;
 					}
-
 				}
 			}
 		}
@@ -76,6 +74,36 @@ int parser_JugadorFromBinary(FILE* pFile , LinkedList* pArrayListJugador)
  */
 int parser_SeleccionFromText(FILE* pFile , LinkedList* pArrayListSeleccion)
 {
-    return 1;
+	Seleccion* seleccionAux;
+	int cantidad;
+	int retorno=-1;
+	char texto[4][50];
+	if(pFile!=NULL)
+		{
+			//LECTURA FANTASMA
+			fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",(*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)));
+			while(!feof(pFile))
+			{
+
+				cantidad=fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",(*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)));
+				if(cantidad>4)
+				{
+					selec_delete(seleccionAux);
+					seleccionAux=NULL;
+					retorno=-1;
+					break;
+				}
+				else
+				{
+					seleccionAux=selec_newParametros((*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)));
+					if(seleccionAux!=NULL)
+					{
+						ll_add(pArrayListSeleccion, seleccionAux);
+						retorno=0;
+					}
+				}
+			}
+		}
+    return retorno;
 }
 

@@ -20,10 +20,10 @@ int controller_cargarJugadoresDesdeTexto(char* path , LinkedList* pArrayListJuga
 	//PATH=RUTA
 	if(pFile!=NULL)
 	{
-		pArrayListJugador=ll_newLinkedList();
+		//pArrayListJugador=ll_newLinkedList();
 		if(parser_JugadorFromText(pFile, pArrayListJugador)==0)
 		{
-			printf("SE LEYO CORRECTAMENTE");
+			printf("SE LEYO CORRECTAMENTE EL ARCHIVO \n");
 		}
 		else
 		{
@@ -91,7 +91,17 @@ int controller_removerJugador(LinkedList* pArrayListJugador)
  */
 int controller_listarJugadores(LinkedList* pArrayListJugador)
 {
+	int cantidad;
+	printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n",-6,"  ID",-40,"         NOMBRE COMPLETO",-4,"EDAD",-25,"      POSICION",-18,"    NACIONALIDAD",-8,"ID SELEC.");
+	if(pArrayListJugador)
+	{
+		cantidad=ll_len(pArrayListJugador);
+		for(int i=0;i<cantidad;i++)
+		{
+			imprimirJugador(pArrayListJugador,i);
 
+		}
+	}
     return 1;
 }
 
@@ -142,7 +152,22 @@ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJu
  */
 int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
 {
-    return 1;
+	FILE* pFile= fopen(path,"r");
+	int retorno=-1;
+	if(pFile!=NULL)
+	{
+		if(parser_SeleccionFromText(pFile, pArrayListSeleccion)==0)
+		{
+			printf("ARCHIVO DE SELECCIONES LEIDO SATISFACTORIAMENTE\n");
+			retorno=0;
+		}
+		else
+		{
+			printf("ERROR, Al abrir archivo de selecciones");
+		}
+	}
+	fclose(pFile);
+    return retorno;
 }
 
 /** \brief Modificar datos de empleado
@@ -167,11 +192,17 @@ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
  */
 int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
 {
-	int retorno=-1;
-	Jugador* jugAux;
 	int cantidad;
-	cantidad=ll_len(pArrayListSeleccion);
-	printf("CANTIDAD %d", cantidad);
+	int retorno=-1;
+	if(pArrayListSeleccion!=NULL)
+	{
+		cantidad=ll_len(pArrayListSeleccion);
+		for(int i=0;i<cantidad;i++)
+		{
+			//printf("CANTIDAD %d",cantidad);
+			imprimirSeleccion(pArrayListSeleccion, i);
+		}
+	}
 
     return retorno;
 }
