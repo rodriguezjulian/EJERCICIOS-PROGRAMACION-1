@@ -209,7 +209,7 @@ int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador)
 	//ll_sort(listaJugadores, jug_OrdenarPorNacionalidad, 1);
 	return compara;
 }
-int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* posicion)
+int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice)
 {
 	int retorno=-1;
 	Jugador* AuxJugador;
@@ -224,7 +224,7 @@ int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* posicion)
 			//NO DEBO HACER (*(AuxJugador+i).id PORQUE YA ll_get me retorna puntero a indice especificado, ademas el tema de trabajar con posiciones consecutivas o no.
 			if((*(AuxJugador)).id==idBuscado)
 			{
-				*posicion=i;
+				*indice=i;
 				//printf("POSICION %d\n",*posicion);
 				retorno=0;
 				break;
@@ -233,11 +233,11 @@ int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* posicion)
 	}
 	return retorno;
 }
-int jug_Modificar_NombreCompleto(LinkedList* pArrayListJugador , int posicion)
+int jug_Editar_NombreCompleto(LinkedList* pArrayListJugador , int indice)
 {
 	int retorno=-1;
 	Jugador* pJugador;
-	pJugador=ll_get(pArrayListJugador, posicion);
+	pJugador=ll_get(pArrayListJugador, indice);
 	int retornoSrtcmp=0;//LO INICIALIZO POR SI EL USUARIO MODIFICA MAS DE UNA VEZ EL CAMPO.
 	char nuevoNombre[100];
 
@@ -266,11 +266,11 @@ int jug_Modificar_NombreCompleto(LinkedList* pArrayListJugador , int posicion)
 	}
 	return retorno;
 }
-int jug_Modificar_Edad(LinkedList* pArrayListJugador , int posicion)
+int jug_Editar_Edad(LinkedList* pArrayListJugador , int indice)
 {
 	int retorno=-1;
 	Jugador* pJugador;
-	pJugador=ll_get(pArrayListJugador, posicion);
+	pJugador=ll_get(pArrayListJugador, indice);
 	int nuevaEdad;
 
 	if(pArrayListJugador!=NULL)
@@ -297,11 +297,11 @@ int jug_Modificar_Edad(LinkedList* pArrayListJugador , int posicion)
 	}
 	return retorno;
 }
-int jug_Modificar_Posicion(LinkedList* pArrayListJugador , int posicion)
+int jug_Editar_Posicion(LinkedList* pArrayListJugador , int indice)
 {
 	int retorno=-1;
 	Jugador* pJugador;
-	pJugador=ll_get(pArrayListJugador, posicion);
+	pJugador=ll_get(pArrayListJugador, indice);
 	char nuevaPosicion [30];
 	int retornoSrtcmp=0;//LO INICIALIZO POR SI EL USUARIO MODIFICA MAS DE UNA VEZ EL CAMPO.
 
@@ -329,11 +329,11 @@ int jug_Modificar_Posicion(LinkedList* pArrayListJugador , int posicion)
 	}
 	return retorno;
 }
-int jug_Modificar_Nacionalidad(LinkedList* pArrayListJugador , int posicion)
+int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice)
 {
 	int retorno=-1;
 	Jugador* pJugador;
-	pJugador=ll_get(pArrayListJugador, posicion);
+	pJugador=ll_get(pArrayListJugador, indice);
 	char nuevaNacionalidad[30];
 	int retornoSrtcmp=0;//LO INICIALIZO POR SI EL USUARIO MODIFICA MAS DE UNA VEZ EL CAMPO.
 
@@ -362,3 +362,4 @@ int jug_Modificar_Nacionalidad(LinkedList* pArrayListJugador , int posicion)
 
 	return retorno;
 }
+

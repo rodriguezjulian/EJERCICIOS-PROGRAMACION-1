@@ -150,7 +150,27 @@ int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int m
 	}
 	return retorno;
 }*/
-
+int ingresarChar(char* mensaje,char* mensajeError, char minimo, char maximo, char* resultado)
+{
+	int retorno=-1;
+	if(mensaje!=NULL && mensajeError!=NULL && resultado!=NULL && minimo<maximo)
+	{
+		do
+		{
+			printf("%s",mensaje);
+			gets(resultado);
+			if(resultado<minimo || resultado>maximo)
+			{
+				printf("%s", mensajeError);
+			}
+			else
+			{
+				retorno=0;
+			}
+		}while(retorno==-1);
+	}
+	return retorno;
+}
 int ingresarCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* mensajeError)
 {
     int retorno=-1;

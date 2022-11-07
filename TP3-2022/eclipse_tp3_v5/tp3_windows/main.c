@@ -40,6 +40,7 @@ int main()
             	controller_editarJugador(listaJugadores);
             break;
             case 4:
+
             break;
             case 5:
             	controller_listarJugadores(listaJugadores);

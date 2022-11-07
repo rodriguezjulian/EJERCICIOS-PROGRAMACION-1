@@ -41,11 +41,11 @@ int jug_getSIdSeleccion(Jugador* this,int* idSeleccion);
 
 int imprimirJugador(LinkedList* pArrayListJugador, int index);
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
-int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* posicion);
+int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice);
 
 
-int jug_Modificar_NombreCompleto(LinkedList* pArrayListJugador , int posicion);
-int jug_Modificar_Edad(LinkedList* pArrayListJugador , int posicion);
-int jug_Modificar_Posicion(LinkedList* pArrayListJugador , int posicion);
-int jug_Modificar_Nacionalidad(LinkedList* pArrayListJugador , int posicion);
+int jug_Editar_NombreCompleto(LinkedList* pArrayListJugador , int indice);
+int jug_Editar_Edad(LinkedList* pArrayListJugador , int indice);
+int jug_Editar_Posicion(LinkedList* pArrayListJugador , int indice);
+int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice);
 #endif // jug_H_INCLUDED
