@@ -41,4 +41,5 @@ int jug_getSIdSeleccion(Jugador* this,int* idSeleccion);
 
 int imprimirJugador(LinkedList* pArrayListJugador, int index);
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
+int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* posicion);
 #endif // jug_H_INCLUDED

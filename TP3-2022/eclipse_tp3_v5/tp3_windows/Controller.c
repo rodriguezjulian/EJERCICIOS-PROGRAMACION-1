@@ -167,9 +167,9 @@ int controller_listarJugadores(LinkedList* pArrayListJugador)
 int controller_editarJugador(LinkedList* pArrayListJugador)
 {
 	//Jugador* pJugador;
-	int idModificado;
+	int idBuscado;
 	int idMaximo; //PARA DARLE RANGO AL INGRESO DE ID.
-
+	int posicion;
 	FILE* pIdMaximo;
 	pIdMaximo=fopen("id.txt", "r");
 	if(pIdMaximo!=NULL)
@@ -177,13 +177,21 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
 		fscanf(pIdMaximo,"%d",&idMaximo);
 	}
 	fclose(pIdMaximo);
-	printf("ID MAXIMO HASTA EL MOMENTO %d \n",idMaximo);
+	//printf("ID MAXIMO HASTA EL MOMENTO %d \n",idMaximo);
 	if(pArrayListJugador!=NULL)
 	{
 		//void ll_remove>Elimina un elemento en LinkedList, en el índice especificado.
 		controller_listarJugadores(pArrayListJugador);
-		ingresarIntConRango(&idModificado, "Ingrese ID que desea modificar.\n", "ERROR, Ingrese ID valido", 1, idMaximo);
+		do
+		{
+			ingresarIntConRango(&idBuscado, "Ingrese ID que desea modificar.\n", "ERROR, Ingrese ID valido\n", 1, idMaximo);
+			if(buscarJugPorId(pArrayListJugador, idBuscado, &posicion)==-1)
+			{
+				printf("ERROR, Ingrese ID valido\n");
+			}
+			printf("POSICION %d\n",posicion);
 
+		}while(buscarJugPorId(pArrayListJugador, idBuscado, &posicion)==-1);
 	}
     return 1;
 }

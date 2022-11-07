@@ -208,5 +208,28 @@ int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador)
 	//ll_sort(listaJugadores, jug_OrdenarPorNacionalidad, 1);
 	return compara;
 }
-
+int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* posicion)
+{
+	int retorno=-1;
+	Jugador* AuxJugador;
+	if(pArrayListJugador!=NULL)
+	{
+		int tam= ll_len(pArrayListJugador);
+		//printf("tam %d",tam);
+		for(int i=0;i<tam;i++)
+		{
+			//printf("ENTRE AL FOR DE BUSCAR POR ID\n");
+			AuxJugador=ll_get(pArrayListJugador, i);
+			//NO DEBO HACER (*(AuxJugador+i).id PORQUE YA ll_get me retorna puntero a indice especificado, ademas el tema de trabajar con posiciones consecutivas o no.
+			if((*(AuxJugador)).id==idBuscado)
+			{
+				*posicion=i;
+				//printf("POSICION %d\n",*posicion);
+				retorno=0;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
 
