@@ -170,6 +170,7 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
 	int idBuscado;
 	int idMaximo; //PARA DARLE RANGO AL INGRESO DE ID.
 	int posicion;
+	int opcion;
 	FILE* pIdMaximo;
 	pIdMaximo=fopen("id.txt", "r");
 	if(pIdMaximo!=NULL)
@@ -187,12 +188,47 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
 			ingresarIntConRango(&idBuscado, "Ingrese ID que desea modificar.\n", "ERROR, Ingrese ID valido\n", 1, idMaximo);
 			if(buscarJugPorId(pArrayListJugador, idBuscado, &posicion)==-1)
 			{
-				printf("ERROR, Ingrese ID valido\n");
+				printf("ERROR, Ingrese ID existente.\n");
 			}
-			printf("POSICION %d\n",posicion);
-
+			//printf("POSICION %d\n",posicion);
 		}while(buscarJugPorId(pArrayListJugador, idBuscado, &posicion)==-1);
+
+
+		printf("+===========================================================================================================+\n"
+				"|%*s|%*s|%*s|%*s|%*s|%*s|\n%s",-6,"  ID",-40,"         NOMBRE COMPLETO",-4,"EDAD",-25,"      POSICION",-18,"    NACIONALIDAD",-8,"ID SELEC.",
+				"+===========================================================================================================+\n");
+		imprimirJugador(pArrayListJugador, posicion);
+		printf("+===========================================================================================================+\n");
+
+
+		printf("+==============================+\n|%*s|\n+==============================+\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n"
+				"+==============================+\n",-30,"INGRESE SEGUN DESEE MODIFICAR",-30,"1.NOMBRE.",-30,"2.EDAD.",-30,"3.POSICION.",-30,"4.NACIONALIDAD.");
+
+		ingresarIntConRango(&opcion, "Opcion ingresada:", "ERROR, Ingrese opcion valida", 1, 4);
+		switch(opcion)
+		{
+		case 1:
+			jug_Modificar_NombreCompleto(pArrayListJugador, posicion);
+		break;
+		case 2:
+			jug_Modificar_Edad(pArrayListJugador, posicion);
+		break;
+		case 3:
+			jug_Modificar_Posicion(pArrayListJugador, posicion);
+		break;
+		case 4:
+			jug_Modificar_Nacionalidad(pArrayListJugador, posicion);
+		break;
+
+
+
+
+		}
 	}
+
+
+
+
     return 1;
 }
 

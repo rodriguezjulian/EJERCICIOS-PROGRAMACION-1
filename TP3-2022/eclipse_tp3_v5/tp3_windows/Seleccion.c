@@ -105,6 +105,5 @@ int imprimirSeleccion(LinkedList* pArrayListSeleccion, int index)
 			printf("| %*d|%*s|%*s| %*d|\n",-3,id,-25,pais,-15,confederacion,-9,convocados);
 		}
 	}
-
 	return retorno;
 }

@@ -3337,3 +3337,450 @@ gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
 gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:24:54 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+03:30:03 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:30:43 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+03:31:30 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+03:33:06 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:33:45 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+03:34:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:35:00 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:35:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+03:35:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:36:34 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:36:48 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:37:30 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:37:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+03:38:10 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:173:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+03:38:31 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:38:38 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+03:40:32 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+03:41:14 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:41:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+03:42:48 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:48:41 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:213:3: error: duplicate case value
+   case 1:
+   ^~~~
+..\Controller.c:210:3: error: previously used here
+   case 1:
+   ^~~~
+..\Controller.c:216:3: error: duplicate case value
+   case 1:
+   ^~~~
+..\Controller.c:210:3: error: previously used here
+   case 1:
+   ^~~~
+..\Controller.c:219:3: error: duplicate case value
+   case 1:
+   ^~~~
+..\Controller.c:210:3: error: previously used here
+   case 1:
+   ^~~~
+03:48:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:55:38 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_mod_NombreCompleto':
+..\Jugador.c:239:10: error: incompatible types when assigning to type 'Jugador {aka struct <anonymous>}' from type 'void *'
+  pJugador=ll_get(pArrayListJugador, posicion);
+          ^
+..\Jugador.c:245:4: warning: implicit declaration of function 'ingresarCadenaCaracteres' [-Wimplicit-function-declaration]
+    ingresarCadenaCaracteres(100, nuevoNombre, "Ingrese nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n");
+    ^~~~~~~~~~~~~~~~~~~~~~~~
+..\Jugador.c:246:26: error: invalid type argument of unary '*' (have 'Jugador {aka struct <anonymous>}')
+    retornoSrtcmp=strcmp((*(pJugador)).nombreCompleto, nuevoNombre);
+                          ^~~~~~~~~~~
+03:55:58 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_mod_NombreCompleto':
+..\Jugador.c:240:10: error: incompatible types when assigning to type 'Jugador {aka struct <anonymous>}' from type 'void *'
+  pJugador=ll_get(pArrayListJugador, posicion);
+          ^
+..\Jugador.c:247:26: error: invalid type argument of unary '*' (have 'Jugador {aka struct <anonymous>}')
+    retornoSrtcmp=strcmp((*(pJugador)).nombreCompleto, nuevoNombre);
+                          ^~~~~~~~~~~
+03:56:13 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:58:56 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:211:56: error: 'nuevoNombre' undeclared (first use in this function)
+    jug_mod_NombreCompleto(pArrayListJugador, posicion, nuevoNombre);
+                                                        ^~~~~~~~~~~
+..\Controller.c:211:56: note: each undeclared identifier is reported only once for each function it appears in
+03:59:34 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:211:56: error: 'nuevoNombre' undeclared (first use in this function)
+    jug_mod_NombreCompleto(pArrayListJugador, posicion, nuevoNombre);
+                                                        ^~~~~~~~~~~
+..\Controller.c:211:56: note: each undeclared identifier is reported only once for each function it appears in
+04:01:45 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:211:7: error: too few arguments to function 'jug_mod_NombreCompleto'
+    if(jug_mod_NombreCompleto(pArrayListJugador, posicion)==0)
+       ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Jugador.h:47:5: note: declared here
+ int jug_mod_NombreCompleto(LinkedList* pArrayListJugador , int posicion, char* nuevoNombre);
+     ^~~~~~~~~~~~~~~~~~~~~~
+04:02:35 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+04:05:17 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+04:05:59 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+04:07:12 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:17:12 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+05:17:41 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:24:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:26:38 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:211:58: error: expected ')' before ';' token
+    if(jug_mod_NombreCompleto(pArrayListJugador, posicion);
+                                                          ^
+..\Controller.c:229:3: error: expected expression before '}' token
+   }
+   ^
+05:26:46 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:26:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:27:54 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+05:29:08 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:214:17: error: 'ArrayListJugador' undeclared (first use in this function)
+    jug_mod_edad(ArrayListJugador, posicion);
+                 ^~~~~~~~~~~~~~~~
+..\Controller.c:214:17: note: each undeclared identifier is reported only once for each function it appears in
+05:29:13 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:31:04 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c:300:1: error: expected '=', ',', ';', 'asm' or '__attribute__' at end of input
+ int jug_Mod_Posicion
+ ^~~
+05:31:57 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:214:4: warning: implicit declaration of function 'jug_Mod_edad' [-Wimplicit-function-declaration]
+    jug_Mod_edad(pArrayListJugador, posicion);
+    ^~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Controller.o: In function `controller_editarJugador':
+C:\Users\Julian Rodriguez\Desktop\PROGRAMACION  1\TP3-2022\eclipse_tp3_v5\tp3_windows\Debug/../Controller.c:214: undefined reference to `jug_Mod_edad'
+collect2.exe: error: ld returned 1 exit status
+05:32:31 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:37:33 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_Mod_Posicion':
+..\Jugador.c:313:4: error: expected ';' before 'retornoSrtcmp'
+    retornoSrtcmp=strcmp((*(pJugador)).posicion, nuevaPosicion);
+    ^~~~~~~~~~~~~
+..\Jugador.c:320:31: warning: passing argument 2 of 'jug_setPosicion' makes pointer from integer without a cast [-Wint-conversion]
+     jug_setPosicion(pJugador, posicion);
+                               ^~~~~~~~
+..\Jugador.c:87:5: note: expected 'char *' but argument is of type 'int'
+ int jug_setPosicion(Jugador* this,char* posicion)
+     ^~~~~~~~~~~~~~~
+05:37:49 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_Mod_Posicion':
+..\Jugador.c:320:31: warning: passing argument 2 of 'jug_setPosicion' makes pointer from integer without a cast [-Wint-conversion]
+     jug_setPosicion(pJugador, posicion);
+                               ^~~~~~~~
+..\Jugador.c:87:5: note: expected 'char *' but argument is of type 'int'
+ int jug_setPosicion(Jugador* this,char* posicion)
+     ^~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:38:15 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:38:44 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+05:39:54 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+05:41:10 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:42:26 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c:332:1: error: expected '=', ',', ';', 'asm' or '__attribute__' at end of input
+ int jug_Modificar_Nacionalidar
+ ^~~
+05:43:31 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_Modificar_Nacionalidad':
+..\Jugador.c:337:7: warning: unused variable 'nuevaNacionalidad' [-Wunused-variable]
+  char nuevaNacionalidad[30];
+       ^~~~~~~~~~~~~~~~~
+..\Jugador.c:335:11: warning: variable 'pJugador' set but not used [-Wunused-but-set-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:46:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_Modificar_Nacionalidad':
+..\Jugador.c:343:3: error: expected ';' before 'retornoSrtcmp'
+   retornoSrtcmp=strcmp((*(pJugador)).nacionalidad, nuevaNacionalidad);
+   ^~~~~~~~~~~~~
+..\Jugador.c:350:24: warning: passing argument 1 of 'jug_setNacionalidad' from incompatible pointer type [-Wincompatible-pointer-types]
+    jug_setNacionalidad(pArrayListJugador, nuevaNacionalidad);
+                        ^~~~~~~~~~~~~~~~~
+..\Jugador.c:107:5: note: expected 'Jugador * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int jug_setNacionalidad(Jugador* this,char* nacionalidad)
+     ^~~~~~~~~~~~~~~~~~~
+..\Jugador.c:335:11: warning: variable 'pJugador' set but not used [-Wunused-but-set-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+05:46:48 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_Modificar_Nacionalidad':
+..\Jugador.c:350:24: warning: passing argument 1 of 'jug_setNacionalidad' from incompatible pointer type [-Wincompatible-pointer-types]
+    jug_setNacionalidad(pArrayListJugador, nuevaNacionalidad);
+                        ^~~~~~~~~~~~~~~~~
+..\Jugador.c:107:5: note: expected 'Jugador * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int jug_setNacionalidad(Jugador* this,char* nacionalidad)
+     ^~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:47:01 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+05:48:02 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:220:4: warning: implicit declaration of function 'jug_Modificar_Nacionalidad' [-Wimplicit-function-declaration]
+    jug_Modificar_Nacionalidad(pArrayListJugador, posicion);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:48:14 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+05:49:06 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+05:50:11 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+05:51:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
