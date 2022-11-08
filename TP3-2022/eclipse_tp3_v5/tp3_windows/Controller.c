@@ -168,11 +168,14 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
 {
 	//Jugador* pJugador;
 	int retorno=-1;
-	int idBuscado;
+	//int idBuscado;
 	int idMaximo; //PARA DARLE RANGO AL INGRESO DE ID.
 	int indice;
 	int opcion;
 	FILE* pIdMaximo;
+
+
+
 	pIdMaximo=fopen("id.txt", "r");
 	if(pIdMaximo!=NULL)
 	{
@@ -182,18 +185,9 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
 	//printf("ID MAXIMO HASTA EL MOMENTO %d \n",idMaximo);
 	if(pArrayListJugador!=NULL)
 	{
-		//void ll_remove>Elimina un elemento en LinkedList, en el índice especificado.
 		controller_listarJugadores(pArrayListJugador);
-		do
-		{
-			ingresarIntConRango(&idBuscado, "Ingrese ID que desea modificar.\n", "ERROR, Ingrese ID valido\n", 1, idMaximo);
-			if(buscarJugPorId(pArrayListJugador, idBuscado, &indice)==-1)
-			{
-				printf("ERROR, Ingrese ID existente.\n");
-			}
-			//printf("POSICION %d\n",posicion);
-		}while(buscarJugPorId(pArrayListJugador, idBuscado, &indice)==-1);
-
+		//SOLICITO ID (AL HACERLO TOMO COMO PARAMETRO EL MAXIMO ID)
+		jug_Solicitar_Id(pArrayListJugador, &indice, "Ingrese ID que desea modificar.\n");
 
 		printf("+===========================================================================================================+\n"
 				"|%*s|%*s|%*s|%*s|%*s|%*s|\n%s",-6,"  ID",-40,"         NOMBRE COMPLETO",-4,"EDAD",-25,"      POSICION",-18,"    NACIONALIDAD",-8,"ID SELEC.",
@@ -225,6 +219,8 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
     return retorno;
 }
 
+
+
 /** \brief Baja del jugador
  *
  * \param path char*
@@ -235,44 +231,35 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
 int controller_removerJugador(LinkedList* pArrayListJugador)
 {
 	int retorno=-1;
-	int idBuscado;
+
 	int indice;
-	int idMaximo;
-	int flag=0;
+
 	Jugador* pJugador;
-	FILE* pIdMaximo;
-	pIdMaximo=fopen("id.txt", "r");
-	if(pIdMaximo!=NULL)
-	{
-		fscanf(pIdMaximo,"%d",&idMaximo);
-	}
-	fclose(pIdMaximo);
-
-	if(pArrayListJugador!=NULL)
-	{
-		controller_listarJugadores(pArrayListJugador);
-		do
-		{
-			ingresarIntConRango(&idBuscado, "Ingrese ID que desea dar de baja.\n", "ERROR, Ingrese ID valido\n", 1, idMaximo);
-			if(buscarJugPorId(pArrayListJugador, idBuscado, &indice)==-1)
-			{
-				printf("ERROR, Ingrese ID existente.\n");
-			}
-			//printf("POSICION %d\n",posicion);
-		}while(buscarJugPorId(pArrayListJugador, idBuscado, &indice)==-1);
-	}
+	//SOLICITO ID (AL HACERLO TOMO COMO PARAMETRO EL MAXIMO ID)
+	jug_Solicitar_Id(pArrayListJugador, &indice, " Ingrese ID que desea dar de baja.\n");
 	pJugador=ll_get(pArrayListJugador, indice);
-	do
-	{
-		printf("Para confirmar la baja del jugador %s presione 'S', caso contrario cualquier otra tecla.\n",(*(pJugador)).nombreCompleto);
 
-	}while()
+	//SE ENCARGA DE CONFIRMAR LA BAJA.(ll_remove)
+	jug_Confirmar_Baja( pArrayListJugador,  indice, (*(pJugador)).nombreCompleto);
 
 
-
+	//FALTA HACER LO DE LOS CONVOCADOS.
 
     return retorno;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /** \brief Ordenar jugadores

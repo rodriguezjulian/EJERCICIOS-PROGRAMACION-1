@@ -3,7 +3,9 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Jugador.h"
-#include<string.h>
+#include "Seleccion.h"
+#include <string.h>
+ #include <ctype.h>
 #include "ingresos.h"
 
 Jugador* jug_new()
@@ -209,6 +211,46 @@ int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador)
 	//ll_sort(listaJugadores, jug_OrdenarPorNacionalidad, 1);
 	return compara;
 }
+int jug_BuscarIdMax(LinkedList* pArrayListJugador, int *idMaximo)
+{
+	int idMax;
+	int retorno=-1;
+	FILE* pIdMaximo=fopen("id.txt", "r");
+	if(pIdMaximo!=NULL)
+	{
+		fscanf(pIdMaximo,"%d",&idMax);
+		retorno=0;
+		*idMaximo=idMax;
+	}
+	fclose(pIdMaximo);
+
+	return retorno;
+}
+int jug_Solicitar_Id(LinkedList* pArrayListJugador, int * indice ,char * mensaje)
+{
+	int retorno=-1;
+	int idBuscado;
+	int idMaximo;
+	//BUSCO EL ULTIMO ID PARA DARLE UN MAXIMO AL INGRESAR EL ID.
+
+	if(pArrayListJugador!=NULL && jug_BuscarIdMax(pArrayListJugador, &idMaximo)==0)
+	{
+		controller_listarJugadores(pArrayListJugador);
+				do
+				{
+					ingresarIntConRango(&idBuscado, mensaje, "ERROR, Ingrese ID existente\n", 1, idMaximo);
+					//ESTE PRINT ES POR SI EL USUARIO CARGA UN ID QUE ESTA POR DEBAJO DEL MAXIMO PERO QUE YA FUE BORRADO.
+					if(buscarJugPorId(pArrayListJugador, idBuscado, &(*(indice)))==-1)
+					{
+						printf("ERROR, Ingrese ID existente.\n");
+					}
+					//printf("POSICION %d\n",posicion);
+				}while(buscarJugPorId(pArrayListJugador, idBuscado, &(*(indice)))==-1);
+		retorno=0;
+	}
+
+	return retorno;
+}
 int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice)
 {
 	int retorno=-1;
@@ -362,4 +404,63 @@ int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice)
 
 	return retorno;
 }
+int jug_Confirmar_Baja(LinkedList* pArrayListJugador, int indice, char* nombreJugador)
+{
+	int retorno=-1;
+	char confirmacion;
+	char auxMayus;
+	do
+	{
+		printf("Para confirmar la baja del jugador %s presione 'S', caso contrario 'N'.\n",nombreJugador);
+		fflush(stdin);
+		gets(&confirmacion);
+		auxMayus=toupper(confirmacion);
+		if(auxMayus=='S')
+		{
+			printf("<<<<<<<<<< BAJA CONFIRMADA >>>>>>>>>\n");
+			retorno=0;
+			ll_remove(pArrayListJugador, indice);
+		}
+	}while(verificarCaracterSN(confirmacion)==-1);
+	//ARMO UN NUEVO IF PARA ESTE MSJ YA QUE SI LO PONGO COMO ELSE DENTRO DEL do{}while(), CADA VEZ QUE EL USUARIO INGRESE
+	//CUALQUIER LETRA, APARECERIA
+	if(retorno==-1)
+	{
+		printf("<<<<<<<<< BAJA CANCELADA >>>>>>>>>>\n");
+	}
+	return retorno;
+}
 
+int jug_convocar(LinkedList* pArrayListJugador, LinkedList* listaConfederaciones)
+{
+	int retorno=-1;
+	int indice;
+
+	//INICIALIZO EL PUNTERO POR BUENAS PRACTICAS
+	Jugador* pJugador=NULL;
+	char pais[30];
+	if(pArrayListJugador!=NULL && listaConfederaciones!=NULL)
+	{
+		//SOLICITAR ID LLAMA A FUNCION PARA LISTAR JUGADORES.
+		jug_Solicitar_Id(pArrayListJugador, &indice, "Ingrese ID del jugador que desea convocar.\n");
+		pJugador=ll_get(pArrayListJugador, indice);
+		if((*(pJugador)).idSeleccion==0)
+		{
+			//controller_listarSelecciones(listaConfederaciones);
+			//printf("ID SELECCION")
+			selec_buscar_Pais(listaConfederaciones, (*(pJugador)).idSeleccion, pais);
+
+			printf("Jugador convocado exitosamente para el pais de %s",pais);
+
+		}
+		else
+		{
+			selec_buscar_Pais(listaConfederaciones, (*(pJugador)).idSeleccion, pais);
+			printf("ERROR, El jugador %s ya se encuentra convocado para la seleccion de %s.\n",(*(pJugador)).nombreCompleto,pais);
+		}
+	}
+
+
+
+	return retorno;
+}

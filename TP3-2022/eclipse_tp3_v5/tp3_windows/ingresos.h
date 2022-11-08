@@ -69,6 +69,6 @@ int ingresarCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* me
 /// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int ingresarShortConRango(short* resultado, char* mensaje, char* mensajeError, short minimo, short maximo);
 
-
+int verificarCaracterSN(char letra);
 
 #endif /* INGRESOS_H_ */

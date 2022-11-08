@@ -29,5 +29,5 @@ int selec_setConvocados(Seleccion* this,int convocados);
 int selec_getConvocados(Seleccion* this,int* convocados);
 
 int imprimirSeleccion(LinkedList* pArrayListSeleccion, int index);
-
+int selec_buscar_Pais(LinkedList* listaConfederaciones, int idSeleccion, char* paisEncontrado);
 #endif // selec_H_INCLUDED

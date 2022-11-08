@@ -38,7 +38,7 @@ int jug_getEdad(Jugador* this,int* edad);
 int jug_setIdSeleccion(Jugador* this,int idSeleccion);
 int jug_getSIdSeleccion(Jugador* this,int* idSeleccion);
 
-
+//HACER QUE TODAS LAS FUNCIONES ARRANQUEN CON jug
 int imprimirJugador(LinkedList* pArrayListJugador, int index);
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
 int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice);
@@ -48,4 +48,8 @@ int jug_Editar_NombreCompleto(LinkedList* pArrayListJugador , int indice);
 int jug_Editar_Edad(LinkedList* pArrayListJugador , int indice);
 int jug_Editar_Posicion(LinkedList* pArrayListJugador , int indice);
 int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice);
+int jug_Confirmar_Baja(LinkedList* pArrayListJugador, int indice, char* nombreJugador);
+int jug_BuscarIdMax(LinkedList* pArrayListJugador, int *idMaximo);
+int jug_Solicitar_Id(LinkedList* pArrayListJugador, int * indice ,char * mensaje);
+int jug_convocar(LinkedList* pArrayListJugador, LinkedList* listaConfederaciones);
 #endif // jug_H_INCLUDED

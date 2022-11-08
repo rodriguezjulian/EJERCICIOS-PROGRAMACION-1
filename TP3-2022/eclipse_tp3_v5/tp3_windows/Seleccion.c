@@ -107,3 +107,27 @@ int imprimirSeleccion(LinkedList* pArrayListSeleccion, int index)
 	}
 	return retorno;
 }
+int selec_buscar_Pais(LinkedList* listaConfederaciones, int id, char* paisEncontrado)
+{
+	int retorno=-1;
+	int cantidad;
+	cantidad=ll_len(listaConfederaciones);
+	Seleccion* pPaises;
+
+	if(listaConfederaciones!=NULL)
+	{
+		for(int i=0;i<cantidad;i++)
+		{
+			pPaises=ll_get(listaConfederaciones, i);
+			if(id==(*(pPaises)).id)
+			{
+				paisEncontrado=(*(pPaises+i)).pais;
+				printf("PAIS ENCONTRADO: %s",paisEncontrado);
+				retorno=0;
+				break;
+			}
+		}
+	}
+
+	return retorno;
+}

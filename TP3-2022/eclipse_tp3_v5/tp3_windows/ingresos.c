@@ -113,6 +113,21 @@ int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int m
 
 	return retorno;
 }
+int verificarCaracterSN(char letra)
+{
+	int retorno=-1;
+	char aux;
+	aux=toupper(letra);
+	if(aux=='S' || aux=='N')
+	{
+		retorno=0;
+	}
+	else
+	{
+		printf("ERROR, Debe ingresar o 'S' o 'N'\n");
+	}
+	return retorno;
+}
 
 /*int confirmarSalida(void)
 {
@@ -150,7 +165,7 @@ int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int m
 	}
 	return retorno;
 }*/
-int ingresarChar(char* mensaje,char* mensajeError, char minimo, char maximo, char* resultado)
+/*int ingresarChar(char* mensaje,char* mensajeError, char minimo, char maximo, char* resultado)
 {
 	int retorno=-1;
 	if(mensaje!=NULL && mensajeError!=NULL && resultado!=NULL && minimo<maximo)
@@ -170,7 +185,7 @@ int ingresarChar(char* mensaje,char* mensajeError, char minimo, char maximo, cha
 		}while(retorno==-1);
 	}
 	return retorno;
-}
+}*/
 int ingresarCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* mensajeError)
 {
     int retorno=-1;
