@@ -44,9 +44,9 @@ int main()
             	controller_removerJugador(listaJugadores);
             break;
             case 5:
+            	operara_Menu_Opcion5(listaJugadores, listaConfederaciones);
             	//PONER EN MENU LOS LISTADOS
-            	controller_listarJugadores(listaJugadores);
-            	controller_listarSelecciones(listaConfederaciones);
+
             break;
             case 6:
             	jug_convocar(listaJugadores, listaConfederaciones);

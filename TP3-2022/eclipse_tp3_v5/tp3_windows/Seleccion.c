@@ -107,7 +107,7 @@ int imprimirSeleccion(LinkedList* pArrayListSeleccion, int index)
 	}
 	return retorno;
 }
-int selec_buscar_Pais(LinkedList* listaConfederaciones, int id, char* paisEncontrado)
+/*int selec_buscar_Pais(LinkedList* listaConfederaciones, int id, char* paisEncontrado)
 {
 	int retorno=-1;
 	int cantidad;
@@ -121,6 +121,7 @@ int selec_buscar_Pais(LinkedList* listaConfederaciones, int id, char* paisEncont
 			pPaises=ll_get(listaConfederaciones, i);
 			if(id==(*(pPaises)).id)
 			{
+				selec_setConvocados(pPaises, convocados)
 				paisEncontrado=(*(pPaises+i)).pais;
 				printf("PAIS ENCONTRADO: %s",paisEncontrado);
 				retorno=0;
@@ -130,4 +131,4 @@ int selec_buscar_Pais(LinkedList* listaConfederaciones, int id, char* paisEncont
 	}
 
 	return retorno;
-}
+}*/

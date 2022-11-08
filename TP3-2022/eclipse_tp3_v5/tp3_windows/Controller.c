@@ -68,15 +68,15 @@ int controller_agregarJugador(LinkedList* pArrayListJugador)
 
 	Jugador* pJugador;
 	pJugador=jug_new();
-
+	//PASAR A FUNCION.
 	pArchivoId=fopen("id.txt", "r");
 	if(pArrayListJugador!=NULL && pJugador!=NULL && pArchivoId!=NULL)
 	{
 		while(!feof(pArchivoId))
 		{
 			retornoFscanf=fscanf(pArchivoId,"%d",&id);
-			printf("idAux %d\n",id);
-			printf("RETORNO SCANF: %d",retornoFscanf);
+			//printf("idAux %d\n",id);
+			//printf("RETORNO SCANF: %d",retornoFscanf);
 			if(retornoFscanf==1)
 			{
 				id=id+1;
@@ -91,13 +91,14 @@ int controller_agregarJugador(LinkedList* pArrayListJugador)
 
 		}
 		fclose(pArchivoId);
+		//VER SI LA SOBRE ESCRITURA LA PONGO EN OTRA OPCION
 		pArchivoId=fopen("id.txt", "w");
 		if(pArchivoId!=NULL)
 		{
 			fprintf(pArchivoId,"%d",id);
 		}
 		fclose(pArchivoId);
-		printf("NUEVO ID %d\n",id);
+		//printf("NUEVO ID %d\n",id);
 
 		if(ingresarCadenaCaracteres(100, nombreCompleto, "Ingrese nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n")==0 &&
 				ingresarIntConRango(&edad, "Ingrese edad del jugador.\t", "ERROR, Ingrese edad valida.", 16, 50)==0 &&
