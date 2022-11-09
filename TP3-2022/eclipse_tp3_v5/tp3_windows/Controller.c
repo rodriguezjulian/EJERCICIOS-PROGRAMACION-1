@@ -330,16 +330,33 @@ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJuga
  * \return int
  *
  */
-int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador)
+int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
-	char opcion [30];
-	selec_IngresarConfederacion(opcion);
+	char confederacion [30];
+	int opcion;
+	selec_IngresarConfederacion(confederacion);
+	selec_verificarConvocadosPorconfederacion(confederacion, pArrayListSeleccion);
+	printf("HOLA ");
+	//opcion=atoi(confederacion);
+	//printf("CONFEDERACION %s \n OPCION %d",confederacion, opcion);
+	/*if()
+	{
+
+	}*/
+	/*FILE* pArchivo;
+	pArchivo= fopen("listado");*/
+	/*switch("opcion")
+	{
+	case "AFC":
+	break;*/
 
 
-    return 1;
+	//}
+
+
+    return retorno;
 }
-
 
 
 /** \brief Carga los datos de los selecciones desde el archivo selecciones.csv (modo texto).

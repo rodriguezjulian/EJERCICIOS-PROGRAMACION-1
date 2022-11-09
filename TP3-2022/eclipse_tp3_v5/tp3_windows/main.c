@@ -12,7 +12,7 @@ int main()
 	setbuf(stdout,NULL);
     int option = 0;
     LinkedList* listaJugadores = ll_newLinkedList();
-    LinkedList* listaConfederaciones=ll_newLinkedList();
+    LinkedList* listaSelecciones=ll_newLinkedList();
 
 	//ingresarIntConRango(&option, "INGRESE SEGUN QUIERA OPERAR", "ERROR, Ingrese opcion valida", 1, 2);
     do{
@@ -32,7 +32,7 @@ int main()
             case 1:
 
             	controller_cargarJugadoresDesdeTexto("jugadores.csv",listaJugadores);
-            	controller_cargarSeleccionesDesdeTexto("selecciones.csv", listaConfederaciones);
+            	controller_cargarSeleccionesDesdeTexto("selecciones.csv", listaSelecciones);
             break;
             case 2:
             	controller_agregarJugador(listaJugadores);
@@ -45,20 +45,23 @@ int main()
             	controller_removerJugador(listaJugadores);
             break;
             case 5:
-            	operara_Menu_Opcion5(listaJugadores, listaConfederaciones);
+            	operara_Menu_Opcion5(listaJugadores, listaSelecciones);
             	//PONER EN MENU LOS LISTADOS
 
             break;
             case 6:
-            	operara_Menu_Opcion6(listaJugadores, listaConfederaciones);
+            	operara_Menu_Opcion6(listaJugadores, listaSelecciones);
 
             break;
             case 7:
              //controller_ordenarJugadores(listaJugadores);
-            	controller_ordenarSelecciones(listaConfederaciones);
+            	controller_ordenarSelecciones(listaSelecciones);
             break;
             case 8:
-            	//controller_guardarJugadoresModoBinario(path, pArrayListJugador);
+
+            	//selec_IngresarConfederacion(opcion);
+            	//selec_verificarConvocadosPorconfederacion(opcion, listaSelecciones);
+            	//controller_guardarJugadoresModoBinario(path, listaJugadores);
             break;
         }
     }while(option != 10);

@@ -116,8 +116,8 @@ int selec_IngresarConfederacion(char* opcion)
 
 	do
 	{
-		ingresarCadenaCaracteres(10, opcionAux, "Ingrese confederacion de la que desea guardar listado de jugadores.\n"
-				" AFC - CAF - CONCACAF -CONMEBOL - UEFA ", "ERROR,Ingrese conferacion valida.\n");
+		ingresarCadenaCaracteres(30, opcionAux, "Ingrese confederacion de la que desea guardar listado de jugadores.\n"
+				" AFC - CAF - CONCACAF - CONMEBOL - UEFA \n", "ERROR,Ingrese conferacion valida.\n");
 
 		//if(strcmp(opcionAux,"AFC") && opcionAux!="CAF" && opcionAux!="CONCACAF" && opcionAux!="CONMEBOL" && opcionAux!="UEFA")
 		if(strcmp(opcionAux,"AFC")==0 || strcmp(opcionAux,"CAF")==0 || strcmp(opcionAux,"CONCACAF")==0 || strcmp(opcionAux,"CONMEBOL")==0 || strcmp(opcionAux,"UEFA")==0)
@@ -134,6 +134,38 @@ int selec_IngresarConfederacion(char* opcion)
 
 	}while(flag==0);
 
+	return retorno;
+}
+//ME FIJO SI LOS PAISES DE LA CONFEDERACION SELECCIONADA TIENEN JUGADORES CONVOCADOS, EN CASO QUE EL CONTADOR SEA MAYOR A UNO YA SE PUEDE SEGUIR
+//RETORNO =0 ESTA TODO OK, HAY AL MENOS UN JUGADOR CONVOCADO EN LA CONFEDERACION.
+int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion)
+{
+	int retorno=-1;
+	Seleccion* pSeleccion;
+	int tam;
+	int convocados=0;
+	tam= ll_len(pArrayListSeleccion);
+
+	if(opcion!=NULL)
+	{
+		for(int i=0;i<tam;i++)
+		{
+			pSeleccion=ll_get(pArrayListSeleccion, i);
+			if(strcmp((*(pSeleccion)).confederacion,opcion)==0)
+			{
+				convocados=convocados+(*(pSeleccion)).convocados;
+			}
+		}
+	}
+	//printf("CONVOCADOS: %d\n",convocados);
+	if(convocados>0)
+	{
+		retorno=0;
+	}
+	else
+	{
+		printf("ERROR, Los paises que integran a la confederacion %s, NO cuentan con convocados.\n",opcion);
+	}
 	return retorno;
 }
 int selec_AsignarDescripcionPais(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador, int indice, char *descripcionPais)
