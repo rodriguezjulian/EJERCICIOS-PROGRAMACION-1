@@ -6,6 +6,8 @@
 #include "LinkedList.h"
 #include "parser.h"
 #include "ingresos.h"
+#include<string.h>
+
 /** \brief Carga los datos de los jugadores desde el archivo jugadores.csv (modo texto).
  *
  * \param path char*
@@ -272,7 +274,41 @@ int controller_removerJugador(LinkedList* pArrayListJugador)
  */
 int controller_ordenarJugadores(LinkedList* pArrayListJugador)
 {
-    return 1;
+	int retorno=0;
+		int orden;
+		int opcion;
+		if(pArrayListJugador!=NULL)
+		{
+			printf("+========================================+\n");
+			printf("|%*s|\n+========================================+\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n+========================================+\n",
+					-40,"              LISTAR",-40,"1.POR NACIONALIDAD.",-41,"2.POR SELECCIONES POR CONFEDERACIÓN.",
+					-40,"3.JUGADORES POR EDAD.",-40,"4.JUGADORES POR NOMBRE.");
+
+			ingresarIntConRango(&opcion, "Ingrese opcion segun desee listar.\n", "ERROR, Ingrese opcion valida.\n", 1, 4);
+			ingresarIntConRango(&orden, "Ingrese 1 para ordenar de forma ascedente o 0 para ordenar de manera descendente.\n", "ERROR, Ingrese numero valido.\n", 0, 1);
+			printf("<<<<<<<<<< Este proceso puede tardar unos segundos. >>>>>>>>>>\n");
+
+			switch(opcion)
+			{
+			case 1:
+				//jug_OrdenarPorNacionalidad
+				ll_sort(pArrayListJugador, jug_OrdenarPorNacionalidad, orden);
+			break;
+			case 2:
+			break;
+			case 3:
+				//jug_OrdenarPorEdad
+				ll_sort(pArrayListJugador, jug_OrdenarPorEdad, orden);
+			break;
+			case 4:
+				//jug_OrdenarPorNombre
+				ll_sort(pArrayListJugador, jug_OrdenarPorNombre, orden);
+			break;
+			}
+			controller_listarJugadores(pArrayListJugador);
+		}
+
+		return retorno;
 }
 
 /** \brief Guarda los datos de los jugadores en el archivo jugadores.csv (modo texto).
@@ -296,6 +332,11 @@ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJuga
  */
 int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador)
 {
+	int retorno=-1;
+	char opcion [30];
+	selec_IngresarConfederacion(opcion);
+
+
     return 1;
 }
 
@@ -378,7 +419,14 @@ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
  */
 int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
 {
-    return 1;
+	if(pArrayListSeleccion!=NULL)
+	{
+		ll_sort(pArrayListSeleccion, selec_OrdenarPorConfederacion, 0);
+		controller_listarSelecciones(pArrayListSeleccion);
+
+		//selec_OrdenarPorConfederacion(unaConderacion, otraConfederacion)
+	}
+	return 1;
 }
 
 /** \brief Guarda los datos de los selecciones en el archivo selecciones.csv (modo texto).

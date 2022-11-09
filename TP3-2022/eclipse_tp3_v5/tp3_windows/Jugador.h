@@ -58,6 +58,12 @@ int jug_convocar(LinkedList* pArrayListJugador, LinkedList* listaConfederaciones
 
 int operara_Menu_Opcion5(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
 
+int jug_OrdenarPorNombre(void* unJugador, void* otroJugador);
+int jug_OrdenarPorEdad(void* unJugador, void* otroJugador);
+int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
 
-int selec_buscarPorId(LinkedList* pArrayListSeleccion, int idBuscado, int *indice);
+int jug_Listar_Convocados(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
+int operara_Menu_Opcion6(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
+int operara_Menu_Opcion7(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
+
 #endif // jug_H_INCLUDED

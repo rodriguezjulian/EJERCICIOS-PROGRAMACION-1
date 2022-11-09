@@ -198,34 +198,7 @@ int imprimirJugador(LinkedList* pArrayListJugador, int index)
 	}
 	return retorno;
 }
-int selec_AsignarDescripcionPais(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador, int indice, char *descripcionPais)
-{
-	int retorno=-1;
-	Jugador* pJugador;
-	//int idSeleccion;//EL QUE TIENE LA ESTRUCTURA JUGADOR
-	int tam;
-	Seleccion* pSeleccion;
 
-	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
-	{
-		//PUNTERO A LA ESTRUCTURA TENIENDO EL INDICE
-		pJugador=ll_get(pArrayListJugador, indice);
-
-		//BUSCO EL TAMANIO DE LA LISTA DE SELECCIONES
-		tam=ll_len(pArrayListSeleccion);
-		for(int i=0;i<tam;i++)
-		{
-			pSeleccion=ll_get(pArrayListSeleccion, i);
-			if((*(pSeleccion)).id==(*(pJugador)).idSeleccion)
-			{
-				//PASO EL NOMBRE DEL PAIS
-				strcpy(descripcionPais, (*(pSeleccion)).pais);
-				break;
-			}
-		}
-	}
-	return retorno;
-}
 int jug_Listar_NoConvocados(LinkedList* pArrayListJugador)
 {
 	int retorno=-1;
@@ -255,7 +228,7 @@ int jug_Listar_NoConvocados(LinkedList* pArrayListJugador)
 	return retorno;
 }
 
-//ARME UNA NUEVA FUNCION PARA MOSTRAR A LOS JUGADORES CONVOCADOS Y AL NOMBRE DEL PAIS QUE LOS CONVOCO.
+//ARME UNA NUEVA FUNCION PARA MOSTRAR A LOS JUGADORES CONVOCADOS Y AL NOMBRE DEL PAIS QUE LOS CONVOCO (AGREGANDO ESTA FUNCIONALIDAD).
 int jug_Listar_Convocados(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -280,7 +253,7 @@ int jug_Listar_Convocados(LinkedList* pArrayListJugador, LinkedList* pArrayListS
 				selec_AsignarDescripcionPais(pArrayListSeleccion, pArrayListJugador, i, descripcionPais);
 				printf("|  %*d|%*s| %*d|%*s|%*s|    %*d|%*s|\n",
 						-4,(*(pJugador)).id,-40,(*(pJugador)).nombreCompleto,-3,(*(pJugador)).edad,-25,(*(pJugador)).posicion,
-						-18,(*(pJugador)).nacionalidad,-5,(*(pJugador)).idSeleccion,-15,descripcionPais);
+						-18,(*(pJugador)).nacionalidad,-5,(*(pJugador)).idSeleccion,-20,descripcionPais);
 				retorno=0;
 			}
 		}
@@ -290,28 +263,78 @@ int jug_Listar_Convocados(LinkedList* pArrayListJugador, LinkedList* pArrayListS
 	return retorno;
 }
 
-
-
-
-
-
-
-
-
-
-
-//REVISAR
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador)
 {
+	int retorno=-1;
+	char nacionalidadUno[30];
+	char nacionalidadDos[30];
 	int compara;
-	Jugador* jugadorUno;
-	Jugador* jugadorDos;
-	jugadorUno=(Jugador*)unJugador;
-	jugadorDos=(Jugador*)otroJugador;
-	compara=strcmp(jugadorUno->nacionalidad,jugadorDos->nacionalidad);
-	//ll_sort(listaJugadores, jug_OrdenarPorNacionalidad, 1);
-	return compara;
+	//ASIGNO
+	jug_getNacionalidad(unJugador, nacionalidadUno);
+	jug_getNacionalidad(otroJugador, nacionalidadDos);
+	compara=strcmp(nacionalidadUno,nacionalidadDos);
+	if(compara>0)//UNO MAYOR
+	{
+		retorno=1;
+	}
+	else
+	{
+		if(compara<0)//2 MAYOR
+		{
+			retorno=-1;
+		}
+	}
+	return retorno;
 }
+
+int jug_OrdenarPorNombre(void* unJugador, void* otroJugador)
+{
+	int compara;
+	int retorno=0;//son iguales
+	char nombreUno[100];
+	char nombreDos[100];
+	jug_getNombreCompleto(unJugador, nombreUno);
+	jug_getNombreCompleto(otroJugador, nombreDos);
+
+	compara=strcmp(nombreUno,nombreDos);
+	if(compara>0)//UNO MAYOR
+	{
+		retorno=1;
+	}
+	else
+	{
+		if(compara<0)//2 MAYOR
+		{
+			retorno=-1;
+		}
+	}
+	return retorno;
+}
+int jug_OrdenarPorEdad(void* unJugador, void* otroJugador)
+{
+	int retorno=0; //IGUALES
+	int edadUno;
+	int edadDos;
+
+	jug_getEdad(unJugador, &edadUno);
+	jug_getEdad(otroJugador, &edadDos);
+
+	if(edadUno>edadDos)//UNO MAYOR
+	{
+		retorno=1;
+	}
+	else
+	{
+		if(edadUno<edadDos)//2 MAYOR
+		{
+			retorno=-1;
+		}
+	}
+
+	return retorno;
+}
+
+
 int jug_BuscarIdMax(LinkedList* pArrayListJugador, int *idMaximo)
 {
 	int idMax;
@@ -530,55 +553,8 @@ int jug_Confirmar_Baja(LinkedList* pArrayListJugador, int indice, char* nombreJu
 	}
 	return retorno;
 }
-int selec_buscarPorId(LinkedList* pArrayListSeleccion, int idBuscado, int *indice)
-{
-	int retorno=-1;
-	int tam;
-	Seleccion* pSeleccion;
-	tam=ll_len(pArrayListSeleccion);
 
-	if(pArrayListSeleccion!=NULL)
-	{
 
-		for(int i=0;i<tam;i++)
-		{
-			pSeleccion=ll_get(pArrayListSeleccion, i);
-			if((*(pSeleccion)).id==idBuscado)
-			{
-				*indice=i;
-				retorno=0;
-				break;
-			}
-		}
-	}
-	return retorno;
-}
-int selec_Solicitar_Id(LinkedList* pArrayListSeleccion, int* indice)
-{
-	int retorno=-1;
-	int idPais;
-	Seleccion* pSeleccion;
-	if(pArrayListSeleccion!=NULL)
-	{
-		//SOLICITO ID.
-		ingresarIntConRango(&idPais, "Ingrese pais para el que desea convocar jugadores.\n", "ERROR, Ingerse ID valido,\n", 1, 32);
-		//CON EL ID, PASO A BUSCAR EL INDICE.
-		selec_buscarPorId(pArrayListSeleccion, idPais, &(*(indice)));
-		// BUSCO EL PUNTERO AL ELEMENTO TENIENDO EN CUENTA EL INDICE.
-		pSeleccion=ll_get(pArrayListSeleccion, *(indice));
-
-		if((*(pSeleccion)).convocados<22)
-		{
-			retorno=0;
-		}
-		else
-		{
-			printf("ERROR, La seleccion llego a su maximo de 22 convocados.\n");
-		}
-	}
-
-	return retorno;
-}
 int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -587,6 +563,7 @@ int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 	int convocados;//SI SE CONFIRMA LA CONVOCACION DEBO SUMAR 1 A LA CANTIDAD DE CONVOCADOS EXISTENTES
 	Seleccion* pSeleccion;
 	Jugador* pJugador;
+
 	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
 	{
 		//LISTO A LAS SELECCIONES
@@ -609,6 +586,7 @@ int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 				selec_setConvocados(pSeleccion, convocados);
 				//ASIGNO LA SELECCION AL JUGADOR
 				(*(pJugador)).idSeleccion=(*(pSeleccion)).id;
+				//*contadorConvocados=*contadorConvocados+1;
 				printf("<<<<<<<<<< %s fue CONVOCADO exitosamente por %s >>>>>>>>>>\n\n",(*(pJugador)).nombreCompleto,(*(pSeleccion)).pais);
 				retorno=0;
 			}
@@ -616,46 +594,98 @@ int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 			{
 				printf("ERROR, el jugador ya se encuentra convocado.\n");
 			}
-
 		}
-
-
-
-
-
 	}
 
 	return retorno;
 }
-/*int jug_convocar(LinkedList* pArrayListJugador, LinkedList* listaConfederaciones)
+int jug_Quitar_Convocado(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
 	int indice;
+	int indiceSeleccion;
+	//int indiceSeleccion;
+	Jugador* pJugador;
+	Seleccion* seleccion;
 
-	//INICIALIZO EL PUNTERO POR BUENAS PRACTICAS
-	Jugador* pJugador=NULL;
-	char pais[30];
-	if(pArrayListJugador!=NULL && listaConfederaciones!=NULL)
+	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
 	{
-		//SOLICITAR ID LLAMA A FUNCION PARA LISTAR JUGADORES.
-		jug_Solicitar_Id(pArrayListJugador, &indice, "Ingrese ID del jugador que desea convocar.\n");
-		pJugador=ll_get(pArrayListJugador, indice);
-		if((*(pJugador)).idSeleccion==0)
-		{
-			//controller_listarSelecciones(listaConfederaciones);
-			//printf("ID SELECCION")
-			//selec_buscar_Pais(listaConfederaciones, (*(pJugador)).idSeleccion, pais);
 
-			printf("Jugador convocado exitosamente para el pais de %s",pais);
+		/*controller_listarSelecciones(pArrayListSeleccion);
+		selec_Solicitar_Id(pArrayListSeleccion, indiceSeleccion);*/
+
+		jug_Listar_Convocados(pArrayListJugador, pArrayListSeleccion);
+		jug_Solicitar_Id(pArrayListJugador, &indice, "Ingrese ID del jugador que desar quitar de la convocatoria.\n");
+
+		pJugador=ll_get(pArrayListJugador, indice);
+		if((*(pJugador)).idSeleccion!=0)
+		{
+			selec_buscarPorId(pArrayListSeleccion, (*(pJugador)).idSeleccion, &indiceSeleccion);
+			seleccion=ll_get(pArrayListSeleccion, indiceSeleccion);
+
+			printf("CANTIDAD DE CONVOCADOS ANTES DE BAJAR %d\n",(*(seleccion)).convocados);
+				(*(seleccion)).convocados=(*(seleccion)).convocados-1;
+			printf("CANTIDAD DE CONVOCADOS DESPUES DE BAJAR %d\n",(*(seleccion)).convocados);
+		//PONGO EN 0 AL ID DE SELECCION DEL JUGADOR
+			(*(pJugador)).idSeleccion=0;
+			//RESTO 1 DEL CONTADOR DE CONVOCADOS
+			//*contadorConvocados=*contadorConvocados-1;
+			printf("<<<<<<<<<< %s bajado de la convocatoria exitosamente. >>>>>>>>>>\n",(*(pJugador)).nombreCompleto);
+
+
 		}
 		else
 		{
-		//	selec_buscar_Pais(listaConfederaciones, (*(pJugador)).idSeleccion, pais);
-			printf("ERROR, El jugador %s ya se encuentra convocado para la seleccion de %s.\n",(*(pJugador)).nombreCompleto,pais);
+			printf("ERROR, El id ingresado pertenece a un jugador NO convocado por ninguna seleccion.\n");
 		}
+
+
+	}
+
+
+	return retorno;
+}
+int operara_Menu_Opcion6(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
+{
+	int retorno=-1;
+	int opcion;
+	Seleccion* pSeleccion;
+	int tamSeleccion;
+	int flag=0;//SI AL RECORRER LA LINKEDLIST NO SE ENCUENTRA NINGUNA SELECCION CON CONVOCADOS, EL FLAG QUEDARA EN 0, NO SE PODRA ACCEDER
+	//A LA OPCION DE QUITAR CONVOCADOS Y SE MOSTRARA UN MENSAJE.
+	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
+	{
+		printf("+=========================================+\n");
+		printf("|%*s|\n|%*s|\n",-41,"         1.CONVOCAR JUGADOR",-41,"         2.QUITAR DE SELECCION");
+		printf("+=========================================+\n");
+		ingresarIntConRango(&opcion, "Ingrese opcion segun desee operar.\n", "ERROR, Elija opcion valida.\n", 1, 2);
+		switch(opcion)
+		{
+		case 1:
+			jug_convocar(pArrayListJugador, pArrayListSeleccion);
+		break;
+		case 2:
+			tamSeleccion=ll_len(pArrayListSeleccion);
+			for(int i=0;i<tamSeleccion;i++)
+			{
+				pSeleccion=ll_get(pArrayListSeleccion, i);
+				if((*(pSeleccion)).convocados!=0)
+				{
+					jug_Quitar_Convocado(pArrayListJugador, pArrayListSeleccion);
+					flag=1;
+					break;
+				}
+			}
+			if(flag==0)
+			{
+				printf("ERROR, No se pueden quitar convocados si aun no hay ninguno.\n");
+			}
+		break;
+		}
+
 	}
 	return retorno;
-}*/
+}
 int operara_Menu_Opcion5(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -678,12 +708,7 @@ int operara_Menu_Opcion5(LinkedList* pArrayListJugador, LinkedList* pArrayListSe
 
     		jug_Listar_Convocados(pArrayListJugador, pArrayListSeleccion);
     	break;
-
     	}
-
-
-
 	}
-
 	return retorno;
 }

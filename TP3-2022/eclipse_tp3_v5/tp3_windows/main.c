@@ -3,9 +3,10 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Jugador.h"
-
 #include "ingresos.h"
 
+
+#include "seleccion.h"
 int main()
 {
 	setbuf(stdout,NULL);
@@ -25,7 +26,7 @@ int main()
     			-50,"10.GUARDAR ARCHIVOS .CSV",-50,"11.SALIR","+==================================================+\n");
 
 
-    	ingresarIntConRango(&option, "INGRESE SEGUN QUIERA OPERAR", "ERROR, Ingrese opcion valida", 1, 6);
+    	ingresarIntConRango(&option, "INGRESE SEGUN QUIERA OPERAR", "ERROR, Ingrese opcion valida", 1, 10);
         switch(option)
         {
             case 1:
@@ -49,8 +50,15 @@ int main()
 
             break;
             case 6:
-            	jug_convocar(listaJugadores, listaConfederaciones);
-            	//MENU DE CONVOCADOS
+            	operara_Menu_Opcion6(listaJugadores, listaConfederaciones);
+
+            break;
+            case 7:
+             //controller_ordenarJugadores(listaJugadores);
+            	controller_ordenarSelecciones(listaConfederaciones);
+            break;
+            case 8:
+            	//controller_guardarJugadoresModoBinario(path, pArrayListJugador);
             break;
         }
     }while(option != 10);

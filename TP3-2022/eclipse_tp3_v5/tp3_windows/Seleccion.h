@@ -31,6 +31,13 @@ int selec_getConvocados(Seleccion* this,int* convocados);
 int imprimirSeleccion(LinkedList* pArrayListSeleccion, int index);
 int selec_buscar_Pais(LinkedList* listaConfederaciones, int idSeleccion, char* paisEncontrado);
 
+int selec_buscarPorId(LinkedList* pArrayListSeleccion, int idBuscado, int *indice);
+int selec_AsignarDescripcionPais(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador, int indice, char *descripcionPais);
+int selec_Solicitar_Id(LinkedList* pArrayListSeleccion, int* indice);
 
+int selec_OrdenarPorConfederacion(void* unaConderacion, void* otraConfederacion);
+
+
+int selec_IngresarConfederacion(char* opcion);
 
 #endif // selec_H_INCLUDED
