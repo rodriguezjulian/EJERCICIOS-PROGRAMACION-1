@@ -717,6 +717,7 @@ int jug_Quitar_Convocado(LinkedList* pArrayListJugador, LinkedList* pArrayListSe
 						{
 							//printf("CANTIDAD DE CONVOCADOS DESPUES DE BAJAR %d\n",selecConvocados);
 							retorno=0;
+							///CORREGIR PRINTF
 							printf("<<<<<<<<<< %s bajado de la convocatoria exitosamente. >>>>>>>>>>\n",(*(pJugador)).nombreCompleto);
 						}
 						else

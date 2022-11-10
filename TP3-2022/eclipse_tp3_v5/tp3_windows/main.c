@@ -4,7 +4,7 @@
 #include "Controller.h"
 #include "Jugador.h"
 #include "ingresos.h"
- #include<string.h>
+#include<string.h>
 
 #include "seleccion.h"
 int main()
@@ -13,8 +13,10 @@ int main()
     int option = 0;
     LinkedList* listaJugadores = ll_newLinkedList();
     LinkedList* listaSelecciones=ll_newLinkedList();
+    LinkedList* listaJugadoresBinario=ll_newLinkedList();
 
     char path[30];
+    strcpy(path,"ARCHIVO_BINARIO.bin");
 
 	//ingresarIntConRango(&option, "INGRESE SEGUN QUIERA OPERAR", "ERROR, Ingrese opcion valida", 1, 2);
     do{
@@ -37,7 +39,6 @@ int main()
             break;
             case 2:
             	controller_agregarJugador(listaJugadores);
-
             break;
             case 3:
             	controller_editarJugador(listaJugadores);
@@ -58,7 +59,9 @@ int main()
             break;
             case 8:
             	controller_guardarJugadoresModoBinario(path, listaJugadores,listaSelecciones);
-            	//printf("CONFEDERACION %s",path);
+            break;
+            case 9:
+            	controller_cargarJugadoresDesdeBinario(path, listaJugadoresBinario);
             break;
         }
     }while(option != 10);

@@ -43,6 +43,6 @@ int selec_OrdenarPorConfederacion(void* unaConderacion, void* otraConfederacion)
 
 
 int selec_IngresarConfederacion(char* opcion);
-int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion, int* convocados);
+int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion);
 int selec_restarConvocado(LinkedList* pArrayListSeleccion, int idSeleccion);
 #endif // selec_H_INCLUDED

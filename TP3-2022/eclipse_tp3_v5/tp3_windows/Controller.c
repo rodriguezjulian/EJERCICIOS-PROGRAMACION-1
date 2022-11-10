@@ -63,7 +63,31 @@ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
     return retorno;
 }
 
+/** \brief Listar jugadores
+ *
+ * \param path char*
+ * \param pArrayListJugador LinkedList*
+ * \return int
+ *
+ */
+int controller_listarJugadores(LinkedList* pArrayListJugador)
+{
+	int cantidad;
+	printf("+===========================================================================================================+\n");
+	printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n",-6,"  ID",-40,"         NOMBRE COMPLETO",-4,"EDAD",-25,"      POSICION",-18,"    NACIONALIDAD",-8,"ID SELEC.");
+	printf("+===========================================================================================================+\n");
+	if(pArrayListJugador)
+	{
+		cantidad=ll_len(pArrayListJugador);
+		for(int i=0;i<cantidad;i++)
+		{
+			imprimirJugador(pArrayListJugador,i);
 
+		}
+		printf("+===========================================================================================================+\n");
+	}
+    return 1;
+}
 
 /** \brief Carga los datos de los jugadores desde el archivo generado en modo binario.
  *
@@ -72,9 +96,32 @@ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
  * \return int
  *
  */
-int controller_cargarJugadoresDesdeBinario(char* path , LinkedList* pArrayListJugador)
+int controller_cargarJugadoresDesdeBinario(char* path , LinkedList* listaJugadoresBinario)
 {
-    return 1;
+	int retorno=-1;
+	FILE *pArchivo;
+	ll_clear(listaJugadoresBinario);
+	Jugador* jugadorAux;
+	int cantidad;
+	if(listaJugadoresBinario!=NULL)
+	{
+		pArchivo=fopen(path,"rb");
+		//VERIFICAR ARCHIVO DISTINTO DE NULL
+		while(!feof(pArchivo))
+		{
+			jugadorAux=jug_new();
+			//VERIFICAR ARCHIVO DISTINTO DE NULL
+			cantidad=fread(jugadorAux,sizeof(Jugador),1,pArchivo);
+			if(cantidad==1)
+			{
+				ll_add(listaJugadoresBinario, jugadorAux);
+			}
+		}
+		fclose(pArchivo);
+		controller_listarJugadores(listaJugadoresBinario);
+	}
+
+    return retorno;
 }
 
 /** \brief Alta de jugadores
@@ -163,31 +210,7 @@ int controller_agregarJugador(LinkedList* pArrayListJugador)
     return retorno;
 
 }
-/** \brief Listar jugadores
- *
- * \param path char*
- * \param pArrayListJugador LinkedList*
- * \return int
- *
- */
-int controller_listarJugadores(LinkedList* pArrayListJugador)
-{
-	int cantidad;
-	printf("+===========================================================================================================+\n");
-	printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n",-6,"  ID",-40,"         NOMBRE COMPLETO",-4,"EDAD",-25,"      POSICION",-18,"    NACIONALIDAD",-8,"ID SELEC.");
-	printf("+===========================================================================================================+\n");
-	if(pArrayListJugador)
-	{
-		cantidad=ll_len(pArrayListJugador);
-		for(int i=0;i<cantidad;i++)
-		{
-			imprimirJugador(pArrayListJugador,i);
 
-		}
-		printf("+===========================================================================================================+\n");
-	}
-    return 1;
-}
 
 /** \brief Modificar datos del jugador
  *
@@ -398,41 +421,68 @@ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJuga
 }
 
 
-int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, int cantidadConvocados, char* path)
+int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* path)
 {
+	//SACAR CANTIDADCONVOCADOS.
 	int retorno=-1;
 	Jugador* pJugador;
 	int tamJugadores;
-	//char nombresJugadoresAux[100];
+	int tamSelecciones;
+	Seleccion* pSeleccion;
 	tamJugadores=ll_len(pArrayListJugador);
-	//int arrayIdsAux[cantidadConvocados];
-	//int j=0;
+	tamSelecciones=ll_len(pArrayListSeleccion);
+	char selecConfederacion[30];
+	int selecId;
+	int jugIdSeleccion;
 
 	FILE* pArchivo;
-	pArchivo=fopen(path,"wb");
 
-	if(pArrayListSeleccion!=NULL)
+	if(pArrayListSeleccion!=NULL && pArrayListJugador!=NULL)
 	{
-
-			for(int i=0;i<tamJugadores;i++)
+		pArchivo=fopen(path,"wb");
+		for(int i=0;i<tamSelecciones;i++)
+		{
+			pSeleccion=ll_get(pArrayListSeleccion, i);
+			if(selec_getConfederacion(pSeleccion, selecConfederacion)==0 && selec_getId(pSeleccion, &selecId)==0)
 			{
-				if(strcmp(nombreConfederacion,"CONMEBOL"))
+			//	printf("CONFEDERACION %s\n LA OTRA CONFEDERACION %s\n ID %d",nombreConfederacion,selecConfederacion,selecId);
+				if(strcmp(nombreConfederacion,selecConfederacion)==0)
 				{
-					pJugador=ll_get(pArrayListJugador, i);
-					if((*(pJugador)).id==3 || (*(pJugador)).id==6 || (*(pJugador)).id==13 || (*(pJugador)).id==32)
+					//INGRESE A UN PAIS DE LA CONFEDERACION
+					for(int i=0;i<tamJugadores;i++)
 					{
-						//fwrite(pJugador,sizeof(Jugador),cantidadConvocados,pArchivo);
-						fwrite(pJugador,sizeof(Jugador),cantidadConvocados,pArchivo);
-						//fprintf();
+						pJugador=ll_get(pArrayListJugador, i);
+						if(jug_getSIdSeleccion(pJugador, &jugIdSeleccion)==0)
+						{
+							//EL JUGADOR PERTENECE A LA CONFEREDACION
+							if(selecId==jugIdSeleccion)
+							{
+								retorno=0;
+								fwrite(pJugador,sizeof(Jugador),1,pArchivo);
+							}
+						}
 					}
 				}
 			}
+
+		}
 		fclose(pArchivo);
 	}
 
 	return retorno;
 }
+	/*	if(strcmp(nombreConfederacion,"CONMEBOL")==0)
+				{
+					pJugador=ll_get(pArrayListJugador, i);
+					//HACER GETTER DEL ID
+					if((*(pJugador)).id==3 || (*(pJugador)).id==6 || (*(pJugador)).id==13 || (*(pJugador)).id==32)
+					{
+						fwrite(pJugador,sizeof(Jugador),1,pArchivo);
+						//fprintf();
+					}
+				}
 
+			fclose(pArchivo);*/
 
 
 /** \brief Guarda los datos de los jugadores en el archivo binario.
@@ -445,40 +495,29 @@ int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederac
 int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
-	/*char confederacion [30];
+	char confederacion [30];
 
-	FILE* pArchivo;
-	int cantidadConvocados;
-	//char nombresJugadoresAux[100];
-	int cantidadLeida;
-
-	Jugador pJugador;
-	//int tam;
-	//tam=ll_len(pArrayListJugador);
-
-	selec_IngresarConfederacion(confederacion);
-
-	selec_verificarConvocadosPorconfederacion(confederacion, pArrayListSeleccion,&cantidadConvocados);
-	//printf("CONVOCADOS %d",cantidadConvocados);
-	strcat(confederacion,".bin");
-	strcpy(path,confederacion);
-
-	jug_guardarJugadores(pArrayListSeleccion, confederacion, pArrayListJugador, cantidadConvocados, path);
-
-*/
-	/*while(!feof(pArchivo))
+	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
 	{
+		selec_IngresarConfederacion(confederacion);
 
-		cantidadLeida=fread(pJugador,sizeof(Jugador),cantidadConvocados,pArchivo);
-		if(cantidadLeida==1)
+		if(selec_verificarConvocadosPorconfederacion(confederacion, pArrayListSeleccion)==0)
 		{
-			printf("Nombre: %s",pJugador.nombreCompleto);
+			//ANALIZAR SI DEBO SOBREESCRIBIR O GENERAR NUEVOS ARCHIVOS.
+			if(jug_guardarJugadores(pArrayListSeleccion, confederacion, pArrayListJugador, path)==0)
+			{
+				printf("<<<<<<<<<< ARCHIVO BINARIO CREADO SATISFACTORIAMENTE >>>>>>>>>\n");
+			}
+			else
+			{
+				printf("<<<<<<<<<< ERROR AL INTENTAR CREAR ARCHIVO BINARIO >>>>>>>>>\n");
+			}
 		}
-
-
-	}*/
-
-
+		else
+		{
+			printf("ERROR, Los paises que integran a la confederacion %s, NO cuentan con convocados.\n",confederacion);
+		}
+	}
 	return retorno;
 }
 

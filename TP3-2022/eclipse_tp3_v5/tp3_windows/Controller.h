@@ -18,4 +18,4 @@ int controller_listarSelecciones(LinkedList* pArrayListSeleccion);
 int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion);
 int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion);
 
-int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, int cantidadConvocados, char* path);
+int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* path);
