@@ -46,21 +46,17 @@ int main()
             	controller_removerJugador(listaJugadores);
             break;
             case 5:
+            	//REVISAR QUE CONTROLLER PONER
             	operara_Menu_Opcion5(listaJugadores, listaSelecciones);
-            	//PONER EN MENU LOS LISTADOS
-
             break;
             case 6:
             	//REVISAR QUE CONTROLLER PONER
             	operara_Menu_Opcion6(listaJugadores, listaSelecciones);
-
             break;
             case 7:
             	controller_ordenarJugadores(listaJugadores, listaSelecciones);
-
             break;
             case 8:
-
             	controller_guardarJugadoresModoBinario(path, listaJugadores,listaSelecciones);
             	//printf("CONFEDERACION %s",path);
             break;

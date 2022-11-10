@@ -236,7 +236,12 @@ int jug_Listar_Convocados(LinkedList* pArrayListJugador, LinkedList* pArrayListS
 	int tam;
 	tam=ll_len(pArrayListJugador);
 	char descripcionPais[30];
-
+	char nacionalidad[30];
+	char nombreCompleto[100];
+	char posicion[30];
+	int id;
+	int edad;
+	int idSeleccion;
 	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
 	{
 		printf("+================================================================================================================================+\n");
@@ -248,16 +253,34 @@ int jug_Listar_Convocados(LinkedList* pArrayListJugador, LinkedList* pArrayListS
 		for(int i=0;i<tam;i++)
 		{
 			pJugador=ll_get(pArrayListJugador, i);
-			if((*(pJugador)).idSeleccion>0)
+			if(jug_getSIdSeleccion(pJugador, &idSeleccion)==0)
 			{
-				selec_AsignarDescripcionPais(pArrayListSeleccion, pArrayListJugador, i, descripcionPais);
-				printf("|  %*d|%*s| %*d|%*s|%*s|    %*d|%*s|\n",
-						-4,(*(pJugador)).id,-40,(*(pJugador)).nombreCompleto,-3,(*(pJugador)).edad,-25,(*(pJugador)).posicion,
-						-18,(*(pJugador)).nacionalidad,-5,(*(pJugador)).idSeleccion,-20,descripcionPais);
-				retorno=0;
+				//if((*(pJugador)).idSeleccion>0)
+				if(idSeleccion>0)
+				{
+					selec_AsignarDescripcionPais(pArrayListSeleccion, pArrayListJugador, i, descripcionPais);
+					if(jug_getEdad(pJugador, &edad)==0 &&
+							jug_getNacionalidad(pJugador, nacionalidad)==0 &&
+							jug_getNombreCompleto(pJugador, nombreCompleto)==0 &&
+							jug_getPosicion(pJugador, posicion)==0 &&
+							jug_getId(pJugador, &id)==0)
+					{
+						/*printf("|  %*d|%*s| %*d|%*s|%*s|    %*d|%*s|\n",
+								-4,(*(pJugador)).id,-40,(*(pJugador)).nombreCompleto,-3,(*(pJugador)).edad,-25,(*(pJugador)).posicion,
+								-18,(*(pJugador)).nacionalidad,-5,(*(pJugador)).idSeleccion,-20,descripcionPais);*/
+
+
+						printf("|  %*d|%*s| %*d|%*s|%*s|    %*d|%*s|\n",
+								-4,id,-40,nombreCompleto,-3,edad,-25,posicion,-18,nacionalidad,-5,idSeleccion,-20,descripcionPais);
+						retorno=0;
+					}
+
+				}
 			}
+
 		}
 		printf("+================================================================================================================================+\n");
+
 	}
 
 	return retorno;
@@ -378,6 +401,7 @@ int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice)
 {
 	int retorno=-1;
 	Jugador* AuxJugador;
+	int idAux;
 	if(pArrayListJugador!=NULL)
 	{
 		int tam= ll_len(pArrayListJugador);
@@ -387,13 +411,18 @@ int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice)
 			//printf("ENTRE AL FOR DE BUSCAR POR ID\n");
 			AuxJugador=ll_get(pArrayListJugador, i);
 			//NO DEBO HACER (*(AuxJugador+i).id PORQUE YA ll_get me retorna puntero a indice especificado, ademas el tema de trabajar con posiciones consecutivas o no.
-			if((*(AuxJugador)).id==idBuscado)
+			//if((*(AuxJugador)).id==idBuscado)
+			if(jug_getId(AuxJugador, &idAux)==0)
 			{
-				*indice=i;
-				//printf("POSICION %d\n",*posicion);
-				retorno=0;
-				break;
+				if(idAux==idBuscado)
+				{
+					*indice=i;
+					//printf("POSICION %d\n",*posicion);
+					retorno=0;
+					break;
+				}
 			}
+
 		}
 	}
 	return retorno;
@@ -412,21 +441,21 @@ int jug_Editar_NombreCompleto(LinkedList* pArrayListJugador , int indice)
 		{
 			ingresarCadenaCaracteres(100, nuevoNombre, "Ingrese nuevo nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n");
 
-			jug_getNombreCompleto(pJugador, viejoNombre);
-
-
-			//retornoSrtcmp=strcmp((*(pJugador)).nombreCompleto, nuevoNombre);
-			retornoSrtcmp=strcmp(viejoNombre, nuevoNombre);
-			if(retornoSrtcmp==0)
+			if(jug_getNombreCompleto(pJugador, viejoNombre)==0)
 			{
-				printf("ERROR, El nombre ingresado es exactamente igual al existente\n");
-			}
-			else
-			{
-				jug_setNombreCompleto(pJugador, nuevoNombre);
-				printf("\n<<<<<<<<<< MODIFICACION SATISFACTORIA - NUEVO NOMBRE: %s >>>>>>>>>\n\n",nuevoNombre);
-				//printf("\n<<<<<<<<<<NUEVO NOMBRE %s>>>>>>>>>>\n", nuevoNombre);
-				retorno=0;
+				//retornoSrtcmp=strcmp((*(pJugador)).nombreCompleto, nuevoNombre);
+				retornoSrtcmp=strcmp(viejoNombre, nuevoNombre);
+				if(retornoSrtcmp==0)
+				{
+					printf("ERROR, El nombre ingresado es exactamente igual al existente\n");
+				}
+				else
+				{
+					jug_setNombreCompleto(pJugador, nuevoNombre);
+					printf("\n<<<<<<<<<< MODIFICACION SATISFACTORIA - NUEVO NOMBRE: %s >>>>>>>>>\n\n",nuevoNombre);
+					//printf("\n<<<<<<<<<<NUEVO NOMBRE %s>>>>>>>>>>\n", nuevoNombre);
+					retorno=0;
+				}
 			}
 		}while(retornoSrtcmp==0);
 	}
@@ -442,22 +471,31 @@ int jug_Editar_Edad(LinkedList* pArrayListJugador , int indice)
 	Jugador* pJugador;
 	pJugador=ll_get(pArrayListJugador, indice);
 	int nuevaEdad;
-
+	int viejaEdad;
 	if(pArrayListJugador!=NULL)
 	{
 		do
 		{
 			ingresarIntConRango(&nuevaEdad, "Ingrese nueva edad del jugador.(De 16 a 50 anios)\t", "ERROR, Ingrese edad valida.", 16, 50);
-			if((*(pJugador)).edad==nuevaEdad)
+			if(jug_getEdad(pJugador, &viejaEdad)==0)
 			{
-				printf("ERROR, La edad ingresada debe ser distinta a la existente actualmente.\n");
+				//if((*(pJugador)).edad==nuevaEdad)
+				if(viejaEdad==nuevaEdad)
+				{
+					printf("ERROR, La edad ingresada debe ser distinta a la existente actualmente.\n");
+				}
+				else
+				{
+					jug_setEdad(pJugador, nuevaEdad);
+					printf("\n<<<<<<<<<< MODIFICACION SATISFACTORIA - NUEVA EDAD %d>>>>>>>>>>\n",nuevaEdad);
+					retorno=0;
+				}
 			}
 			else
 			{
-				jug_setEdad(pJugador, nuevaEdad);
-				printf("\n<<<<<<<<<< MODIFICACION SATISFACTORIA - NUEVA EDAD %d>>>>>>>>>>\n",nuevaEdad);
-				retorno=0;
+				printf("ERROR,al intentar acceder a la anterior edad.\n");
 			}
+
 
 		}while(retorno==-1);
 	}
@@ -473,25 +511,34 @@ int jug_Editar_Posicion(LinkedList* pArrayListJugador , int indice)
 	Jugador* pJugador;
 	pJugador=ll_get(pArrayListJugador, indice);
 	char nuevaPosicion [30];
-	int retornoSrtcmp=0;//LO INICIALIZO POR SI EL USUARIO MODIFICA MAS DE UNA VEZ EL CAMPO.
+	//int retornoSrtcmp=0;//LO INICIALIZO POR SI EL USUARIO MODIFICA MAS DE UNA VEZ EL CAMPO.
+	char viejaPosicion[30];
 
 	if(pArrayListJugador!=NULL)
 	{
 		do
 		{
 			ingresarCadenaCaracteres(30, nuevaPosicion, "Ingrese nueva posicion del jugador.\nArquero - Defensor - Delantero - Mediocampista\t", "ERROR, Ingrese posicion valida\n");
-			retornoSrtcmp=strcmp((*(pJugador)).posicion, nuevaPosicion);
-			if(retornoSrtcmp==0)
+			//retornoSrtcmp=strcmp((*(pJugador)).posicion, nuevaPosicion);
+			if(jug_getPosicion(pJugador, viejaPosicion)==0)
 			{
-				printf("ERROR, La posicion ingresada es exactamente igual a la existente\n");
+				if(strcmp(viejaPosicion, nuevaPosicion)==0)
+				{
+					printf("ERROR, La posicion ingresada es exactamente igual a la existente\n");
+				}
+				else
+				{
+					jug_setPosicion(pJugador, nuevaPosicion);
+					printf("\n<<<<<<<<<< MODIFICACION SATISFACTORIA - NUEVA POSICION %s >>>>>>>>>>\n",nuevaPosicion);
+					retorno=0;
+				}
 			}
 			else
 			{
-				jug_setPosicion(pJugador, nuevaPosicion);
-				printf("\n<<<<<<<<<< MODIFICACION SATISFACTORIA - NUEVA POSICION %s >>>>>>>>>>\n",nuevaPosicion);
-				retorno=0;
+				printf("ERROR al inentar acceder a la anterior posicion.\n");
 			}
-		}while(retornoSrtcmp==0);
+
+		}while(retorno==-1);
 	}
 	else
 	{
@@ -505,25 +552,39 @@ int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice)
 	Jugador* pJugador;
 	pJugador=ll_get(pArrayListJugador, indice);
 	char nuevaNacionalidad[30];
-	int retornoSrtcmp=0;//LO INICIALIZO POR SI EL USUARIO MODIFICA MAS DE UNA VEZ EL CAMPO.
+	char nacionalidadVieja[30];
+	//int retornoSrtcmp=0;//LO INICIALIZO POR SI EL USUARIO MODIFICA MAS DE UNA VEZ EL CAMPO.
 
 	if(pArrayListJugador!=NULL)
 	{
 		do
 		{
 			ingresarCadenaCaracteres(30, nuevaNacionalidad, "Ingrese nueva nacionalidad del jugador.\t", "ERROR, Ingrese nacionalidad valida.\n");
-			retornoSrtcmp=strcmp((*(pJugador)).nacionalidad, nuevaNacionalidad);
-			if(retornoSrtcmp==0)
+			if(jug_getNacionalidad(pJugador, nacionalidadVieja)==0)
 			{
-				printf("ERROR, La nacionalidad ingresada es exactamente igual a la existente\n");
+				if(strcmp(nacionalidadVieja, nuevaNacionalidad)==0)
+				{
+					printf("ERROR, La nacionalidad ingresada es exactamente igual a la existente\n");
+				}
+				else
+				{
+					if(jug_setNacionalidad(pJugador, nuevaNacionalidad)==0)
+					{
+						printf("\n<<<<<<<<<< MODIFICACION SATISFACTORIA - NUEVA NACIONALIDAD %s >>>>>>>>>\n",nuevaNacionalidad);
+						retorno=0;
+					}
+					else
+					{
+						printf("ERROR al setear la nueva nacionalidad.\n");
+					}
+				}
 			}
 			else
 			{
-				jug_setNacionalidad(pJugador, nuevaNacionalidad);
-				printf("\n<<<<<<<<<< MODIFICACION SATISFACTORIA - NUEVA NACIONALIDAD %s >>>>>>>>>\n",nuevaNacionalidad);
-				retorno=0;
+				printf("ERROR al intentar acceder a la anterior nacionalidad.\n");
 			}
-		}while(retornoSrtcmp==0);
+
+		}while(retorno==-1);
 	}
 	else
 	{
@@ -563,6 +624,8 @@ int jug_Confirmar_Baja(LinkedList* pArrayListJugador, int indice, char* nombreJu
 int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
+	int idSeleccion;
+	int jugIdSeleccion;
 	int indiceSeleccion;
 	int indiceJugador;
 	int convocados;//SI SE CONFIRMA LA CONVOCACION DEBO SUMAR 1 A LA CANTIDAD DE CONVOCADOS EXISTENTES
@@ -573,32 +636,40 @@ int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 	{
 		//LISTO A LAS SELECCIONES
 		controller_listarSelecciones(pArrayListSeleccion);
-		//SOLICITO ID VALIDANDO DESDE ESTA MISMA FUNCION A TRAVEZ DE LLAMAR A selec_buscarPorId QUE EL PAIS NO HAYA LLEGADO A 22 CONVOCADOS.
+		//SOLICITO ID VALIDANDO DESDE ESTA MISMA FUNCION A TRAVEZ DE LLAMAR A selec_Solicitar_Id QUE EL PAIS NO HAYA LLEGADO A 22 CONVOCADOS.
 		if(selec_Solicitar_Id(pArrayListSeleccion, &indiceSeleccion)==0)
 		{
 			jug_Listar_NoConvocados( pArrayListJugador);
 
 			jug_Solicitar_Id(pArrayListJugador, &indiceJugador, "Ingrese ID de jugador que desea convocar\t");
-			//PIEDO EL PUNTERO AL JUGADOR TENIENDO EN CUENTA EL INDICE.
+			//PIDO EL PUNTERO AL JUGADOR TENIENDO EN CUENTA EL INDICE.
 			pJugador=ll_get(pArrayListJugador, indiceJugador);
-			if((*(pJugador)).idSeleccion==0)
+			//if((*(pJugador)).idSeleccion==0)
+
+			//APUNTO A LA ESTRUCUTRA DE SELECCION.
+			pSeleccion=ll_get(pArrayListSeleccion, indiceSeleccion);
+
+			if(jug_getSIdSeleccion(pJugador, &jugIdSeleccion)==0 && selec_getConvocados(pSeleccion, &convocados)==0 && selec_getId(pSeleccion, &idSeleccion)==0)
 			{
-				//APUNTO A LA ESTRUCUTRA DE SELECCION.
-				pSeleccion=ll_get(pArrayListSeleccion, indiceSeleccion);
-				//SUMO 1 A LOS CONVOCADOS YA EXISTENTES.
-				convocados=(*(pSeleccion)).convocados+1;
-				//LO SETEO.
-				selec_setConvocados(pSeleccion, convocados);
-				//ASIGNO LA SELECCION AL JUGADOR
-				(*(pJugador)).idSeleccion=(*(pSeleccion)).id;
-				//*contadorConvocados=*contadorConvocados+1;
-				printf("<<<<<<<<<< %s fue CONVOCADO exitosamente por %s >>>>>>>>>>\n\n",(*(pJugador)).nombreCompleto,(*(pSeleccion)).pais);
-				retorno=0;
+				printf("ID SELECCION: %d\n",idSeleccion);
+				if(jugIdSeleccion==0)
+				{
+					//SUMO 1 A LOS CONVOCADOS YA EXISTENTES.
+					convocados=convocados+1;
+					//SETEO A LA SELECCION 1 CONVOCADO + Y AL JUGADOR EL ID DE LA SELECCION
+					if(selec_setConvocados(pSeleccion, convocados)==0 && jug_setIdSeleccion(pJugador, idSeleccion)==0)
+					{
+						//(*(pJugador)).idSeleccion=(*(pSeleccion)).id;
+						printf("<<<<<<<<<< %s fue CONVOCADO exitosamente por %s >>>>>>>>>>\n\n",(*(pJugador)).nombreCompleto,(*(pSeleccion)).pais);
+						retorno=0;
+					}
+				}
+				else
+				{
+					printf("ERROR, el jugador ya se encuentra convocado.\n");
+				}
 			}
-			else
-			{
-				printf("ERROR, el jugador ya se encuentra convocado.\n");
-			}
+
 		}
 	}
 
@@ -611,43 +682,64 @@ int jug_Quitar_Convocado(LinkedList* pArrayListJugador, LinkedList* pArrayListSe
 	int indiceSeleccion;
 	//int indiceSeleccion;
 	Jugador* pJugador;
-	Seleccion* seleccion;
+	int jugIdSeleccion;
+	char nombreCompleto[100];
+	int selecConvocados;
+	Seleccion* pSeleccion;
 
 	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
 	{
-
-		/*controller_listarSelecciones(pArrayListSeleccion);
-		selec_Solicitar_Id(pArrayListSeleccion, indiceSeleccion);*/
 
 		jug_Listar_Convocados(pArrayListJugador, pArrayListSeleccion);
 		jug_Solicitar_Id(pArrayListJugador, &indice, "Ingrese ID del jugador que desar quitar de la convocatoria.\n");
 
 		pJugador=ll_get(pArrayListJugador, indice);
-		if((*(pJugador)).idSeleccion!=0)
+		if(jug_getSIdSeleccion(pJugador, &jugIdSeleccion)==0 && jug_getNombreCompleto(pJugador, nombreCompleto)==0)
 		{
-			selec_buscarPorId(pArrayListSeleccion, (*(pJugador)).idSeleccion, &indiceSeleccion);
-			seleccion=ll_get(pArrayListSeleccion, indiceSeleccion);
+			if(jugIdSeleccion!=0)
+			{
+				//if(selec_buscarPorId(pArrayListSeleccion, (*(pJugador)).idSeleccion, &indiceSeleccion)==0)
+				if(selec_buscarPorId(pArrayListSeleccion, jugIdSeleccion, &indiceSeleccion)==0)
+				{
+					pSeleccion=ll_get(pArrayListSeleccion, indiceSeleccion);
+					if(selec_getConvocados(pSeleccion, &selecConvocados)==0)
+					{
+						//printf("CANTIDAD DE CONVOCADOS ANTES DE BAJAR %d\n",selecConvocados);
+						//1 CONVOCADO MENOS - LUEGO SETEO ESTE CAMBIO
+						selecConvocados=selecConvocados-1;
+						//(*(seleccion)).convocados=(*(seleccion)).convocados-1
 
-			printf("CANTIDAD DE CONVOCADOS ANTES DE BAJAR %d\n",(*(seleccion)).convocados);
-				(*(seleccion)).convocados=(*(seleccion)).convocados-1;
-			printf("CANTIDAD DE CONVOCADOS DESPUES DE BAJAR %d\n",(*(seleccion)).convocados);
-		//PONGO EN 0 AL ID DE SELECCION DEL JUGADOR
-			(*(pJugador)).idSeleccion=0;
-			//RESTO 1 DEL CONTADOR DE CONVOCADOS
-			//*contadorConvocados=*contadorConvocados-1;
-			printf("<<<<<<<<<< %s bajado de la convocatoria exitosamente. >>>>>>>>>>\n",(*(pJugador)).nombreCompleto);
-
-
+						//PONGO EN 0 AL ID DE SELECCION DEL JUGADOR
+						//(*(pJugador)).idSeleccion=0;
+						jugIdSeleccion=0;
+						//SETEO NUEVOS VALORES PARA EL JUGADOR (idSeleccion) y para la seleccion 1 convocado menos
+						if(jug_setIdSeleccion(pJugador, jugIdSeleccion)==0 && selec_setConvocados(pSeleccion, selecConvocados)==0)
+						{
+							//printf("CANTIDAD DE CONVOCADOS DESPUES DE BAJAR %d\n",selecConvocados);
+							retorno=0;
+							printf("<<<<<<<<<< %s bajado de la convocatoria exitosamente. >>>>>>>>>>\n",(*(pJugador)).nombreCompleto);
+						}
+						else
+						{
+							printf("ERROR al setear el id de seleccion del jugador en 0 / al setear la cantidad de convocados nueva de la seleccion.\n");
+						}
+					}
+					else
+					{
+						printf("ERROR al buscar el index por desde el ID.\n");
+					}
+				}
+			}
+			else
+			{
+				printf("ERROR, El id ingresado pertenece a un jugador NO convocado por ninguna seleccion.\n");
+			}
 		}
 		else
 		{
-			printf("ERROR, El id ingresado pertenece a un jugador NO convocado por ninguna seleccion.\n");
+			printf("ERROR al intentar acceder al id de la seleccion / al nombre del jugador.\n");
 		}
-
-
 	}
-
-
 	return retorno;
 }
 int operara_Menu_Opcion6(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
@@ -656,6 +748,7 @@ int operara_Menu_Opcion6(LinkedList* pArrayListJugador, LinkedList* pArrayListSe
 	int opcion;
 	Seleccion* pSeleccion;
 	int tamSeleccion;
+	int selecConvocados;
 	int flag=0;//SI AL RECORRER LA LINKEDLIST NO SE ENCUENTRA NINGUNA SELECCION CON CONVOCADOS, EL FLAG QUEDARA EN 0, NO SE PODRA ACCEDER
 	//A LA OPCION DE QUITAR CONVOCADOS Y SE MOSTRARA UN MENSAJE.
 	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
@@ -674,11 +767,19 @@ int operara_Menu_Opcion6(LinkedList* pArrayListJugador, LinkedList* pArrayListSe
 			for(int i=0;i<tamSeleccion;i++)
 			{
 				pSeleccion=ll_get(pArrayListSeleccion, i);
-				if((*(pSeleccion)).convocados!=0)
+
+				if(selec_getConvocados(pSeleccion, &selecConvocados)==0)
 				{
-					jug_Quitar_Convocado(pArrayListJugador, pArrayListSeleccion);
-					flag=1;
-					break;
+					//if((*(pSeleccion)).convocados!=0)
+					if(selecConvocados!=0)
+					{
+						if(jug_Quitar_Convocado(pArrayListJugador, pArrayListSeleccion)==0)
+						{
+							retorno=0;
+							flag=1;
+							break;
+						}
+					}
 				}
 			}
 			if(flag==0)

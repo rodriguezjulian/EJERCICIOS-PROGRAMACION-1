@@ -87,11 +87,11 @@ int selec_getConvocados(Seleccion* this,int* convocados)
 int imprimirSeleccion(LinkedList* pArrayListSeleccion, int index)
 {
 	int retorno=-1;
-	Seleccion* seleccionAux;
 	int id;
 	char pais[50];
 	char confederacion[50];
 	int convocados;
+	Seleccion* seleccionAux;
 	seleccionAux=ll_get(pArrayListSeleccion, index);
 
 	if(pArrayListSeleccion!=NULL && index>-1)
@@ -144,7 +144,8 @@ int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayLi
 	Seleccion* pSeleccion;
 	int tam;
 	int convocadosAux=0;
-
+	char selecConfederacion[30];
+	int selecConvocados;
 	tam= ll_len(pArrayListSeleccion);
 
 	if(opcion!=NULL)
@@ -155,12 +156,20 @@ int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayLi
 		{
 			pSeleccion=ll_get(pArrayListSeleccion, i);
 			//RECIBI POR PARAMETRO A LA CONFEDERACION ELEGIDA, AHORA ME FIJO SI LAS SELECCIONES CON ESA CONFEDERACION, TIENEN CONVOCADOS
-
-			if(strcmp((*(pSeleccion)).confederacion,opcion)==0 && (*(pSeleccion)).convocados>0)
+			if(selec_getConfederacion(pSeleccion, selecConfederacion)==0 && selec_getConvocados(pSeleccion, &selecConvocados)==0)
 			{
-				//printf("IF DEL SRTCMP");
-				convocadosAux=convocadosAux+(*(pSeleccion)).convocados;
+				//if(strcmp((*(pSeleccion)).confederacion,opcion)==0 && (*(pSeleccion)).convocados>0)
+				if(strcmp(selecConfederacion,opcion)==0 && selecConvocados>0)
+				{
+					//printf("IF DEL SRTCMP");
+					convocadosAux=convocadosAux+selecConvocados;
+				}
 			}
+			else
+			{
+				printf("ERROR al intentar acceder a la confederacion / cantidad de convocados.\n");
+			}
+
 		}
 		if(convocadosAux>0)
 		{
@@ -209,6 +218,7 @@ int selec_buscarPorId(LinkedList* pArrayListSeleccion, int idBuscado, int *indic
 	int retorno=-1;
 	int tam;
 	Seleccion* pSeleccion;
+	int selecId;
 	tam=ll_len(pArrayListSeleccion);
 
 	if(pArrayListSeleccion!=NULL)
@@ -217,11 +227,19 @@ int selec_buscarPorId(LinkedList* pArrayListSeleccion, int idBuscado, int *indic
 		for(int i=0;i<tam;i++)
 		{
 			pSeleccion=ll_get(pArrayListSeleccion, i);
-			if((*(pSeleccion)).id==idBuscado)
+			if(selec_getId(pSeleccion, &selecId)==0)
 			{
-				*indice=i;
-				retorno=0;
-				break;
+				//if((*(pSeleccion)).id==idBuscado)
+				if(selecId==idBuscado)
+				{
+					*indice=i;
+					retorno=0;
+					break;
+				}
+			}
+			else
+			{
+				printf("ERROR al obtener el id de la seleccion.\n");
 			}
 		}
 	}
@@ -232,23 +250,31 @@ int selec_Solicitar_Id(LinkedList* pArrayListSeleccion, int* indice)
 	int retorno=-1;
 	int idPais;
 	Seleccion* pSeleccion;
+	int selecConvocados;
 	if(pArrayListSeleccion!=NULL)
 	{
 		//SOLICITO ID.
 		ingresarIntConRango(&idPais, "Ingrese pais para el que desea convocar jugadores.\n", "ERROR, Ingerse ID valido,\n", 1, 32);
 		//CON EL ID, PASO A BUSCAR EL INDICE.
-		selec_buscarPorId(pArrayListSeleccion, idPais, &(*(indice)));
-		// BUSCO EL PUNTERO AL ELEMENTO TENIENDO EN CUENTA EL INDICE.
-		pSeleccion=ll_get(pArrayListSeleccion, *(indice));
+		if(selec_buscarPorId(pArrayListSeleccion, idPais, &(*(indice)))==0)
+		{
+			// BUSCO EL PUNTERO AL ELEMENTO TENIENDO EN CUENTA EL INDICE.
+			pSeleccion=ll_get(pArrayListSeleccion, *(indice));
+			if(selec_getConvocados(pSeleccion, &selecConvocados)==0)
+			{
+				//if((*(pSeleccion)).convocados<22)
+				if(selecConvocados<22)
+				{
+					retorno=0;
+				}
+				else
+				{
+					printf("ERROR, La seleccion llego a su maximo de 22 convocados.\n");
+				}
+			}
 
-		if((*(pSeleccion)).convocados<22)
-		{
-			retorno=0;
 		}
-		else
-		{
-			printf("ERROR, La seleccion llego a su maximo de 22 convocados.\n");
-		}
+
 	}
 	return retorno;
 }

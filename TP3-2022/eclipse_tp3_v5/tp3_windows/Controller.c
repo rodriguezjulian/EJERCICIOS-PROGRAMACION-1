@@ -111,12 +111,12 @@ int controller_agregarJugador(LinkedList* pArrayListJugador)
 			if(retornoFscanf==1)
 			{
 				id=id+1;
-				puts("SE ABRIO OK\n");
+				//puts("SE ABRIO OK\n");
 
 			}
 			else
 			{
-				puts("FALLA EL FSCANF\n");
+				//puts("FALLA EL FSCANF\n");
 				break;
 			}
 
@@ -415,7 +415,7 @@ int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederac
 int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
-	char confederacion [30];
+	/*char confederacion [30];
 
 	FILE* pArchivo;
 	int cantidadConvocados;
@@ -435,7 +435,7 @@ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJu
 
 	jug_guardarJugadores(pArrayListSeleccion, confederacion, pArrayListJugador, cantidadConvocados, path);
 
-
+*/
 	/*while(!feof(pArchivo))
 	{
 
