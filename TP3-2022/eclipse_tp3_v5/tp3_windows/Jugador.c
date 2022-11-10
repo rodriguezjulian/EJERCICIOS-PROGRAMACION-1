@@ -608,7 +608,7 @@ int jug_Confirmar_Baja(LinkedList* pArrayListJugador, int indice, char* nombreJu
 		{
 			printf("<<<<<<<<<< BAJA CONFIRMADA >>>>>>>>>\n");
 			retorno=0;
-			ll_remove(pArrayListJugador, indice);
+
 		}
 	}while(verificarCaracterSN(confirmacion)==-1);
 	//ARMO UN NUEVO IF PARA ESTE MSJ YA QUE SI LO PONGO COMO ELSE DENTRO DEL do{}while(), CADA VEZ QUE EL USUARIO INGRESE
@@ -651,7 +651,7 @@ int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 
 			if(jug_getSIdSeleccion(pJugador, &jugIdSeleccion)==0 && selec_getConvocados(pSeleccion, &convocados)==0 && selec_getId(pSeleccion, &idSeleccion)==0)
 			{
-				printf("ID SELECCION: %d\n",idSeleccion);
+				//printf("ID SELECCION: %d\n",idSeleccion);
 				if(jugIdSeleccion==0)
 				{
 					//SUMO 1 A LOS CONVOCADOS YA EXISTENTES.

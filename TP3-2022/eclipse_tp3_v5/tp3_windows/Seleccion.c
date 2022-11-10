@@ -213,38 +213,7 @@ int selec_AsignarDescripcionPais(LinkedList* pArrayListSeleccion, LinkedList* pA
 	}
 	return retorno;
 }
-int selec_buscarPorId(LinkedList* pArrayListSeleccion, int idBuscado, int *indice)
-{
-	int retorno=-1;
-	int tam;
-	Seleccion* pSeleccion;
-	int selecId;
-	tam=ll_len(pArrayListSeleccion);
 
-	if(pArrayListSeleccion!=NULL)
-	{
-
-		for(int i=0;i<tam;i++)
-		{
-			pSeleccion=ll_get(pArrayListSeleccion, i);
-			if(selec_getId(pSeleccion, &selecId)==0)
-			{
-				//if((*(pSeleccion)).id==idBuscado)
-				if(selecId==idBuscado)
-				{
-					*indice=i;
-					retorno=0;
-					break;
-				}
-			}
-			else
-			{
-				printf("ERROR al obtener el id de la seleccion.\n");
-			}
-		}
-	}
-	return retorno;
-}
 int selec_Solicitar_Id(LinkedList* pArrayListSeleccion, int* indice)
 {
 	int retorno=-1;
@@ -298,6 +267,73 @@ int selec_OrdenarPorConfederacion(void* unaConderacion, void* otraConfederacion)
 		if(compara<0)//2 MAYOR
 		{
 			retorno=-1;
+		}
+	}
+	return retorno;
+}
+int selec_buscarPorId(LinkedList* pArrayListSeleccion, int idBuscado, int *indice)
+{
+	int retorno=-1;
+	int tam;
+	Seleccion* pSeleccion=NULL;
+	int selecId;
+	tam=ll_len(pArrayListSeleccion);
+
+	if(pArrayListSeleccion!=NULL)
+	{
+		//printf("ENTRO 0\n");
+		for(int i=0;i<tam;i++)
+		{
+			//printf("ENTRO 1\n");
+			pSeleccion=ll_get(pArrayListSeleccion, i);
+			//printf("ENTRO 2\n");
+			if(selec_getId(pSeleccion, &selecId)==0)
+			{
+				//printf("ENTRO 3\n");
+				//if((*(pSeleccion)).id==idBuscado)
+				if(selecId==idBuscado)
+				{
+					//printf("ENTRO 4\n");
+					*indice=i;
+					retorno=0;
+					break;
+				}
+			}
+			else
+			{
+				printf("ERROR al obtener el id de la seleccion.\n");
+			}
+		}
+	}
+	return retorno;
+}
+int selec_restarConvocado(LinkedList* pArrayListSeleccion, int idSeleccion)
+{
+	int retorno=-1;
+	int selecIndice;
+	Seleccion* pSeleccion;
+	int selecConvocados;
+	//printf("ENTRO 0\n");
+	if(pArrayListSeleccion!=NULL)
+	{
+	//	printf("ID SELECCION %d \n",idSeleccion);
+		if(selec_buscarPorId(pArrayListSeleccion, idSeleccion, &selecIndice)==0)
+		{
+		//	printf("INDICE DEL PAIS %d",selecIndice);
+			pSeleccion=ll_get(pArrayListSeleccion, selecIndice);
+			//printf("ENTRO 1\n");
+			//EN CASO DE HACERLO DEBO RESTAR 1 AL CONTADOR DE CONVOCADOS DE ESA SELECCION
+			if(selec_getConvocados(pSeleccion, &selecConvocados)==0)
+			{
+				//printf("CONVOCADOS ANTES %d",selecConvocados);
+				selecConvocados=selecConvocados-1;
+				//printf("CONVOCADOS DESPUES %d",selecConvocados);
+				if(selec_setConvocados(pSeleccion, selecConvocados)==0)
+				{
+					retorno=0;
+					printf("<<<<<<<<<< JUGADOR DESCONTADO DE SU SELECCION  >>>>>>>>>\n");
+				}
+			}
 		}
 	}
 	return retorno;

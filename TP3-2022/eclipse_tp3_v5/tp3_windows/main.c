@@ -43,7 +43,7 @@ int main()
             	controller_editarJugador(listaJugadores);
             break;
             case 4:
-            	controller_removerJugador(listaJugadores);
+            	controller_removerJugador(listaJugadores,listaSelecciones );
             break;
             case 5:
             	//REVISAR QUE CONTROLLER PONER

@@ -260,23 +260,53 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
  * \return int
  *
  */
-int controller_removerJugador(LinkedList* pArrayListJugador)
+int controller_removerJugador(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
 
+	Jugador* pJugador;
+	int jugIdSelec;
+	char jugNombreCompleto[100];
 	int indice;
 
-	Jugador* pJugador;
-	//SOLICITO ID (AL HACERLO TOMO COMO PARAMETRO EL MAXIMO ID)
-	jug_Solicitar_Id(pArrayListJugador, &indice, " Ingrese ID que desea dar de baja.\n");
-	pJugador=ll_get(pArrayListJugador, indice);
+	if(pArrayListJugador!=NULL)
+	{
+		controller_listarJugadores(pArrayListJugador);
+		//SOLICITO ID (AL HACERLO TOMO COMO PARAMETRO EL MAXIMO ID)
+		jug_Solicitar_Id(pArrayListJugador, &indice, " Ingrese ID que desea dar de baja.\n");
+		pJugador=ll_get(pArrayListJugador, indice);
+		if(jug_getNombreCompleto(pJugador, jugNombreCompleto)==0)
+		{
+			//SE ENCARGA DE CONFIRMAR LA BAJA. DENTRO SE LLAMA A (ll_remove).
+			if(jug_Confirmar_Baja( pArrayListJugador,  indice, jugNombreCompleto)==0)
+			{
+				//VERIFICO QUE SI EL JUGADOR PERTENECE A UN EQUIPO.
+				if(jug_getSIdSeleccion(pJugador, &jugIdSelec)==0)
+				{
+					//printf("ENTRO 1\n");
+					//DEBERIA MOVER ESTE CODIGO A UNA FUNCION Y LLAMARLA DESDE CONFIRMAR BAJA
+					if(jugIdSelec>0)
+					{
+						//printf("ENTRO 2\n");
+						//SI EL JUGADOR ESTABA CONVOCADO, ANTES DE REMOVERLO, LE RESTO 1 AL CONTADOR DE CONVOCADOS DE SU SELECCION.
+						if(selec_restarConvocado(pArrayListSeleccion, jugIdSelec)==0)
+						{
+							//UNA VEZ QUE RESTE, REMUEVO AL JUGADOR FINALMENTE.
+							ll_remove(pArrayListJugador, indice);
+							retorno=0;
+						}
 
-	//SE ENCARGA DE CONFIRMAR LA BAJA.(ll_remove)
-	jug_Confirmar_Baja( pArrayListJugador,  indice, (*(pJugador)).nombreCompleto);
-
-
-	//FALTA HACER LO DE LOS CONVOCADOS.
-
+					}
+					else
+					{
+						//SI EL JUGADOR NO ESTABA CONVOCADO POR NINGUNA SELECCION ll_remove
+						ll_remove(pArrayListJugador, indice);
+						retorno=0;
+					}
+				}
+			}
+		}
+	}
     return retorno;
 }
 
