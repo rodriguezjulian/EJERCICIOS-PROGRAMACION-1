@@ -2648,3 +2648,745 @@ In file included from ..\Seleccion.c:4:0:
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
 gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:29:32 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:400:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:41:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:416:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:42:00 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:415:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:44:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:426:79: warning: passing argument 4 of 'obtenerNombresPorConf' from incompatible pointer type [-Wincompatible-pointer-types]
+  obtenerNombresPorConf(pArrayListSeleccion, confederacion, pArrayListJugador, nombresJugadores, cantidadConvocados);
+                                                                               ^~~~~~~~~~~~~~~~
+..\Controller.c:371:5: note: expected 'char *' but argument is of type 'char (*)[100]'
+ int obtenerNombresPorConf(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* nombresJugadores, int cantidad)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:45:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:426:79: warning: passing argument 4 of 'obtenerNombresPorConf' from incompatible pointer type [-Wincompatible-pointer-types]
+  obtenerNombresPorConf(pArrayListSeleccion, confederacion, pArrayListJugador, nombresJugadores, &cantidadConvocados);
+                                                                               ^~~~~~~~~~~~~~~~
+..\Controller.c:371:5: note: expected 'char *' but argument is of type 'char (*)[100]'
+ int obtenerNombresPorConf(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* nombresJugadores, int cantidad)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:426:97: warning: passing argument 5 of 'obtenerNombresPorConf' makes integer from pointer without a cast [-Wint-conversion]
+  obtenerNombresPorConf(pArrayListSeleccion, confederacion, pArrayListJugador, nombresJugadores, &cantidadConvocados);
+                                                                                                 ^
+..\Controller.c:371:5: note: expected 'int' but argument is of type 'int *'
+ int obtenerNombresPorConf(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* nombresJugadores, int cantidad)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:46:43 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:426:79: warning: passing argument 4 of 'obtenerNombresPorConf' from incompatible pointer type [-Wincompatible-pointer-types]
+  obtenerNombresPorConf(pArrayListSeleccion, confederacion, pArrayListJugador, nombresJugadores, cantidadConvocados);
+                                                                               ^~~~~~~~~~~~~~~~
+..\Controller.c:371:5: note: expected 'char *' but argument is of type 'char (*)[100]'
+ int obtenerNombresPorConf(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* nombresJugadores, int cantidad)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:46:56 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:51:40 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:427:79: warning: passing argument 4 of 'obtenerNombresPorConf' from incompatible pointer type [-Wincompatible-pointer-types]
+  obtenerNombresPorConf(pArrayListSeleccion, confederacion, pArrayListJugador, nombresJugadores, cantidadConvocados);
+                                                                               ^~~~~~~~~~~~~~~~
+..\Controller.c:371:5: note: expected 'char *' but argument is of type 'char (*)[100]'
+ int obtenerNombresPorConf(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* nombresJugadores, int cantidad)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:52:34 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:53:23 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:54:06 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+00:55:16 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:56:14 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+..\Seleccion.c: In function 'selec_verificarConvocadosPorconfederacion':
+..\Seleccion.c:155:44: warning: passing argument 2 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+    if(strcmp((*(pSeleccion)).confederacion,*opcion)==0)
+                                            ^
+In file included from ..\Seleccion.c:3:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:56:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+..\Seleccion.c: In function 'selec_verificarConvocadosPorconfederacion':
+..\Seleccion.c:155:44: warning: passing argument 2 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+    if(strcmp((*(pSeleccion)).confederacion,*(opcion))==0)
+                                            ^
+In file included from ..\Seleccion.c:3:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:56:31 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+..\Seleccion.c: In function 'selec_verificarConvocadosPorconfederacion':
+..\Seleccion.c:155:44: warning: passing argument 2 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+    if(strcmp((*(pSeleccion)).confederacion,(*(opcion))==0)
+                                            ^
+In file included from ..\Seleccion.c:3:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'int'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+..\Seleccion.c:155:7: warning: null argument where non-null required (argument 2) [-Wnonnull]
+    if(strcmp((*(pSeleccion)).confederacion,(*(opcion))==0)
+       ^~~~~~
+..\Seleccion.c:156:4: error: expected ')' before '{' token
+    {
+    ^
+..\Seleccion.c:160:3: error: expected expression before '}' token
+   }
+   ^
+00:56:45 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+..\Seleccion.c: In function 'selec_verificarConvocadosPorconfederacion':
+..\Seleccion.c:155:44: warning: passing argument 2 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+    if(strcmp((*(pSeleccion)).confederacion,(*(opcion)))==0)
+                                            ^
+In file included from ..\Seleccion.c:3:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+00:56:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:59:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:05:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:13:25 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:13:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:14:23 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:21:22 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+01:22:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:23:28 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:38:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:39:29 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:40:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+01:43:43 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+In file included from ..\Jugador.c:4:0:
+..\Controller.h:11:5: error: conflicting types for 'controller_guardarJugadoresModoBinario'
+ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.h:9:5: note: previous declaration of 'controller_guardarJugadoresModoBinario' was here
+ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+01:44:14 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+01:48:17 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:48:20 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:48:43 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:427:79: warning: passing argument 4 of 'obtenerNombresPorConf' from incompatible pointer type [-Wincompatible-pointer-types]
+  obtenerNombresPorConf(pArrayListSeleccion, confederacion, pArrayListJugador, nombresJugadores, cantidadConvocados);
+                                                                               ^~~~~~~~~~~~~~~~
+..\Controller.c:371:5: note: expected 'char *' but argument is of type 'char (*)[100]'
+ int obtenerNombresPorConf(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* nombresJugadores, int cantidad)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:49:22 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:432:17: error: 'nombresJugadores' undeclared (first use in this function)
+   printf("%s\n",nombresJugadores[i]);
+                 ^~~~~~~~~~~~~~~~
+..\Controller.c:432:17: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+01:49:31 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+01:49:38 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:427:7: warning: unused variable 'nombresJugadores' [-Wunused-variable]
+  char nombresJugadores[cantidadConvocados][100];
+       ^~~~~~~~~~~~~~~~
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:09:35 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:428:79: warning: passing argument 4 of 'obtenerNombresPorConf' from incompatible pointer type [-Wincompatible-pointer-types]
+  obtenerNombresPorConf(pArrayListSeleccion, confederacion, pArrayListJugador, nombresJugadores, cantidadConvocados);
+                                                                               ^~~~~~~~~~~~~~~~
+..\Controller.c:371:5: note: expected 'char *' but argument is of type 'char (*)[100]'
+ int obtenerNombresPorConf(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* nombresJugadores, int cantidad)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:10:01 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:419:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:418:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:14:25 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:420:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:419:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:415:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:15:27 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:19:00 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:31:18 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'obtenerNombresPorConf':
+..\Controller.c:379:6: warning: unused variable 'j' [-Wunused-variable]
+  int j=0;
+      ^
+..\Controller.c:378:6: warning: unused variable 'arrayIdsAux' [-Wunused-variable]
+  int arrayIdsAux[cantidadConvocados];
+      ^~~~~~~~~~~
+..\Controller.c:376:7: warning: unused variable 'nombresJugadoresAux' [-Wunused-variable]
+  char nombresJugadoresAux[100];
+       ^~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:433:10: error: 'nombresJugadores' undeclared (first use in this function)
+   strcpy(nombresJugadores[i],nombresJugadoresAux);
+          ^~~~~~~~~~~~~~~~
+..\Controller.c:433:10: note: each undeclared identifier is reported only once for each function it appears in
+02:31:35 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'obtenerNombresPorConf':
+..\Controller.c:379:6: warning: unused variable 'j' [-Wunused-variable]
+  int j=0;
+      ^
+..\Controller.c:378:6: warning: unused variable 'arrayIdsAux' [-Wunused-variable]
+  int arrayIdsAux[cantidadConvocados];
+      ^~~~~~~~~~~
+..\Controller.c:376:7: warning: unused variable 'nombresJugadoresAux' [-Wunused-variable]
+  char nombresJugadoresAux[100];
+       ^~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:420:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:417:7: warning: unused variable 'nombresJugadoresAux' [-Wunused-variable]
+  char nombresJugadoresAux[100];
+       ^~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:38:19 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'obtenerNombresPorConf':
+..\Controller.c:394:13: error: incompatible type for argument 1 of 'fwrite'
+      fwrite(*(pJugador),sizeof(Jugador),cantidadConvocados,pArchivo);
+             ^
+In file included from ..\Controller.c:1:0:
+c:\mingw\include\stdio.h:735:41: note: expected 'const void *' but argument is of type 'Jugador {aka struct <anonymous>}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+                                         ^~~~~~
+..\Controller.c:379:6: warning: unused variable 'j' [-Wunused-variable]
+  int j=0;
+      ^
+..\Controller.c:378:6: warning: unused variable 'arrayIdsAux' [-Wunused-variable]
+  int arrayIdsAux[cantidadConvocados];
+      ^~~~~~~~~~~
+..\Controller.c:376:7: warning: unused variable 'nombresJugadoresAux' [-Wunused-variable]
+  char nombresJugadoresAux[100];
+       ^~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:425:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:422:7: warning: unused variable 'nombresJugadoresAux' [-Wunused-variable]
+  char nombresJugadoresAux[100];
+       ^~~~~~~~~~~~~~~~~~~
+02:38:40 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'obtenerNombresPorConf':
+..\Controller.c:379:6: warning: unused variable 'j' [-Wunused-variable]
+  int j=0;
+      ^
+..\Controller.c:378:6: warning: unused variable 'arrayIdsAux' [-Wunused-variable]
+  int arrayIdsAux[cantidadConvocados];
+      ^~~~~~~~~~~
+..\Controller.c:376:7: warning: unused variable 'nombresJugadoresAux' [-Wunused-variable]
+  char nombresJugadoresAux[100];
+       ^~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:425:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:422:7: warning: unused variable 'nombresJugadoresAux' [-Wunused-variable]
+  char nombresJugadoresAux[100];
+       ^~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:39:58 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'obtenerNombresPorConf':
+..\Controller.c:379:6: warning: unused variable 'j' [-Wunused-variable]
+  int j=0;
+      ^
+..\Controller.c:378:6: warning: unused variable 'arrayIdsAux' [-Wunused-variable]
+  int arrayIdsAux[cantidadConvocados];
+      ^~~~~~~~~~~
+..\Controller.c:376:7: warning: unused variable 'nombresJugadoresAux' [-Wunused-variable]
+  char nombresJugadoresAux[100];
+       ^~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:425:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:422:7: warning: unused variable 'nombresJugadoresAux' [-Wunused-variable]
+  char nombresJugadoresAux[100];
+       ^~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:40:09 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:426:2: error: 'tam' undeclared (first use in this function)
+  tam=ll_len(pArrayListJugador);
+  ^~~
+..\Controller.c:426:2: note: each undeclared identifier is reported only once for each function it appears in
+02:40:20 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:41:25 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:42:44 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:43:19 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:44:08 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:45:09 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:45:57 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:455:3: warning: "/*" within comment [-Wcomment]
+   /*pArchivo= fopen(path,"wb");
+    
+..\Controller.c:417:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: At top level:
+..\Controller.c:468:4: error: expected identifier or '(' before '/' token
+  }*/
+    ^
+..\Controller.c:470:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:468:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }*/
+  ^
+02:46:13 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+02:54:50 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+02:56:38 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:02:22 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:442:23: error: incompatible type for argument 1 of 'fread'
+   cantidadLeida=fread(pJugador,sizeof(Jugador),cantidadConvocados,pArchivo);
+                       ^~~~~~~~
+In file included from ..\Controller.c:1:0:
+c:\mingw\include\stdio.h:734:41: note: expected 'void *' but argument is of type 'Jugador {aka struct <anonymous>}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fread (void *, size_t, size_t, FILE *);
+                                         ^~~~~
+03:03:59 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:425:10: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador pJugador;
+          ^~~~~~~~
+..\Controller.c:423:6: warning: unused variable 'cantidadLeida' [-Wunused-variable]
+  int cantidadLeida;
+      ^~~~~~~~~~~~~
+..\Controller.c:420:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:15:58 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:425:10: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador pJugador;
+          ^~~~~~~~
+..\Controller.c:423:6: warning: unused variable 'cantidadLeida' [-Wunused-variable]
+  int cantidadLeida;
+      ^~~~~~~~~~~~~
+..\Controller.c:420:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:45:02 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_Editar_NombreCompleto':
+..\Jugador.c:417:47: warning: passing argument 1 of 'jug_getNombreCompleto' from incompatible pointer type [-Wincompatible-pointer-types]
+    retornoSrtcmp=strcmp(jug_getNombreCompleto(pArrayListJugador, nuevoNombre), nuevoNombre);
+                                               ^~~~~~~~~~~~~~~~~
+..\Jugador.c:79:5: note: expected 'Jugador * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int jug_getNombreCompleto(Jugador* this,char* nombreCompleto)
+     ^~~~~~~~~~~~~~~~~~~~~
+..\Jugador.c:417:25: warning: passing argument 1 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+    retornoSrtcmp=strcmp(jug_getNombreCompleto(pArrayListJugador, nuevoNombre), nuevoNombre);
+                         ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Jugador.c:7:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'int'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:45:25 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_Editar_NombreCompleto':
+..\Jugador.c:417:25: warning: passing argument 1 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+    retornoSrtcmp=strcmp(jug_getNombreCompleto(pJugador, nuevoNombre), nuevoNombre);
+                         ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Jugador.c:7:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'int'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+03:45:54 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_Editar_NombreCompleto':
+..\Jugador.c:418:18: error: too few arguments to function 'strcmp'
+    retornoSrtcmp=strcmp(nuevoNombre), nuevoNombre);
+                  ^~~~~~
+In file included from ..\Jugador.c:7:0:
+c:\mingw\include\string.h:77:38: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+..\Jugador.c:418:37: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+    retornoSrtcmp=strcmp(nuevoNombre), nuevoNombre);
+                                     ^
+..\Jugador.c:418:37: warning: statement with no effect [-Wunused-value]
+..\Jugador.c:418:50: error: expected ';' before ')' token
+    retornoSrtcmp=strcmp(nuevoNombre), nuevoNombre);
+                                                  ^
+..\Jugador.c:418:50: error: expected statement before ')' token
+03:47:01 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+..\Jugador.c: In function 'jug_Editar_NombreCompleto':
+..\Jugador.c:418:18: error: too few arguments to function 'strcmp'
+    retornoSrtcmp=strcmp(viejoNombre), nuevoNombre);
+                  ^~~~~~
+In file included from ..\Jugador.c:7:0:
+c:\mingw\include\string.h:77:38: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+..\Jugador.c:418:37: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+    retornoSrtcmp=strcmp(viejoNombre), nuevoNombre);
+                                     ^
+..\Jugador.c:418:37: warning: statement with no effect [-Wunused-value]
+..\Jugador.c:418:50: error: expected ';' before ')' token
+    retornoSrtcmp=strcmp(viejoNombre), nuevoNombre);
+                                                  ^
+..\Jugador.c:418:50: error: expected statement before ')' token
+03:47:05 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+04:06:57 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3

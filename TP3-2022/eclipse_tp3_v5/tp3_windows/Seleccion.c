@@ -149,25 +149,31 @@ int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayLi
 
 	if(opcion!=NULL)
 	{
+
+
 		for(int i=0;i<tam;i++)
 		{
 			pSeleccion=ll_get(pArrayListSeleccion, i);
-			if(strcmp((*(pSeleccion)).confederacion,opcion)==0)
+			//RECIBI POR PARAMETRO A LA CONFEDERACION ELEGIDA, AHORA ME FIJO SI LAS SELECCIONES CON ESA CONFEDERACION, TIENEN CONVOCADOS
+
+			if(strcmp((*(pSeleccion)).confederacion,opcion)==0 && (*(pSeleccion)).convocados>0)
 			{
+				//printf("IF DEL SRTCMP");
 				convocadosAux=convocadosAux+(*(pSeleccion)).convocados;
 			}
 		}
+		if(convocadosAux>0)
+		{
+			retorno=0;
+
+			*convocados=convocadosAux;
+		}
+		else
+		{
+			printf("ERROR, Los paises que integran a la confederacion %s, NO cuentan con convocados.\n",opcion);
+		}
 	}
-	//printf("CONVOCADOS: %d\n",convocados);
-	if(convocadosAux>0)
-	{
-		retorno=0;
-		*convocados=convocadosAux;
-	}
-	else
-	{
-		printf("ERROR, Los paises que integran a la confederacion %s, NO cuentan con convocados.\n",opcion);
-	}
+
 	return retorno;
 }
 int selec_AsignarDescripcionPais(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador, int indice, char *descripcionPais)

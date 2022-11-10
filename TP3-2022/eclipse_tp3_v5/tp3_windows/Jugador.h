@@ -62,7 +62,10 @@ int jug_OrdenarPorNombre(void* unJugador, void* otroJugador);
 int jug_OrdenarPorEdad(void* unJugador, void* otroJugador);
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
 
+
 int jug_Listar_Convocados(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
+
+
 int operara_Menu_Opcion6(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
 int operara_Menu_Opcion7(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
 

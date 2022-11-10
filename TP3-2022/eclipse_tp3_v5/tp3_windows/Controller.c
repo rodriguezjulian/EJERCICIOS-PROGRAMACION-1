@@ -367,6 +367,44 @@ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJuga
     return 1;
 }
 
+
+int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, int cantidadConvocados, char* path)
+{
+	int retorno=-1;
+	Jugador* pJugador;
+	int tamJugadores;
+	//char nombresJugadoresAux[100];
+	tamJugadores=ll_len(pArrayListJugador);
+	//int arrayIdsAux[cantidadConvocados];
+	//int j=0;
+
+	FILE* pArchivo;
+	pArchivo=fopen(path,"wb");
+
+	if(pArrayListSeleccion!=NULL)
+	{
+
+			for(int i=0;i<tamJugadores;i++)
+			{
+				if(strcmp(nombreConfederacion,"CONMEBOL"))
+				{
+					pJugador=ll_get(pArrayListJugador, i);
+					if((*(pJugador)).id==3 || (*(pJugador)).id==6 || (*(pJugador)).id==13 || (*(pJugador)).id==32)
+					{
+						//fwrite(pJugador,sizeof(Jugador),cantidadConvocados,pArchivo);
+						fwrite(pJugador,sizeof(Jugador),cantidadConvocados,pArchivo);
+						//fprintf();
+					}
+				}
+			}
+		fclose(pArchivo);
+	}
+
+	return retorno;
+}
+
+
+
 /** \brief Guarda los datos de los jugadores en el archivo binario.
  *
  * \param path char*
@@ -381,36 +419,41 @@ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJu
 
 	FILE* pArchivo;
 	int cantidadConvocados;
+	//char nombresJugadoresAux[100];
+	int cantidadLeida;
 
-	Jugador* pJugador;
-	int tam;
-	tam=ll_len(pArrayListJugador);
+	Jugador pJugador;
+	//int tam;
+	//tam=ll_len(pArrayListJugador);
 
 	selec_IngresarConfederacion(confederacion);
 
-	if(selec_verificarConvocadosPorconfederacion(confederacion, pArrayListSeleccion,&cantidadConvocados)==0)
+	selec_verificarConvocadosPorconfederacion(confederacion, pArrayListSeleccion,&cantidadConvocados);
+	//printf("CONVOCADOS %d",cantidadConvocados);
+	strcat(confederacion,".bin");
+	strcpy(path,confederacion);
+
+	jug_guardarJugadores(pArrayListSeleccion, confederacion, pArrayListJugador, cantidadConvocados, path);
+
+
+	/*while(!feof(pArchivo))
 	{
-		strcat(confederacion,".bin");
-		strcpy(path,confederacion);
 
-		pArchivo= fopen(path,"wb");
-		for(int i=0;i<tam;i++)
+		cantidadLeida=fread(pJugador,sizeof(Jugador),cantidadConvocados,pArchivo);
+		if(cantidadLeida==1)
 		{
-			pJugador=ll_get(pArrayListJugador, i);
-			if(strcmp(confederacion,"UEFA")==0)
-			{
-				if((*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
-				{
-				}
-				//fwrite(pJugador,sizeof(Jugador),cantidadConvocados,pArchivo);
-			}
-
-
+			printf("Nombre: %s",pJugador.nombreCompleto);
 		}
-	}
-    return retorno;
 
+
+	}*/
+
+
+	return retorno;
 }
+
+
+
 
 /** \brief Carga los datos de los selecciones desde el archivo selecciones.csv (modo texto).
  *

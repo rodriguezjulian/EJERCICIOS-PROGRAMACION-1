@@ -405,13 +405,18 @@ int jug_Editar_NombreCompleto(LinkedList* pArrayListJugador , int indice)
 	pJugador=ll_get(pArrayListJugador, indice);
 	int retornoSrtcmp=0;//LO INICIALIZO POR SI EL USUARIO MODIFICA MAS DE UNA VEZ EL CAMPO.
 	char nuevoNombre[100];
-
+	char viejoNombre[100];
 	if(pArrayListJugador!=NULL)
 	{
 		do
 		{
 			ingresarCadenaCaracteres(100, nuevoNombre, "Ingrese nuevo nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n");
-			retornoSrtcmp=strcmp((*(pJugador)).nombreCompleto, nuevoNombre);
+
+			jug_getNombreCompleto(pJugador, viejoNombre);
+
+
+			//retornoSrtcmp=strcmp((*(pJugador)).nombreCompleto, nuevoNombre);
+			retornoSrtcmp=strcmp(viejoNombre, nuevoNombre);
 			if(retornoSrtcmp==0)
 			{
 				printf("ERROR, El nombre ingresado es exactamente igual al existente\n");
