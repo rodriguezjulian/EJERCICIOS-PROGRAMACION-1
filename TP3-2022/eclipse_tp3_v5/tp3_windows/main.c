@@ -4,7 +4,7 @@
 #include "Controller.h"
 #include "Jugador.h"
 #include "ingresos.h"
-
+ #include<string.h>
 
 #include "seleccion.h"
 int main()
@@ -13,6 +13,8 @@ int main()
     int option = 0;
     LinkedList* listaJugadores = ll_newLinkedList();
     LinkedList* listaSelecciones=ll_newLinkedList();
+
+    char path[30];
 
 	//ingresarIntConRango(&option, "INGRESE SEGUN QUIERA OPERAR", "ERROR, Ingrese opcion valida", 1, 2);
     do{
@@ -54,14 +56,13 @@ int main()
 
             break;
             case 7:
-             //controller_ordenarJugadores(listaJugadores);
-            	controller_ordenarSelecciones(listaSelecciones);
+            	controller_ordenarJugadores(listaJugadores, listaSelecciones);
+
             break;
             case 8:
 
-            	//selec_IngresarConfederacion(opcion);
-            	//selec_verificarConvocadosPorconfederacion(opcion, listaSelecciones);
-            	//controller_guardarJugadoresModoBinario(path, listaJugadores);
+            	controller_guardarJugadoresModoBinario(path, listaJugadores);
+            	//printf("CONFEDERACION %s",path);
             break;
         }
     }while(option != 10);

@@ -35,6 +35,35 @@ int controller_cargarJugadoresDesdeTexto(char* path , LinkedList* pArrayListJuga
 	fclose(pFile);
     return 1;
 }
+/** \brief Listar selecciones
+ *
+ * \param path char*
+ * \param pArrayListSeleccion LinkedList*
+ * \return int
+ *
+ */
+int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
+{
+	int cantidad;
+	int retorno=-1;
+	if(pArrayListSeleccion!=NULL)
+	{
+		//printf("| %*d|%*s|%*s| %*d|\n",-3,id,-25,pais,-10,confederacion,-3,convocados);
+		printf("+=========================================================+\n");
+		printf("|%*s|%*s|%*s|%*s|\n",-4," ID",-25,"         PAIS",-15," CONFEDERACION",-10,"CONVOCADOS");
+		printf("+=========================================================+\n");
+		cantidad=ll_len(pArrayListSeleccion);
+		for(int i=0;i<cantidad;i++)
+		{
+			imprimirSeleccion(pArrayListSeleccion, i);
+		}
+		printf("+=========================================================+\n");
+	}
+
+    return retorno;
+}
+
+
 
 /** \brief Carga los datos de los jugadores desde el archivo generado en modo binario.
  *
@@ -172,19 +201,19 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
 	//Jugador* pJugador;
 	int retorno=-1;
 	//int idBuscado;
-	int idMaximo; //PARA DARLE RANGO AL INGRESO DE ID.
+	//int idMaximo; //PARA DARLE RANGO AL INGRESO DE ID.
 	int indice;
 	int opcion;
-	FILE* pIdMaximo;
+	//FILE* pIdMaximo;
 
 
 
-	pIdMaximo=fopen("id.txt", "r");
+	/*pIdMaximo=fopen("id.txt", "r");
 	if(pIdMaximo!=NULL)
 	{
 		fscanf(pIdMaximo,"%d",&idMaximo);
 	}
-	fclose(pIdMaximo);
+	fclose(pIdMaximo);*/
 	//printf("ID MAXIMO HASTA EL MOMENTO %d \n",idMaximo);
 	if(pArrayListJugador!=NULL)
 	{
@@ -252,19 +281,28 @@ int controller_removerJugador(LinkedList* pArrayListJugador)
 }
 
 
+/** \brief Ordenar selecciones
+ *
+ * \param path char*
+ * \param pArrayListSeleccion LinkedList*
+ * \return int
+ *
+ */
+int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+{
+	int orden;
+	if(pArrayListSeleccion!=NULL)
+	{
+		ingresarIntConRango(&orden, "Ingrese 1 para ordenar de forma ascedente o 0 para ordenar de manera descendente.\n", "ERROR, Ingrese numero valido.\n", 0, 1);
+		printf("<<<<<<<<<< Este proceso puede tardar unos segundos. >>>>>>>>>>\n");
 
+		ll_sort(pArrayListSeleccion, selec_OrdenarPorConfederacion, 0);
+		controller_listarSelecciones(pArrayListSeleccion);
 
-
-
-
-
-
-
-
-
-
-
-
+		//selec_OrdenarPorConfederacion(unaConderacion, otraConfederacion)
+	}
+	return 1;
+}
 /** \brief Ordenar jugadores
  *
  * \param path char*
@@ -272,7 +310,7 @@ int controller_removerJugador(LinkedList* pArrayListJugador)
  * \return int
  *
  */
-int controller_ordenarJugadores(LinkedList* pArrayListJugador)
+int controller_ordenarJugadores(LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion)
 {
 	int retorno=0;
 		int orden;
@@ -285,27 +323,33 @@ int controller_ordenarJugadores(LinkedList* pArrayListJugador)
 					-40,"3.JUGADORES POR EDAD.",-40,"4.JUGADORES POR NOMBRE.");
 
 			ingresarIntConRango(&opcion, "Ingrese opcion segun desee listar.\n", "ERROR, Ingrese opcion valida.\n", 1, 4);
-			ingresarIntConRango(&orden, "Ingrese 1 para ordenar de forma ascedente o 0 para ordenar de manera descendente.\n", "ERROR, Ingrese numero valido.\n", 0, 1);
-			printf("<<<<<<<<<< Este proceso puede tardar unos segundos. >>>>>>>>>>\n");
-
+			//SI LA OPCION ES ==2 DENTRO DE CONTROLLER CONSULTO ACERCA DEL ORDEN
+			if(opcion==1 || opcion==3 || opcion==4)
+			{
+				ingresarIntConRango(&orden, "Ingrese 1 para ordenar de forma ascedente o 0 para ordenar de manera descendente.\n", "ERROR, Ingrese numero valido.\n", 0, 1);
+				printf("<<<<<<<<<< Este proceso puede tardar unos segundos. >>>>>>>>>>\n");
+			}
 			switch(opcion)
 			{
 			case 1:
 				//jug_OrdenarPorNacionalidad
 				ll_sort(pArrayListJugador, jug_OrdenarPorNacionalidad, orden);
+				controller_listarJugadores(pArrayListJugador);
 			break;
 			case 2:
+				controller_ordenarSelecciones(pArrayListSeleccion);
 			break;
 			case 3:
 				//jug_OrdenarPorEdad
 				ll_sort(pArrayListJugador, jug_OrdenarPorEdad, orden);
+				controller_listarJugadores(pArrayListJugador);
 			break;
 			case 4:
 				//jug_OrdenarPorNombre
 				ll_sort(pArrayListJugador, jug_OrdenarPorNombre, orden);
+				controller_listarJugadores(pArrayListJugador);
 			break;
 			}
-			controller_listarJugadores(pArrayListJugador);
 		}
 
 		return retorno;
@@ -334,30 +378,39 @@ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJu
 {
 	int retorno=-1;
 	char confederacion [30];
-	int opcion;
+
+	FILE* pArchivo;
+	int cantidadConvocados;
+
+	Jugador* pJugador;
+	int tam;
+	tam=ll_len(pArrayListJugador);
+
 	selec_IngresarConfederacion(confederacion);
-	selec_verificarConvocadosPorconfederacion(confederacion, pArrayListSeleccion);
-	printf("HOLA ");
-	//opcion=atoi(confederacion);
-	//printf("CONFEDERACION %s \n OPCION %d",confederacion, opcion);
-	/*if()
+
+	if(selec_verificarConvocadosPorconfederacion(confederacion, pArrayListSeleccion,&cantidadConvocados)==0)
 	{
+		strcat(confederacion,".bin");
+		strcpy(path,confederacion);
 
-	}*/
-	/*FILE* pArchivo;
-	pArchivo= fopen("listado");*/
-	/*switch("opcion")
-	{
-	case "AFC":
-	break;*/
+		pArchivo= fopen(path,"wb");
+		for(int i=0;i<tam;i++)
+		{
+			pJugador=ll_get(pArrayListJugador, i);
+			if(strcmp(confederacion,"UEFA")==0)
+			{
+				if((*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+				{
+				}
+				//fwrite(pJugador,sizeof(Jugador),cantidadConvocados,pArchivo);
+			}
 
 
-	//}
-
-
+		}
+	}
     return retorno;
-}
 
+}
 
 /** \brief Carga los datos de los selecciones desde el archivo selecciones.csv (modo texto).
  *
@@ -399,52 +452,7 @@ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
 }
 
 
-/** \brief Listar selecciones
- *
- * \param path char*
- * \param pArrayListSeleccion LinkedList*
- * \return int
- *
- */
-int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
-{
-	int cantidad;
-	int retorno=-1;
-	if(pArrayListSeleccion!=NULL)
-	{
-		//printf("| %*d|%*s|%*s| %*d|\n",-3,id,-25,pais,-10,confederacion,-3,convocados);
-		printf("+=========================================================+\n");
-		printf("|%*s|%*s|%*s|%*s|\n",-4," ID",-25,"         PAIS",-15," CONFEDERACION",-10,"CONVOCADOS");
-		printf("+=========================================================+\n");
-		cantidad=ll_len(pArrayListSeleccion);
-		for(int i=0;i<cantidad;i++)
-		{
-			imprimirSeleccion(pArrayListSeleccion, i);
-		}
-		printf("+=========================================================+\n");
-	}
 
-    return retorno;
-}
-
-/** \brief Ordenar selecciones
- *
- * \param path char*
- * \param pArrayListSeleccion LinkedList*
- * \return int
- *
- */
-int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
-{
-	if(pArrayListSeleccion!=NULL)
-	{
-		ll_sort(pArrayListSeleccion, selec_OrdenarPorConfederacion, 0);
-		controller_listarSelecciones(pArrayListSeleccion);
-
-		//selec_OrdenarPorConfederacion(unaConderacion, otraConfederacion)
-	}
-	return 1;
-}
 
 /** \brief Guarda los datos de los selecciones en el archivo selecciones.csv (modo texto).
  *

@@ -1830,3 +1830,821 @@ gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
 gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+04:04:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:67:14: warning: implicit declaration of function 'strcat' [-Wimplicit-function-declaration]
+              strcat(confederacion,".bin");
+              ^~~~~~
+..\main.c:67:14: warning: incompatible implicit declaration of built-in function 'strcat'
+..\main.c:67:14: note: include '<string.h>' or provide a declaration of 'strcat'
+..\main.c:68:14: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+              strcpy(path,confederacion);
+              ^~~~~~
+..\main.c:68:14: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\main.c:68:14: note: include '<string.h>' or provide a declaration of 'strcpy'
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+04:05:18 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+04:05:34 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+18:33:28 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editarJugador':
+..\Controller.c:178:8: warning: unused variable 'pIdMaximo' [-Wunused-variable]
+  FILE* pIdMaximo;
+        ^~~~~~~~~
+..\Controller.c:175:6: warning: unused variable 'idMaximo' [-Wunused-variable]
+  int idMaximo; //PARA DARLE RANGO AL INGRESO DE ID.
+      ^~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:337:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+18:33:40 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:337:6: warning: unused variable 'opcion' [-Wunused-variable]
+  int opcion;
+      ^~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+18:33:53 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+22:50:17 **** Rebuild of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:16:10: warning: unused variable 'confederacion' [-Wunused-variable]
+     char confederacion [30];
+          ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ingresos.o "..\\ingresos.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+22:50:29 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+22:53:18 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+22:54:35 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:346:24: error: 'wb' undeclared (first use in this function)
+   pArchivo= fopen(path,wb);
+                        ^~
+..\Controller.c:346:24: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+22:54:58 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+23:07:26 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:340:5: error: too few arguments to function 'selec_verificarConvocadosPorconfederacion'
+  if(selec_verificarConvocadosPorconfederacion(confederacion, pArrayListSeleccion))
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:5:0:
+..\Seleccion.h:42:5: note: declared here
+ int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion, int* convocados);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:347:35: error: expected expression before ')' token
+   fwrite(pArchivo,sizeof(Jugador),)
+                                   ^
+..\Controller.c:347:3: error: too few arguments to function 'fwrite'
+   fwrite(pArchivo,sizeof(Jugador),)
+   ^~~~~~
+In file included from ..\Controller.c:1:0:
+c:\mingw\include\stdio.h:735:41: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+                                         ^~~~~~
+23:08:06 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+23:11:17 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+23:14:29 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:7: error: expected expression before ')' token
+    if()
+       ^
+23:16:22 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:342:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:341:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:338:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:335:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: At top level:
+..\Controller.c:394:5: error: expected identifier or '(' before 'return'
+     return retorno;
+     ^~~~~~
+..\Controller.c:395:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:364:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+23:16:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:342:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:341:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:338:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+23:17:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+23:18:45 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:342:6: warning: variable 'tam' set but not used [-Wunused-but-set-variable]
+  int tam;
+      ^~~
+..\Controller.c:341:11: warning: unused variable 'pJugador' [-Wunused-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:338:8: warning: unused variable 'pArchivo' [-Wunused-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+23:19:01 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:343:2: error: 'tam' undeclared (first use in this function)
+  tam=ll_len(pArrayListJugador);
+  ^~~
+..\Controller.c:343:2: note: each undeclared identifier is reported only once for each function it appears in
+23:19:05 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+23:33:48 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:351:3: error: 'pArchivo' undeclared (first use in this function)
+   pArchivo= fopen(path,"wb");
+   ^~~~~~~~
+..\Controller.c:351:3: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:355:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+                    ^~
+..\Controller.c:355:29: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:33:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+                    ^~
+..\Controller.c:355:29: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:34:14 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+                    ^~
+..\Controller.c:355:29: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:34:26 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+                    ^~
+..\Controller.c:355:29: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:34:48 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:351:3: error: 'pArchivo' undeclared (first use in this function)
+   pArchivo= fopen(path,"wb");
+   ^~~~~~~~
+..\Controller.c:351:3: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:355:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+                    ^~
+..\Controller.c:355:29: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:34:59 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+                    ^~
+..\Controller.c:355:29: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if(confederacion=="UEFA" && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:35:36 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:21: warning: comparison with string literal results in unspecified behavior [-Waddress]
+    if((confederacion=="UEFA") && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+                     ^~
+..\Controller.c:355:31: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if((confederacion=="UEFA") && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:35:44 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:21: warning: comparison with string literal results in unspecified behavior [-Waddress]
+    if((confederacion=="UEFA" && (*(pJugador)).idSeleccion==1) || (*(pJugador)).idSeleccion==5)
+                     ^~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:35:45 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:21: warning: comparison with string literal results in unspecified behavior [-Waddress]
+    if((confederacion=="UEFA" && (*(pJugador)).idSeleccion==1) || (*(pJugador)).idSeleccion==5)
+                     ^~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:36:32 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:7: warning: implicit declaration of function 'strcpm' [-Wimplicit-function-declaration]
+    if(strcpm(confederacion,"UEFA")==0 && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ^~~~~~
+..\Controller.c:355:39: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if(strcpm(confederacion,"UEFA")==0 && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:36:49 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:354:4: warning: implicit declaration of function 'strcpm' [-Wimplicit-function-declaration]
+    strcpm(confederacion,"UEFA");
+    ^~~~~~
+..\Controller.c:356:39: error: 'i' undeclared (first use in this function)
+    pJugador=ll_get(pArrayListJugador, i);
+                                       ^
+..\Controller.c:356:39: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:357:39: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if(strcpm(confederacion,"UEFA")==0 && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+23:37:03 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:355:39: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+    if(strcmp(confederacion,"UEFA")==0 && (*(pJugador)).idSeleccion==1 || (*(pJugador)).idSeleccion==5)
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:39:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:341:11: warning: variable 'pJugador' set but not used [-Wunused-but-set-variable]
+  Jugador* pJugador;
+           ^~~~~~~~
+..\Controller.c:338:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:442:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:401:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:374:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:43:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_ordenarJugadores':
+..\Controller.c:298:5: warning: implicit declaration of function 'controller_ordenarSelecciones' [-Wimplicit-function-declaration]
+     controller_ordenarSelecciones(pArrayListSeleccion);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:468:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:339:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:468:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:465:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:446:5: warning: 'controller_ordenarSelecciones' defined but not used [-Wunused-function]
+ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:405:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:378:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:43:32 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Jugador.o "..\\Jugador.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_ordenarSelecciones':
+..\Controller.c:267:3: warning: implicit declaration of function 'controller_listarSelecciones' [-Wimplicit-function-declaration]
+   controller_listarSelecciones(pArrayListSeleccion);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:468:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:356:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:468:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:465:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:435:5: warning: 'controller_listarSelecciones' defined but not used [-Wunused-function]
+ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:422:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:395:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:46:06 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:59:14: error: too few arguments to function 'controller_ordenarJugadores'
+              controller_ordenarJugadores(listaJugadores);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.c:4:0:
+..\Controller.h:7:5: note: declared here
+ int controller_ordenarJugadores(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:46:18 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_ordenarSelecciones':
+..\Controller.c:265:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'if'
+  if(pArrayListSeleccion!=NULL)
+  ^~
+..\Controller.c:267:24: error: 'orden' undeclared (first use in this function)
+   ingresarIntConRango(&orden, "Ingrese 1 para ordenar de forma ascedente o 0 para ordenar de manera descendente.\n", "ERROR, Ingrese numero valido.\n", 0, 1);
+                        ^~~~~
+..\Controller.c:267:24: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:271:3: warning: implicit declaration of function 'controller_listarSelecciones' [-Wimplicit-function-declaration]
+   controller_listarSelecciones(pArrayListSeleccion);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:463:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:351:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:463:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:460:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:430:5: warning: 'controller_listarSelecciones' defined but not used [-Wunused-function]
+ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:417:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:390:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:46:36 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_ordenarSelecciones':
+..\Controller.c:271:3: warning: implicit declaration of function 'controller_listarSelecciones' [-Wimplicit-function-declaration]
+   controller_listarSelecciones(pArrayListSeleccion);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:463:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:351:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:463:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:460:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:430:5: warning: 'controller_listarSelecciones' defined but not used [-Wunused-function]
+ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:417:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:390:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:47:20 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:464:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\Controller.c:380:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+..\Controller.c:464:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\Controller.c:461:5: warning: 'controller_guardarSeleccionesModoTexto' defined but not used [-Wunused-function]
+ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:446:5: warning: 'controller_editarSeleccion' defined but not used [-Wunused-function]
+ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:419:5: warning: 'controller_cargarSeleccionesDesdeTexto' defined but not used [-Wunused-function]
+ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+23:53:31 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:380:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+00:03:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:382:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+00:21:56 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_guardarJugadoresModoBinario':
+..\Controller.c:382:8: warning: variable 'pArchivo' set but not used [-Wunused-but-set-variable]
+  FILE* pArchivo;
+        ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+..\Seleccion.c:141:5: error: conflicting types for 'selec_verificarConvocadosPorconfederacion'
+ int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion, int* convocados, LinkedList* pArrayListJugador)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Seleccion.c:4:0:
+..\seleccion.h:42:5: note: previous declaration of 'selec_verificarConvocadosPorconfederacion' was here
+ int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion, int* convocados);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Seleccion.c: In function 'selec_verificarConvocadosPorconfederacion':
+..\Seleccion.c:146:6: error: 'convocados' redeclared as different kind of symbol
+  int convocados=0;
+      ^~~~~~~~~~
+..\Seleccion.c:141:99: note: previous definition of 'convocados' was here
+ int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion, int* convocados, LinkedList* pArrayListJugador)
+                                                                                                   ^~~~~~~~~~
+00:22:59 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Seleccion.o "..\\Seleccion.c" 
+gcc "-LC:\\Users\\Julian Rodriguez\\Desktop\\PROGRAMACION  1\\TP3-2022\\eclipse_tp3_v5\\tp3_windows" -o pruebaTp3.exe Controller.o Jugador.o Seleccion.o ingresos.o main.o parser.o -lLinkedList 

@@ -138,12 +138,13 @@ int selec_IngresarConfederacion(char* opcion)
 }
 //ME FIJO SI LOS PAISES DE LA CONFEDERACION SELECCIONADA TIENEN JUGADORES CONVOCADOS, EN CASO QUE EL CONTADOR SEA MAYOR A UNO YA SE PUEDE SEGUIR
 //RETORNO =0 ESTA TODO OK, HAY AL MENOS UN JUGADOR CONVOCADO EN LA CONFEDERACION.
-int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion)
+int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion, int* convocados )
 {
 	int retorno=-1;
 	Seleccion* pSeleccion;
 	int tam;
-	int convocados=0;
+	int convocadosAux=0;
+
 	tam= ll_len(pArrayListSeleccion);
 
 	if(opcion!=NULL)
@@ -153,14 +154,15 @@ int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayLi
 			pSeleccion=ll_get(pArrayListSeleccion, i);
 			if(strcmp((*(pSeleccion)).confederacion,opcion)==0)
 			{
-				convocados=convocados+(*(pSeleccion)).convocados;
+				convocadosAux=convocadosAux+(*(pSeleccion)).convocados;
 			}
 		}
 	}
 	//printf("CONVOCADOS: %d\n",convocados);
-	if(convocados>0)
+	if(convocadosAux>0)
 	{
 		retorno=0;
+		*convocados=convocadosAux;
 	}
 	else
 	{
