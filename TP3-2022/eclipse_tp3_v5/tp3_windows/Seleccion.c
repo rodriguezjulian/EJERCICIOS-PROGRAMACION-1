@@ -178,25 +178,40 @@ int selec_AsignarDescripcionPais(LinkedList* pArrayListSeleccion, LinkedList* pA
 {
 	int retorno=-1;
 	Jugador* pJugador;
-	//int idSeleccion;//EL QUE TIENE LA ESTRUCTURA JUGADOR
 	int tam;
 	Seleccion* pSeleccion;
+	int selecId;
+	char selecPais[30];
+	int jugIdSeleccion;
+
 
 	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
 	{
+		//printf("ENTRE AL IF en selec_AsignarDescripcionPais >0\n");
 		//PUNTERO A LA ESTRUCTURA TENIENDO EL INDICE
 		pJugador=ll_get(pArrayListJugador, indice);
-
 		//BUSCO EL TAMANIO DE LA LISTA DE SELECCIONES
 		tam=ll_len(pArrayListSeleccion);
 		for(int i=0;i<tam;i++)
 		{
+			//printf("ENTRE AL FOR en selec_AsignarDescripcionPais >0\n");
 			pSeleccion=ll_get(pArrayListSeleccion, i);
-			if((*(pSeleccion)).id==(*(pJugador)).idSeleccion)
+		//	printf("PASE EL ll_get\n");
+			if(selec_getId(pSeleccion, &selecId)==0 && jug_getSIdSeleccion(pJugador, &jugIdSeleccion)==0)
 			{
-				//PASO EL NOMBRE DEL PAIS
-				strcpy(descripcionPais, (*(pSeleccion)).pais);
-				break;
+				//printf("OBTUVE LOS GETTERS\n");
+				if(selecId==jugIdSeleccion)
+				{
+				//	printf("COINCIDENCIA ENTRE EL ID DE SELECCION DEL JUG Y EL DE LA SELEC \n");
+					if(selec_getPais(pSeleccion, selecPais)==0)
+					{
+						retorno=0;
+						//PASO EL NOMBRE DEL PAIS
+						//printf("HAGO STRCPY selec_AsignarDescripcionPais >0\n");
+						strcpy(descripcionPais, selecPais);
+						break;
+					}
+				}
 			}
 		}
 	}
@@ -327,28 +342,4 @@ int selec_restarConvocado(LinkedList* pArrayListSeleccion, int idSeleccion)
 	}
 	return retorno;
 }
-/*int selec_buscar_Pais(LinkedList* listaConfederaciones, int id, char* paisEncontrado)
-{
-	int retorno=-1;
-	int cantidad;
-	cantidad=ll_len(listaConfederaciones);
-	Seleccion* pPaises;
 
-	if(listaConfederaciones!=NULL)
-	{
-		for(int i=0;i<cantidad;i++)
-		{
-			pPaises=ll_get(listaConfederaciones, i);
-			if(id==(*(pPaises)).id)
-			{
-				selec_setConvocados(pPaises, convocados)
-				paisEncontrado=(*(pPaises+i)).pais;
-				printf("PAIS ENCONTRADO: %s",paisEncontrado);
-				retorno=0;
-				break;
-			}
-		}
-	}
-
-	return retorno;
-}*/

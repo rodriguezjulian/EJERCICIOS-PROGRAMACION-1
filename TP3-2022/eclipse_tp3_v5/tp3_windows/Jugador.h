@@ -39,7 +39,8 @@ int jug_setIdSeleccion(Jugador* this,int idSeleccion);
 int jug_getSIdSeleccion(Jugador* this,int* idSeleccion);
 
 //HACER QUE TODAS LAS FUNCIONES ARRANQUEN CON jug
-int imprimirJugador(LinkedList* pArrayListJugador, int index);
+//int jug_imprimirJugador(LinkedList* pArrayListJugador, int index,LinkedList* pArrayListSeleccion);
+int jug_imprimirJugadores(LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion, int referenciaDeUso);
 
 
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
@@ -50,6 +51,11 @@ int jug_Editar_NombreCompleto(LinkedList* pArrayListJugador , int indice);
 int jug_Editar_Edad(LinkedList* pArrayListJugador , int indice);
 int jug_Editar_Posicion(LinkedList* pArrayListJugador , int indice);
 int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice);
+
+
+
+
+
 int jug_Confirmar_Baja(LinkedList* pArrayListJugador, int indice, char* nombreJugador);
 int jug_BuscarIdMax(LinkedList* pArrayListJugador, int *idMaximo);
 int jug_Solicitar_Id(LinkedList* pArrayListJugador, int * indice ,char * mensaje);
@@ -63,10 +69,15 @@ int jug_OrdenarPorEdad(void* unJugador, void* otroJugador);
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
 
 
-int jug_Listar_Convocados(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
 
 
-int operara_Menu_Opcion6(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
-int operara_Menu_Opcion7(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
+int jug_IngresarPosicion(char* posicion);
+void jug_MostrarNacionalidades(void);
+int jug_IngresarNacionalidad(char* nacionalidad);
+
+
+int jug_OrdenarPorPosicion(void* unJugador, void* otroJugador);
+int jug_Quitar_Convocado(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
+
 
 #endif // jug_H_INCLUDED
