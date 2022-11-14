@@ -40,11 +40,11 @@ int jug_getSIdSeleccion(Jugador* this,int* idSeleccion);
 
 //HACER QUE TODAS LAS FUNCIONES ARRANQUEN CON jug
 //int jug_imprimirJugador(LinkedList* pArrayListJugador, int index,LinkedList* pArrayListSeleccion);
-int jug_imprimirJugadores(LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion, int referenciaDeUso);
+
 
 
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
-int buscarJugPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice);
+int jug_BuscarPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice);
 
 
 int jug_Editar_NombreCompleto(LinkedList* pArrayListJugador , int indice);
@@ -54,7 +54,7 @@ int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice);
 
 
 
-
+int jug_verificarCambios(LinkedList* pArrayListJugador ,LinkedList* pArrayListJugadorOriginal, int* jug_Flag);
 
 int jug_Confirmar_Baja(LinkedList* pArrayListJugador, int indice, char* nombreJugador);
 int jug_BuscarIdMax(LinkedList* pArrayListJugador, int *idMaximo);
@@ -62,14 +62,12 @@ int jug_Solicitar_Id(LinkedList* pArrayListJugador, int * indice ,char * mensaje
 int jug_convocar(LinkedList* pArrayListJugador, LinkedList* listaConfederaciones);
 
 
-int operara_Menu_Opcion5(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
-
 int jug_OrdenarPorNombre(void* unJugador, void* otroJugador);
 int jug_OrdenarPorEdad(void* unJugador, void* otroJugador);
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador);
 
 
-
+int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* path);
 
 int jug_IngresarPosicion(char* posicion);
 void jug_MostrarNacionalidades(void);

@@ -84,30 +84,7 @@ int selec_getConvocados(Seleccion* this,int* convocados)
 	}
 	return retorno;
 }
-int imprimirSeleccion(LinkedList* pArrayListSeleccion, int index)
-{
-	int retorno=-1;
-	int id;
-	char pais[50];
-	char confederacion[50];
-	int convocados;
-	Seleccion* seleccionAux;
-	seleccionAux=ll_get(pArrayListSeleccion, index);
 
-	if(pArrayListSeleccion!=NULL && index>-1)
-	{
-
-		if(selec_getId(seleccionAux, &id)==0 &&
-		selec_getPais(seleccionAux, pais)==0 &&
-		selec_getConfederacion(seleccionAux, confederacion)==0 &&
-		selec_getConvocados(seleccionAux, &convocados)==0)
-		{
-			//printf("IMPRIMIR SELECCION ENTRO");
-			printf("| %*d|%*s|%*s| %*d|\n",-3,id,-25,pais,-15,confederacion,-9,convocados);
-		}
-	}
-	return retorno;
-}
 int selec_IngresarConfederacion(char* opcion)
 {
 	int retorno=-1;

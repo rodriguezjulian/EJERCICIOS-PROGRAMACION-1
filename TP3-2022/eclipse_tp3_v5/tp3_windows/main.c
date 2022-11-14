@@ -6,8 +6,10 @@
 #include "ingresos.h"
 #include<string.h>
 
+#include "salidas.h"
+
 #include "Seleccion.h"
-void mostrarMenuPrincipal();
+
 int main()
 {
 	setbuf(stdout,NULL);
@@ -21,9 +23,9 @@ int main()
     int idMax;
     char path[30];
     strcpy(path,"ARCHIVO_BINARIO.bin");
+    int flagSalida=0;
 
     do{
-
     	mostrarMenuPrincipal();
     	ingresarIntConRango(&option, "INGRESE SEGUN QUIERA OPERAR", "ERROR, Ingrese opcion valida.\n", 1, 11);
         switch(option)
@@ -31,9 +33,10 @@ int main()
             case 1:
             	if(ll_isEmpty(listaJugadores)==1 && ll_isEmpty(listaSelecciones)==1)
             	{
-            		if(controller_cargarJugadoresDesdeTexto("jugadores.csv",listaJugadores)!=0 &&
-            				controller_cargarJugadoresDesdeTexto("jugadores.csv",listaJugadoresOriginal)!=0)
+            		if(controller_cargarJugadoresDesdeTexto("jugadores.csv",listaJugadores)==0 &&
+            				controller_cargarJugadoresDesdeTexto("jugadores.csv",listaJugadoresOriginal)==0)
             		{
+            			printf("\n<<<<<<<<<< ARCHIVO DE JUGADORES CARGADO EXITOSAMENTE >>>>>>>>>>\n");
             			if(controller_cargarSeleccionesDesdeTexto("selecciones.csv", listaSelecciones)!=0)
             			{
             				printf("ERROR al cargar el archivo: selecciones.csv\n");
@@ -43,6 +46,10 @@ int main()
             		{
             			printf("ERROR al cargar el archivo: jugadores.csv\n");
             		}
+            	}
+            	else
+            	{
+            		printf("Los archivos ya han sido cargados.\n ");
             	}
             break;
             case 2:
@@ -109,7 +116,10 @@ int main()
             	}
             break;
             case 9:
-            	controller_cargarJugadoresDesdeBinario(path, listaJugadoresBinario,listaSelecciones);
+            	if(controller_cargarJugadoresDesdeBinario(path, listaJugadoresBinario,listaSelecciones)!=0)
+            	{
+            		printf("ERROR, al cargar archivo binario.\n");
+            	}
             break;
             case 10:
             	if(controller_guardarJugadoresModoTexto("probando guardar jugadores.txt", listaJugadores)!=0 &&
@@ -120,20 +130,14 @@ int main()
             	}
             break;
             case 11:
-            	controller_Salir(listaSelecciones, listaJugadores, listaJugadoresOriginal, idMax);
+            	if(controller_Salir(listaSelecciones, listaJugadores, listaJugadoresOriginal, idMax)==0)
+				{
+            		flagSalida=1;
+				}
             break;
         }
-    }while(option != 10);
+    }while(flagSalida==0);
 
     return 0;
 }
-void mostrarMenuPrincipal()
-{
-	printf("+==================================================+\n|%*s|\n%s",
-			-50,"                MENU PRINCIPAL","+==================================================+\n");
 
-	printf("|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n%s\n",-50,"1.CARGA DE ARCHIVOS",
-			-50,"2.ALTA DE JUGADOR",-51,"3.MODIFICACIÓN DE JUGADOR",-50,"4.BAJA DE JUGADOR",-50,"5.LISTADOS",
-			-50,"6.CONVOCAR JUGADORES",-50,"7.ORDENAR Y LISTAR",-50,"8.GENERAR ARCHIVO BINARIO",-50,"9.CARGAR ARCHIVO BINARIO",
-			-50,"10.GUARDAR ARCHIVOS .CSV",-50,"11.SALIR","+==================================================+\n");
-}

@@ -6,7 +6,8 @@
 #include "LinkedList.h"
 #include "parser.h"
 #include "ingresos.h"
-#include<string.h>
+#include <string.h>
+#include "salidas.h"
 
 /** \brief Carga los datos de los jugadores desde el archivo jugadores.csv (modo texto).
  *
@@ -24,13 +25,13 @@ int controller_cargarJugadoresDesdeTexto(char* path , LinkedList* pArrayListJuga
 	if(pFile!=NULL)
 	{
 		//pArrayListJugador=ll_newLinkedList();
-		if(parser_JugadorFromText(pFile, pArrayListJugador)==0)
+		if(parser_JugadorFromText(pFile, pArrayListJugador)!=0)
 		{
-			printf("\n<<<<<<<<<< ARCHIVO DE JUGADORES CARGADO EXITOSAMENTE >>>>>>>>>>\n");
+			puts("ERROR AL CARGAR EL ARCHIVO");
 		}
 		else
 		{
-			puts("ERROR AL CARGAR EL ARCHIVO");
+			retorno=0;
 		}
 	}
 	fclose(pFile);
@@ -56,7 +57,7 @@ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
 		cantidad=ll_len(pArrayListSeleccion);
 		for(int i=0;i<cantidad;i++)
 		{
-			imprimirSeleccion(pArrayListSeleccion, i);
+			selec_imprimirSeleccion(pArrayListSeleccion, i);
 			retorno=0;
 		}
 		printf("+=========================================================+\n");
@@ -151,16 +152,6 @@ int controller_agregarJugador(LinkedList* pArrayListJugador , int* idMax)
 		jug_BuscarIdMax(pArrayListJugador, &id);
 		*idMax=id+1;
 
-
-
-		//VER SI LA SOBRE ESCRITURA LA PONGO EN OTRA OPCION
-		/*pArchivoId=fopen("id.txt", "w");
-		if(pArchivoId!=NULL)
-		{
-			fprintf(pArchivoId,"%d",id);
-		}
-		fclose(pArchivoId);*/
-		//printf("NUEVO ID %d\n",id);
 		if(ingresarCadenaCaracteres(100, nombreCompleto, "Ingrese nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n")==0 &&
 				ingresarIntConRango(&edad, "Ingrese edad del jugador (16/50).\t", "ERROR, Ingrese edad valida.", 16, 50)==0 &&
 				jug_IngresarPosicion(posicion)==0 &&
@@ -529,56 +520,7 @@ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJuga
 }
 
 
-int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* path)
-{
-	//SACAR CANTIDADCONVOCADOS.
-	int retorno=-1;
-	Jugador* pJugador;
-	int tamJugadores;
-	int tamSelecciones;
-	Seleccion* pSeleccion;
-	tamJugadores=ll_len(pArrayListJugador);
-	tamSelecciones=ll_len(pArrayListSeleccion);
-	char selecConfederacion[30];
-	int selecId;
-	int jugIdSeleccion;
 
-	FILE* pArchivo;
-
-	if(pArrayListSeleccion!=NULL && pArrayListJugador!=NULL)
-	{
-		pArchivo=fopen(path,"wb");
-		for(int i=0;i<tamSelecciones;i++)
-		{
-			pSeleccion=ll_get(pArrayListSeleccion, i);
-			if(selec_getConfederacion(pSeleccion, selecConfederacion)==0 && selec_getId(pSeleccion, &selecId)==0)
-			{
-			//	printf("CONFEDERACION %s\n LA OTRA CONFEDERACION %s\n ID %d",nombreConfederacion,selecConfederacion,selecId);
-				if(strcmp(nombreConfederacion,selecConfederacion)==0)
-				{
-					//INGRESE A UN PAIS DE LA CONFEDERACION
-					for(int i=0;i<tamJugadores;i++)
-					{
-						pJugador=ll_get(pArrayListJugador, i);
-						if(jug_getSIdSeleccion(pJugador, &jugIdSeleccion)==0)
-						{
-							//EL JUGADOR PERTENECE A LA CONFEREDACION
-							if(selecId==jugIdSeleccion)
-							{
-								retorno=0;
-								fwrite(pJugador,sizeof(Jugador),1,pArchivo);
-							}
-						}
-					}
-				}
-			}
-
-		}
-		fclose(pArchivo);
-	}
-
-	return retorno;
-}
 int controller_guardarMaxId(char* path, int maxId)
 {
 	int retorno=-1;
@@ -691,49 +633,6 @@ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSe
 	}
     return retorno;
 }
-int jug_verificarCambios(LinkedList* pArrayListJugador ,LinkedList* pArrayListJugadorOriginal, int* jug_Flag)
-{
-	int retorno=-1;
-	Jugador* pJugador;
-	char nombreCompleto[100];
-	int edad;
-	char posicion[30];
-	char nacionalidad[30];
-	int idSeleccion;
-	Jugador* pJugadorOriginal;
-	char nombreCompletoOriginal[100];
-	int edadOriginal;
-	char posicionOriginal[30];
-	char nacionalidadOriginal[30];
-	int idSeleccionOriginal;
-
-	int tamJugadores;
-	tamJugadores=ll_len(pArrayListJugador);
-
-	if(pArrayListJugador!=NULL && pArrayListJugadorOriginal!=NULL)
-	{
-		for(int i=0;i<tamJugadores;i++)
-		{
-			pJugador=ll_get(pArrayListJugador, i);
-			pJugadorOriginal=ll_get(pArrayListJugadorOriginal, i);
-			if(jug_getEdad(pJugador, &edad)==0 && jug_getEdad(pJugadorOriginal, &edadOriginal)==0 &&
-					jug_getNacionalidad(pJugador, nacionalidad)==0 && jug_getNacionalidad(pJugadorOriginal, nacionalidadOriginal)==0 &&
-					jug_getNombreCompleto(pJugador, nombreCompleto)==0 && jug_getNombreCompleto(pJugadorOriginal, nombreCompletoOriginal)==0 &&
-					jug_getPosicion(pJugador, posicion)==0 && jug_getPosicion(pJugadorOriginal, posicionOriginal)==0 &&
-					jug_getSIdSeleccion(pJugador, &idSeleccion)==0 && jug_getSIdSeleccion(pJugadorOriginal, &idSeleccionOriginal)==0)
-			{
-				retorno=0;
-				if(edad!=edadOriginal || strcmp(nacionalidad,nacionalidadOriginal)!=0 || strcmp(nombreCompleto,nombreCompletoOriginal)!=0 ||
-						strcmp(posicion,posicionOriginal)!=0 || idSeleccion!=idSeleccionOriginal)
-				{
-					*jug_Flag=1;
-					break;
-				}
-			}
-		}
-	}
-	return retorno;
-}
 
 int controller_Salir(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador ,LinkedList* pArrayListJugadorOriginal, int idMax)
 {
@@ -742,39 +641,36 @@ int controller_Salir(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJuga
 	int opcion;
 	if(pArrayListSeleccion!=NULL && pArrayListJugador!=NULL)
 	{
-		ingresarIntConRango(&opcion, "Para confirmar salida presione 1, para continuar operando presione 2.\n", "ERROR,Ingrese opcion valida", 1, 2);
-		if(opcion==2)
+		if(jug_verificarCambios(pArrayListJugador, pArrayListJugadorOriginal, &jug_Flag)==0)
 		{
-			if(jug_verificarCambios(pArrayListJugador, pArrayListJugadorOriginal, &jug_Flag)==0)
+			if(jug_Flag==1)
 			{
-				if(jug_Flag==1)
+				ingresarIntConRango(&opcion, "\n<<<<<<<<<< SE DETECTARON CAMBIOS, PARA GUARDAR PRESIONE: 1, "
+						"PARA SALIR SIN GUARDAR: 2 >>>>>>>>>>\n", "ERROR, Ingrese opcion valida.\n", 1, 2);
+				if(opcion==1)
 				{
-					ingresarIntConRango(&opcion, "\n<<<<<<<<<< SE DETECTARON CAMBIOS, PARA GUARDAR PRESIONE: 1, "
-							"PARA SALIR SIN GUARDAR: 2 >>>>>>>>>>\n", "ERROR, Ingrese opcion valida.\n", 1, 2);
-					if(opcion==1)
+					if(controller_guardarJugadoresModoTexto("probando guardar jugadores.txt", pArrayListJugador)!=0 &&
+					controller_guardarSeleccionesModoTexto("prueba listas.txt", pArrayListSeleccion)!=0 &&
+					controller_guardarMaxId("id.txt", idMax)!=0)
 					{
-		            	if(controller_guardarJugadoresModoTexto("probando guardar jugadores.txt", pArrayListJugador)!=0 &&
-		            	controller_guardarSeleccionesModoTexto("prueba listas.txt", pArrayListSeleccion)!=0 &&
-		            	controller_guardarMaxId("id.txt", idMax)!=0)
-		            	{
-		            		printf("\n<<<<<<<<<< ERROR AL GUARDAR ARCHIVOS >>>>>>>>>>\n");
-		            	}
-		            	else
-		            	{
-		            		retorno=0;
-		            		printf("\n<<<<<<<<<< ARCHIVOS GUARDADOS EXITOSAMENTE >>>>>>>>>>\n");
-		            		printf("\n<<<<<<<<<< SALIDA EXITOSA >>>>>>>>>>\n");
-		            	}
+						printf("\n<<<<<<<<<< ERROR AL GUARDAR ARCHIVOS >>>>>>>>>>\n");
+					}
+					else
+					{
+						printf("\n<<<<<<<<<< ARCHIVOS GUARDADOS EXITOSAMENTE >>>>>>>>>>\n");
 					}
 				}
 			}
 		}
-		else
+		if(retorno==-1)
 		{
-			printf("\n<<<<<<<<<< SALIDA EXITOSA >>>>>>>>>>\n");
+			ingresarIntConRango(&opcion, "Para confirmar salida presione 2, para continuar operando presione 1.\n", "ERROR,Ingrese opcion valida", 1, 2);
+			if(opcion==2)
+			{
+				retorno=0;
+				printf("\n<<<<<<<<<< SALIDA EXITOSA >>>>>>>>>>\n");
+			}
 		}
-
-
 	}
 	return retorno;
 }
