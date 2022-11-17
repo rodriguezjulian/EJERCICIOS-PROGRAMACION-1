@@ -11,21 +11,34 @@
 #include "ingresos.h"
 
 
-int ingresarFloat(float* resultado,char* mensaje)
+/// \fn int ingresarNumIntConRango(int*, char*, char*, int)
+/// \brief Ingreso texto, verifico que sean numeros efectivamente (isDigit), y paso a numeros con "atoi", para luego verificar si se
+/// cumple con el minimo.
+///
+///
+/// \param resultado ,tipo de dato int (pasa por referencia).
+/// \param mensaje ,mensaje utilizado para solicitar el numero.
+/// \param mensajeError ,mensaje de error por si el usuario ingresa un numero por debajo del minimo.
+/// \param minimo ,limite inferior del rango.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
+int ingresarIntConMinimo(int* resultado, char* mensaje, char* mensajeError, int minimo)
 {
 	int retorno=-1;
 	int flag;
-	char	numero[999999];
 	int tamIngreso;
+	char numero[999999];
+
 	do
 	{
 		flag=0;
-		if(resultado!=NULL && mensaje!=NULL)
+		if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL)
 		{
 			printf("%s",mensaje);
 			fflush(stdin);
 			gets(numero);
-			tamIngreso=strlen(numero);
+
+            tamIngreso=strlen(numero);
+
             for(int i=0;i<tamIngreso;i++)
             {
             	if(isdigit((*(numero+i)))==0)
@@ -37,37 +50,33 @@ int ingresarFloat(float* resultado,char* mensaje)
             }
             if(flag==0)
             {
-            	retorno=0;
             	*resultado=atoi(numero);
+                if(*resultado>=minimo)
+                {
+                	retorno=0;
+                }
+                else
+                {
+                	printf("%s",mensajeError);
+                }
             }
 		}
 
 	}while(retorno!=0);
-	return retorno;
-}
-int ingresarFloatConMinimo(float* resultado, char* mensaje,char*mensajeError,int minimo)
-{
-	int retorno=-1;
-	float numero;
-	do
-	{
-		if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL)
-		{
-			ingresarFloat(&numero,mensaje);
-			if(numero>=minimo)
-			{
-				*resultado=numero;
-				retorno=0;
-			}
-			else
-			{
-				printf("%s",mensajeError);
-			}
-		}
-	}while(retorno!=0);
 
 	return retorno;
 }
+/// \fn int ingresarNumIntConRango(int*, char*, char*, int, int)
+/// \brief Ingreso texto, verifico que sean numeros efectivamente (isDigit), y paso a numeros con "atoi", para luego verificar si se
+/// cumple con el rango.
+///
+///
+/// \param resultado ,tipo de dato int (pasa por referencia).
+/// \param mensaje ,mensaje utilizado para solicitar el numero.
+/// \param mensajeError ,mensaje de error por si el usuario ingresa un numero fuera del rango.
+/// \param minimo ,limite inferior del rango.
+/// \param maximo ,limite superior del rango.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int minimo, int maximo)
 {
 	int retorno=-1;
@@ -113,6 +122,11 @@ int ingresarIntConRango(int* resultado, char* mensaje, char* mensajeError, int m
 
 	return retorno;
 }
+/// \fn int verificarCaracterSN(char)
+/// \brief Verifica si se ingreso una s/S o n/N y retorna segun corresponda
+///
+/// \param letra
+/// \return return=0 ingreso s/S n/N/ return=-1 ingreso cualquier otra leta
 int verificarCaracterSN(char letra)
 {
 	int retorno=-1;
@@ -128,64 +142,14 @@ int verificarCaracterSN(char letra)
 	}
 	return retorno;
 }
-
-/*int confirmarSalida(void)
-{
-	int retorno=-1;
-	char respuesta;
-	int reintentos=3;
-
-	do
-	{
-		printf("\nPara seguir operando presione S|N");
-		fflush(stdin);
-		scanf("%c",&respuesta);
-		respuesta=toupper(respuesta);
-
-		reintentos=reintentos-1;
-		if(verificarCaracterSN(respuesta)==-1 )
-		{
-			printf("ERROR, ingrese opcion valida\nReintentos restantes: %d\n\n",reintentos);
-		}
-	}while(verificarCaracterSN(respuesta)==-1 && reintentos>0);
-
-
-	if(respuesta!='S')
-	{
-		printf("Confirme que desea SALIR presionando X \nPara continuar operando ingrese cualquier otra tecla");
-		fflush(stdin);
-		scanf("%c",&respuesta);
-		respuesta=toupper(respuesta);
-
-		if(respuesta=='X')
-		{
-			printf("<<<<<<<<<<<<<<<<<<<<SALIR>>>>>>>>>>>>>>>>>>>");
-			retorno=0;
-		}
-	}
-	return retorno;
-}*/
-/*int ingresarChar(char* mensaje,char* mensajeError, char minimo, char maximo, char* resultado)
-{
-	int retorno=-1;
-	if(mensaje!=NULL && mensajeError!=NULL && resultado!=NULL && minimo<maximo)
-	{
-		do
-		{
-			printf("%s",mensaje);
-			gets(resultado);
-			if(resultado<minimo || resultado>maximo)
-			{
-				printf("%s", mensajeError);
-			}
-			else
-			{
-				retorno=0;
-			}
-		}while(retorno==-1);
-	}
-	return retorno;
-}*/
+/// \fn int ingresarCadenaCaracteres(int, char*, char*, char*)
+/// \brief Ingresar una cadena de caracteres verificando el tamanio, y que no se encuentren numeros.
+///
+/// \param tam ,tamaño de la cadena
+/// \param textoIngresado ,el resultado se pasara por referencia.
+/// \param mensaje ,mensaje utilizado para solicitar la cadena.
+/// \param mensajeError ,mensaje de error por si el usuario excede la cantidad de caracteres.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int ingresarCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* mensajeError)
 {
     int retorno=-1;
@@ -222,47 +186,5 @@ int ingresarCadenaCaracteres(int tam,char* textoIngresado,char* mensaje,char* me
     }
     return retorno;
 }
-int ingresarShortConRango(short* resultado, char* mensaje, char* mensajeError, short minimo, short maximo)
-{
-	short retorno=-1;
-	int flag;
-	int tamIngreso;
-	char numero[999999];
-	do
-		{
-			flag=0;
-			if(resultado!=NULL && mensaje!=NULL && mensajeError!=NULL && minimo<maximo)
-			{
-				printf("%s",mensaje);
-				fflush(stdin);
-				gets(numero);
 
-	            tamIngreso=strlen(numero);
-
-	            for(int i=0;i<tamIngreso;i++)
-	            {
-	            	if(isdigit((*(numero+i)))==0)
-	            	{
-	            		flag=1;
-	            		printf("ERROR, Ingrese un numero\n");
-	            		break;
-	            	}
-	            }
-	            if(flag==0)
-	            {
-	            	*resultado=atoi(numero);
-	                if(*resultado>=minimo && *resultado<= maximo)
-	                {
-	                	retorno=0;
-	                }
-	                else
-	                {
-	                	printf("%s",mensajeError);
-	                }
-	            }
-			}
-
-		}while(retorno!=0);
-	return retorno;
-}
 

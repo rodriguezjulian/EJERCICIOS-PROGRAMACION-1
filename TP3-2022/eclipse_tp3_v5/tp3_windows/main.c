@@ -1,3 +1,4 @@
+//RODRIGUEZ JULIAN MANUEL DIV J  TP3
 #include <stdio.h>
 #include <stdlib.h>
 #include "LinkedList.h"
@@ -5,9 +6,7 @@
 #include "Jugador.h"
 #include "ingresos.h"
 #include<string.h>
-
 #include "salidas.h"
-
 #include "Seleccion.h"
 
 int main()
@@ -33,11 +32,15 @@ int main()
             case 1:
             	if(ll_isEmpty(listaJugadores)==1 && ll_isEmpty(listaSelecciones)==1)
             	{
-            		if(controller_cargarJugadoresDesdeTexto("jugadores.csv",listaJugadores)==0 &&
+            		if(controller_cargarJugadoresDesdeTexto("data.csv",listaJugadores)==0 &&
             				controller_cargarJugadoresDesdeTexto("jugadores.csv",listaJugadoresOriginal)==0)
             		{
             			printf("\n<<<<<<<<<< ARCHIVO DE JUGADORES CARGADO EXITOSAMENTE >>>>>>>>>>\n");
-            			if(controller_cargarSeleccionesDesdeTexto("selecciones.csv", listaSelecciones)!=0)
+            			if(controller_cargarSeleccionesDesdeTexto("selecciones.csv", listaSelecciones)==0)
+            			{
+            				controller_cargarIdMaximo(&idMax);
+            			}
+            			else
             			{
             				printf("ERROR al cargar el archivo: selecciones.csv\n");
             			}
@@ -92,42 +95,89 @@ int main()
             	}
             break;
             case 5:
-            	if(controller_listar(listaJugadores, listaSelecciones)!=0)
+            	if(ll_isEmpty(listaJugadores)==0 && ll_isEmpty(listaSelecciones)==0)
             	{
-            		printf("<<<<<<<<<< ERROR, al listar.>>>>>>>>>\n");
+    				if(controller_listar(listaJugadores, listaSelecciones)!=0)
+                	{
+                		printf("<<<<<<<<<< ERROR, al listar.>>>>>>>>>\n");
+                		printf("<<<<<<<<<< RECUERDE QUE PARA LISTAR CONVOCADOS PRIMERO DEBE CONVOCAR AL MENOS 1 JUGADOR >>>>>>>>>>\n");
+                	}
             	}
+            	else
+            	{
+            		printf("Debe operar la opcion 1 antes de poder listar.\n");
+            	}
+
             break;
             case 6:
-            	if(controller_editarSeleccion(listaJugadores, listaSelecciones)!=0)
+            	if(ll_isEmpty(listaJugadores)==0 && ll_isEmpty(listaSelecciones)==0)
             	{
-            		printf("<<<<<<<<<< ERROR al editar seleccion.>>>>>>>>>\n");
+                	if(controller_editarSeleccion(listaJugadores, listaSelecciones)!=0)
+                	{
+                		printf("<<<<<<<<<< ERROR al convocar / desconvocar jugador.>>>>>>>>>\n");
+                	}
             	}
+            	else
+            	{
+            		printf("Debe operar la opcion 1 antes de convocar o desconvocar.\n");
+            	}
+
             break;
             case 7:
-            	if(controller_ordenarJugadores(listaJugadores, listaSelecciones)!=0)
+            	if(ll_isEmpty(listaJugadores)==0 && ll_isEmpty(listaSelecciones)==0)
             	{
-            		printf("<<<<<<<<<< ERROR al ordenar jugadores / listarlos. >>>>>>>>>\n");
+                	if(controller_ordenarJugadores(listaJugadores, listaSelecciones)!=0)
+                	{
+                		printf("<<<<<<<<<< ERROR al ordenar jugadores / listarlos. >>>>>>>>>\n");
+                	}
+            	}
+            	else
+            	{
+            		printf("Debe operar la opcion 1 antes de ordenar y listar.\n");
             	}
             break;
             case 8:
-            	if(controller_guardarJugadoresModoBinario(path, listaJugadores,listaSelecciones)!=0)
+            	if(ll_isEmpty(listaJugadores)==0 && ll_isEmpty(listaSelecciones)==0)
             	{
-            		printf("<<<<<<<<<< ERROR AL INTENTAR CREAR ARCHIVO BINARIO >>>>>>>>>\n");
+                	if(controller_guardarJugadoresModoBinario(path, listaJugadores,listaSelecciones)!=0)
+                	{
+                		printf("<<<<<<<<<< ERROR AL INTENTAR CREAR ARCHIVO BINARIO >>>>>>>>>\n");
+                	}
+            	}
+            	else
+            	{
+            		printf("Debe operar la opcion 1 antes de generar un archivo binario.\n");
             	}
             break;
             case 9:
-            	if(controller_cargarJugadoresDesdeBinario(path, listaJugadoresBinario,listaSelecciones)!=0)
+            	if(ll_isEmpty(listaJugadores)==0 && ll_isEmpty(listaSelecciones)==0)
             	{
-            		printf("ERROR, al cargar archivo binario.\n");
+                	if(controller_cargarJugadoresDesdeBinario(path, listaJugadoresBinario,listaSelecciones)!=0)
+                	{
+                		printf("ERROR, al cargar archivo binario.Debe operar la opcion 8 primeramente.\n");
+                	}
+            	}
+            	else
+            	{
+            		printf("Debe operar la opcion 1 antes de cargar un archivo binario.\n");
             	}
             break;
             case 10:
-            	if(controller_guardarJugadoresModoTexto("probando guardar jugadores.txt", listaJugadores)!=0 &&
-            	controller_guardarSeleccionesModoTexto("prueba listas.txt", listaSelecciones)!=0 &&
-            	controller_guardarMaxId("id.txt", idMax)!=0)
+            	if(ll_isEmpty(listaJugadores)==0 && ll_isEmpty(listaSelecciones)==0)
             	{
-            		printf("\n<<<<<<<<<< ERROR AL GUARDAR ARCHIVOS >>>>>>>>>>\n");
+                	if(controller_guardarJugadoresModoTexto("jugadores.csv", listaJugadores)!=0 ||
+                	controller_cargarJugadoresDesdeTexto("jugadores.csv", listaJugadoresOriginal)!=0 ||
+                	controller_guardarSeleccionesModoTexto("selecciones.csv", listaSelecciones)!=0 ||
+                	controller_guardarMaxId("id.txt", idMax)!=0)
+                	{
+                		printf("\n<<<<<<<<<< ERROR AL GUARDAR ARCHIVOS >>>>>>>>>>\n");
+                	}
             	}
+            	else
+            	{
+            		printf("ERROR, Debe operar la opcion 1 antes de poder guardar archivos.\n");
+            	}
+
             break;
             case 11:
             	if(controller_Salir(listaSelecciones, listaJugadores, listaJugadoresOriginal, idMax)==0)

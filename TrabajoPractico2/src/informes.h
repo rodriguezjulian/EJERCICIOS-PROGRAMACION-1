@@ -33,6 +33,9 @@ int listarJugadores(eJugador* jugadores,eConfederacion* confederaciones,int tam,
 /// \return return=0 SALIO BIEN / return=-1 SALIO MAL.
 int listarJugadoresXConfederaciones(eJugador* jugadores,eConfederacion* confederaciones,int tam, int tamConfederaciones);
 
+
+
+
 /// \fn int informarTotalyMediaDeSalarios(eJugador*, int, int)
 /// \brief En esta funcion se llamara a "acumularTotalSalarios","calcularPromedio"y "calcularJugPorArribaDeLaMedia""
 /// Una vez obtenidos estos datos se mostraran ordenadamente.

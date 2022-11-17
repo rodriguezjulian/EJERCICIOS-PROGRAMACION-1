@@ -155,7 +155,6 @@ int informarRegionMasAsistida(eJugador* jugadores, int tam, int tamConfederacion
 
 	for(int i=0;i<tamConfederaciones;i++)
 	{
-		printf("ENTRO?");
 		flag=0;
 		if((*(arrayCantidadAcumulados+i))==maximoContador)
 		{

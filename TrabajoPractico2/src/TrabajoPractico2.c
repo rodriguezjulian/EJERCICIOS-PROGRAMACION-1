@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : TrabajoPractico2.c
- Author      : Rodriguez Julian Manuel - Div J - Turno tarde - Laboratorio
+ Author      : Rodriguez Julian Manuel - Div J - Turno tarde - Laboratorio.
  Version     :
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
@@ -14,7 +14,7 @@
 #include "jugadores.h"
 #include "confederaciones.h"
 
-#define TAM 8
+#define TAM 3000
 #define TAM_CONFEDERACIONES 6
 #define VACIO 1
 #define OCUPADO 0
@@ -28,7 +28,9 @@ int main(void) {
 	int contadorJugadores=0;//INICIALIZADO EN 0 YA QUE SE USARA COMO VARIABLE DE CONTROL EN EL MENU
 	int contadorConf=6;//SE HARDCODEAN 6 ESTRUCTURAS
 	eJugador jugadores[TAM];
-//
+
+
+
 	eConfederacion confederaciones[6]=
 	{
 			{100,"CONMEBOL","SUDAMERICA",1916,OCUPADO},

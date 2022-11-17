@@ -4,18 +4,33 @@
 #include "seleccion.h"
 #include "ingresos.h"
 #include "Jugador.h"
+/// \fn void selec_delete(Seleccion*)
+/// \brief Libero espacio de memoria de un puntero a estructura Seleccion recibido.
+///
+/// \param this
 void selec_delete(Seleccion* this)
 {
 
 	free(this);
 }
-
+/// \fn Seleccion selec_new*()
+/// \brief Reserva espacio de memoria para una estructura de tipo Seleccion.
+///
+/// \return retorna puntero a estructura de tipo Seleccion
 Seleccion* selec_new()
 {
 	Seleccion* pSeleccion;
 	pSeleccion = (Seleccion*)calloc(1,sizeof(Seleccion)*1);
 	return pSeleccion;
 }
+/// \fn Seleccion selec_newParametros*(char*, char*, char*, char*)
+/// \brief Recibe por parametro valores para completar los campos de una estructa de tipo Seleccion, habiendo reservado memoria anteriormente.
+///
+/// \param idStr
+/// \param paisStr
+/// \param confederacionStr
+/// \param convocadosStr
+/// \return retorna puntero a estructura de tipo Seleccion
 Seleccion* selec_newParametros(char* idStr,char* paisStr,char* confederacionStr, char* convocadosStr)
 {
 	Seleccion* pSeleccion;
@@ -29,7 +44,12 @@ Seleccion* selec_newParametros(char* idStr,char* paisStr,char* confederacionStr,
 	}
 	return pSeleccion;
 }
-
+/// \fn int selec_getId(Seleccion*, int*)
+/// \brief Asigno valor del campo id de una estructura de tipo Seleccion a una variable.
+///
+/// \param this
+/// \param id variable a la que se le pasara el valor por referencia.
+/// \return return int return=0 SALIO BIEN / return=-1 SALIO MAL
 int selec_getId(Seleccion* this,int* id)
 {
 	int retorno=-1;
@@ -38,9 +58,14 @@ int selec_getId(Seleccion* this,int* id)
 		*id=this->id;
 		retorno=0;
 	}
-
 	return retorno;
 }
+/// \fn int selec_getPais(Seleccion*, char*)
+/// \brief Asigno valor del campo pais de una estructura de tipo Seleccion a una variable.
+///
+/// \param this
+/// \param pais variable a la que se le pasara el valor por referencia.
+/// \return return int return=0 SALIO BIEN / return=-1 SALIO MAL
 int selec_getPais(Seleccion* this,char* pais)
 {
 	int retorno=-1;
@@ -52,7 +77,12 @@ int selec_getPais(Seleccion* this,char* pais)
 	}
 	return retorno;
 }
-
+/// \fn int selec_getConfederacion(Seleccion*, char*)
+/// \brief  Asigno valor del campo confederacion de una estructura de tipo Seleccion a una variable.
+///
+/// \param this
+/// \param confederacion variable a la que se le pasara el valor por referencia.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int selec_getConfederacion(Seleccion* this,char* confederacion)
 {
 	int retorno=-1;
@@ -63,7 +93,12 @@ int selec_getConfederacion(Seleccion* this,char* confederacion)
 	}
 	return retorno;
 }
-
+/// \fn int selec_setConvocados(Seleccion*, int)
+/// \brief Se le asigna  a this el valor que se reciba por parametro en el campo convocados.
+///
+/// \param this
+/// \param convocados entero que se recibe
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int selec_setConvocados(Seleccion* this,int convocados)
 {
 	int retorno=-1;
@@ -74,6 +109,12 @@ int selec_setConvocados(Seleccion* this,int convocados)
 	}
 	return retorno;
 }
+/// \fn int selec_getConvocados(Seleccion*, int*)
+/// \brief Asigno valor del campo convocados de una estructura de tipo Seleccion a una variable.
+///
+/// \param this
+/// \param convocados
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int selec_getConvocados(Seleccion* this,int* convocados)
 {
 	int retorno=-1;
@@ -84,7 +125,11 @@ int selec_getConvocados(Seleccion* this,int* convocados)
 	}
 	return retorno;
 }
-
+/// \fn int selec_IngresarConfederacion(char*)
+/// \brief Solicita ingresar confederacion por teclado mostrando las disponibles para luego validar lo ingresado.
+///
+/// \param opcion Se pasa por referencia el resultado.
+/// \return return int return=0 SALIO BIEN / return=-1 SALIO MAL
 int selec_IngresarConfederacion(char* opcion)
 {
 	int retorno=-1;
@@ -114,7 +159,13 @@ int selec_IngresarConfederacion(char* opcion)
 	return retorno;
 }
 //ME FIJO SI LOS PAISES DE LA CONFEDERACION SELECCIONADA TIENEN JUGADORES CONVOCADOS, EN CASO QUE EL CONTADOR SEA MAYOR A UNO YA SE PUEDE SEGUIR
-//RETORNO =0 ESTA TODO OK, HAY AL MENOS UN JUGADOR CONVOCADO EN LA CONFEDERACION.
+
+/// \fn int selec_verificarConvocadosPorconfederacion(char*, LinkedList*)
+/// \brief  Se verifica que los paises de la seleccion recibida por parametro tiene convocados
+///
+/// \param opcion
+/// \param pArrayListSeleccion
+/// \return return=0 ESTA TODO OK, HAY AL MENOS UN JUGADOR CONVOCADO EN LA CONFEDERACION.
 int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -151,6 +202,15 @@ int selec_verificarConvocadosPorconfederacion(char* opcion, LinkedList* pArrayLi
 
 	return retorno;
 }
+/// \fn int selec_AsignarDescripcionPais(LinkedList*, LinkedList*, int, char*)
+/// \brief Al recibir el indice de un jugador, teniendo en cuenta el campo idSeleccion, busco pasar por referencia
+/// el nombre de la seleccion a la que esta convocado.
+///
+/// \param pArrayListSeleccion
+/// \param pArrayListJugador
+/// \param indice
+/// \param descripcionPais paso por referencia la descripcion del pais.
+/// \return return int return=0 SALIO BIEN / return=-1 SALIO MAL
 int selec_AsignarDescripcionPais(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador, int indice, char *descripcionPais)
 {
 	int retorno=-1;
@@ -194,7 +254,13 @@ int selec_AsignarDescripcionPais(LinkedList* pArrayListSeleccion, LinkedList* pA
 	}
 	return retorno;
 }
-
+/// \fn int selec_Solicitar_Id(LinkedList*, int*)
+/// \brief Ya listadas las selecciones, en esta funcion paso a solicitar el id de la seleccion (valido), verifico que aun
+/// se mantenga por debajo de los 22 convocados y retorno segun ello.
+///
+/// \param pArrayListSeleccion
+/// \param indice
+/// \return return int return=0 SALIO BIEN / return=-1 SALIO MAL
 int selec_Solicitar_Id(LinkedList* pArrayListSeleccion, int* indice)
 {
 	int retorno=-1;
@@ -228,6 +294,13 @@ int selec_Solicitar_Id(LinkedList* pArrayListSeleccion, int* indice)
 	}
 	return retorno;
 }
+/// \fn int selec_OrdenarPorConfederacion(void*, void*)
+/// \brief Obtengo dos valores para el campo confederacion de una estructura de tipo Seleccion, los comparo y retorno
+/// segun corresponda.
+///
+/// \param unaConderacion
+/// \param otraConfederacion
+/// \return return=0 si son iguales / return=1 si el primero es mayor / return=-1 si el segundo es mayor
 int selec_OrdenarPorConfederacion(void* unaConderacion, void* otraConfederacion)
 {
 	int retorno=0;//SON IGUALES
@@ -252,6 +325,13 @@ int selec_OrdenarPorConfederacion(void* unaConderacion, void* otraConfederacion)
 	}
 	return retorno;
 }
+/// \fn int selec_buscarPorId(LinkedList*, int, int*)
+/// \brief Recibe un id de seleccion y pasa por referencia el indice en el que se encuentra el mismo.
+///
+/// \param pArrayListSeleccion
+/// \param idBuscado
+/// \param indice
+/// \return return int return=0 SALIO BIEN / return=-1 SALIO MAL
 int selec_buscarPorId(LinkedList* pArrayListSeleccion, int idBuscado, int *indice)
 {
 	int retorno=-1;
@@ -288,6 +368,13 @@ int selec_buscarPorId(LinkedList* pArrayListSeleccion, int idBuscado, int *indic
 	}
 	return retorno;
 }
+/// \fn int selec_restarConvocado(LinkedList*, int)
+/// \brief Recibiendo por parametro el id de la seleccion a operar, obtengo el indice (selec_buscarPorId)en donde se ubica y le resto -1 a su
+/// campo de convocodos, luego hago el set del nuevo valor.
+///
+/// \param pArrayListSeleccion
+/// \param idSeleccion
+/// \return
 int selec_restarConvocado(LinkedList* pArrayListSeleccion, int idSeleccion)
 {
 	int retorno=-1;

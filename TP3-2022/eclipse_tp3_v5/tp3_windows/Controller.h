@@ -1,5 +1,4 @@
 int controller_cargarJugadoresDesdeTexto(char* path , LinkedList* pArrayListJugador);
-
 int controller_cargarJugadoresDesdeBinario(char* path , LinkedList* listaJugadoresBinario,LinkedList* pArrayListSeleccion);
 int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJugador);
 int controller_agregarJugador(LinkedList* pArrayListJugador, int* idMax);
@@ -16,4 +15,4 @@ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSe
 int controller_editarSeleccion(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion);
 int controller_guardarMaxId(char* path, int maxId);
 int controller_Salir(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador ,LinkedList* pArrayListJugadorOriginal, int idMax);
-
+int controller_cargarIdMaximo( int *idMaximo);

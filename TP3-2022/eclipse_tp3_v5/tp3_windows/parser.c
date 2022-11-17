@@ -7,8 +7,8 @@
 /** \brief Parsea los datos de los jugadores desde el archivo jugadores.csv (modo texto).
  *
  * \param path char*
- * \param pArrayListJugador LinkedList*
- * \return int
+ * \param pArrayListJugador LinkedList* lista a parsear
+ * \return return=0 SALIO BIEN / return=-1 SALIO MAL
  */
 int parser_JugadorFromText(FILE* pFile , LinkedList* pArrayListJugador)
 {
@@ -28,7 +28,7 @@ int parser_JugadorFromText(FILE* pFile , LinkedList* pArrayListJugador)
 		{
 			//USO AL RETORNO DE SCANF PARA VERIFICAR QUE ESTA TODO BIEN
 			cantidad=fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",(*(texto+0)),(*(texto+1)),(*(texto+2)),(*(texto+3)),(*(texto+4)),(*(texto+5)));
-			if(cantidad>6)
+			if(cantidad<6)
 			{
 				jug_delete(jugadorAux);
 				jugadorAux=NULL;
@@ -51,24 +51,11 @@ int parser_JugadorFromText(FILE* pFile , LinkedList* pArrayListJugador)
     return retorno;
 }
 
-/** \brief Parsea los datos de los jugadores desde el archivo binario.
- *
- * \param path char*
- * \param pArrayListJugador LinkedList*
- * \return int
- *
- */
-int parser_JugadorFromBinary(FILE* pFile , LinkedList* pArrayListJugador)
-{
-    return 1;
-}
-
-
 /** \brief Parsea los datos de los selecciones desde el archivo selecciones.csv (modo texto).
  *
  * \param path char*
- * \param pArrayListSeleccion LinkedList*
- * \return int
+ * \param pArrayListSeleccion LinkedList* lista a parsear
+ * \return return=0 SALIO BIEN / return=-1 SALIO MAL
  *
  */
 int parser_SeleccionFromText(FILE* pFile , LinkedList* pArrayListSeleccion)

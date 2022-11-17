@@ -8,7 +8,10 @@
 #include <ctype.h>
 #include "ingresos.h"
 #include "salidas.h"
-
+/// \fn Jugador jug_new*()
+/// \brief Reserva espacio de memoria para una estructura de tipo Jugador.
+///
+/// \return
 Jugador* jug_new()
 {
 	Jugador* pJugador;
@@ -17,12 +20,25 @@ Jugador* jug_new()
 	pJugador=(Jugador*)calloc(1,sizeof(Jugador)*1);
 	return pJugador;
 }
-
+/// \fn void jug_delete(Jugador*)
+/// \brief Libero espacio de memoria de un puntero a estructura Jugador recibido.
+///
+/// \param this
 void jug_delete(Jugador* this)
 {
 	free(this);
-
 }
+/// \fn Jugador jug_newParametros*(char*, char*, char*, char*, char*, char*)
+/// \brief Recibe por parametro valores para completar los campos de una estructa de tipo Jugador, habiendo
+/// reservado memoria anteriormente.
+///
+/// \param idStr
+/// \param nombreCompletoStr
+/// \param edadStr
+/// \param posicionStr
+/// \param nacionalidadStr
+/// \param idSelccionStr
+/// \return
 Jugador* jug_newParametros(char* idStr,char* nombreCompletoStr,char* edadStr, char* posicionStr, char* nacionalidadStr, char* idSelccionStr)
 {
 	Jugador* pJugador;
@@ -44,6 +60,12 @@ Jugador* jug_newParametros(char* idStr,char* nombreCompletoStr,char* edadStr, ch
 	}
 	return pJugador;
 }
+/// \fn int jug_setId(Jugador*, int)
+/// \brief Se le asigna  a this el valor que se reciba por parametro en el campo id.
+///
+/// \param this puntero a estructura  Jugador
+/// \param id
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_setId(Jugador* this,int id)
 {
 	int retorno=-1;
@@ -55,6 +77,12 @@ int jug_setId(Jugador* this,int id)
 
 	return retorno;
 }
+/// \fn int jug_getId(Jugador*, int*)
+/// \brief  Asigno valor del campo id de una estructura de tipo Jugador a una variable.
+///
+/// \param this
+/// \param id variable a la que se le pasara el valor por referencia.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_getId(Jugador* this,int* id)
 {
 	int retorno=-1;
@@ -65,7 +93,12 @@ int jug_getId(Jugador* this,int* id)
 	}
 	return retorno;
 }
-
+/// \fn int jug_setNombreCompleto(Jugador*, char*)
+/// \brief  Se le asigna  a this el valor que se reciba por parametro en el campo nombreCompleto.
+///
+/// \param this puntero a estructura  Jugador
+/// \param nombreCompleto descripcion tipo char
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_setNombreCompleto(Jugador* this,char* nombreCompleto)
 {
 	int retorno=-1;
@@ -77,6 +110,12 @@ int jug_setNombreCompleto(Jugador* this,char* nombreCompleto)
 
 	return retorno;
 }
+/// \fn int jug_getNombreCompleto(Jugador*, char*)
+/// \brief Asigno valor del campo nombreCompleto de una estructura de tipo Jugador a una variable.
+///
+/// \param this
+/// \param nombreCompleto variable a la que se le pasara el valor por referencia.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_getNombreCompleto(Jugador* this,char* nombreCompleto)
 {
 	int retorno=-1;
@@ -87,6 +126,12 @@ int jug_getNombreCompleto(Jugador* this,char* nombreCompleto)
 	}
 	return retorno;
 }
+/// \fn int jug_setPosicion(Jugador*, char*)
+/// \brief Se le asigna  a this el valor que se reciba por parametro en el campo posicion.
+///
+/// \param this puntero a estructura  Jugador
+/// \param posicion descripcion tipo char
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_setPosicion(Jugador* this,char* posicion)
 {
 	int retorno=-1;
@@ -97,6 +142,12 @@ int jug_setPosicion(Jugador* this,char* posicion)
 	}
 	return retorno;
 }
+/// \fn int jug_getPosicion(Jugador*, char*)
+/// \brief  Asigno valor del campo posicion de una estructura de tipo Jugador a una variable.
+///
+/// \param this
+/// \param posicion variable a la que se le pasara el valor por referencia.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_getPosicion(Jugador* this,char* posicion)
 {
 	int retorno=-1;
@@ -107,6 +158,12 @@ int jug_getPosicion(Jugador* this,char* posicion)
 	}
 	return retorno;
 }
+/// \fn int jug_setNacionalidad(Jugador*, char*)
+/// \brief  Se le asigna  a this el valor que se reciba por parametro en el campo nacionalidad.
+///
+/// \param this puntero a estructura  Jugador
+/// \param nacionalidad descripcion tipo char
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_setNacionalidad(Jugador* this,char* nacionalidad)
 {
 	int retorno=-1;
@@ -118,6 +175,12 @@ int jug_setNacionalidad(Jugador* this,char* nacionalidad)
 	}
 	return retorno;
 }
+/// \fn int jug_getNacionalidad(Jugador*, char*)
+/// \brief  Asigno valor del campo nacionalidad de una estructura de tipo Jugador a una variable.
+///
+/// \param this
+/// \param nacionalidad variable a la que se le pasara el valor por referencia.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_getNacionalidad(Jugador* this,char* nacionalidad)
 {
 	int retorno=-1;
@@ -129,6 +192,12 @@ int jug_getNacionalidad(Jugador* this,char* nacionalidad)
 	}
 	return retorno;
 }
+/// \fn int jug_setEdad(Jugador*, int)
+/// \brief Se le asigna  a this el valor que se reciba por parametro en el campo edad.
+///
+/// \param this puntero a estructura  Jugador
+/// \param edad entero que se recibe
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_setEdad(Jugador* this,int edad)
 {
 	int retorno=-1;
@@ -140,6 +209,12 @@ int jug_setEdad(Jugador* this,int edad)
 	return retorno;
 
 }
+/// \fn int jug_getEdad(Jugador*, int*)
+/// \brief Asigno valor del campo edad de una estructura de tipo Jugador a una variable.
+///
+/// \param this
+/// \param edad variable a la que se le pasara el valor por referencia.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_getEdad(Jugador* this,int* edad)
 {
 	int retorno=-1;
@@ -150,6 +225,12 @@ int jug_getEdad(Jugador* this,int* edad)
 	}
 	return retorno;
 }
+/// \fn int jug_setIdSeleccion(Jugador*, int)
+/// \brief  Se le asigna  a this el valor que se reciba por parametro en el campo idSeleccion.
+///
+/// \param this this puntero a estructura  Jugador
+/// \param idSeleccion entero que se recibe
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_setIdSeleccion(Jugador* this,int idSeleccion)
 {
 	int retorno=-1;
@@ -161,6 +242,12 @@ int jug_setIdSeleccion(Jugador* this,int idSeleccion)
 	return retorno;
 
 }
+/// \fn int jug_getSIdSeleccion(Jugador*, int*)
+/// \brief Asigno valor del campo idSeleccion de una estructura de tipo Jugador a una variable.
+///
+/// \param this
+/// \param idSeleccion variable a la que se le pasara el valor por referencia.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_getSIdSeleccion(Jugador* this,int* idSeleccion)
 {
 	int retorno=-1;
@@ -171,7 +258,12 @@ int jug_getSIdSeleccion(Jugador* this,int* idSeleccion)
 	}
 	return retorno;
 }
-
+/// \fn int jug_IngresarPosicion(char*)
+/// \brief Muestro posiciones que puede llegar a elegir el usuario, pido que elija segun precise (valido) y
+/// paso por referencia la cadena de caracteres que representan al campo posicion.
+///
+/// \param posicion
+/// \return return int return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_IngresarPosicion(char* posicion)
 {
 	int retorno=-1;
@@ -231,7 +323,12 @@ int jug_IngresarPosicion(char* posicion)
 	return retorno;
 }
 
-
+/// \fn int jug_IngresarNacionalidad(char*)
+/// \brief Listo nacionalidades (jug_MostrarNacionalidades), doy a elegir opcion y retorno por referencia segun
+/// el usuario eligio.
+///
+/// \param nacionalidad
+/// \return return int return=0 SALIO BIEN / return=-1 SALIO MAL
 int jug_IngresarNacionalidad(char* nacionalidad)
 {
 	int retorno=-1;
@@ -345,6 +442,13 @@ int jug_IngresarNacionalidad(char* nacionalidad)
 	}
 	return retorno;
 }
+/// \fn int jug_OrdenarPorNacionalidad(void*, void*)
+/// \brief Obtengo dos valores para el campo nacionalidad de una estructura tipo Jugador, los comparo y retorno
+/// segun corresponda.
+///
+/// \param unJugador
+/// \param otroJugador
+/// \return return=0 si son iguales / return=1 si el primero es mayor / return=-1 si el segundo es mayor
 int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador)
 {
 	int retorno=-1;
@@ -368,7 +472,13 @@ int jug_OrdenarPorNacionalidad(void* unJugador, void* otroJugador)
 	}
 	return retorno;
 }
-
+/// \fn int jug_OrdenarPorNombre(void*, void*)
+/// \brief Obtengo dos valores para el campo nombreCompleto de una estructura tipo Jugador, los comparo y retorno
+/// segun corresponda.
+///
+/// \param unJugador
+/// \param otroJugador
+/// \return return=0 si son iguales / return=1 si el primero es mayor / return=-1 si el segundo es mayor
 int jug_OrdenarPorNombre(void* unJugador, void* otroJugador)
 {
 	int compara;
@@ -392,29 +502,13 @@ int jug_OrdenarPorNombre(void* unJugador, void* otroJugador)
 	}
 	return retorno;
 }
-int jug_OrdenarPorPosicion(void* unJugador, void* otroJugador)
-{
-	int compara;
-	int retorno=0;//son iguales
-	char nombreUno[100];
-	char nombreDos[100];
-	jug_getPosicion(unJugador, nombreUno);
-	jug_getPosicion(otroJugador, nombreDos);
-
-	compara=strcmp(nombreUno,nombreDos);
-	if(compara>0)//UNO MAYOR
-	{
-		retorno=1;
-	}
-	else
-	{
-		if(compara<0)//2 MAYOR
-		{
-			retorno=-1;
-		}
-	}
-	return retorno;
-}
+/// \fn int jug_OrdenarPorEdad(void*, void*)
+/// \brief Obtengo dos valores para el campo edad de una estructura tipo Jugador, los comparo y retorno
+/// segun corresponda.
+///
+/// \param unJugador
+/// \param otroJugador
+/// \return return=0 si son iguales / return=1 si el primero es mayor / return=-1 si el segundo es mayor
 int jug_OrdenarPorEdad(void* unJugador, void* otroJugador)
 {
 	int retorno=0; //IGUALES
@@ -440,45 +534,13 @@ int jug_OrdenarPorEdad(void* unJugador, void* otroJugador)
 }
 
 
-int jug_BuscarIdMax(LinkedList* pArrayListJugador, int *idMaximo)
-{
-	int idMax;
-	int retorno=-1;
-	FILE* pIdMaximo=fopen("id.txt", "r");
-	if(pIdMaximo!=NULL)
-	{
-		fscanf(pIdMaximo,"%d",&idMax);
-		retorno=0;
-		*idMaximo=idMax;
-	}
-	fclose(pIdMaximo);
-
-	return retorno;
-}
-int jug_Solicitar_Id(LinkedList* pArrayListJugador, int * indice ,char * mensaje)
-{
-	int retorno=-1;
-	int idBuscado;
-	int idMaximo;
-	//BUSCO EL ULTIMO ID PARA DARLE UN MAXIMO AL INGRESAR EL ID.
-
-	if(pArrayListJugador!=NULL && jug_BuscarIdMax(pArrayListJugador, &idMaximo)==0)
-	{
-		do
-		{
-			ingresarIntConRango(&idBuscado, mensaje, "ERROR, Ingrese ID existente\n", 1, idMaximo);
-			//ESTE PRINT ES POR SI EL USUARIO CARGA UN ID QUE ESTA POR DEBAJO DEL MAXIMO PERO QUE YA FUE BORRADO.
-			if(jug_BuscarPorId(pArrayListJugador, idBuscado, &(*(indice)))==-1)
-			{
-				printf("ERROR, Ingrese ID existente.\n");
-			}
-			//printf("POSICION %d\n",posicion);
-		}while(jug_BuscarPorId(pArrayListJugador, idBuscado, &(*(indice)))==-1);
-		retorno=0;
-	}
-
-	return retorno;
-}
+/// \fn int jug_BuscarPorId(LinkedList*, int, int*)
+/// \brief Recibo un id y busco el indice en donde se encuentra la estructura.
+///
+/// \param pArrayListJugador
+/// \param idBuscado
+/// \param indice posicion retornada por referencia
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
 int jug_BuscarPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice)
 {
 	int retorno=-1;
@@ -509,6 +571,43 @@ int jug_BuscarPorId(LinkedList* pArrayListJugador, int idBuscado, int* indice)
 	}
 	return retorno;
 }
+/// \fn int jug_Solicitar_Id(LinkedList*, int*, char*)
+/// \brief Solicito id, valido que exista y retorno el indice en el que se encuentra (funcion jug_BuscarPorId).
+///
+/// \param pArrayListJugador
+/// \param indice posicion del id
+/// \param mensaje descripcion para solicitar el id
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
+int jug_Solicitar_Id(LinkedList* pArrayListJugador, int * indice ,char * mensaje)
+{
+	int retorno=-1;
+	int idBuscado;
+
+	//BUSCO EL ULTIMO ID PARA DARLE UN MAXIMO AL INGRESAR EL ID.
+
+	if(pArrayListJugador!=NULL)
+	{
+		do
+		{
+			ingresarIntConMinimo(&idBuscado, mensaje, "ERROR, Ingrese ID existente\n", 1);
+			//ESTE PRINT ES POR SI EL USUARIO CARGA UN ID QUE ESTA POR DEBAJO DEL MAXIMO PERO QUE YA FUE BORRADO.
+			if(jug_BuscarPorId(pArrayListJugador, idBuscado, &(*(indice)))==-1)
+			{
+				printf("ERROR, Ingrese ID existente.\n");
+			}
+			//printf("POSICION %d\n",posicion);
+		}while(jug_BuscarPorId(pArrayListJugador, idBuscado, &(*(indice)))==-1);
+		retorno=0;
+	}
+	return retorno;
+}
+/// \fn int jug_Editar_NombreCompleto(LinkedList*, int)
+/// \brief Recibo el indice de la estructura a modificarle el campo nombreCompleto, valido que el nuevo nombre sea distinto al anterior y
+/// seteo el nuevo nombre a la estructura.
+///
+/// \param pArrayListJugador
+/// \param indice
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
 int jug_Editar_NombreCompleto(LinkedList* pArrayListJugador , int indice)
 {
 	int retorno=-1;
@@ -547,6 +646,13 @@ int jug_Editar_NombreCompleto(LinkedList* pArrayListJugador , int indice)
 	}
 	return retorno;
 }
+/// \fn int jug_Editar_Edad(LinkedList*, int)
+/// \brief Recibo el indice de la estructura a modificarle el campo edad, valido que la nueva edad sea distinta a la anterior y
+/// seteo la nueva edad a la estructura.
+///
+/// \param pArrayListJugador
+/// \param indice
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
 int jug_Editar_Edad(LinkedList* pArrayListJugador , int indice)
 {
 	int retorno=-1;
@@ -587,6 +693,13 @@ int jug_Editar_Edad(LinkedList* pArrayListJugador , int indice)
 	}
 	return retorno;
 }
+/// \fn int jug_Editar_Posicion(LinkedList*, int)
+/// \brief Recibo el indice de la estructura a modificarle el campo posicion, valido que la nueva posicion sea distinta a la anterior y
+/// seteo la nueva posicion a la estructura.
+///
+/// \param pArrayListJugador
+/// \param indice
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
 int jug_Editar_Posicion(LinkedList* pArrayListJugador , int indice)
 {
 	int retorno=-1;
@@ -629,6 +742,13 @@ int jug_Editar_Posicion(LinkedList* pArrayListJugador , int indice)
 	}
 	return retorno;
 }
+/// \fn int jug_Editar_Nacionalidad(LinkedList*, int)
+/// \brief Recibo el indice de la estructura a modificarle el campo nacionalidad, valido que la nueva nacionalidad sea distinta a la anterior y
+/// seteo la nueva nacionalidad a la estructura.
+///
+/// \param pArrayListJugador
+/// \param indice
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
 int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice)
 {
 	int retorno=-1;
@@ -642,7 +762,8 @@ int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice)
 	{
 		do
 		{
-			ingresarCadenaCaracteres(30, nuevaNacionalidad, "Ingrese nueva nacionalidad del jugador.\t", "ERROR, Ingrese nacionalidad valida.\n");
+			//ingresarCadenaCaracteres(30, nuevaNacionalidad, "Ingrese nueva nacionalidad del jugador.\t", "ERROR, Ingrese nacionalidad valida.\n");
+			jug_IngresarNacionalidad(nuevaNacionalidad);
 			if(jug_getNacionalidad(pJugador, nacionalidadVieja)==0)
 			{
 				if(strcmp(nacionalidadVieja, nuevaNacionalidad)==0)
@@ -676,6 +797,14 @@ int jug_Editar_Nacionalidad(LinkedList* pArrayListJugador , int indice)
 
 	return retorno;
 }
+/// \fn int jug_Confirmar_Baja(LinkedList*, int, char*)
+/// \brief Se solicita que usuario ingre S o N para confirmar la baja de un jugador, se retorna segun
+/// lo elegido por el mismo.
+///
+/// \param pArrayListJugador
+/// \param indice
+/// \param nombreJugador
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
 int jug_Confirmar_Baja(LinkedList* pArrayListJugador, int indice, char* nombreJugador)
 {
 	int retorno=-1;
@@ -703,7 +832,13 @@ int jug_Confirmar_Baja(LinkedList* pArrayListJugador, int indice, char* nombreJu
 	return retorno;
 }
 
-
+/// \fn int jug_convocar(LinkedList*, LinkedList*)
+/// \brief Se listan selecciones, se da a elegir 1 (validacion - selec_Solicitar_Id), en caso que el jugador pueda ser convocado se
+/// le setea el id de seleccion y se suma 1 convocado al campo convocados de la estructura de tipo Seleccion del pais.
+///Imprimo el nombre del jugador convocado y el del pais convocante.
+/// \param pArrayListJugador
+/// \param pArrayListSeleccion
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
 int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -714,7 +849,8 @@ int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 	int convocados;//SI SE CONFIRMA LA CONVOCACION DEBO SUMAR 1 A LA CANTIDAD DE CONVOCADOS EXISTENTES
 	Seleccion* pSeleccion;
 	Jugador* pJugador;
-
+	char nombreCompleto[100];
+	char pais[30];
 	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
 	{
 		//LISTO A LAS SELECCIONES
@@ -740,10 +876,11 @@ int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 					//SUMO 1 A LOS CONVOCADOS YA EXISTENTES.
 					convocados=convocados+1;
 					//SETEO A LA SELECCION 1 CONVOCADO + Y AL JUGADOR EL ID DE LA SELECCION
-					if(selec_setConvocados(pSeleccion, convocados)==0 && jug_setIdSeleccion(pJugador, idSeleccion)==0)
+					if(selec_setConvocados(pSeleccion, convocados)==0 && jug_setIdSeleccion(pJugador, idSeleccion)==0 &&
+							jug_getNombreCompleto(pJugador, nombreCompleto)==0 && selec_getPais(pSeleccion, pais)==0)
 					{
-						//(*(pJugador)).idSeleccion=(*(pSeleccion)).id;
-						printf("<<<<<<<<<< %s fue CONVOCADO exitosamente por %s >>>>>>>>>>\n\n",(*(pJugador)).nombreCompleto,(*(pSeleccion)).pais);
+						//printf("<<<<<<<<<< %s fue CONVOCADO exitosamente por %s >>>>>>>>>>\n\n",(*(pJugador)).nombreCompleto,(*(pSeleccion)).pais);
+						printf("<<<<<<<<<< %s fue CONVOCADO exitosamente por %s >>>>>>>>>>\n\n",nombreCompleto,pais);
 						retorno=0;
 					}
 				}
@@ -752,18 +889,24 @@ int jug_convocar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 					printf("ERROR, el jugador ya se encuentra convocado.\n");
 				}
 			}
-
 		}
 	}
 
 	return retorno;
 }
+/// \fn int jug_Quitar_Convocado(LinkedList*, LinkedList*)
+/// \brief Previa verificacion de la existencia de al menos 1 convocado, se listan jugadores convocados (jug_imprimirJugadores) , se
+/// solicita id (jug_Solicitar_Id), en caso que el jugador se encuentre convocado se pondra en 0 al campo de idSeleccion y se
+/// restara a la seleccion que convocante un convocado.
+///
+/// \param pArrayListJugador
+/// \param pArrayListSeleccion
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
 int jug_Quitar_Convocado(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
 	int indice;
 	int indiceSeleccion;
-	//int indiceSeleccion;
 	Jugador* pJugador;
 	int jugIdSeleccion;
 	char nombreCompleto[100];
@@ -773,7 +916,6 @@ int jug_Quitar_Convocado(LinkedList* pArrayListJugador, LinkedList* pArrayListSe
 	char jug_NombreCompleto[100];
 	if(pArrayListJugador!=NULL && pArrayListSeleccion!=NULL)
 	{
-
 		//jug_Listar_Convocados(pArrayListJugador, pArrayListSeleccion, 2);
 		jug_imprimirJugadores(pArrayListJugador, pArrayListSeleccion, 2);
 		do
@@ -832,6 +974,14 @@ int jug_Quitar_Convocado(LinkedList* pArrayListJugador, LinkedList* pArrayListSe
 	}
 	return retorno;
 }
+/// \fn int jug_verificarCambios(LinkedList*, LinkedList*, int*)
+/// \brief Se compara el tamanio y campo a campo, de una lista sin modificar de jugadores y de otra potencialmente modificable de
+/// jugadores. En caso de existir un cambio se retorna por referencia un 1.
+///
+/// \param pArrayListJugador
+/// \param pArrayListJugadorOriginal
+/// \param jug_Flag
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
 int jug_verificarCambios(LinkedList* pArrayListJugador ,LinkedList* pArrayListJugadorOriginal, int* jug_Flag)
 {
 	int retorno=-1;
@@ -876,9 +1026,16 @@ int jug_verificarCambios(LinkedList* pArrayListJugador ,LinkedList* pArrayListJu
 	}
 	return retorno;
 }
+/// \fn int jug_guardarJugadores(LinkedList*, char*, LinkedList*, char*)
+/// \brief
+///
+/// \param pArrayListSeleccion
+/// \param nombreConfederacion
+/// \param pArrayListJugador
+/// \param path
+/// \return
 int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederacion, LinkedList* pArrayListJugador, char* path)
 {
-	//SACAR CANTIDADCONVOCADOS.
 	int retorno=-1;
 	Jugador* pJugador;
 	int tamJugadores;
@@ -923,7 +1080,6 @@ int jug_guardarJugadores(LinkedList* pArrayListSeleccion, char* nombreConfederac
 		}
 		fclose(pArchivo);
 	}
-
 	return retorno;
 }
 

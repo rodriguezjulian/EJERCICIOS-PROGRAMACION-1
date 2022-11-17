@@ -9,11 +9,33 @@
 #include <string.h>
 #include "salidas.h"
 
+/// \fn int controller_cargarIdMaximo(LinkedList*, int*)
+/// \brief Abre un archivo que contiene el maximo id y lo pasa por referencia.
+///
+/// \param pArrayListJugador
+/// \param idMaximo
+/// \return return return int return=0 SALIO BIEN / return=-1 SALIO MAL.
+int controller_cargarIdMaximo( int *idMaximo)
+{
+	int idMax;
+	int retorno=-1;
+	FILE* pIdMaximo=fopen("id.txt", "r");
+	if(pIdMaximo!=NULL)
+	{
+		fscanf(pIdMaximo,"%d",&idMax);
+		retorno=0;
+		*idMaximo=idMax;
+	}
+	fclose(pIdMaximo);
+
+	return retorno;
+}
 /** \brief Carga los datos de los jugadores desde el archivo jugadores.csv (modo texto).
- *
+ *Dentro de la funcion se llama a parser_JugadorFromText para poder cargar los datos de manera ordenada y
+ *satisfactoria.
  * \param path char*
  * \param pArrayListJugador LinkedList*
- * \return int
+ * \return int return=0 SALIO BIEN / return=-1 SALIO MAL
  *
  */
 int controller_cargarJugadoresDesdeTexto(char* path , LinkedList* pArrayListJugador)
@@ -37,13 +59,11 @@ int controller_cargarJugadoresDesdeTexto(char* path , LinkedList* pArrayListJuga
 	fclose(pFile);
     return retorno;
 }
-/** \brief Listar selecciones
- *
- * \param path char*
- * \param pArrayListSeleccion LinkedList*
- * \return int
- *
- */
+/// \fn int controller_listarSelecciones(LinkedList*)
+/// \brief Se listan selecciones,dentro se llama a imprimir seleccion.
+///
+/// \param pArrayListSeleccion
+/// \return return int return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
 {
 	int cantidad;
@@ -57,21 +77,23 @@ int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
 		cantidad=ll_len(pArrayListSeleccion);
 		for(int i=0;i<cantidad;i++)
 		{
-			selec_imprimirSeleccion(pArrayListSeleccion, i);
-			retorno=0;
+			if(selec_imprimirSeleccion(pArrayListSeleccion, i)==0)
+			{
+				retorno=0;
+			}
 		}
 		printf("+=========================================================+\n");
 	}
     return retorno;
 }
 
-/** \brief Listar jugadores
- *
- * \param path char*
- * \param pArrayListJugador LinkedList*
- * \return int
- *
- */
+/// \fn int controller_listarJugadores(LinkedList*, LinkedList*)
+/// \brief  *Se listan jugadores, se llama a jug_imprimirJugadores pasando como parametro un 1 para mostrar
+/// tanto a jugadores convocados como no convocados.
+///
+/// \param pArrayListJugador
+/// \param pArrayListSeleccion
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_listarJugadores(LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -88,7 +110,7 @@ int controller_listarJugadores(LinkedList* pArrayListJugador,LinkedList* pArrayL
  *
  * \param path char*
  * \param pArrayListJugador LinkedList*
- * \return int
+ * \return  return=0 SALIO BIEN / return=-1 SALIO MAL
  *
  */
 int controller_cargarJugadoresDesdeBinario(char* path , LinkedList* listaJugadoresBinario,LinkedList* pArrayListSeleccion)
@@ -105,52 +127,51 @@ int controller_cargarJugadoresDesdeBinario(char* path , LinkedList* listaJugador
 		if(pArchivo!=NULL)
 		{
 			while(!feof(pArchivo))
+				{
+					jugadorAux=jug_new();
+					//VERIFICAR ARCHIVO DISTINTO DE NULL
+					cantidad=fread(jugadorAux,sizeof(Jugador),1,pArchivo);
+					if(cantidad==1)
 					{
-						jugadorAux=jug_new();
-						//VERIFICAR ARCHIVO DISTINTO DE NULL
-						cantidad=fread(jugadorAux,sizeof(Jugador),1,pArchivo);
-						if(cantidad==1)
-						{
-							ll_add(listaJugadoresBinario, jugadorAux);
-							retorno=0;
-						}
+						ll_add(listaJugadoresBinario, jugadorAux);
+						retorno=0;
 					}
-					fclose(pArchivo);
-					controller_listarJugadores(listaJugadoresBinario,pArrayListSeleccion);
+				}
+				fclose(pArchivo);
+				controller_listarJugadores(listaJugadoresBinario,pArrayListSeleccion);
 		}
 	}
     return retorno;
 }
 
-/** \brief Alta de jugadores
- *
- * \param path char*
- * \param pArrayListJugador LinkedList*
- * \return int
- *
- */
-
+/// \fn int controller_agregarJugador(LinkedList*, int*)
+/// \brief Solicita validando continuamente los datos necesarios para completar cada campo de la estructura de un jugador,
+/// los mismo se setean y agregan a la likedlist. Se pasa por referencia el valor de idMax, que es el ID maximo hasta el momento,
+/// este dato sera de vital importancia a la hora de guardar o no los datos que se modificaron en el archivo.
+///
+/// \param pArrayListJugador
+/// \param idMax
+/// \return  return=0 SALIO BIEN / return=-1 SALIO MAL
 //ALTA MANUAL
 int controller_agregarJugador(LinkedList* pArrayListJugador , int* idMax)
 {
 	int retorno=-1;
-	int id;
 	char nombreCompleto[100];
 	int edad;
 	char posicion[30];
 	char nacionalidad[30];
 	int idSeleccion=0;
 
-	FILE *pArchivoId;
+	//FILE *pArchivoId;
 
 	Jugador* pJugador;
 	pJugador=jug_new();
 	//PASAR A FUNCION.
-	pArchivoId=fopen("id.txt", "r");
-	if(pArrayListJugador!=NULL && pJugador!=NULL && pArchivoId!=NULL)
+	//pArchivoId=fopen("id.txt", "r");
+	if(pArrayListJugador!=NULL && pJugador!=NULL)
 	{
-		jug_BuscarIdMax(pArrayListJugador, &id);
-		*idMax=id+1;
+		//jug_BuscarIdMax(pArrayListJugador, &id);
+		*idMax=*idMax+1;
 
 		if(ingresarCadenaCaracteres(100, nombreCompleto, "Ingrese nombre completo del jugador.\t", "ERROR, Ingrese nombre completo valido\n")==0 &&
 				ingresarIntConRango(&edad, "Ingrese edad del jugador (16/50).\t", "ERROR, Ingrese edad valida.", 16, 50)==0 &&
@@ -185,6 +206,13 @@ int controller_agregarJugador(LinkedList* pArrayListJugador , int* idMax)
 
 }
 
+/// \fn int controller_listar(LinkedList*, LinkedList*)
+/// \brief Muestra menu para que el usuario ingrese opcion segun lo que se desee listar y llama a la funcion que corresponda,
+///  se valida el retorno de la funcion llamada.
+///
+/// \param pArrayListJugador
+/// \param pArrayListSeleccion
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_listar(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -220,10 +248,11 @@ int controller_listar(LinkedList* pArrayListJugador, LinkedList* pArrayListSelec
 	return retorno;
 }
 /** \brief Modificar datos del jugador
- *
+ *Muestra lista de jugadores llamando a jug_imprimirJugadores, pide id de jugador a modificar (se valida),muestra menu
+ *para que el usuario ingrese opcion segun desee operar, se llaman funciones segun corresponda y se validan sus
  * \param path char*
  * \param pArrayListJugador LinkedList*
- * \return int
+ * \return return=0 SALIO BIEN / return=-1 SALIO MAL
  *
  */
 int controller_editarJugador(LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion)
@@ -281,13 +310,13 @@ int controller_editarJugador(LinkedList* pArrayListJugador,LinkedList* pArrayLis
 
 
 
-/** \brief Baja del jugador
- *
- * \param path char*
- * \param pArrayListJugador LinkedList*
- * \return int
- *
- */
+/// \fn int controller_removerJugador(LinkedList*, LinkedList*)
+/// \brief Se listad jugadores, se solita id (se valida), se elimina jugador de la lista y en caso que este convocado por alguna
+/// seleccion, se descuenta 1 (funcion selec_restarConvocado).
+///
+/// \param pArrayListJugador
+/// \param pArrayListSeleccion
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_removerJugador(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -337,13 +366,12 @@ int controller_removerJugador(LinkedList* pArrayListJugador, LinkedList* pArrayL
 }
 
 
-/** \brief Ordenar selecciones
- *
- * \param path char*
- * \param pArrayListSeleccion LinkedList*
- * \return int
- *
- */
+/// \fn int controller_ordenarSelecciones(LinkedList*)
+/// \brief Se pide un orden para ordenar, ascendente o descente (se valida), se llama a ll_sort utilizando puntero
+/// a funcion con selec_OrdenarPorConfederacion
+///
+/// \param pArrayListSeleccion
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
 {
 	int orden;
@@ -361,13 +389,13 @@ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion)
 	}
 	return retorno;
 }
-/** \brief Ordenar jugadores
- *
- * \param path char*
- * \param pArrayListJugador LinkedList*
- * \return int
- *
- */
+/// \fn int controller_ordenarJugadores(LinkedList*, LinkedList*)
+/// \brief Se muestra un menu de opciones, el usuario ingresa segun desee operar (validacion),se llama a
+/// la funcion correspondiente validando su retorno.
+///
+/// \param pArrayListJugador
+/// \param pArrayListSeleccion
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_ordenarJugadores(LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -422,6 +450,12 @@ int controller_ordenarJugadores(LinkedList* pArrayListJugador,LinkedList* pArray
 		}
 		return retorno;
 }
+/// \fn int controller_editarSeleccion(LinkedList*, LinkedList*)
+/// \brief Se muestra menu, el usuario elige segun desee operar (validacion), se llama a jug_convocar o a jug_Quitar_Convocado segun corresponda.
+///
+/// \param pArrayListJugador
+/// \param pArrayListSeleccion
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_editarSeleccion(LinkedList* pArrayListJugador, LinkedList* pArrayListSeleccion)
 {
 	int retorno=-1;
@@ -477,13 +511,13 @@ int controller_editarSeleccion(LinkedList* pArrayListJugador, LinkedList* pArray
 }
 
 
-/** \brief Guarda los datos de los jugadores en el archivo jugadores.csv (modo texto).
- *
- * \param path char*
- * \param pArrayListSeleccion LinkedList*
- * \return int
- *
- */
+/// \fn int controller_guardarJugadoresModoTexto(char*, LinkedList*)
+/// \brief Se abre un archivo para sobrescribirlo con lo cargado en la lista recibida por parametro, se
+/// obtienen valores mediante getters validando, y por ultimo se cierra el archivo.
+///
+/// \param path
+/// \param pArrayListJugador
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJugador)
 {
 	int retorno=-1;
@@ -516,11 +550,20 @@ int controller_guardarJugadoresModoTexto(char* path , LinkedList* pArrayListJuga
 		}
 		fclose(pFile);
 	}
+	if(retorno==0)
+	{
+		printf("\n<<<<<<<<<< JUGADORES GUARDADOS CORRECTAMENTE >>>>>>>>>>\n");
+	}
     return retorno;
 }
 
 
-
+/// \fn int controller_guardarMaxId(char*, int)
+/// \brief Abre un archivo y obtiene el unico dato que contiene, el mismo corresponde al id maximo operado hasta el momento.
+///
+/// \param path
+/// \param maxId
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_guardarMaxId(char* path, int maxId)
 {
 	int retorno=-1;
@@ -528,15 +571,19 @@ int controller_guardarMaxId(char* path, int maxId)
 	if(path!=NULL)
 	{
 		fprintf(pArchivo,"%d",maxId);
+		retorno=0;
+
+		printf("\n<<<<<<<<<< MAXIMO ID GUARDADO CORRECTAMENTE >>>>>>>>>>\n");
 	}
 	fclose(pArchivo);
 	return retorno;
 }
-/** \brief Guarda los datos de los jugadores en el archivo binario.
+/** \brief Guarda los datos de los jugadores convocados en un archivo binario de una confederacion especifica validando que la
+ * misma tenga convocados.
  *
  * \param path char*
  * \param pArrayListJugador LinkedList*
- * \return int
+ * \return return=0 SALIO BIEN / return=-1 SALIO MAL
  *
  */
 int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion)
@@ -568,11 +615,13 @@ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJu
 
 
 
-/** \brief Carga los datos de los selecciones desde el archivo selecciones.csv (modo texto).
+/** \brief Carga los datos de las selecciones desde el archivo selecciones.csv (modo texto).
+ *Dentro de la funcion se llama a parser_SeleccionFromText para poder cargar los datos de manera ordenada y
+ *satisfactoria.
  *
  * \param path char*
  * \param pArrayListSeleccion LinkedList*
- * \return int
+ * \return return=0 SALIO BIEN / return=-1 SALIO MAL
  *
  */
 int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSeleccion)
@@ -600,7 +649,7 @@ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSe
  *
  * \param path char*
  * \param pArrayListSeleccion LinkedList*
- * \return int
+ * \return return=0 SALIO BIEN / return=-1 SALIO MAL
  *
  */
 int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion)
@@ -631,9 +680,20 @@ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSe
 		}
 		fclose(pFile);
 	}
+	if(retorno==0)
+	{
+		printf("\n<<<<<<<<<< SELECCIONES GUARDADAS CORRECTAMENTE >>>>>>>>>>\n");
+	}
     return retorno;
 }
-
+/// \fn int controller_Salir(LinkedList*, LinkedList*, LinkedList*, int)
+/// \brief Verifica que se hayan realizado cambios y en tal caso ofrece guardarlos.Repregunta si esta seguro el usuario de que desea salir.
+///
+/// \param pArrayListSeleccion lista de selecciones.
+/// \param pArrayListJugador lista de jugadores.
+/// \param pArrayListJugadorOriginal lista de jugadores sin modificar.
+/// \param idMax id maximo obtenido hasta el momento.
+/// \return return=0 SALIO BIEN / return=-1 SALIO MAL
 int controller_Salir(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador ,LinkedList* pArrayListJugadorOriginal, int idMax)
 {
 	int retorno=-1;
@@ -649,8 +709,8 @@ int controller_Salir(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJuga
 						"PARA SALIR SIN GUARDAR: 2 >>>>>>>>>>\n", "ERROR, Ingrese opcion valida.\n", 1, 2);
 				if(opcion==1)
 				{
-					if(controller_guardarJugadoresModoTexto("probando guardar jugadores.txt", pArrayListJugador)!=0 &&
-					controller_guardarSeleccionesModoTexto("prueba listas.txt", pArrayListSeleccion)!=0 &&
+					if(controller_guardarJugadoresModoTexto("jugadores.csv", pArrayListJugador)!=0 ||
+					controller_guardarSeleccionesModoTexto("selecciones.csv", pArrayListSeleccion)!=0 ||
 					controller_guardarMaxId("id.txt", idMax)!=0)
 					{
 						printf("\n<<<<<<<<<< ERROR AL GUARDAR ARCHIVOS >>>>>>>>>>\n");
@@ -668,6 +728,9 @@ int controller_Salir(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJuga
 			if(opcion==2)
 			{
 				retorno=0;
+				ll_deleteLinkedList(pArrayListJugadorOriginal);
+				ll_deleteLinkedList(pArrayListJugador);
+				ll_deleteLinkedList(pArrayListSeleccion);
 				printf("\n<<<<<<<<<< SALIDA EXITOSA >>>>>>>>>>\n");
 			}
 		}

@@ -1,4 +1,4 @@
-id,nombreCompleto,edad,posicion,nacionalidad,idSelecion
+id,nombreCompleto,edad,posicion,nacionalidad,idSeleccion
 1,Emiliano Martinez,28,Portero,Argentino,0
 2,Juan Musso,27,Portero,Argentino,0
 3,Agustin Marchesin,33,Portero,Argentino,0
@@ -13,7 +13,7 @@ id,nombreCompleto,edad,posicion,nacionalidad,idSelecion
 12,Facundo Medina,22,Defensa central,Argentino,0
 13,Nicolas Otamendi,33,Defensa central,Argentino,0
 14,German Pezzella,30,Defensa central,Argentino,0
-15,Walter Kannemann,30,Defensa central,Argentino,0
+15,Walter Kannemann,20,Defensa central,Argentino,0
 16,Nehuen Perez,21,Defensa central,Argentino,0
 17,Nicolas Tagliafico,28,Lateral izquierdo,Argentino,0
 18,Marcos Acuna,29,Lateral izquierdo,Argentino,0

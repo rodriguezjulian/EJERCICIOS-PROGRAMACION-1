@@ -8,7 +8,9 @@
 #include <stdlib.h>
 #include "Seleccion.h"
 #include "Jugador.h"
-
+/// \fn void mostrarMenuPrincipal()
+/// \brief Se muestran opciones potencialmente elegibles del menu principal.
+///
 void mostrarMenuPrincipal()
 {
 	printf("+==================================================+\n|%*s|\n%s",
@@ -16,10 +18,15 @@ void mostrarMenuPrincipal()
 
 	printf("|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n|%*s|\n%s\n",-50,"1.CARGA DE ARCHIVOS",
 			-50,"2.ALTA DE JUGADOR",-51,"3.MODIFICACIÓN DE JUGADOR",-50,"4.BAJA DE JUGADOR",-50,"5.LISTADOS",
-			-50,"6.CONVOCAR JUGADORES",-50,"7.ORDENAR Y LISTAR",-50,"8.GENERAR ARCHIVO BINARIO",-50,"9.CARGAR ARCHIVO BINARIO",
-			-50,"10.GUARDAR ARCHIVOS .CSV",-50,"11.SALIR","+==================================================+\n");
+			-50,"6.CONVOCAR / DESCONVOCAR JUGADORES",-50,"7.ORDENAR Y LISTAR",-50,"8.GENERAR ARCHIVO BINARIO",-50,"9.CARGAR ARCHIVO BINARIO",
+			-50,"10.GUARDAR ARCHIVOS ",-50,"11.SALIR","+==================================================+\n");
 }
-
+/// \fn int selec_imprimirSeleccion(LinkedList*, int)
+/// \brief Imprime seleccion de un indice especifico en forma ordenada.
+///
+/// \param pArrayListSeleccion lista de seleccion
+/// \param index indice
+/// \return
 int selec_imprimirSeleccion(LinkedList* pArrayListSeleccion, int index)
 {
 	int retorno=-1;
@@ -39,11 +46,22 @@ int selec_imprimirSeleccion(LinkedList* pArrayListSeleccion, int index)
 		selec_getConvocados(seleccionAux, &convocados)==0)
 		{
 			//printf("IMPRIMIR SELECCION ENTRO");
+			retorno=0;
 			printf("| %*d|%*s|%*s| %*d|\n",-3,id,-25,pais,-15,confederacion,-9,convocados);
 		}
 	}
 	return retorno;
 }
+/// \fn int jug_imprimirJugadores(LinkedList*, LinkedList*, int)
+/// \brief Imprime/lista en forma ordenada los datos de los jugadores, incluyendo si estan o no seleccionados. Se
+/// tiene en cuenta una referencia recibida por parametro a la hora de listar.
+///
+/// \param pArrayListJugador lista de jugadores
+/// \param pArrayListSeleccion lista de selecciones
+/// \param referenciaDeUso 	 * referenciaDeUso==1 / SE MUESTRAN TODOS LOS JUGADORES.
+///	referenciaDeUso==2 / SE MUESTRAN LOS JUGADORES CONVOCADOS.
+///	 referenciaDeUso==3 / SE MUESTRAN LOS JUGADORES NO CONVOCADOS.
+/// \return
 int jug_imprimirJugadores(LinkedList* pArrayListJugador,LinkedList* pArrayListSeleccion, int referenciaDeUso)
 {
 	int retorno=-1;
@@ -110,6 +128,9 @@ int jug_imprimirJugadores(LinkedList* pArrayListJugador,LinkedList* pArrayListSe
 	}
 	return retorno;
 }
+/// \fn void jug_MostrarNacionalidades(void)
+/// \brief Lista las nacionalidades de forma ordena.
+///
 void jug_MostrarNacionalidades(void)
 {
 
